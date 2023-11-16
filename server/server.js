@@ -78,6 +78,8 @@ app.post("/user:id", (req, res) => {
   });
 });
 
+//app  server
+
 app.listen(port, () => {
   console.log(`app listening at http://localhost:${port}`);
 });
