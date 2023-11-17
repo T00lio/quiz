@@ -21,12 +21,7 @@ app.use(express.json());
 app.get("/reactQuestions", async (req, res) => {
   try {
     const result = await db.query("SELECT * FROM questions");
-    res.status(202).json({
-      status: "success",
-      data: {
-        questions: result.rows,
-      },
-    });
+    console.log(result);
   } catch (err) {
     console.log(err);
   }
