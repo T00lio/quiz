@@ -5,6 +5,11 @@ const cors = require("cors");
 const port = process.env.PORT || 3004;
 
 //middleware
+app.use((req, res, next) => {
+  console.log("middleware");
+  next();
+});
+
 app.use(cors());
 
 app.use(express.json());
