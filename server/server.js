@@ -22,6 +22,14 @@ app.get("/reactQuestions", async (req, res) => {
   try {
     const result = await db.query("SELECT * FROM questions");
     console.log(result);
+    res.status(202).json({
+      status: "success",
+      results: result.rows.length,
+      data: {
+        question: result.rows[0].question_text,
+        subject: result.rows[0].question_subject,
+      },
+    });
   } catch (err) {
     console.log(err);
   }
