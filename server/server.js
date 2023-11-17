@@ -1,4 +1,5 @@
 require("dotenv").config();
+const db = require("./db");
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -17,15 +18,20 @@ app.use(express.json());
 //routes for questions
 
 //react questions
-app.get("/reactQuestions", (req, res) => {
-  res.status(202).json({
-    status: "success",
-    data: {
-      question: "What is the capital of France?",
-      answers: ["New York", "London", "Paris", "Dublin"],
-    },
-  });
+app.get("/reactQuestions", async (req, res) => {
+  try {
+    const result = await db.query("SELECT * FROM questions");
+    res.status(202).json({
+      status: "success",
+      data: {
+        questions: result.rows,
+      },
+    });
+  } catch (err) {
+    console.log(err);
+  }
 });
+
 //js questions
 app.get("/jsQuestions", (req, res) => {
   res.status(202).json({
