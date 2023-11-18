@@ -14,7 +14,7 @@ function App() {
       try {
         const response = await reactQuestions.get("/");
         setQuestions(response.data);
-        console.log(response.data);
+        console.log(response);
       } catch (err) {
         console.log(err);
       }
@@ -70,9 +70,14 @@ function App() {
       <p style={{ textAlign: "center", fontSize: "1.5rem", fontWeight: "200" }}>
         This app will help you memorize the top 100 react interview questions
       </p>
-
       <div>
+        <p>{questions.data.questions}</p>
         <button>Click here to start</button>
+      </div>
+      <div>
+        <button onClick={handleClicked}></button>
+        <button onClick={handleRestart}></button>
+        <button></button>
       </div>
     </>
   );
