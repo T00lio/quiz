@@ -13,7 +13,7 @@ function App() {
     const fetchData = async () => {
       try {
         const response = await reactQuestions.get("/");
-        setQuestions(response.data.results);
+        setQuestions(response.data.data);
         console.log(response.data.data);
       } catch (err) {
         console.log(err);
@@ -71,7 +71,19 @@ function App() {
         This app will help you memorize the top 100 react interview questions
       </p>
       <div className="question">
-        {questions.map}
+        {questions.map((question, index) => {
+          return (
+            <div key={index}>
+              <h2 style={{ fontSize: "2rem" }}>
+                <ul style={{ listStyle: "none" }}>
+                  <li>
+                    {question.id}.{question.question}
+                  </li>
+                </ul>
+              </h2>
+            </div>
+          );
+        })}
         <h2 style={{ fontSize: "2rem" }}>
           <ul style={{ listStyle: "none" }}>
             <li>{questions.question}</li>
