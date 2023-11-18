@@ -25,10 +25,11 @@ app.get("/reactQuestions", async (req, res) => {
     res.status(202).json({
       status: "success",
       results: result.rows.length,
-      data: {
-        question: result.rows[0].question_text,
-        subject: result.rows[0].question_subject,
-      },
+      data: result.rows.map((row) => ({
+        id: row.question_id,
+        question: row.question_text,
+        subject: row.question_subject,
+      })),
     });
   } catch (err) {
     console.log(err);
