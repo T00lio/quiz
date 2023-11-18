@@ -70,6 +70,10 @@ function App() {
       <p style={{ textAlign: "center", fontSize: "1.5rem", fontWeight: "200" }}>
         This app will help you memorize the top 100 react interview questions
       </p>
+
+      <div>
+        <button>Click here to start</button>
+      </div>
     </>
   );
 }
