@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import reactQuestions from "./api/reactQuestions";
+import logo from "/react.svg";
 import "./App.css";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
 
 function App() {
   const [number, setNumber] = useState(0);
@@ -48,66 +47,70 @@ function App() {
   };
   return (
     <>
-      <Header />
+      <header>
+        <h1
+          style={{
+            textAlign: "center",
+            alignItems: "center",
+            fontWeight: "900",
+            justifyContent: "center",
+            display: "flex",
+            fontSize: "4rem",
+          }}
+        >
+          100 React Question{" "}
+          <img
+            className="App-logo"
+            src={logo}
+            alt="react logo"
+            style={{ width: "40px", height: "40px" }}
+          ></img>
+        </h1>
+      </header>
+      <p style={{ textAlign: "center", fontSize: "1.5rem", fontWeight: "200" }}>
+        This app will help you memorize the top 100 react interview questions
+      </p>
+      <div className="question">
+        {questions.map((question, index) => {
+          return (
+            <div key={index}>
+              <h2 style={{ fontSize: "2rem" }}>
+                <ul style={{ listStyle: "none" }}>
+                  <li key={question.question_id} className="row">
+                    <div className="col">
+                      {question.question_id}.{question.question_text}
+                    </div>
+                    <div className="col">
+                      <button className="optionButton" onClick={handleClicked}>
+                        {question.option1}
+                      </button>
+                      <button className="optionButton" onClick={handleClicked}>
+                        {question.option3}
+                      </button>
+                      <button className="optionButton" onClick={handleClicked}>
+                        {question.option4}
+                      </button>
+                      <button className="optionButton" onClick={handleClicked}>
+                        {question.option2}
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+              </h2>
+            </div>
+          );
+        })}
+        <h2 style={{ fontSize: "2rem" }}>
+          <ul style={{ listStyle: "none" }}>
+            <li>{questions.question}</li>
+          </ul>
+        </h2>
+      </div>
 
-      <div className="grid">
-        <div className="question grid-item">
-          {questions.map((question, index) => {
-            return (
-              <div key={index}>
-                <h2 style={{ fontSize: "2rem" }}>
-                  <ul style={{ listStyle: "none" }}>
-                    <li key={question.question_id} className="row">
-                      <div className="col">
-                        {question.question_id}.{question.question_text}
-                      </div>
-                      <div className="col">
-                        <button
-                          className="optionButton"
-                          onClick={handleClicked}
-                        >
-                          {question.option1}
-                        </button>
-                        <button
-                          className="optionButton"
-                          onClick={handleClicked}
-                        >
-                          {question.option3}
-                        </button>
-                        <button
-                          className="optionButton"
-                          onClick={handleClicked}
-                        >
-                          {question.option4}
-                        </button>
-                        <button
-                          className="optionButton"
-                          onClick={handleClicked}
-                        >
-                          {question.option2}
-                        </button>
-                      </div>
-                    </li>
-                  </ul>
-                </h2>
-              </div>
-            );
-          })}
-          <h2 style={{ fontSize: "2rem" }}>
-            <ul style={{ listStyle: "none" }}>
-              <li>{questions.question}</li>
-            </ul>
-          </h2>
-        </div>
-
-        <div>
-          <button onClick={handleRestart}>Click here to restart</button>
-          <button onClick={() => handleClicked(true)}>True</button>
-          {showResult}
-        </div>
-        <div className="grid-item">
-          <Footer />
-        </div>
+      <div>
+        <button onClick={handleRestart}>Click here to restart</button>
+        <button onClick={() => handleClicked(true)}>True</button>
+        {showResult}
       </div>
     </>
   );

@@ -1,8 +1,13 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  #root {
+    padding: 0;
+  }
 }
 
 .logo {
@@ -16,21 +21,6 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
 }
 
 .card {
@@ -60,4 +50,44 @@
   flex-basis: 100%;
   flex: 1;
   justify-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.1fr 3fr 0.1fr;
+  grid-template-rows: 0.5fr 1.5fr 1.5fr 0.5fr;
+  gap: 2px 3px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Header Header Header"
+    ". Question ."
+    ". Options ."
+    "Foote Footer Footer";
+}
+
+.Header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". ."
+    ". ."
+    ". .";
+  grid-area: Header;
+}
+
+.Question {
+  grid-area: Question;
+}
+
+.Options {
+  grid-area: Options;
+}
+
+.Footer {
+  grid-area: Footer;
+  width: 100%;
+  position: sticky;
 }
