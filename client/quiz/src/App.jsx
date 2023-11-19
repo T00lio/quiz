@@ -13,8 +13,9 @@ function App() {
     const fetchData = async () => {
       try {
         const response = await reactQuestions.get("/");
-        setQuestions(response.data.data);
         console.log(response.data.data);
+
+        setQuestions(response.data.data);
       } catch (err) {
         console.log(err);
       }
@@ -77,7 +78,11 @@ function App() {
               <h2 style={{ fontSize: "2rem" }}>
                 <ul style={{ listStyle: "none" }}>
                   <li>
-                    {question.id}.{question.question}
+                    {question.question_id}.{question.question_text}
+                    <button>{question.option1}</button>
+                    <button>{question.option3}</button>
+                    <button>{question.option4}</button>
+                    <button>{question.option2}</button>
                   </li>
                 </ul>
               </h2>

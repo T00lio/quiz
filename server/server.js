@@ -7,7 +7,6 @@ const port = process.env.PORT || 3004;
 
 //middleware
 app.use((req, res, next) => {
-  console.log("middleware");
   next();
 });
 
@@ -18,36 +17,23 @@ app.use(express.json());
 //routes for questions
 
 //react questions
+
 app.get("/reactQuestions", async (req, res) => {
   try {
     const result = await db.query(
-      "SELECT a.*, b.* FROM questions AS a JOIN answers AS b ON a.question_id = b.id"
+      "SELECT q.question_id, q.question_text, a.option1,a.correct1,a.option2,a.correct2,a.option3,a.correct3,a.option4,a.correct4  " +
+        "FROM questions AS q " +
+        "JOIN answers AS a ON q.question_id = a.id"
     );
-    console.log(result);
+
     res.status(202).json({
       status: "success",
-      results: result.rows.length,
-      data: result.rows.map((row) => ({
-        id: row.question_id,
-        question: row.question_text,
-        subject: row.question_subject,
-        answers: [
-          {
-            id: row.answer_id,
-            answer1: row.answer_text,
-            isCorrect1: row.is_correct,
-            answer2: row.answer_text,
-            isCorrect2: row.is_correct,
-            answer3: row.answer_text,
-            isCorrect3: row.is_correct,
-            answer4: row.answer_text,
-            isCorrect4: row.is_correct,
-          },
-        ],
-      })),
+      results: result.length,
+      data: result.rows,
     });
   } catch (err) {
-    console.log(err);
+    console.error(err);
+    res.status(500).json({ status: "error", message: "Internal Server Error" });
   }
 });
 
