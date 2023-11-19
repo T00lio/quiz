@@ -20,7 +20,9 @@ app.use(express.json());
 //react questions
 app.get("/reactQuestions", async (req, res) => {
   try {
-    const result = await db.query("SELECT * FROM questions");
+    const result = await db.query(
+      "SELECT a.*, b.* FROM questions AS a JOIN answers AS b ON a.question_id = b.id"
+    );
     console.log(result);
     res.status(202).json({
       status: "success",
@@ -29,6 +31,19 @@ app.get("/reactQuestions", async (req, res) => {
         id: row.question_id,
         question: row.question_text,
         subject: row.question_subject,
+        answers: [
+          {
+            id: row.answer_id,
+            answer1: row.answer_text,
+            isCorrect1: row.is_correct,
+            answer2: row.answer_text,
+            isCorrect2: row.is_correct,
+            answer3: row.answer_text,
+            isCorrect3: row.is_correct,
+            answer4: row.answer_text,
+            isCorrect4: row.is_correct,
+          },
+        ],
       })),
     });
   } catch (err) {
