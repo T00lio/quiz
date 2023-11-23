@@ -14,13 +14,6 @@ function Header() {
           This app will help you memorize the top 100 react interview questions
         </p>
       </div>
-
-      <div className="col">
-        <h3 className="dashboard">Score: 10000</h3>
-        <h3 className="dashboard">Question: 10000</h3>
-        <h3 className="dashboard">Time: 10000</h3>
-        <h3 className="dashboard">user</h3>
-      </div>
     </header>
   );
 }

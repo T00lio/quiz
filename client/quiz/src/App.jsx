@@ -70,17 +70,17 @@ function App() {
       <p style={{ textAlign: "center", fontSize: "1.5rem", fontWeight: "200" }}>
         This app will help you memorize the top 100 react interview questions
       </p>
-      <div className="question">
+      <div>
         {questions.map((question, index) => {
           return (
             <div key={index}>
               <h2 style={{ fontSize: "2rem" }}>
                 <ul style={{ listStyle: "none" }}>
                   <li key={question.question_id} className="row">
-                    <div className="col">
+                    <div className="question">
                       {question.question_id}.{question.question_text}
                     </div>
-                    <div className="col">
+                    <div className="option">
                       <button className="optionButton" onClick={handleClicked}>
                         {question.option1}
                       </button>
@@ -100,14 +100,15 @@ function App() {
             </div>
           );
         })}
-        <h2 style={{ fontSize: "2rem" }}>
-          <ul style={{ listStyle: "none" }}>
-            <li>{questions.question}</li>
-          </ul>
-        </h2>
       </div>
 
-      <div>
+      <div className="Footer">
+        <div className="col">
+          <h5 className="dashboard">Score: 10000</h5>
+          <h5 className="dashboard">Question: 10000</h5>
+          <h5 className="dashboard">Time: 10000</h5>
+          <h5 className="dashboard">user</h5>
+        </div>
         <button onClick={handleRestart}>Click here to restart</button>
         <button onClick={() => handleClicked(true)}>True</button>
         {showResult}
