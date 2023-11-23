@@ -13,13 +13,12 @@ function App() {
     const fetchData = async () => {
       try {
         const response = await reactQuestions.get("/");
-        console.log(response.data.data);
         setQuestions(response.data.data);
+        console.log(response.data.data);
       } catch (err) {
         console.log(err);
       }
     };
-
     fetchData();
   }, []);
 
@@ -45,73 +44,59 @@ function App() {
     setScore(0);
     setShowResult(false);
   };
+
+  console.log(questions[number].question_text);
+
   return (
     <>
-      <header>
-        <h1
-          style={{
-            textAlign: "center",
-            alignItems: "center",
-            fontWeight: "900",
-            justifyContent: "center",
-            display: "flex",
-            fontSize: "4rem",
-          }}
-        >
-          100 React Question{" "}
-          <img
-            className="App-logo"
-            src={logo}
-            alt="react logo"
-            style={{ width: "40px", height: "40px" }}
-          ></img>
-        </h1>
-      </header>
-      <p style={{ textAlign: "center", fontSize: "1.5rem", fontWeight: "200" }}>
-        This app will help you memorize the top 100 react interview questions
-      </p>
-      <div>
-        {questions.map((question, index) => {
-          return (
-            <div key={index}>
-              <h2 style={{ fontSize: "2rem" }}>
-                <ul style={{ listStyle: "none" }}>
-                  <li key={question.question_id} className="row">
-                    <div className="question">
-                      {question.question_id}.{question.question_text}
-                    </div>
-                    <div className="option">
-                      <button className="optionButton" onClick={handleClicked}>
-                        {question.option1}
-                      </button>
-                      <button className="optionButton" onClick={handleClicked}>
-                        {question.option3}
-                      </button>
-                      <button className="optionButton" onClick={handleClicked}>
-                        {question.option4}
-                      </button>
-                      <button className="optionButton" onClick={handleClicked}>
-                        {question.option2}
-                      </button>
-                    </div>
-                  </li>
-                </ul>
-              </h2>
-            </div>
-          );
-        })}
-      </div>
-
-      <div className="Footer">
-        <div className="col">
-          <h5 className="dashboard">Score: 10000</h5>
-          <h5 className="dashboard">Question: 10000</h5>
-          <h5 className="dashboard">Time: 10000</h5>
-          <h5 className="dashboard">user</h5>
+      <div className="App">
+        <header className="Header">
+          <h1
+            style={{
+              textAlign: "center",
+              alignItems: "center",
+              fontWeight: "900",
+              justifyContent: "center",
+              display: "flex",
+              fontSize: "4rem",
+            }}
+          >
+            100 React Question{" "}
+            <img
+              className="App-logo"
+              src={logo}
+              alt="react logo"
+              style={{ width: "40px", height: "40px" }}
+            ></img>
+          </h1>
+          <p
+            style={{
+              textAlign: "center",
+              fontSize: "1.5rem",
+              fontWeight: "200",
+            }}
+          >
+            This app will help you memorize the top 100 react interview
+            questions
+          </p>{" "}
+        </header>
+        <div className="Question">
+          {" "}
+          <h1>{questions[number].question_text}</h1>
         </div>
-        <button onClick={handleRestart}>Click here to restart</button>
-        <button onClick={() => handleClicked(true)}>True</button>
-        {showResult}
+        <div className="Footer">
+          <div className="row">
+            <h5 className="dashboard">
+              Score: {score} out of: {questions.length}
+            </h5>
+            <h5 className="dashboard">Question: {questions.question_id}</h5>
+            <h5 className="dashboard">Time: 10000</h5>
+            <h5 className="dashboard">user</h5>
+          </div>
+          <button onClick={handleRestart}>Click here to restart</button>
+          <button onClick={() => handleClicked(true)}>True</button>
+          {showResult}
+        </div>
       </div>
     </>
   );
