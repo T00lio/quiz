@@ -7,6 +7,7 @@ function App() {
   const [number, setNumber] = useState(0);
   const [questions, setQuestions] = useState([]);
   const [showResult, setShowResult] = useState(false);
+  const [restultBG, setResultBG] = useState("");
   const [score, setScore] = useState(0);
 
   useEffect(() => {
@@ -43,12 +44,17 @@ function App() {
     }
     console.log(isCorrect);
 
-    const nextQuest = number + 1;
-    if (nextQuest < questions.length) {
-      setNumber(nextQuest);
-    } else {
-      setShowResult(true);
-    }
+    const newBackgroundColor = isCorrect ? "green" : "red";
+    setResultBG(newBackgroundColor);
+    setTimeout(() => {
+      setResultBG("");
+      const nextQuest = number + 1;
+      if (nextQuest < questions.length) {
+        setNumber(nextQuest);
+      } else {
+        setShowResult(true);
+      }
+    }, 2000);
   };
 
   const handleRestart = () => {
@@ -57,7 +63,6 @@ function App() {
     setShowResult(false);
   };
 
-  console.log(score);
   const questionData = questions[number];
 
   return (
@@ -86,7 +91,7 @@ function App() {
             style={{
               textAlign: "center",
               fontSize: "1.5rem",
-              fontWeight: "200",
+              fontWeight: "500",
             }}
           >
             This app will help you memorize the top 100 react interview
@@ -105,6 +110,9 @@ function App() {
           {" "}
           <h1>{questionData?.question_text}</h1>
         </section>
+        <div className="Result" style={{ backgroundColor: restultBG }}>
+          {/* <h1>good job</h1> */}
+        </div>
         <section className="Options">
           <button
             className="OptionButton"
@@ -134,12 +142,14 @@ function App() {
         <footer className="Footer">
           <div className="row">
             <div className="col">
-              <h5 className="dashboard">Question: {} number of question</h5>
+              <h5 className="dashboard">
+                Question: {number} of {questions.length}
+              </h5>
               <h5 className="dashboard">Time: 10000</h5>
               <h5 className="dashboard">user</h5>
               Score: {score} out of: {questions?.length}
             </div>
-            <h5 className="col">
+            <h5 className="col" style={{ textAlign: "center" }}>
               <button className="button" onClick={handleRestart}>
                 Click here to restart
               </button>

@@ -16,7 +16,7 @@
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
     "Header Header Header"
-    "Question . Options"
+    "Question Result Options"
     "Footer Footer Footer";
   height: 100dvh;
   width: 100dvw;
@@ -32,6 +32,14 @@
   top: 0;
   position: fixed;
   width: 100%;
+
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(42, 7, 57, 0.06047516198704106) 89%,
+    rgba(21, 54, 61, 1) 100%
+  );
+  color: white;
 }
 
 .Footer {
@@ -39,6 +47,15 @@
   width: 100%;
   position: fixed;
   bottom: 0;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(42, 7, 57, 0.06047516198704106) 89%,
+    rgba(21, 54, 61, 1) 100%
+  );
+  color: white;
+  padding: 1rem;
 }
 
 .Question {
@@ -59,8 +76,18 @@
 
 .OptionButton {
   margin: 0.5rem;
-  padding: 0.5rem;
+  padding: 1rem;
   width: 100%;
   max-width: 400px;
   font-size: large;
+}
+
+.Result {
+  grid-area: Result;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 100rem;
 }
