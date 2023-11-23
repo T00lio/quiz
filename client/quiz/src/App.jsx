@@ -42,9 +42,8 @@ function App() {
     // Update the score based on whether any answer was correct.
     if (isCorrect) {
       setScore(score + 1);
-      alert("correct! 🙌");
     } else {
-      alert("incorrect! 👎🏻");
+      setScore(score);
     }
 
     // Proceed to the next question or show the result.
@@ -107,32 +106,60 @@ function App() {
         ) : null}
         <section className="Question">
           {" "}
-          <h1>{questionData.question_text}</h1>
+          <h1>{questionData?.question_text}</h1>
         </section>
         <section className="Options">
           <button
             className="OptionButton"
-            onClick={handleClicked(questionData.correct1)}
+            onClick={() =>
+              handleClicked(
+                questionData?.correct1,
+                questionData?.correct2,
+                questionData?.correct3,
+                questionData?.correct4
+              )
+            }
           >
-            {questionData.option1}
+            {questionData?.option1}
           </button>
           <button
             className="OptionButton"
-            onClick={handleClicked(questionData.correct2)}
+            onClick={() =>
+              handleClicked(
+                questionData?.correct1,
+                questionData?.correct2,
+                questionData?.correct3,
+                questionData?.correct4
+              )
+            }
           >
-            {questionData.option2}
+            {questionData?.option2}
           </button>
           <button
             className="OptionButton"
-            onClick={handleClicked(questionData.correct3)}
+            onClick={() =>
+              handleClicked(
+                questionData?.correct1,
+                questionData?.correct2,
+                questionData?.correct3,
+                questionData?.correct4
+              )
+            }
           >
-            {questionData.option3}
+            {questionData?.option3}
           </button>
           <button
             className="OptionButton"
-            onClick={handleClicked(questionData.correct4)}
+            onClick={() =>
+              handleClicked(
+                questionData?.correct1,
+                questionData?.correct2,
+                questionData?.correct3,
+                questionData?.correct4
+              )
+            }
           >
-            {questionData.option4}
+            {questionData?.option4}
           </button>
         </section>
         <footer className="Footer">
@@ -141,7 +168,7 @@ function App() {
               <h5 className="dashboard">Question: {} number of question</h5>
               <h5 className="dashboard">Time: 10000</h5>
               <h5 className="dashboard">user</h5>
-              Score: {score} out of: {questions.length}
+              Score: {score} out of: {questions?.length}
             </div>
             <h5 className="col">
               <button className="button" onClick={handleRestart}>
