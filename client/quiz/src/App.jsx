@@ -45,8 +45,6 @@ function App() {
     setShowResult(false);
   };
 
-  console.log(questions[number].question_text);
-
   return (
     <>
       <div className="App">
