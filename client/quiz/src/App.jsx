@@ -22,7 +22,19 @@ function App() {
   }, []);
 
   const handleClicked = () => {
-    if () {
+    if (questions[number].option1 === true) {
+      setScore(score);
+      alert("incorrect! 👎🏻");
+    }
+    if (questions[number].option2 === true) {
+      setScore(score);
+      alert("incorrect! 👎🏻");
+    }
+    if (questions[number].option3 === true) {
+      setScore(score);
+      alert("incorrect! 👎🏻");
+    }
+    if (questions[number].option4 === true) {
       setScore(score);
       alert("incorrect! 👎🏻");
     } else {
