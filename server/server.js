@@ -31,6 +31,7 @@ app.get("/reactQuestions", async (req, res) => {
       results: result.length,
       data: result.rows,
     });
+    console.log(result);
   } catch (err) {
     console.error(err);
     res.status(500).json({ status: "error", message: "Internal Server Error" });

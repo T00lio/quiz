@@ -14,34 +14,40 @@ function App() {
       try {
         const response = await reactQuestions.get("/");
         setQuestions(response.data.data);
+        console.log(response.data.data);
       } catch (err) {
         console.log(err);
       }
     };
     fetchData();
   }, []);
+  const handleClicked = (correct1, correct2, correct3, correct4) => {
+    // Initially, set a flag to determine if any answer was correct.
+    let isCorrect = false;
 
-  const handleClicked = () => {
-    if (questions[number].option1 === true) {
-      setScore(score);
-      alert("incorrect! 👎🏻");
+    // Check each option and update the score if it's correct.
+    if (correct1 === "true") {
+      isCorrect = true;
     }
-    if (questions[number].option2 === true) {
-      setScore(score);
-      alert("incorrect! 👎🏻");
+    if (correct2 === "true") {
+      isCorrect = true;
     }
-    if (questions[number].option3 === true) {
-      setScore(score);
-      alert("incorrect! 👎🏻");
+    if (correct3 === "true") {
+      isCorrect = true;
     }
-    if (questions[number].option4 === true) {
-      setScore(score);
-      alert("incorrect! 👎🏻");
-    } else {
+    if (correct4 === "true") {
+      isCorrect = true;
+    }
+
+    // Update the score based on whether any answer was correct.
+    if (isCorrect) {
       setScore(score + 1);
       alert("correct! 🙌");
+    } else {
+      alert("incorrect! 👎🏻");
     }
 
+    // Proceed to the next question or show the result.
     const nextQuest = number + 1;
     if (nextQuest < questions.length) {
       setNumber(nextQuest);
@@ -55,6 +61,8 @@ function App() {
     setScore(0);
     setShowResult(false);
   };
+
+  const questionData = questions[number];
 
   return (
     <>
@@ -99,28 +107,38 @@ function App() {
         ) : null}
         <section className="Question">
           {" "}
-          <h1>{questions[number].question_text}</h1>
+          <h1>{questionData.question_text}</h1>
         </section>
         <section className="Options">
-          <button onClick={() => handleClicked(false)}>
-            {questions[number].option1}
+          <button
+            className="OptionButton"
+            onClick={handleClicked(questionData.correct1)}
+          >
+            {questionData.option1}
           </button>
-          <button className="OptionButton" onClick={() => handleClicked(false)}>
-            {questions[number].option2}
+          <button
+            className="OptionButton"
+            onClick={handleClicked(questionData.correct2)}
+          >
+            {questionData.option2}
           </button>
-          <button className="OptionButton" onClick={() => handleClicked(false)}>
-            {questions[number].option3}
+          <button
+            className="OptionButton"
+            onClick={handleClicked(questionData.correct3)}
+          >
+            {questionData.option3}
           </button>
-          <button className="OptionButton" onClick={() => handleClicked(false)}>
-            {questions[number].option4}
+          <button
+            className="OptionButton"
+            onClick={handleClicked(questionData.correct4)}
+          >
+            {questionData.option4}
           </button>
         </section>
         <footer className="Footer">
           <div className="row">
             <div className="col">
-              <h5 className="dashboard">
-                Question: {questions[number].question_id}
-              </h5>
+              <h5 className="dashboard">Question: {} number of question</h5>
               <h5 className="dashboard">Time: 10000</h5>
               <h5 className="dashboard">user</h5>
               Score: {score} out of: {questions.length}
