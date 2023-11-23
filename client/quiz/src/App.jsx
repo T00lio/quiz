@@ -21,11 +21,9 @@ function App() {
     };
     fetchData();
   }, []);
-  const handleClicked = (correct1, correct2, correct3, correct4) => {
-    // Initially, set a flag to determine if any answer was correct.
-    let isCorrect = false;
 
-    // Check each option and update the score if it's correct.
+  const handleClicked = (correct1, correct2, correct3, correct4) => {
+    let isCorrect = false;
     if (correct1 === "true") {
       isCorrect = true;
     }
@@ -38,15 +36,13 @@ function App() {
     if (correct4 === "true") {
       isCorrect = true;
     }
-
-    // Update the score based on whether any answer was correct.
     if (isCorrect) {
       setScore(score + 1);
     } else {
       setScore(score);
     }
+    console.log(isCorrect);
 
-    // Proceed to the next question or show the result.
     const nextQuest = number + 1;
     if (nextQuest < questions.length) {
       setNumber(nextQuest);
@@ -61,6 +57,7 @@ function App() {
     setShowResult(false);
   };
 
+  console.log(score);
   const questionData = questions[number];
 
   return (
@@ -111,53 +108,25 @@ function App() {
         <section className="Options">
           <button
             className="OptionButton"
-            onClick={() =>
-              handleClicked(
-                questionData?.correct1,
-                questionData?.correct2,
-                questionData?.correct3,
-                questionData?.correct4
-              )
-            }
+            onClick={() => handleClicked(questionData?.correct1)}
           >
             {questionData?.option1}
           </button>
           <button
             className="OptionButton"
-            onClick={() =>
-              handleClicked(
-                questionData?.correct1,
-                questionData?.correct2,
-                questionData?.correct3,
-                questionData?.correct4
-              )
-            }
+            onClick={() => handleClicked(questionData?.correct2)}
           >
             {questionData?.option2}
           </button>
           <button
             className="OptionButton"
-            onClick={() =>
-              handleClicked(
-                questionData?.correct1,
-                questionData?.correct2,
-                questionData?.correct3,
-                questionData?.correct4
-              )
-            }
+            onClick={() => handleClicked(questionData?.correct3)}
           >
             {questionData?.option3}
           </button>
           <button
             className="OptionButton"
-            onClick={() =>
-              handleClicked(
-                questionData?.correct1,
-                questionData?.correct2,
-                questionData?.correct3,
-                questionData?.correct4
-              )
-            }
+            onClick={() => handleClicked(questionData?.correct4)}
           >
             {questionData?.option4}
           </button>
