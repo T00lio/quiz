@@ -14,7 +14,6 @@ function App() {
       try {
         const response = await reactQuestions.get("/");
         setQuestions(response.data.data);
-        console.log(response.data.data);
       } catch (err) {
         console.log(err);
       }
