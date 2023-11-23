@@ -77,9 +77,31 @@ function App() {
             questions
           </p>{" "}
         </header>
+        {showResult === true ? (
+          <div>
+            <h2 style={{ textAlign: "center" }}>Result</h2>
+            <strong>
+              You scored {score} out of {questions.length}
+            </strong>
+          </div>
+        ) : null}
         <div className="Question">
           {" "}
-          <h1>{questions[number].question_text}</h1>
+          {/* <h1>{questions[number].question_text}</h1> */}
+        </div>
+        <div className="Options">
+          {/* <button onClick={() => handleClicked(false)}>
+            {questions[number].option1}
+          </button>
+          <button onClick={() => handleClicked(false)}>
+            {questions[number].option2}
+          </button>
+          <button onClick={() => handleClicked(false)}>
+            {questions[number].option3}
+          </button>
+          <button onClick={() => handleClicked(false)}>
+            {questions[number].option4}
+          </button> */}
         </div>
         <div className="Footer">
           <div className="row">
