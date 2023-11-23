@@ -21,8 +21,8 @@ function App() {
     fetchData();
   }, []);
 
-  const handleClicked = (isTrue) => {
-    if (isTrue === false) {
+  const handleClicked = () => {
+    if () {
       setScore(score);
       alert("incorrect! 👎🏻");
     } else {
@@ -85,37 +85,43 @@ function App() {
             </strong>
           </div>
         ) : null}
-        <div className="Question">
+        <section className="Question">
           {" "}
-          {/* <h1>{questions[number].question_text}</h1> */}
-        </div>
-        <div className="Options">
-          {/* <button onClick={() => handleClicked(false)}>
+          <h1>{questions[number].question_text}</h1>
+        </section>
+        <section className="Options">
+          <button onClick={() => handleClicked(false)}>
             {questions[number].option1}
           </button>
-          <button onClick={() => handleClicked(false)}>
+          <button className="OptionButton" onClick={() => handleClicked(false)}>
             {questions[number].option2}
           </button>
-          <button onClick={() => handleClicked(false)}>
+          <button className="OptionButton" onClick={() => handleClicked(false)}>
             {questions[number].option3}
           </button>
-          <button onClick={() => handleClicked(false)}>
+          <button className="OptionButton" onClick={() => handleClicked(false)}>
             {questions[number].option4}
-          </button> */}
-        </div>
-        <div className="Footer">
+          </button>
+        </section>
+        <footer className="Footer">
           <div className="row">
-            <h5 className="dashboard">
+            <div className="col">
+              <h5 className="dashboard">
+                Question: {questions[number].question_id}
+              </h5>
+              <h5 className="dashboard">Time: 10000</h5>
+              <h5 className="dashboard">user</h5>
               Score: {score} out of: {questions.length}
+            </div>
+            <h5 className="col">
+              <button className="button" onClick={handleRestart}>
+                Click here to restart
+              </button>
+
+              {showResult}
             </h5>
-            <h5 className="dashboard">Question: {questions.question_id}</h5>
-            <h5 className="dashboard">Time: 10000</h5>
-            <h5 className="dashboard">user</h5>
           </div>
-          <button onClick={handleRestart}>Click here to restart</button>
-          <button onClick={() => handleClicked(true)}>True</button>
-          {showResult}
-        </div>
+        </footer>
       </div>
     </>
   );
