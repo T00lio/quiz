@@ -32,13 +32,7 @@
   top: 0;
   position: fixed;
   width: 100%;
-
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(42, 7, 57, 0.06047516198704106) 89%,
-    rgba(21, 54, 61, 1) 100%
-  );
+  background: rgba(21, 54, 61, 1) 100%;
   color: white;
 }
 
@@ -47,13 +41,8 @@
   width: 100%;
   position: fixed;
   bottom: 0;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(42, 7, 57, 0.06047516198704106) 89%,
-    rgba(21, 54, 61, 1) 100%
-  );
+
+  background: rgba(21, 54, 61, 1) 100%;
   color: white;
   padding: 1rem;
 }
