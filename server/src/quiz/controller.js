@@ -1,7 +1,7 @@
 const pool = require("../../db");
 
 const getQuiz = (req, res) => {
-  pool.query("SELECT * FROM quiz", (error, results) => {
+  pool.query("SELECT * FROM questions", (error, results) => {
     if (error) {
       throw error;
     }

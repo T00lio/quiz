@@ -15,6 +15,7 @@ function App() {
       try {
         const response = await reactQuestions.get("/");
         setQuestions(response.data.data);
+        console.log(response.data.data);
       } catch (err) {
         console.log(err);
       }
@@ -24,16 +25,16 @@ function App() {
 
   const handleClicked = (correct1, correct2, correct3, correct4) => {
     let isCorrect = false;
-    if (correct1 === "true") {
+    if (correct1 === "TRUE") {
       isCorrect = true;
     }
-    if (correct2 === "true") {
+    if (correct2 === "TRUE") {
       isCorrect = true;
     }
-    if (correct3 === "true") {
+    if (correct3 === "TRUE") {
       isCorrect = true;
     }
-    if (correct4 === "true") {
+    if (correct4 === "TRUE") {
       isCorrect = true;
     }
     if (isCorrect) {
@@ -41,7 +42,6 @@ function App() {
     } else {
       setScore(score);
     }
-    console.log(isCorrect);
 
     const newBackgroundColor = isCorrect ? "green" : "red";
     setResultBG(newBackgroundColor);
@@ -107,7 +107,7 @@ function App() {
         ) : null}
         <section className="Question">
           {" "}
-          <h1>{questionData?.question_text}</h1>
+          <h1>{questionData?.question}</h1>
         </section>
         <div className="Result" style={{ backgroundColor: restultBG }}>
           {/* <h1>good job</h1> */}

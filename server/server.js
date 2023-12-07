@@ -20,11 +20,7 @@ app.use(express.json());
 
 app.get("/reactQuestions", async (req, res) => {
   try {
-    const result = await db.query(
-      "SELECT q.question_id, q.question_text, a.option1,a.correct1,a.option2,a.correct2,a.option3,a.correct3,a.option4,a.correct4  " +
-        "FROM questions AS q " +
-        "JOIN answers AS a ON q.question_id = a.id"
-    );
+    const result = await db.query("SELECT * FROM questions");
 
     res.status(202).json({
       status: "success",
