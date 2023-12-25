@@ -9,10 +9,7 @@ function App() {
   const [showResult, setShowResult] = useState(false);
   const [restultBG, setResultBG] = useState("");
   const [score, setScore] = useState(0);
-  const [button1BG, setButton1BG] = useState("");
-  const [button2BG, setButton2BG] = useState("");
-  const [button3BG, setButton3BG] = useState("");
-  const [button4BG, setButton4BG] = useState("");
+  const [buttonBG, setButtonBG] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,17 +29,16 @@ function App() {
     const isOption3Correct = correct3 === "true";
     const isOption4Correct = correct4 === "true";
 
-    // Set the background color for each button based on correctness
-    const button1BG = isOption1Correct ? "green" : "red";
-    const button2BG = isOption2Correct ? "green" : "red";
-    const button3BG = isOption3Correct ? "green" : "red";
-    const button4BG = isOption4Correct ? "green" : "red";
+    // Create an object to store the background color for each button
+    const buttonBG = {
+      button1: isOption1Correct ? "green" : "red",
+      button2: isOption2Correct ? "green" : "red",
+      button3: isOption3Correct ? "green" : "red",
+      button4: isOption4Correct ? "green" : "red",
+    };
 
-    // Update the background colors for the option buttons
-    setButton1BG(button1BG);
-    setButton2BG(button2BG);
-    setButton3BG(button3BG);
-    setButton4BG(button4BG);
+    // Update the background colors for the option buttons individually
+    setButtonBG(buttonBG);
 
     // Calculate the overall correctness
     const isCorrect =
@@ -56,10 +52,7 @@ function App() {
 
     setTimeout(() => {
       // Reset the background colors when the timer expires
-      setButton1BG("");
-      setButton2BG("");
-      setButton3BG("");
-      setButton4BG("");
+      setButtonBG({});
       setResultBG("");
 
       const nextQuest = number + 1;
@@ -125,29 +118,57 @@ function App() {
           <h1>{questionData?.question_text}</h1>
           <button
             className="OptionButton"
-            style={{ backgroundColor: button1BG }}
-            onClick={() => handleClicked(questionData?.correct1)}
+            style={{ backgroundColor: buttonBG.button1 }}
+            onClick={() =>
+              handleClicked(
+                questionData?.correct1,
+                questionData?.correct2,
+                questionData?.correct3,
+                questionData?.correct4
+              )
+            }
           >
             {questionData?.option1}
           </button>
           <button
             className="OptionButton"
-            style={{ backgroundColor: button2BG }}
-            onClick={() => handleClicked(questionData?.correct2)}
+            style={{ backgroundColor: buttonBG.button2 }}
+            onClick={() =>
+              handleClicked(
+                questionData?.correct1,
+                questionData?.correct2,
+                questionData?.correct3,
+                questionData?.correct4
+              )
+            }
           >
             {questionData?.option2}
           </button>
           <button
             className="OptionButton"
-            style={{ backgroundColor: button3BG }}
-            onClick={() => handleClicked(questionData?.correct3)}
+            style={{ backgroundColor: buttonBG.button3 }}
+            onClick={() =>
+              handleClicked(
+                questionData?.correct1,
+                questionData?.correct2,
+                questionData?.correct3,
+                questionData?.correct4
+              )
+            }
           >
             {questionData?.option3}
           </button>
           <button
             className="OptionButton"
-            style={{ backgroundColor: button4BG }}
-            onClick={() => handleClicked(questionData?.correct4)}
+            style={{ backgroundColor: buttonBG.button4 }}
+            onClick={() =>
+              handleClicked(
+                questionData?.correct1,
+                questionData?.correct2,
+                questionData?.correct3,
+                questionData?.correct4
+              )
+            }
           >
             {questionData?.option4}
           </button>
