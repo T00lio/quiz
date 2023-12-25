@@ -4,6 +4,11 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const port = process.env.PORT || 3004;
+const { Sequelize } = require("sequelize");
+const sequelize = new Sequelize("questions", "tuliosalvatierra", "1234", {
+  host: "/tmp",
+  dialect: "postgres",
+});
 
 //middleware
 app.use((req, res, next) => {
@@ -98,6 +103,12 @@ app.post("/user:id", (req, res) => {
 //app  server
 
 app.listen(port, () => {
+  try {
+    sequelize.authenticate();
+    console.log("Connection has been established successfully.");
+  } catch (err) {
+    console.error("Unable to connect to the database:", err);
+  }
   console.log(`app listening at http://localhost:${port}`);
 });
 
