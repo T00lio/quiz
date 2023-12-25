@@ -5,11 +5,16 @@ const app = express();
 const cors = require("cors");
 const port = process.env.PORT || 3004;
 const { Sequelize } = require("sequelize");
-const sequelize = new Sequelize("questions", "tuliosalvatierra", "1234", {
-  host: "/tmp",
-  dialect: "postgres",
-});
-
+const sequelize = new Sequelize(
+  process.env.PGDATABASE,
+  process.env.PGUSER,
+  process.env.PGPASSWORD,
+  {
+    host: process.env.PGHOST,
+    dialect: "postgres",
+    // Add any other necessary configuration options
+  }
+);
 //middleware
 app.use((req, res, next) => {
   next();
@@ -23,6 +28,26 @@ app.use(express.json());
 
 //react questions
 
+//sequelize db
+const connectDb = async () => {
+  try {
+    await sequelize.authenticate();
+    console.log("Connection has been established successfully.");
+  } catch (error) {
+    console.error("Unable to connect to the database:", err);
+  }
+};
+
+(async () => {
+  await connectDb();
+  console.log("hello");
+})();
+
+app.get("/api/reactQuestions", async (req, res) => {
+  res.json({ message: "Hello from server!" });
+});
+
+//regular db
 app.get("/reactQuestions", async (req, res) => {
   try {
     const result = await db.query(
