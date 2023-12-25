@@ -12,8 +12,8 @@
 
 .App {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 0.25fr 1.75fr 0.25fr;
+  grid-template-rows: 1fr 2fr 1fr;
   grid-template-areas:
     "Header Header Header"
     "Question Result Options"
@@ -67,7 +67,6 @@
   margin: 0.5rem;
   padding: 1rem;
   width: 100%;
-  max-width: 400px;
   font-size: large;
 }
 
@@ -79,4 +78,8 @@
   align-items: center;
   padding: 1rem;
   border-radius: 100rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: auto;
 }

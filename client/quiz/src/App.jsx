@@ -9,6 +9,10 @@ function App() {
   const [showResult, setShowResult] = useState(false);
   const [restultBG, setResultBG] = useState("");
   const [score, setScore] = useState(0);
+  const [button1BG, setButton1BG] = useState("");
+  const [button2BG, setButton2BG] = useState("");
+  const [button3BG, setButton3BG] = useState("");
+  const [button4BG, setButton4BG] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,30 +27,41 @@ function App() {
   }, []);
 
   const handleClicked = (correct1, correct2, correct3, correct4) => {
-    let isCorrect = false;
-    if (correct1 === "true") {
-      isCorrect = true;
-    }
-    if (correct2 === "true") {
-      isCorrect = true;
-    }
-    if (correct3 === "true") {
-      isCorrect = true;
-    }
-    if (correct4 === "true") {
-      isCorrect = true;
-    }
-    if (isCorrect) {
-      setScore(score + 1);
-    } else {
-      setScore(score);
-    }
-    console.log(isCorrect);
+    const isOption1Correct = correct1 === "true";
+    const isOption2Correct = correct2 === "true";
+    const isOption3Correct = correct3 === "true";
+    const isOption4Correct = correct4 === "true";
 
-    const newBackgroundColor = isCorrect ? "green" : "red";
-    setResultBG(newBackgroundColor);
+    // Set the background color for each button based on correctness
+    const button1BG = isOption1Correct ? "green" : "red";
+    const button2BG = isOption2Correct ? "green" : "red";
+    const button3BG = isOption3Correct ? "green" : "red";
+    const button4BG = isOption4Correct ? "green" : "red";
+
+    // Update the background colors for the option buttons
+    setButton1BG(button1BG);
+    setButton2BG(button2BG);
+    setButton3BG(button3BG);
+    setButton4BG(button4BG);
+
+    // Calculate the overall correctness
+    const isCorrect =
+      isOption1Correct ||
+      isOption2Correct ||
+      isOption3Correct ||
+      isOption4Correct;
+
+    // Set the overall background color based on correctness
+    setResultBG(isCorrect ? "green" : "red");
+
     setTimeout(() => {
+      // Reset the background colors when the timer expires
+      setButton1BG("");
+      setButton2BG("");
+      setButton3BG("");
+      setButton4BG("");
       setResultBG("");
+
       const nextQuest = number + 1;
       if (nextQuest < questions.length) {
         setNumber(nextQuest);
@@ -105,39 +120,39 @@ function App() {
             </strong>
           </div>
         ) : null}
-        <section className="Question">
+        <section className="Result">
           {" "}
           <h1>{questionData?.question_text}</h1>
-        </section>
-        <div className="Result" style={{ backgroundColor: restultBG }}>
-          {/* <h1>good job</h1> */}
-        </div>
-        <section className="Options">
           <button
             className="OptionButton"
+            style={{ backgroundColor: button1BG }}
             onClick={() => handleClicked(questionData?.correct1)}
           >
             {questionData?.option1}
           </button>
           <button
             className="OptionButton"
+            style={{ backgroundColor: button2BG }}
             onClick={() => handleClicked(questionData?.correct2)}
           >
             {questionData?.option2}
           </button>
           <button
             className="OptionButton"
+            style={{ backgroundColor: button3BG }}
             onClick={() => handleClicked(questionData?.correct3)}
           >
             {questionData?.option3}
           </button>
           <button
             className="OptionButton"
+            style={{ backgroundColor: button4BG }}
             onClick={() => handleClicked(questionData?.correct4)}
           >
             {questionData?.option4}
           </button>
         </section>
+
         <footer className="Footer">
           <div className="row">
             <div className="col">
