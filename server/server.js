@@ -5,16 +5,8 @@ const app = express();
 const cors = require("cors");
 const port = process.env.PORT || 3004;
 const { Sequelize } = require("sequelize");
-const sequelize = new Sequelize(
-  process.env.PGDATABASE,
-  process.env.PGUSER,
-  process.env.PGPASSWORD,
-  {
-    host: process.env.PGHOST,
-    dialect: "postgres",
-    // Add any other necessary configuration options
-  }
-);
+const csv = require("csv-parser");
+const fs = require("fs");
 
 app.use(cors());
 
@@ -24,6 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // router
 const router = require("../server/src/routes/routes.js");
+const question = require("./models/question.js");
 app.use("/api/question", router);
 //middleware
 app.use((req, res, next) => {
@@ -35,6 +28,24 @@ var corsOptions = {
 };
 
 //react questions
+
+// scrip to loaad data from csv to postgresql
+app.get("/", async (req, res) => {
+  try {
+    const stream = fs
+      .createReadStream("answers.csv")
+      .pipe(csv())
+      .on("data", async (row) => {
+        await question.create(row);
+      })
+      .on("end", () => {
+        console.log("CSV file successfully processed");
+      });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ status: "error", message: "Internal Server Error" });
+  }
+});
 
 //sequelize db version
 
