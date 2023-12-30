@@ -1,47 +1,36 @@
-const fs = require("fs");
-const path = require("path");
-const Sequelize = require("sequelize");
-const { sequelize } = require("../models");
-const config = require("../config/config");
+const config = require("../config/config.js");
 
-const basename = path.basename(__filename);
-const db = {};
+const { Sequelize, DataTypes } = require("sequelize");
 
 const sequelize = new Sequelize(
-  process.env.PGDATABASE,
-  process.env.PGUSER,
-  process.env.PGPASSWORD,
+  config.development.database,
+  config.development.username,
+  config.development.password,
   {
-    host: process.env.PGHOST,
+    host: config.development.host,
     dialect: "postgres",
-    // Add any other necessary configuration options
+    pool: {
+      max: 5,
+      min: 0,
+      idle: 10000,
+    },
   }
 );
 
-fs.readdirSync(__dirname)
-  .filter((file) => {
-    return (
-      file.indexOf(".") !== 0 &&
-      file !== basename &&
-      file.slice(-3) === ".js" &&
-      file.indexOf(".test.js") === -1
-    );
-  })
-  .forEach((file) => {
-    const model = require(path.join(__dirname, file))(
-      sequelize,
-      Sequelize.DataTypes
-    );
-    db[model.name] = model;
-  });
+sequelize.authenticate().then(
+  () => console.log("Connected to questions database"),
+  (err) => console.log(err)
+);
 
-Object.keys(db).forEach((modelName) => {
-  if (db[modelName].associate) {
-    db[modelName].associate(db);
-  }
-});
-
-db.sequelize = sequelize;
+const db = {};
 db.Sequelize = Sequelize;
+db.sequelize = sequelize;
+
+db.questions = require("./question.js")(sequelize, DataTypes);
+db.answers = require("./answer.js")(sequelize, DataTypes);
+
+db.sequelize.sync({ force: false }).then(() => {
+  console.log("Drop and re-sync db.");
+});
 
 module.exports = db;

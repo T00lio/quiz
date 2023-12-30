@@ -1,14 +1,18 @@
-const pool = require("../../db");
+const db = require("../../models");
 
-const getQuiz = (req, res) => {
-  pool.query("SELECT * FROM quiz", (error, results) => {
-    if (error) {
-      throw error;
-    }
-    res.status(200).json(results.rows);
-  });
+// create main model
+
+const Question = db.questions;
+const Answer = db.answers;
+
+// main controller
+
+const getQuestions = async (req, res) => {
+  let questions = await Question.findAll({});
+  res.status(200).send(questions);
+  console.log(questions);
 };
 
 module.exports = {
-  getQuiz,
+  getQuestions,
 };

@@ -5,6 +5,11 @@ module.exports = {
     database: "questions",
     host: "/tmp",
     dialect: "postgres",
+    pool: {
+      max: 5,
+      min: 0,
+      idle: 10000,
+    },
   },
   test: {
     username: "tuliosalvatierra",
@@ -12,6 +17,11 @@ module.exports = {
     database: "questions",
     host: "/tmp",
     dialect: "postgres",
+    pool: {
+      max: 5,
+      min: 0,
+      idle: 10000,
+    },
   },
   production: {
     username: "tuliosalvatierra",
@@ -19,5 +29,10 @@ module.exports = {
     database: "questions",
     host: "/tmp",
     dialect: "postgres",
+    pool: {
+      max: 5,
+      min: 0,
+      idle: 10000,
+    },
   },
 };

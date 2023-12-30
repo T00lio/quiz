@@ -15,39 +15,41 @@ const sequelize = new Sequelize(
     // Add any other necessary configuration options
   }
 );
-//middleware
-app.use((req, res, next) => {
-  next();
-});
 
 app.use(cors());
 
 app.use(express.json());
 
-//routes for questions
+app.use(express.urlencoded({ extended: true }));
+
+// router
+const router = require("../server/src/routes/routes.js");
+app.use("/api/question", router);
+//middleware
+app.use((req, res, next) => {
+  next();
+});
+
+var corsOptions = {
+  origin: "http://localhost:3004",
+};
 
 //react questions
 
-//sequelize db
-const connectDb = async () => {
+//sequelize db version
+
+app.get("/", async (req, res) => {
   try {
-    await sequelize.authenticate();
-    console.log("Connection has been established successfully.");
-  } catch (error) {
-    console.error("Unable to connect to the database:", err);
+    res.json({ message: "Hello from api!" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ status: "error", message: "Internal Server Error" });
   }
-};
-
-(async () => {
-  await connectDb();
-  console.log("hello");
-})();
-
-app.get("/api/reactQuestions", async (req, res) => {
-  res.json({ message: "Hello from server!" });
 });
 
-//regular db
+// db connection
+
+//regular db version
 app.get("/reactQuestions", async (req, res) => {
   try {
     const result = await db.query(
@@ -68,72 +70,9 @@ app.get("/reactQuestions", async (req, res) => {
   }
 });
 
-//js questions
-app.get("/jsQuestions", (req, res) => {
-  res.status(202).json({
-    status: "success",
-    data: {
-      question: "What is the capital of France?",
-      answers: ["New York", "London", "Paris", "Dublin"],
-    },
-  });
-});
-
-//html questions
-
-app.get("/htmlQuestions", (req, res) => {
-  res.status(202).json({
-    status: "success",
-    data: {
-      question: "What is the capital of France?",
-      answers: ["New York", "London", "Paris", "Dublin"],
-    },
-  });
-});
-
-//css questions
-
-app.get("/cssQuestions", (req, res) => {
-  res.status(202).json({
-    status: "success",
-    data: {
-      question: "What is the capital of France?",
-      answers: ["New York", "London", "Paris", "Dublin"],
-    },
-  });
-});
-
-//routes for users
-
-app.get("/user:id", (req, res) => {
-  res.status(202).json({
-    status: "success",
-    data: {
-      username: "John Doe",
-      score: 0,
-    },
-  });
-});
-
-app.post("/user:id", (req, res) => {
-  res.status(202).json({
-    status: "success",
-    data: {
-      username: "John Doe",
-      score: 0,
-    },
-  });
-});
-
 //app  server
 
 app.listen(port, () => {
-  try {
-    sequelize.authenticate();
-    console.log("Connection has been established successfully.");
-  } catch (err) {
-    console.error("Unable to connect to the database:", err);
-  }
   console.log(`app listening at http://localhost:${port}`);
 });
 
