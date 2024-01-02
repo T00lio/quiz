@@ -1,0 +1,101 @@
+question_id,question_text,questions_subject
+1,What is React.js?,React
+2,What are the key features of React.js?,React
+3,What is JSX?,React
+4,What is the significance of the virtual DOM in React.js?,React
+5,What is the difference between a functional component and a class component in React.js?,React
+6,What is the purpose of the constructor in a React component?,React
+7,What is state in React.js?,React
+8,What is the difference between state and props in React.js?,React
+9,What is a controlled component?,React
+10,What are React lifecycle methods?,React
+11,What is the significance of the render() method in React.js?,React
+12,What is the purpose of keys in React lists?,React
+13,What is context in React.js?,React
+14,What are higher-order components (HOCs) in React.js?,React
+15,What are React hooks?,React
+16,What are the basic rules of hooks?,React
+17,What is the useState hook used for?,React
+18,What is the useEffect hook used for?,React
+19,What is the difference between useCallback and useMemo hooks?,React
+20,What is React Router?,React
+21,What is Redux?,React
+22,What is the purpose of actions in Redux?,React
+23,What are reducers in Redux?,React
+24,What is the connect function in Redux?,React
+25,What is the purpose of middleware in Redux?,React
+26,What is Redux Thunk?,React
+27,What is React Native?,React
+28,What is the difference between React and React Native?,React
+29,What are React Native components?,React
+30,What is the purpose of StyleSheet in React Native?,React
+31,What is the difference between state and props in React Native?,React
+32,What is the purpose of AsyncStorage in React Native?,React
+33,What is the purpose of the Expo framework in React Native?,React
+34,What is the purpose of the shouldComponentUpdate() method?,React
+35,What is the React DevTools?,React
+36,What is the purpose of the key prop in React?,React
+37,What are the different ways to style components in React?,React
+38,What is the purpose of React Fragments?,React
+39,What are controlled components in React forms?,React
+40,What is the purpose of the children prop in React?,React
+41,What is the difference between shallow rendering and full rendering in React testing?,React
+42,What are React portals?,React
+43,What is the purpose of the React.memo() function?,React
+44,What are the differences between a controlled component and an uncontrolled component?,React
+45,What is the purpose of error boundaries in React?,React
+46,What is the React.StrictMode?,React
+47,What is the purpose of the React.Fragment component?,React
+48,"What is the significance of the ""key"" attribute when rendering an array of components?",React
+49,What is the useReducer hook in React?,React
+50,What is the purpose of the useContext hook in React?,React
+51,What is the difference between React and ReactDOM?,React
+52,What is the purpose of React.createRef()?,React
+53,What is the purpose of the forwardRef() function?,React
+54,What is the purpose of React.lazy() and Suspense in React?,React
+55,What is the purpose of the useImperativeHandle() hook?,React
+56,What is the purpose of the useLayoutEffect() hook?,React
+57,What is the purpose of the useDebugValue() hook?,React
+58,What is the purpose of the memo() function in React?,React
+59,What is the purpose of the create-react-app tool?,React
+60,What is the purpose of the React Developer Tools extension?,React
+61,What is the purpose of the shouldComponentUpdate() method in React class components?,React
+62,What is the purpose of the componentWillUnmount() method in React class components?,React
+63,What is the purpose of the componentDidCatch() method in React class components?,React
+64,What is the purpose of the getDerivedStateFromProps() method in React class components?,React
+65,What is the purpose of the getSnapshotBeforeUpdate() method in React class components?,React
+66,What is the purpose of the ReactDOMServer package in React?,React
+67,What is the purpose of the ReactDOM.hydrate() method?,React
+68,What are some benefits of using React for web development?,React
+69,What are some limitations or challenges of using React?,React
+70,How does React differ from other JavaScript frameworks like Angular or Vue?,React
+71,What are some best practices for optimizing performance in React applications?,React
+72,How can you handle forms in React?,React
+73,How can you handle routing in React?,React
+74,What is Redux and how does it work with React?,React
+75,What is React Native and how is it different from React?,React
+76,What is the purpose of the useState() hook in React?,React
+77,What is the purpose of the useEffect() hook in React?,React
+78,What is the purpose of the useContext() hook in React?,React
+79,What is the purpose of the useReducer() hook in React?,React
+80,What is the purpose of the useRef() hook in React?,React
+81,What is the purpose of the useMemo() hook in React?,React
+82,What is the purpose of the useCallback() hook in React?,React
+83,What is server-side rendering (SSR) in React?,React
+84,What are some common ways to optimize performance in React applications?,React
+85,What is the purpose of React.memo() in functional components?,React
+86,How can you optimize the rendering of a large list of items in React?,React
+87,What is the purpose of the componentDidCatch() method in React class components?,React
+88,How can you pass data between components in React?,React
+89,"What are React keys, and why are they important?",React
+90,"What is prop drilling, and how can it be avoided in React?",React
+91,How can you handle forms with validation in React?,React
+92,What are the benefits of using controlled components in forms?,React
+93,How can you implement lazy loading in React for code splitting?,React
+94,"What is the significance of the ""key"" attribute in React lists?",React
+95,How can you prevent unnecessary re-renders in functional components?,React
+96,What is the purpose of the useTransition() hook in React?,React
+97,What is the purpose of the useQuery() hook in React Query?,React
+98,How do you handle side effects in functional components in React?,React
+99,What is the purpose of the useMutation() hook in React Query?,React
+100,What is the purpose of the useInfiniteQuery() hook in React Query?,React
