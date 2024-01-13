@@ -9,11 +9,6 @@ const sequelize = new Sequelize(
   {
     host: config.development.host,
     dialect: "postgres",
-    pool: {
-      max: 5,
-      min: 0,
-      idle: 10000,
-    },
   }
 );
 

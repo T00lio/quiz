@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
+    "start-debug": "nodemon --inspect-brk load-questions.js",
     "load-questions": "node load-questions.js"
   },
   "author": "",
