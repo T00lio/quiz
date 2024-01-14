@@ -7,15 +7,16 @@ function App() {
   const [number, setNumber] = useState(0);
   const [questions, setQuestions] = useState([]);
   const [showResult, setShowResult] = useState(false);
-  const [restultBG, setResultBG] = useState("");
+  const [, setResultBG] = useState("");
   const [score, setScore] = useState(0);
   const [buttonBG, setButtonBG] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await reactQuestions.get("/");
+        const response = await reactQuestions.get("/api/questions");
         setQuestions(response.data.data);
+        console.log(setQuestions);
       } catch (err) {
         console.log(err);
       }
@@ -70,7 +71,7 @@ function App() {
     setShowResult(false);
   };
 
-  const questionData = questions[number];
+  // const questionData = questions[number];
 
   return (
     <>
@@ -115,62 +116,58 @@ function App() {
         ) : null}
         <section className="Result">
           {" "}
-          <h1>{questionData?.question_text}</h1>
+          {/* <h1>{questionData?.question_text}</h1> */}
           <button
             className="OptionButton"
             style={{ backgroundColor: buttonBG.button1 }}
             onClick={() =>
-              handleClicked(
-                questionData?.correct1,
-                questionData?.correct2,
-                questionData?.correct3,
-                questionData?.correct4
-              )
+              handleClicked()
+              // questionData?.correct1,
+              // questionData?.correct2,
+              // questionData?.correct3,
+              // questionData?.correct4
             }
           >
-            {questionData?.option1}
+            {/* {questionData?.option1} */}
           </button>
           <button
             className="OptionButton"
             style={{ backgroundColor: buttonBG.button2 }}
             onClick={() =>
-              handleClicked(
-                questionData?.correct1,
-                questionData?.correct2,
-                questionData?.correct3,
-                questionData?.correct4
-              )
+              handleClicked()
+              // questionData?.correct1,
+              // questionData?.correct2,
+              // questionData?.correct3,
+              // questionData?.correct4
             }
           >
-            {questionData?.option2}
+            {/* {questionData?.option2} */}
           </button>
           <button
             className="OptionButton"
             style={{ backgroundColor: buttonBG.button3 }}
             onClick={() =>
-              handleClicked(
-                questionData?.correct1,
-                questionData?.correct2,
-                questionData?.correct3,
-                questionData?.correct4
-              )
+              handleClicked()
+              // questionData?.correct1,
+              // questionData?.correct2,
+              // questionData?.correct3,
+              // questionData?.correct4
             }
           >
-            {questionData?.option3}
+            {/* {questionData?.option3} */}
           </button>
           <button
             className="OptionButton"
             style={{ backgroundColor: buttonBG.button4 }}
             onClick={() =>
-              handleClicked(
-                questionData?.correct1,
-                questionData?.correct2,
-                questionData?.correct3,
-                questionData?.correct4
-              )
+              handleClicked()
+              // questionData?.correct1,
+              // questionData?.correct2,
+              // questionData?.correct3,
+              // questionData?.correct4
             }
           >
-            {questionData?.option4}
+            {/* {questionData?.option4} */}
           </button>
         </section>
 

@@ -41,11 +41,6 @@ app.get("/", async (req, res) => {
   }
 });
 
-// db connection
-
-//regular db version
-app.get("/reactQuestions", questionsController.getQuestions);
-
 //app  server
 
 app.listen(port, () => {
