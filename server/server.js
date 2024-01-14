@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 });
 
 var corsOptions = {
-  origin: "http://localhost:3004",
+  origin: `http://localhost:${port}`,
 };
 
 //react questions
