@@ -16,7 +16,7 @@ function App() {
       try {
         const response = await reactQuestions.get("/api/questions");
         setQuestions(response.data.data);
-        console.log(setQuestions);
+        console.log(response.data.data);
       } catch (err) {
         console.log(err);
       }
@@ -120,8 +120,8 @@ function App() {
           <button
             className="OptionButton"
             style={{ backgroundColor: buttonBG.button1 }}
-            onClick={() =>
-              handleClicked()
+            onClick={
+              () => handleClicked()
               // questionData?.correct1,
               // questionData?.correct2,
               // questionData?.correct3,
@@ -133,8 +133,8 @@ function App() {
           <button
             className="OptionButton"
             style={{ backgroundColor: buttonBG.button2 }}
-            onClick={() =>
-              handleClicked()
+            onClick={
+              () => handleClicked()
               // questionData?.correct1,
               // questionData?.correct2,
               // questionData?.correct3,
@@ -146,8 +146,8 @@ function App() {
           <button
             className="OptionButton"
             style={{ backgroundColor: buttonBG.button3 }}
-            onClick={() =>
-              handleClicked()
+            onClick={
+              () => handleClicked()
               // questionData?.correct1,
               // questionData?.correct2,
               // questionData?.correct3,
@@ -159,8 +159,8 @@ function App() {
           <button
             className="OptionButton"
             style={{ backgroundColor: buttonBG.button4 }}
-            onClick={() =>
-              handleClicked()
+            onClick={
+              () => handleClicked()
               // questionData?.correct1,
               // questionData?.correct2,
               // questionData?.correct3,

@@ -2,24 +2,31 @@ const express = require("express");
 const csv = require("csv-parser");
 const fs = require("fs");
 const app = express();
-const { sequelize, questions } = require("../server/models/index.js");
+const { sequelize, answers } = require("../server/models/index.js");
 const port = process.env.PORT || 3005;
 
 app.get("/", async (req, res) => {
   try {
-    fs.createReadStream("./answers.csv")
+    const rows = [];
+    fs.createReadStream("./answers - React.csv")
       .pipe(csv())
-      .on("data", async (row) => {
-        await questions?.create(row);
-        console.log(row);
+      .on("data", (row) => {
+        rows.push(row); // Collect rows in an array
       })
-      .on("end", () => {
+      .on("end", async () => {
         console.log("CSV file successfully processed");
-      });
 
-    res
-      .status(200)
-      .json({ status: "success", message: "Rows added to the database model" });
+        // Process each row sequentially
+        for (const row of rows) {
+          console.log(row);
+          await answers.create(row);
+        }
+
+        res.status(200).json({
+          status: "success",
+          message: "Rows added to the database model",
+        });
+      });
   } catch (err) {
     console.error(err);
     res.status(500).json({
@@ -29,7 +36,7 @@ app.get("/", async (req, res) => {
   }
 });
 
-// Inicia el servidor
+// Start the server
 app.listen(port, async () => {
-  console.log("Database connection established.");
+  console.log(`Server listening on port ${port}`);
 });

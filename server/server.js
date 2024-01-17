@@ -46,6 +46,3 @@ app.get("/", async (req, res) => {
 app.listen(port, () => {
   console.log(`app listening at http://localhost:${port}`);
 });
-
-// reponsible for serving the client
-// Path: server/server.js

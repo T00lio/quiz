@@ -9,8 +9,10 @@ const Answer = db.answers;
 
 const getQuestions = async (req, res) => {
   try {
-    const questions = await Question.findAll({});
-    res.status(200).send(questions);
+    const question = await Question.findAll({});
+    const answer = await Answer.findAll({});
+    res.status(200).send(answer);
+    console.log(res);
   } catch (err) {
     console.error(err);
     res.status(500).send({ message: "Error retrieving questions" });

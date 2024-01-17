@@ -21,7 +21,7 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.questions = require("./question.js")(sequelize, DataTypes);
+// db.questions = require("./question.js")(sequelize, DataTypes);
 db.answers = require("./answer.js")(sequelize, DataTypes);
 
 db.sequelize.sync({ force: false }).then(() => {
