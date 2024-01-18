@@ -2,14 +2,14 @@ const db = require("../models");
 
 // create main model
 
-const Question = db.questions;
+// const Question = db.questions;
 const Answer = db.answers;
 
 // main controller
 
 const getQuestions = async (req, res) => {
   try {
-    const question = await Question.findAll({});
+    // const question = await Question.findAll({});
     const answer = await Answer.findAll({});
     res.status(200).send(answer);
     console.log(res);
