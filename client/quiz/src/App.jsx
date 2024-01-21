@@ -7,16 +7,20 @@ function App() {
   const [number, setNumber] = useState(0);
   const [questions, setQuestions] = useState([]);
   const [showResult, setShowResult] = useState(false);
-  const [, setResultBG] = useState("");
   const [score, setScore] = useState(0);
-  const [buttonBG, setButtonBG] = useState({});
+  const [buttonBG, setButtonBG] = useState({
+    button1: "",
+    button2: "",
+    button3: "",
+    button4: "",
+  });
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await reactQuestions.get("/api/questions");
-        setQuestions(response.data.data);
-        console.log(response.data.data);
+        setQuestions(response.data);
+        console.log(response.data);
       } catch (err) {
         console.log(err);
       }
@@ -24,45 +28,30 @@ function App() {
     fetchData();
   }, []);
 
-  const handleClicked = (correct1, correct2, correct3, correct4) => {
-    const isOption1Correct = correct1 === "true";
-    const isOption2Correct = correct2 === "true";
-    const isOption3Correct = correct3 === "true";
-    const isOption4Correct = correct4 === "true";
+  const handleClicked = (optionIndex) => {
+    const currentQuestion = questions[number];
+    let newButtonBG = {};
 
-    // Create an object to store the background color for each button
-    const buttonBG = {
-      button1: isOption1Correct ? "green" : "red",
-      button2: isOption2Correct ? "green" : "red",
-      button3: isOption3Correct ? "green" : "red",
-      button4: isOption4Correct ? "green" : "red",
-    };
+    for (let i = 1; i <= 4; i++) {
+      if (i === optionIndex) {
+        newButtonBG[`button${i}`] =
+          currentQuestion[`correct${i}`] === "TRUE" ? "green" : "red";
 
-    // Update the background colors for the option buttons individually
-    setButtonBG(buttonBG);
+        setButtonBG(newButtonBG);
+        if (currentQuestion[`correct${i}`] === "TRUE") {
+          setScore(score + 1);
+        }
 
-    // Calculate the overall correctness
-    const isCorrect =
-      isOption1Correct ||
-      isOption2Correct ||
-      isOption3Correct ||
-      isOption4Correct;
-
-    // Set the overall background color based on correctness
-    setResultBG(isCorrect ? "green" : "red");
-
-    setTimeout(() => {
-      // Reset the background colors when the timer expires
-      setButtonBG({});
-      setResultBG("");
-
-      const nextQuest = number + 1;
-      if (nextQuest < questions.length) {
-        setNumber(nextQuest);
-      } else {
-        setShowResult(true);
+        setTimeout(() => {
+          if (number + 1 < questions.length) {
+            setNumber(number + 1);
+            setButtonBG({ button1: "", button2: "", button3: "", button4: "" });
+          } else {
+            setShowResult(true);
+          }
+        }, 1500);
       }
-    }, 1500);
+    }
   };
 
   const handleRestart = () => {
@@ -71,11 +60,15 @@ function App() {
     setShowResult(false);
   };
 
-  // const questionData = questions[number];
+  if (!questions.length) return null;
+
+  const currentQuestion = questions[number];
+  console.log(currentQuestion);
 
   return (
     <>
       <div className="App">
+        {/* app header */}
         <header className="Header">
           <h1
             style={{
@@ -87,7 +80,7 @@ function App() {
               fontSize: "4rem",
             }}
           >
-            100 React Question{" "}
+            100 React Questions{" "}
             <img
               className="App-logo"
               src={logo}
@@ -102,90 +95,57 @@ function App() {
               fontWeight: "500",
             }}
           >
-            This app will help you memorize the top 100 react interview
-            questions
+            This app will help you memorize the top 100 interview questions in
+            React, HTML, CSS & Javascript
           </p>{" "}
         </header>
+        {/******************  quiz section************* */}
         {showResult === true ? (
-          <div>
-            <h2 style={{ textAlign: "center" }}>Result</h2>
-            <strong>
-              You scored {score} out of {questions.length}
-            </strong>
-          </div>
-        ) : null}
-        <section className="Result">
-          {" "}
-          {/* <h1>{questionData?.question_text}</h1> */}
-          <button
-            className="OptionButton"
-            style={{ backgroundColor: buttonBG.button1 }}
-            onClick={
-              () => handleClicked()
-              // questionData?.correct1,
-              // questionData?.correct2,
-              // questionData?.correct3,
-              // questionData?.correct4
-            }
-          >
-            {/* {questionData?.option1} */}
-          </button>
-          <button
-            className="OptionButton"
-            style={{ backgroundColor: buttonBG.button2 }}
-            onClick={
-              () => handleClicked()
-              // questionData?.correct1,
-              // questionData?.correct2,
-              // questionData?.correct3,
-              // questionData?.correct4
-            }
-          >
-            {/* {questionData?.option2} */}
-          </button>
-          <button
-            className="OptionButton"
-            style={{ backgroundColor: buttonBG.button3 }}
-            onClick={
-              () => handleClicked()
-              // questionData?.correct1,
-              // questionData?.correct2,
-              // questionData?.correct3,
-              // questionData?.correct4
-            }
-          >
-            {/* {questionData?.option3} */}
-          </button>
-          <button
-            className="OptionButton"
-            style={{ backgroundColor: buttonBG.button4 }}
-            onClick={
-              () => handleClicked()
-              // questionData?.correct1,
-              // questionData?.correct2,
-              // questionData?.correct3,
-              // questionData?.correct4
-            }
-          >
-            {/* {questionData?.option4} */}
-          </button>
-        </section>
+          <section className="quizSection">
+            <h1 className="Result">Congratulations!</h1>
+            <h3 className="Result">You successfully completed this quiz</h3>
 
+            <h1 className="Result">
+              Your Score is <bold>{score}</bold> out of{" "}
+              <bold>{questions.length}</bold>
+            </h1>
+            <h3 className="Result">Thank you for taking the quiz!</h3>
+          </section>
+        ) : (
+          <section className="quizSection">
+            {/*************** question text ****************/}
+            <h1 className="current-Question">
+              {currentQuestion.id}.{currentQuestion.question}
+            </h1>
+
+            {/*************** option buttons ****************/}
+            {[1, 2, 3, 4].map((optionIndex) => (
+              <button
+                className="OptionButton"
+                key={optionIndex}
+                onClick={() => handleClicked(optionIndex)}
+                style={{ backgroundColor: buttonBG[`button${optionIndex}`] }}
+              >
+                {currentQuestion[`option${optionIndex}`]}
+              </button>
+            ))}
+          </section>
+        )}
+        {/***************** app footer ****************/}
         <footer className="Footer">
           <div className="row">
             <div className="col">
               <h5 className="dashboard">
-                Question: {number} of {questions.length}
+                Progress: Question {questions[number]?.id} of {questions.length}
               </h5>
               <h5 className="dashboard">Time: 10000</h5>
               <h5 className="dashboard">user</h5>
-              Score: {score} out of: {questions?.length}
+              Score: {score} out of: {questions.length}
             </div>
             <h5 className="col" style={{ textAlign: "center" }}>
-              <button className="button" onClick={handleRestart}>
+              <button className="restart-button" onClick={handleRestart}>
                 Click here to restart
               </button>
-
               {showResult}
             </h5>
           </div>
@@ -194,4 +154,5 @@ function App() {
     </>
   );
 }
+
 export default App;
