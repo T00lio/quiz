@@ -9,6 +9,9 @@ const port = process.env.PORT || 3004;
 const { Sequelize } = require("sequelize");
 const csv = require("csv-parser");
 const fs = require("fs");
+const cookieSession = require("cookie-session");
+const passport = require("passport");
+const GoogleStrategy = require("passport-google-oauth20").Strategy;
 
 app.use(cors());
 
@@ -40,6 +43,27 @@ app.get("/", async (req, res) => {
     res.status(500).json({ status: "error", message: "Internal Server Error" });
   }
 });
+
+//google sign in
+
+app.use(
+  cookieSession({
+    name: "session",
+    keys: ["quiz"],
+    maxAge: 24 * 60 * 60 * 1000, // 24 hours
+  })
+);
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use(
+  cors({
+    origin: `http://localhost:${port}`,
+    methods: ["GET", "POST, PUT, DELETE"],
+    credentials: true,
+  })
+);
 
 //app  server
 

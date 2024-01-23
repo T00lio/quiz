@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import reactQuestions from "./api/reactQuestions.js";
 import Header from "./components/Header";
 import Footer from "./components/Footer/Footer";
+import "./App.css";
+import Home from "./pages/Home.jsx";
 import QuizSection from "./components/QuizSection/QuizSection";
 import ResultSection from "./components/ResultSection/ResultSection";
 
@@ -65,26 +68,47 @@ function App() {
   if (!questions.length) return null;
 
   const currentQuestion = questions[number];
-  console.log(currentQuestion);
+
   return (
     <>
       <div className="App">
         {/* app header */}
         <Header />
+        {/* app body */}
 
-        {/******************  quiz section************* */}
-        {showResult === true ? (
-          <ResultSection score={score} questions={questions} />
-        ) : (
-          <QuizSection
-            score={score}
-            buttonBG={buttonBG}
-            questions={questions}
-            currentQuestion={currentQuestion}
-            handleClicked={handleClicked}
-          />
-        )}
-        {/***************** app footer ****************/}
+        <Routes>
+          {/* login modal */}
+          <Route path="/home" element={<Home />} />
+          {/******************  quiz section************* */}
+          {showResult === true ? (
+            <Route
+              path="/result "
+              element={
+                <ResultSection
+                  score={score}
+                  questions={questions}
+                  handleRestart={handleRestart}
+                />
+              }
+            />
+          ) : (
+            // result
+            <Route
+              path="/quiz"
+              element={
+                <QuizSection
+                  score={score}
+                  buttonBG={buttonBG}
+                  questions={questions}
+                  currentQuestion={currentQuestion}
+                  handleClicked={handleClicked}
+                />
+              }
+            />
+          )}
+
+          {/***************** app footer ****************/}
+        </Routes>
         <Footer
           number={number}
           questions={questions}
