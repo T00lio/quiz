@@ -39,3 +39,5 @@ router.get(
     res.redirect("");
   }
 );
+
+module.exports = router;

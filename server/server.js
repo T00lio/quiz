@@ -12,6 +12,7 @@ const fs = require("fs");
 const cookieSession = require("cookie-session");
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
+const authRoute = require("./routes/auth");
 
 app.use(cors());
 
@@ -64,6 +65,8 @@ app.use(
     credentials: true,
   })
 );
+
+app.use("/auth", authRoute);
 
 //app  server
 
