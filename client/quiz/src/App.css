@@ -22,6 +22,26 @@
   width: 100dvw;
 }
 
+.Header {
+  grid-area: Header;
+  width: 100%;
+  background: black;
+  color: white;
+  padding: 1rem;
+}
+
+.App-title {
+  font-size: calc(10px + 2vmin);
+  color: white;
+  text-align: left;
+}
+
+.App-intro {
+  font-size: large;
+  text-align: left;
+  padding: 1rem;
+}
+
 .button {
   font-size: large;
   margin: 1rem;
@@ -34,7 +54,7 @@
   padding: 0.5rem;
   background-color: #ff0000;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .h5 {
@@ -51,7 +71,7 @@
   top: 0;
   position: fixed;
   width: 100%;
-  background: rgba(21, 54, 61, 1) 100%;
+  background: black;
   color: white;
 }
 
@@ -61,7 +81,7 @@
   position: fixed;
   bottom: 0;
 
-  background: rgba(21, 54, 61, 1) 100%;
+  background: black;
   color: white;
   padding: 1rem;
 }

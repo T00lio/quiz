@@ -79,6 +79,7 @@ function App() {
               display: "flex",
               fontSize: "4rem",
             }}
+            className="App-title"
           >
             100 React Questions{" "}
             <img
@@ -94,6 +95,7 @@ function App() {
               fontSize: "1.5rem",
               fontWeight: "500",
             }}
+            className="App-intro"
           >
             This app will help you memorize the top 100 interview questions in
             React, HTML, CSS & Javascript
@@ -138,15 +140,14 @@ function App() {
               <h5 className="dashboard">
                 Progress: Question {questions[number]?.id} of {questions.length}
               </h5>
-              <h5 className="dashboard">Time: 10000</h5>
-              <h5 className="dashboard">user</h5>
+              {/* <h5 className="dashboard">Time: 10000</h5>
+              <h5 className="dashboard">user</h5> */}
               Score: {score} out of: {questions.length}
             </div>
             <h5 className="col" style={{ textAlign: "center" }}>
               <button className="restart-button" onClick={handleRestart}>
                 Click here to restart
               </button>
-              {showResult}
             </h5>
           </div>
         </footer>
