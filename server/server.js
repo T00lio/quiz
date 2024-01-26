@@ -1,4 +1,6 @@
 require("dotenv").config();
+const passportSetup = require("./passport.js");
+const passport = require("passport");
 const questionsController = require("./controllers/controller.js");
 const questionRoutes = require("./routes/routes.js");
 const db = require("./db");
@@ -10,9 +12,9 @@ const { Sequelize } = require("sequelize");
 const csv = require("csv-parser");
 const fs = require("fs");
 const cookieSession = require("cookie-session");
-const passport = require("passport");
+
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
-const authRoute = require("./routes/auth");
+const authRoute = require("./routes/auth.js");
 
 app.use(cors());
 
@@ -71,5 +73,5 @@ app.use("/auth", authRoute);
 //app  server
 
 app.listen(port, () => {
-  console.log(`app listening at http://localhost:${port}`);
+  console.log(`app at http://localhost:${port}`);
 });

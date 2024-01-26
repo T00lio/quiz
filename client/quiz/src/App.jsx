@@ -21,6 +21,9 @@ function App() {
     button3: "",
     button4: "",
   });
+
+  const user = true;
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -78,7 +81,7 @@ function App() {
 
         <Routes>
           {/* login modal */}
-          <Route path="/home" element={<Home />} />
+          <Route path="/home" element={user ? <Home /> : <Login />} />
           {/******************  quiz section************* */}
           {showResult === true ? (
             <Route
