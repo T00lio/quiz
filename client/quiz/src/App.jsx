@@ -81,7 +81,7 @@ function App() {
 
         <Routes>
           {/* login modal */}
-          <Route path="/home" element={user ? <Home /> : <Login />} />
+          <Route path="/home" element={user ? <Home /> : <Home />} />
           {/******************  quiz section************* */}
           {showResult === true ? (
             <Route
