@@ -1,11 +1,9 @@
 const db = require("../models");
 
-// create main model
-
 // const Question = db.questions;
 const Answer = db.answers;
 
-// main controller
+// questions controller
 
 const getQuestions = async (req, res) => {
   try {

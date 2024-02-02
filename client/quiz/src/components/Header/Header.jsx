@@ -11,7 +11,7 @@ function Header() {
           fontWeight: "900",
           justifyContent: "center",
           display: "flex",
-          fontSize: "4rem",
+          fontSize: "3rem",
         }}
         className="App-title"
       >
@@ -26,7 +26,7 @@ function Header() {
       <p
         style={{
           textAlign: "center",
-          fontSize: "1.5rem",
+          fontSize: "1rem",
           fontWeight: "500",
         }}
         className="App-intro"

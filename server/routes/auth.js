@@ -16,10 +16,7 @@ router.get(
   passport.authenticate("google", {
     successRedirect: CLIENT_URL,
     failureRedirect: "/login/failed",
-  }),
-  (req, res) => {
-    res.redirect("");
-  }
+  })
 );
 
 router.get("/login/failed", (req, res) => {

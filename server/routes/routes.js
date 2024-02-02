@@ -1,4 +1,4 @@
-const questionController = require("../controllers/controller.js");
+const questionController = require("../controllers/questionController.js");
 
 const router = require("express").Router();
 

@@ -2,7 +2,6 @@ import "./QuizSection.css";
 import PropTypes from "prop-types";
 
 function QuizSection({ handleClicked, buttonBG, currentQuestion }) {
-  console.log(currentQuestion);
   return (
     <>
       <section className="quizSection">

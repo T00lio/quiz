@@ -1,7 +1,7 @@
 require("dotenv").config();
 const passportSetup = require("./passport.js");
 const passport = require("passport");
-const questionsController = require("./controllers/controller.js");
+const questionsController = require("./controllers/questionController.js");
 const questionRoutes = require("./routes/routes.js");
 const db = require("./db");
 const express = require("express");
@@ -12,9 +12,20 @@ const { Sequelize } = require("sequelize");
 const csv = require("csv-parser");
 const fs = require("fs");
 const cookieSession = require("cookie-session");
+const authRoute = require("./routes/auth.js");
+
+//passport
 
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
-const authRoute = require("./routes/auth.js");
+
+// //middleware
+app.use((req, res, next) => {
+  next();
+});
+
+var corsOptions = {
+  origin: `http://localhost:${port}`,
+};
 
 app.use(cors());
 
@@ -25,14 +36,6 @@ app.use(express.urlencoded({ extended: true }));
 // router
 
 app.use("/api/questions", questionRoutes);
-//middleware
-app.use((req, res, next) => {
-  next();
-});
-
-var corsOptions = {
-  origin: `http://localhost:${port}`,
-};
 
 //react questions
 
