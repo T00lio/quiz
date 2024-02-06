@@ -1,0 +1,84 @@
+/* Component.module.css */
+.container {
+  margin: 0 auto;
+  max-width: 350px;
+  padding: 6px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.subtitle {
+  color: #666;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup {
+  margin-bottom: 16px;
+}
+
+.label {
+  color: #555;
+}
+
+.input {
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.submitButton {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.separator {
+  margin: 16px 0;
+  border-top: 1px solid #ddd;
+}
+
+.socialButtons {
+  display: flex;
+  flex-direction: column;
+}
+
+.googleButton,
+.facebookButton,
+.twitterButton {
+  width: 100%;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.signupLink {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.signupText {
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+}
