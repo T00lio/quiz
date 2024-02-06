@@ -1,4 +1,3 @@
-require("dotenv").config();
 const passportSetup = require("./passport.js");
 const passport = require("passport");
 const questionsController = require("./controllers/questionController.js");
@@ -13,31 +12,41 @@ const csv = require("csv-parser");
 const fs = require("fs");
 const cookieSession = require("cookie-session");
 const authRoute = require("./routes/auth.js");
+const dotenv = require("dotenv");
+dotenv.config();
 
-//passport
+//oauth section
 
-const GoogleStrategy = require("passport-google-oauth20").Strategy;
+app.use("/auth", authRoute);
 
-// //middleware
-app.use((req, res, next) => {
-  next();
-});
+app.use(
+  cookieSession({
+    maxAge: 24 * 60 * 60 * 1000,
+    keys: [process.env.COOKIE_KEY],
+  })
+);
 
-var corsOptions = {
-  origin: `http://localhost:${port}`,
-};
+app.use(passport.initialize());
+app.use(passport.session());
 
-app.use(cors());
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      // Check if the request origin is allowed
+      // You can implement more specific logic here, also add https version client URL
+      const allowedOrigins = ["http://localhost:5173"];
+      const isAllowed = allowedOrigins.includes(origin);
 
-app.use(express.json());
-
-app.use(express.urlencoded({ extended: true }));
+      callback(null, isAllowed);
+    },
+    methods: "GET, POST, PUT, DELETE",
+    credentials: true,
+  })
+);
 
 // router
 
 app.use("/api/questions", questionRoutes);
-
-//react questions
 
 //sequelize db version
 
@@ -50,30 +59,7 @@ app.get("/", async (req, res) => {
   }
 });
 
-//google sign in
-
-app.use(
-  cookieSession({
-    name: "session",
-    keys: ["quiz"],
-    maxAge: 24 * 60 * 60 * 1000, // 24 hours
-  })
-);
-
-app.use(passport.initialize());
-app.use(passport.session());
-
-app.use(
-  cors({
-    origin: `http://localhost:${port}`,
-    methods: ["GET", "POST, PUT, DELETE"],
-    credentials: true,
-  })
-);
-
-app.use("/auth", authRoute);
-
-//app  server
+//app server
 
 app.listen(port, () => {
   console.log(`app at http://localhost:${port}`);

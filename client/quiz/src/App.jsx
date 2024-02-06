@@ -29,7 +29,6 @@ function App() {
       try {
         const response = await reactQuestions.get("/api/questions");
         setQuestions(response.data);
-        console.log(response.data);
       } catch (err) {
         console.log(err);
       }
