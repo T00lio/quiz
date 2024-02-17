@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import api from "../api/api";
 
 import logo from "/react.svg";
 import axios from "axios";
