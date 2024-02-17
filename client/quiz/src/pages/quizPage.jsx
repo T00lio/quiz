@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import api from "../api/api";
 
 import logo from "/react.svg";
+import axios from "axios";
 
 function QuizPage() {
   const [number, setNumber] = useState(0);
@@ -12,13 +13,8 @@ function QuizPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const response = await api.get("/api/questions");
-        setQuestions(response.data.data);
-        console.log(response.data.data);
-      } catch (err) {
-        console.log(err);
-      }
+      const response = await axios.get("http://localhost:3004/api/questions");
+      setQuestions(response.data);
     };
     fetchData();
   }, []);

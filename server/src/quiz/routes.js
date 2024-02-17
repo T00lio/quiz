@@ -1,8 +1,7 @@
-const { Router } = require("express");
-const controller = require("./controller");
+import { getQuestions } from "../../controllers/controllers.js";
 
-const router = Router();
+const router = require("express").Router();
 
-router.get("/reactQuestion", controller.getQuiz);
+router.get("/", getQuestions);
 
-module.exports = router;
+export default router;

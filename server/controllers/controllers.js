@@ -7,7 +7,7 @@ const app = express();
 const cors = require("cors");
 const port = process.env.PORT || 3004;
 const { Sequelize } = require("sequelize");
-
+const csv = require("csv-parser");
 const fs = require("fs");
 
 app.use(cors());
