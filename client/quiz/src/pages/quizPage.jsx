@@ -81,13 +81,7 @@ function QuizPage() {
               style={{ width: "40px", height: "40px" }}
             ></img>
           </h1>
-          <p
-            style={{
-              textAlign: "center",
-              fontSize: "1.5rem",
-              fontWeight: "500",
-            }}
-          >
+          <p className="text-black">
             This app will help you memorize the top 100 react interview
             questions
           </p>{" "}
