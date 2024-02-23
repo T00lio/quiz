@@ -16,6 +16,7 @@ export default function Quiz() {
   const [questions, setQuestions] = useState([]);
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
+  const [clickedOption, setClickedOption] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,6 +26,19 @@ export default function Quiz() {
     };
     fetchData();
   }, []);
+
+  const handleClicked = (optionId, isCorrect) => {
+    setClickedOption(optionId); // Record which option was clicked
+
+    if (isCorrect) {
+      setScore(score + 1);
+      // Optionally set a background color state here if you want immediate feedback
+    }
+    // Clear the clicked option state after a delay to reset the background color
+    setTimeout(() => {
+      setClickedOption(""); // Reset so no button is marked as clicked
+    }, 1500);
+  };
 
   const handleRestart = () => {
     setNumber(0);
@@ -43,7 +57,7 @@ export default function Quiz() {
         {/* header */}
         <section className="py-8 px-4 lg:px-10 bg-gray-800">
           <nav className="relative flex justify-between items-center">
-            <a className="text-2xl text-white font-bold" href="#">
+            <a className="text-2xl text-white font-bold" href="/">
               <img
                 className="h-7"
                 src="zospace-assets/logos/zospace-logo.svg"
@@ -76,7 +90,7 @@ export default function Quiz() {
             <div className="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
               <ul className="flex items-center text-white space-x-10">
                 <li>
-                  <a className="text-white font-bold text-lg" href="#">
+                  <a className="text-white font-bold text-lg" href="/quizmenu">
                     Quizes
                   </a>
                 </li>
@@ -92,7 +106,7 @@ export default function Quiz() {
                   </svg>
                 </span>
                 <li>
-                  <a className="text-white font-bold text-lg" href="#">
+                  <a className="text-white font-bold text-lg" href="/about">
                     About
                   </a>
                 </li>
@@ -108,7 +122,10 @@ export default function Quiz() {
                   </svg>
                 </span>
                 <li>
-                  <a className="text-white font-bold text-lg" href="#">
+                  <a
+                    className="text-white font-bold text-lg"
+                    href="contactpage"
+                  >
                     Contact
                   </a>
                 </li>
@@ -119,7 +136,7 @@ export default function Quiz() {
             <div className="hidden lg:block">
               <a
                 className="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full"
-                href="#"
+                href="/signup"
               >
                 Sign Up
               </a>
@@ -129,7 +146,7 @@ export default function Quiz() {
             <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80" />
             <nav className="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
               <div className="flex items-center mb-16 pr-6">
-                <a className="ml-10 text-2xl text-gray-800 font-bold" href="#">
+                <a className="ml-10 text-2xl text-gray-800 font-bold" href="/">
                   <img
                     className="h-7"
                     src="zospace-assets/logos/zospace-dark-logo.svg"
@@ -143,7 +160,7 @@ export default function Quiz() {
                   <li className="mb-1 px-10">
                     <a
                       className="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl"
-                      href="#"
+                      href="/quizmenu"
                     >
                       Quizes
                     </a>
@@ -151,7 +168,7 @@ export default function Quiz() {
                   <li className="mb-1 px-10">
                     <a
                       className="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl"
-                      href="#"
+                      href="/about"
                     >
                       About
                     </a>
@@ -159,7 +176,7 @@ export default function Quiz() {
                   <li className="mb-1 px-10">
                     <a
                       className="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl"
-                      href="#"
+                      href="/contactpage"
                     >
                       Contact
                     </a>
@@ -171,13 +188,13 @@ export default function Quiz() {
                 <div className="pt-6">
                   <a
                     className="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full"
-                    href="#"
+                    href="/signup"
                   >
                     Sign in
                   </a>
                   <a
                     className="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200"
-                    href="#"
+                    href="/signup"
                   >
                     Sign up
                   </a>
@@ -200,23 +217,71 @@ export default function Quiz() {
                     <div className="px-16 pt-16 pb-24 bg-gray-600 rounded-lg top-0">
                       <div className="container mx-auto bg-white rounded-2xl" />
                       <h3 className="mt-12 mb-8 text-4xl font-bold text-white">
-                        Welcome to ${"{"}subject{"}"} Quiz
+                        Welcome no ${"{"}subject{"}"} Quiz
                       </h3>
                       <h4 className="text-lg text-gray-100 mb-10">
                         {questionData.question}
                       </h4>
                       <div className="grid-rows-4 flex flex-col">
-                        <button className="bg-white rounded-l p-5 mb-5">
-                          {questionData.option1}
+                        <button
+                          className={`rounded-xl p-5 mb-5 ${
+                            clickedOption === "option1"
+                              ? "bg-green-500"
+                              : "bg-white"
+                          }`}
+                          onClick={() =>
+                            handleClicked(
+                              "option1",
+                              questionData?.correct1 === "TRUE"
+                            )
+                          }
+                        >
+                          {questionData?.option1}
                         </button>
-                        <button className="bg-white rounded-l p-5 mb-5">
-                          {questionData.option2}
+                        <button
+                          className={`rounded-xl p-5 mb-5 ${
+                            clickedOption === "option2"
+                              ? "bg-green-500"
+                              : "bg-white"
+                          }`}
+                          onClick={() =>
+                            handleClicked(
+                              "option2",
+                              questionData?.correct2 === "TRUE"
+                            )
+                          }
+                        >
+                          {questionData?.option2}
                         </button>
-                        <button className="bg-white rounded-l p-5 mb-5">
-                          {questionData.option3}
+                        <button
+                          className={`rounded-xl p-5 mb-5 ${
+                            clickedOption === "option1"
+                              ? "bg-green-500"
+                              : "bg-white"
+                          }`}
+                          onClick={() =>
+                            handleClicked(
+                              "option1",
+                              questionData?.correct3 === "TRUE"
+                            )
+                          }
+                        >
+                          {questionData?.option3}
                         </button>
-                        <button className="bg-white rounded-l p-5">
-                          {questionData.option4}
+                        <button
+                          className={`rounded-xl p-5 mb-5 ${
+                            clickedOption === "option2"
+                              ? "bg-green-500"
+                              : "bg-white"
+                          }`}
+                          onClick={() =>
+                            handleClicked(
+                              "option2",
+                              questionData?.correct4 === "TRUE"
+                            )
+                          }
+                        >
+                          {questionData?.option4}
                         </button>
                       </div>
                     </div>
@@ -254,7 +319,7 @@ export default function Quiz() {
               {" "}
               <a
                 className="inline-block mb-20 text-white text-xl font-bold"
-                href="#"
+                href="/"
               >
                 {" "}
                 <img
@@ -268,7 +333,7 @@ export default function Quiz() {
                 <li className="mb-4 md:mb-0">
                   <a
                     className="font-bold text-white hover:text-gray-100"
-                    href="#"
+                    href="/"
                   >
                     Home
                   </a>
@@ -276,7 +341,7 @@ export default function Quiz() {
                 <li className="mb-4 md:mb-0">
                   <a
                     className="font-bold text-white hover:text-gray-100"
-                    href="#"
+                    href="/services"
                   >
                     Services
                   </a>
@@ -284,7 +349,7 @@ export default function Quiz() {
                 <li className="mb-4 md:mb-0">
                   <a
                     className="font-bold text-white hover:text-gray-100"
-                    href="#"
+                    href="/packages"
                   >
                     Packages
                   </a>
@@ -292,7 +357,7 @@ export default function Quiz() {
                 <li className="mb-4 md:mb-0">
                   <a
                     className="font-bold text-white hover:text-gray-100"
-                    href="#"
+                    href="/about"
                   >
                     About
                   </a>
@@ -300,7 +365,7 @@ export default function Quiz() {
                 <li className="mb-4 md:mb-0">
                   <a
                     className="font-bold text-white hover:text-gray-100"
-                    href="#"
+                    href="/contact"
                   >
                     Reach Out
                   </a>
@@ -310,7 +375,7 @@ export default function Quiz() {
                 {" "}
                 <a
                   className="flex justify-center items-center w-12 h-12 mr-4 bg-gray-600 rounded-full"
-                  href="#"
+                  href="/"
                 >
                   {" "}
                   <svg
@@ -335,7 +400,7 @@ export default function Quiz() {
                 </a>{" "}
                 <a
                   className="flex justify-center items-center w-12 h-12 mr-4 bg-gray-600 rounded-full"
-                  href="#"
+                  href="/"
                 >
                   {" "}
                   <svg
@@ -364,7 +429,7 @@ export default function Quiz() {
                 </a>{" "}
                 <a
                   className="flex justify-center items-center w-12 h-12 bg-gray-600 rounded-full"
-                  href="#"
+                  href="/"
                 >
                   {" "}
                   <svg
