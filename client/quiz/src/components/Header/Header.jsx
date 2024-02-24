@@ -5,7 +5,7 @@ function Header() {
   return (
     <nav className="relative pb-20 bg-black">
       <div className="flex py-8 px-4 lg:px-8 justify-between items-center bg-transparent sticky rounded-2xl">
-        <a className="text-2xl text-white font-bold" href="#">
+        <a className="text-2xl text-white font-bold" href="/">
           <img
             className="h-7"
             src="zospace-assets/logos/zospace-logo.svg"
@@ -34,7 +34,7 @@ function Header() {
               <span></span>
             </li>
             <li>
-              <a className="text-white font-bold text-lg" href="#">
+              <a className="text-white font-bold text-lg" href="/">
                 Quizes
               </a>
             </li>
@@ -50,7 +50,7 @@ function Header() {
               </svg>
             </span>
             <li>
-              <a className="text-white font-bold text-lg" href="#">
+              <a className="text-white font-bold text-lg" href="/">
                 About
               </a>
             </li>
@@ -66,7 +66,7 @@ function Header() {
               </svg>
             </span>
             <li>
-              <a className="text-white font-bold text-lg" href="#">
+              <a className="text-white font-bold text-lg" href="/">
                 Contact Us
               </a>
             </li>
@@ -75,7 +75,7 @@ function Header() {
         <div className="hidden lg:block">
           <a
             className="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-2xl"
-            href="#"
+            href="/"
           >
             Start here
           </a>
