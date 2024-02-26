@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { useState, useEffect } from "react";
 import axios from "axios";
 import Logo from "../assets/zospace-assets/images/logo.svg";
 
@@ -18,6 +17,11 @@ export default function Quiz() {
   const [showResult, setShowResult] = useState(true);
   const [score, setScore] = useState(0);
   const [clickedOption, setClickedOption] = useState("");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -80,7 +84,7 @@ export default function Quiz() {
         {/* header */}
         <section className="py-8 px-4 lg:px-10 bg-gray-800">
           <nav className="relative flex justify-between items-center">
-            <a className="text-2xl text-white font-bold" href="/">
+            <a className="text-2xl text-white font-bold" href="/home">
               <img className="h-7" src={Logo} alt="" width="auto" />
             </a>
             <div className="lg:hidden">
@@ -92,6 +96,7 @@ export default function Quiz() {
                   viewBox="0 0 39 13"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  onClick={toggleMenu}
                 >
                   <rect width={39} height={2} rx={1} fill="#C4C4C4" />
                   <rect
@@ -108,7 +113,7 @@ export default function Quiz() {
             <div className="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
               <ul className="flex items-center text-white space-x-10">
                 <li>
-                  <a className="text-white font-bold text-lg" href="/">
+                  <a className="text-white font-bold text-lg" href="/quizmenu">
                     Quizes
                   </a>
                 </li>
@@ -124,7 +129,7 @@ export default function Quiz() {
                   </svg>
                 </span>
                 <li>
-                  <a className="text-white font-bold text-lg" href="/">
+                  <a className="text-white font-bold text-lg" href="/about">
                     About
                   </a>
                 </li>
@@ -140,7 +145,7 @@ export default function Quiz() {
                   </svg>
                 </span>
                 <li>
-                  <a className="text-white font-bold text-lg" href="/">
+                  <a className="text-white font-bold text-lg" href="/contact">
                     Contact
                   </a>
                 </li>
@@ -151,7 +156,7 @@ export default function Quiz() {
             <div className="hidden lg:block">
               <a
                 className="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full"
-                href="/"
+                href="/singin"
               >
                 Sign Up
               </a>
