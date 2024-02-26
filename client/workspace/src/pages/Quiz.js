@@ -316,7 +316,7 @@ export default function Quiz() {
                           </button>
                           <button
                             onClick={handleSkip}
-                            className="mr-5 bg-white rounded-full p-5"
+                            className="mr-5 bg-amber-300 rounded-full p-5"
                           >
                             skip question
                           </button>
