@@ -1,14 +1,24 @@
-const pool = require("../../db");
+const db = require("../../models/index.js");
 
-const getQuiz = (req, res) => {
-  pool.query("SELECT * FROM questions", (error, results) => {
-    if (error) {
-      throw error;
-    }
-    res.status(200).json(results.rows);
-  });
+// create main model
+
+// const Question = db.questions;
+const Answer = db.answers;
+
+// main controller
+
+const getQuestions = async (req, res) => {
+  try {
+    // const question = await Question.findAll({});
+    const answer = await Answer.findAll({});
+    res.status(200).send(answer);
+    console.log(res);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send({ message: "Error retrieving questions" });
+  }
 };
 
 module.exports = {
-  getQuiz,
+  getQuestions,
 };

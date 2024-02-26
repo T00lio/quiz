@@ -1,94 +1,44 @@
 require("dotenv").config();
+const questionsController = require("./controllers/controller.js");
+const questionRoutes = require("./routes/routes.js");
 const db = require("./db");
 const express = require("express");
 const app = express();
 const cors = require("cors");
 const port = process.env.PORT || 3004;
+const { Sequelize } = require("sequelize");
 
-//middleware
-app.use((req, res, next) => {
-  next();
-});
+const fs = require("fs");
 
 app.use(cors());
 
 app.use(express.json());
 
-//routes for questions
+app.use(express.urlencoded({ extended: true }));
+
+// router
+
+app.use("/api/questions", questionRoutes);
+//middleware
+app.use((req, res, next) => {
+  next();
+});
+
+var corsOptions = {
+  origin: `http://localhost:${port}`,
+};
 
 //react questions
 
-app.get("/reactQuestions", async (req, res) => {
-  try {
-    const result = await db.query("SELECT * FROM questions");
+//sequelize db version
 
-    res.status(202).json({
-      status: "success",
-      results: result.length,
-      data: result.rows,
-    });
-    console.log(result);
+app.get("/", async (req, res) => {
+  try {
+    res.json({ message: "Hello from api!" });
   } catch (err) {
     console.error(err);
     res.status(500).json({ status: "error", message: "Internal Server Error" });
   }
-});
-
-//js questions
-app.get("/jsQuestions", (req, res) => {
-  res.status(202).json({
-    status: "success",
-    data: {
-      question: "What is the capital of France?",
-      answers: ["New York", "London", "Paris", "Dublin"],
-    },
-  });
-});
-
-//html questions
-
-app.get("/htmlQuestions", (req, res) => {
-  res.status(202).json({
-    status: "success",
-    data: {
-      question: "What is the capital of France?",
-      answers: ["New York", "London", "Paris", "Dublin"],
-    },
-  });
-});
-
-//css questions
-
-app.get("/cssQuestions", (req, res) => {
-  res.status(202).json({
-    status: "success",
-    data: {
-      question: "What is the capital of France?",
-      answers: ["New York", "London", "Paris", "Dublin"],
-    },
-  });
-});
-
-//routes for users
-
-app.get("/user:id", (req, res) => {
-  res.status(202).json({
-    status: "success",
-    data: {
-      username: "John Doe",
-      score: 0,
-    },
-  });
-});
-
-app.post("/user:id", (req, res) => {
-  res.status(202).json({
-    status: "success",
-    data: {
-      username: "John Doe",
-      score: 0,
-    },
-  });
 });
 
 //app  server
@@ -96,6 +46,3 @@ app.post("/user:id", (req, res) => {
 app.listen(port, () => {
   console.log(`app listening at http://localhost:${port}`);
 });
-
-// reponsible for serving the client
-// Path: server/server.js
