@@ -242,13 +242,13 @@ export default function Quiz() {
                         />
                         <div>
                           <h3 className="mt-12 mb-8 ml-auto text-4xl font-bold text-white">
-                            Welcome to React Quiz
+                            Welcome to the React Quiz
                           </h3>
                         </div>
 
-                        <div className="mr-auto bg-white">
-                          <p>Score 1 out of 10</p>
-                          <p>Progeress 10%</p>
+                        <div className="bg-white mr-auto w-25%">
+                          <p className="w-25">Score 1 out of 10</p>
+                          <p className="w-25">Progeress 10%</p>
                         </div>
                         <h4 className="text-lg text-gray-100 mb-10">
                           Question {number}: {questionData?.question}
