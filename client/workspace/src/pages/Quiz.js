@@ -236,11 +236,20 @@ export default function Quiz() {
                   <div className="px-16 pt-16 pb-24 bg-gray-600 rounded-lg top-0">
                     {showResult ? (
                       <>
-                        <div className="container mx-auto bg-white rounded-2xl" />
+                        <div
+                          className="container mx-auto bg-white rounded-2xl flex flex-row"
+                          style={{ width: "100%", height: "100%" }}
+                        />
+                        <div>
+                          <h3 className="mt-12 mb-8 ml-auto text-4xl font-bold text-white">
+                            Welcome to React Quiz
+                          </h3>
+                        </div>
 
-                        <h3 className="mt-12 mb-8 text-4xl font-bold text-white">
-                          Welcome to React Quiz
-                        </h3>
+                        <div className="mr-auto bg-white">
+                          <p>Score 1 out of 10</p>
+                          <p>Progeress 10%</p>
+                        </div>
                         <h4 className="text-lg text-gray-100 mb-10">
                           Question {number}: {questionData?.question}
                         </h4>
