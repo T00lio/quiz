@@ -14,7 +14,7 @@ const meta = {
 export default function Quiz() {
   const [number, setNumber] = useState(0);
   const [questions, setQuestions] = useState([]);
-  const [showResult, setShowResult] = useState(true);
+  const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
   const [clickedOption, setClickedOption] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -373,7 +373,7 @@ export default function Quiz() {
               {" "}
               <a
                 className="inline-block mb-20 text-white text-xl font-bold"
-                href="/"
+                href="/home"
               >
                 {" "}
                 <img
@@ -387,7 +387,7 @@ export default function Quiz() {
                 <li className="mb-4 md:mb-0">
                   <a
                     className="font-bold text-white hover:text-gray-100"
-                    href="/"
+                    href="/home"
                   >
                     Home
                   </a>
@@ -395,7 +395,7 @@ export default function Quiz() {
                 <li className="mb-4 md:mb-0">
                   <a
                     className="font-bold text-white hover:text-gray-100"
-                    href="/"
+                    href="/services"
                   >
                     Services
                   </a>
@@ -429,7 +429,7 @@ export default function Quiz() {
                 {" "}
                 <a
                   className="flex justify-center items-center w-12 h-12 mr-4 bg-gray-600 rounded-full"
-                  href="/"
+                  href="https://www.facebook.com/tulio.dev"
                 >
                   {" "}
                   <svg
@@ -454,7 +454,7 @@ export default function Quiz() {
                 </a>{" "}
                 <a
                   className="flex justify-center items-center w-12 h-12 mr-4 bg-gray-600 rounded-full"
-                  href="/"
+                  href="https://www.instagram.com/tulio_dev/"
                 >
                   {" "}
                   <svg
@@ -483,7 +483,7 @@ export default function Quiz() {
                 </a>{" "}
                 <a
                   className="flex justify-center items-center w-12 h-12 bg-gray-600 rounded-full"
-                  href="/"
+                  href="https://twitter.com/user_name_tulio"
                 >
                   {" "}
                   <svg
