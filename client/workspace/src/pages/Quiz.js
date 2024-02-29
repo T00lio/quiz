@@ -14,7 +14,7 @@ const meta = {
 export default function Quiz() {
   const [number, setNumber] = useState(0);
   const [questions, setQuestions] = useState([]);
-  const [showResult, setShowResult] = useState(false);
+  const [showResult, setShowResult] = useState(true);
   const [score, setScore] = useState(0);
   const [clickedOption, setClickedOption] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -111,45 +111,25 @@ export default function Quiz() {
               </button>
             </div>
             <div className="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
-              <ul className="flex items-center text-white space-x-10">
+              <ul className="flex jusify-evenly text-white space-x-10">
                 <li>
                   <a className="text-white font-bold text-lg" href="/quizmenu">
                     Quizes
                   </a>
                 </li>
-                <span>
-                  <svg
-                    width={5}
-                    height={5}
-                    viewBox="0 0 5 5"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B" />
-                  </svg>
-                </span>
+
                 <li>
                   <a className="text-white font-bold text-lg" href="/about">
                     About
                   </a>
                 </li>
-                <span>
-                  <svg
-                    width={5}
-                    height={5}
-                    viewBox="0 0 5 5"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B" />
-                  </svg>
-                </span>
+
                 <li>
                   <a className="text-white font-bold text-lg" href="/contact">
                     Contact
                   </a>
                 </li>
-                <span></span>
+
                 <li></li>
               </ul>
             </div>
@@ -342,7 +322,7 @@ export default function Quiz() {
                           You sucesfully completed the quiz, here are your
                           results:
                         </h2>
-                        <h3 className="text-3xl mb-2 leading-tight font-bold font-heading text-white">
+                        <h3 className="text-4xl mt-2 mb-2 leading-tight font-bold font-heading text-white">
                           You scored {score} out of {questions.length}
                         </h3>
                         <div className="mt-32">
@@ -350,14 +330,14 @@ export default function Quiz() {
                             onClick={handleRestart}
                             className="mr-5 bg-white rounded-full p-5 m-5"
                           >
-                            Restast
+                            Restart
                           </button>
-                          <button
-                            onClick={handleSkip}
+                          <a
+                            href="/quizmenu"
                             className="mr-5 bg-white rounded-full p-5 m-5"
                           >
                             go to home/nextquiz
-                          </button>
+                          </a>
                         </div>
                       </>
                     )}
@@ -389,9 +369,9 @@ export default function Quiz() {
                 <li className="mb-4 md:mb-0">
                   <a
                     className="font-bold text-white hover:text-gray-100"
-                    href="/home"
+                    href="/quizmenu"
                   >
-                    Home
+                    Quizes
                   </a>
                 </li>{" "}
                 <li className="mb-4 md:mb-0">
@@ -399,31 +379,15 @@ export default function Quiz() {
                     className="font-bold text-white hover:text-gray-100"
                     href="/services"
                   >
-                    Services
-                  </a>
-                </li>{" "}
-                <li className="mb-4 md:mb-0">
-                  <a
-                    className="font-bold text-white hover:text-gray-100"
-                    href="/"
-                  >
-                    Packages
-                  </a>
-                </li>{" "}
-                <li className="mb-4 md:mb-0">
-                  <a
-                    className="font-bold text-white hover:text-gray-100"
-                    href="/"
-                  >
                     About
                   </a>
                 </li>{" "}
                 <li className="mb-4 md:mb-0">
                   <a
                     className="font-bold text-white hover:text-gray-100"
-                    href="/"
+                    href="/about"
                   >
-                    Reach Out
+                    Contact
                   </a>
                 </li>{" "}
               </ul>
