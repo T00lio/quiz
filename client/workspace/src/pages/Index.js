@@ -147,562 +147,42 @@ export default function Index() {
             </nav>
           </div>
         </section>
-        <section className="py-20 2xl:py-40 bg-gray-800">
-          <div className="container px-4 mx-auto">
-            <div className="mb-16 md:mb-24 text-center">
-              <h2 className="mb-8 md:mb-14 text-5xl lg:text-6xl 2xl:text-7xl text-white font-bold font-heading">
-                Products
-              </h2>
-              <p className="text-lg text-gray-200">
-                Here some of the product that I am developing
-              </p>
-            </div>
-            <div className="max-w-6xl mx-auto">
-              <div className="lg:pl-24 pt-12 lg:pt-24 pb-14 mb-10 bg-gray-900 rounded-xl border-12 border-gray-700">
-                <div className="flex flex-wrap -mx-4">
-                  <div className="w-full lg:w-7/12 px-4 mb-4 lg:mb-0">
-                    <div className="px-8 lg:pl-0 max-w-xl">
-                      <div className="flex items-center mb-8">
-                        <h2 className="mr-16 text-3xl md:text-4xl font-bold font-heading text-white">
-                          Basic landing page
-                        </h2>
-                        <span className="hidden lg:inline-block w-full py-px bg-gray-700" />
-                      </div>
-                      <p className="mb-6 text-lg text-gray-200">
-                        The brown me quam, sagittis porttitor lorem sort lora
-                        commodo lorem fringilla nisl.
-                      </p>
-                      <ul className="flex flex-wrap text-left -mx-4 text-white text-base lg:text-lg">
-                        <li className="w-full lg:w-1/2 px-4 mb-6 flex items-center">
-                          <svg
-                            className="w-5 h-4 mr-6"
-                            width={20}
-                            height={16}
-                            viewBox="0 0 20 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z"
-                              fill="white"
-                            />
-                          </svg>
-                          <span>Complete files</span>
-                        </li>
-                        <li className="w-full lg:w-1/2 px-4 mb-6 flex items-center">
-                          <svg
-                            className="w-5 h-4 mr-6"
-                            width={20}
-                            height={16}
-                            viewBox="0 0 20 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z"
-                              fill="white"
-                            />
-                          </svg>
-                          <span>100GB cloud storage</span>
-                        </li>
-                        <li className="w-full lg:w-1/2 px-4 mb-6 flex items-center">
-                          <svg
-                            className="w-5 h-4 mr-6"
-                            width={20}
-                            height={16}
-                            viewBox="0 0 20 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z"
-                              fill="white"
-                            />
-                          </svg>
-                          <span>500 team members</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="w-full lg:w-5/12 px-4">
-                    <div className="h-full text-center">
-                      <h3 className="mb-3 text-lg font-bold text-blue-500">
-                        20% off for students*
-                      </h3>
-                      <div className="mb-1 flex justify-center font-bold text-white">
-                        <span className="self-start inline-block mr-1 text-xl">
-                          $
-                        </span>
-                        <p className="self-end text-5xl">19.90</p>
-                      </div>
-                      <p className="mb-10 text-lg text-white">/Month</p>
-                      <a
-                        className="px-12 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200"
-                        href="#"
-                      >
-                        Buy now
-                      </a>
-                    </div>
-                  </div>
+        {/* content */}
+        <section className="relative pt-20 2xl:pt-20 bg-gray-800 pb-20">
+          <div className="relative container px-4 pt-12 md:pt-20 mx-auto mb-20">
+            <div className="relative container px-4 pt-12 md:pt-20 mx-auto">
+              <div className="flex flex-wrap items-center -mx-4 mb-20 2xl:mb-14">
+                <div className="w-full lg:w-1/2 px-4 mb-16 lg:mb-0">
+                  <span className="text-lg font-bold text-blue-400">
+                    Challenge Accepted?
+                  </span>
+                  <h2 className="max-w-2xl mt-12 mb-12 text-6xl 2xl:text-8xl text-white font-bold font-heading">
+                    Start mastring now and join the elite!
+                  </h2>
+                  <p className="mb-12 lg:mb-16 2xl:mb-24 text-xl text-gray-100">
+                    Pratice the top 100 interview on React, HTML, CSS and
+                    Javascript
+                  </p>
+                  <a
+                    className="inline-block px-12 py-5 text-lg text-white font-bold bg-blue-500 hover:bg-blue-600 transition duration-200 rounded-2xl"
+                    href="#"
+                  >
+                    Boost Your Skills Today
+                  </a>
                 </div>
-              </div>
-              <div className="lg:pl-24 pt-12 lg:pt-24 pb-14 bg-gray-900 rounded-xl border-12 border-gray-700">
-                <div className="flex flex-wrap -mx-4">
-                  <div className="w-full lg:w-7/12 px-4 mb-4 lg:mb-0">
-                    <div className="px-8 lg:pl-0 max-w-xl">
-                      <div className="flex items-center mb-8">
-                        <h2 className="mr-16 text-3xl md:text-4xl font-bold font-heading text-white">
-                          Advanced website
-                        </h2>
-                        <span className="hidden lg:inline-block w-full py-px bg-gray-700" />
-                      </div>
-                      <p className="mb-6 text-lg text-gray-200">
-                        The brown me quam, sagittis porttitor lorem sort lora
-                        commodo lorem fringilla nisl.
-                      </p>
-                      <ul className="flex flex-wrap text-left -mx-4 text-white text-base lg:text-lg">
-                        <li className="w-full lg:w-1/2 px-4 mb-6 flex items-center">
-                          <svg
-                            className="w-5 h-4 mr-6"
-                            width={20}
-                            height={16}
-                            viewBox="0 0 20 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z"
-                              fill="white"
-                            />
-                          </svg>
-                          <span className="font-medium">Complete files</span>
-                        </li>
-                        <li className="w-full lg:w-1/2 px-4 mb-6 flex items-center">
-                          <svg
-                            className="w-5 h-4 mr-6"
-                            width={20}
-                            height={16}
-                            viewBox="0 0 20 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z"
-                              fill="white"
-                            />
-                          </svg>
-                          <span className="font-medium">5 team members</span>
-                        </li>
-                        <li className="w-full lg:w-1/2 px-4 mb-6 flex items-center">
-                          <svg
-                            className="w-5 h-4 mr-6"
-                            width={20}
-                            height={16}
-                            viewBox="0 0 20 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z"
-                              fill="white"
-                            />
-                          </svg>
-                          <span className="font-medium">
-                            10GB cloud storage
-                          </span>
-                        </li>
-                        <li className="w-full lg:w-1/2 px-4 mb-6 flex items-center">
-                          <svg
-                            className="w-5 h-4 mr-6"
-                            width={20}
-                            height={16}
-                            viewBox="0 0 20 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z"
-                              fill="white"
-                            />
-                          </svg>
-                          <span className="font-medium">Unlimited editors</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="w-full lg:w-5/12 px-4">
-                    <div className="h-full text-center">
-                      <h3 className="mb-3 text-lg font-bold text-blue-500">
-                        20% off for students*
-                      </h3>
-                      <div className="mb-1 flex justify-center font-bold text-white">
-                        <span className="self-start inline-block mr-1 text-xl">
-                          $
-                        </span>
-                        <p className="self-end text-5xl">35.90</p>
-                      </div>
-                      <p className="mb-10 text-lg text-white">/Month</p>
-                      <a
-                        className="px-12 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200"
-                        href="#"
-                      >
-                        Buy now
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="pt-20 pb-24 2xl:py-40 bg-gray-800">
-          <div className="container mx-auto px-4">
-            <div className="mb-16 md:mb-24 text-center">
-              <h2 className="mb-8 md:mb-14 text-5xl lg:text-6xl 2xl:text-7xl text-white font-bold font-heading">
-                Choose a plan
-              </h2>
-              <p className="text-lg text-gray-200">
-                The quick brown fox jumps over the lazy dog.
-              </p>
-            </div>
-            <div className="max-w-6xl mx-auto">
-              <div className="flex flex-wrap items-center -mx-3">
-                <div className="w-full lg:w-1/3 px-3 mb-8 lg:mb-0">
-                  <div className="px-12 py-16 bg-gray-500 rounded-3xl">
-                    <div className="pb-8 mb-14 border-b border-gray-400">
-                      <div className="flex justify-between items-center px-3">
-                        <h3 className="text-4xl text-white font-bold font-heading">
-                          Free
-                        </h3>
-                        <p className="text-lg text-white font-bold">$0,00</p>
-                      </div>
-                    </div>
-                    <ul className="text-lg text-white mb-16">
-                      <li className="flex items-center mb-8">
-                        <span className="mr-6">
-                          <svg
-                            width={20}
-                            height={16}
-                            viewBox="0 0 20 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z"
-                              fill="white"
-                            />
-                          </svg>
-                        </span>
-                        <span>Complete files</span>
-                      </li>
-                      <li className="flex items-center mb-8">
-                        <span className="mr-6">
-                          <svg
-                            width={20}
-                            height={16}
-                            viewBox="0 0 20 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z"
-                              fill="white"
-                            />
-                          </svg>
-                        </span>
-                        <span>10GB cloud storage</span>
-                      </li>
-                      <li className="flex items-center">
-                        <span className="mr-6">
-                          <svg
-                            width={20}
-                            height={16}
-                            viewBox="0 0 20 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z"
-                              fill="white"
-                            />
-                          </svg>
-                        </span>
-                        <span>5 team members</span>
-                      </li>
-                    </ul>
-                    <div className="text-center">
-                      <a
-                        className="inline-block px-10 py-4 border border-gray-200 hover:border-gray-100 rounded-full font-bold text-white"
-                        href="#"
-                      >
-                        Try free
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full lg:w-1/3 px-3 mb-8 lg:mb-0">
-                  <div className="px-12 py-16 bg-blue-500 rounded-3xl">
-                    <div className="pb-8 mb-14 border-b border-blueGray-300">
-                      <div className="flex justify-between items-center px-3">
-                        <h3 className="text-4xl text-white font-bold font-heading">
-                          Team
-                        </h3>
-                        <p className="text-lg text-white font-bold">$9,99</p>
-                      </div>
-                    </div>
-                    <ul className="text-lg text-white mb-16">
-                      <li className="flex items-center mb-8">
-                        <span className="mr-6">
-                          <svg
-                            width={20}
-                            height={16}
-                            viewBox="0 0 20 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z"
-                              fill="white"
-                            />
-                          </svg>
-                        </span>
-                        <span>Complete files</span>
-                      </li>
-                      <li className="flex items-center mb-8">
-                        <span className="mr-6">
-                          <svg
-                            width={20}
-                            height={16}
-                            viewBox="0 0 20 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z"
-                              fill="white"
-                            />
-                          </svg>
-                        </span>
-                        <span>100GB cloud storage</span>
-                      </li>
-                      <li className="flex items-center mb-8">
-                        <span className="mr-6">
-                          <svg
-                            width={20}
-                            height={16}
-                            viewBox="0 0 20 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z"
-                              fill="white"
-                            />
-                          </svg>
-                        </span>
-                        <span>20 team members</span>
-                      </li>
-                      <li className="flex items-center mb-8">
-                        <span className="mr-6">
-                          <svg
-                            width={20}
-                            height={16}
-                            viewBox="0 0 20 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z"
-                              fill="white"
-                            />
-                          </svg>
-                        </span>
-                        <span>Unlimited anonymous board editors</span>
-                      </li>
-                      <li className="flex items-center">
-                        <span className="mr-6">
-                          <svg
-                            width={20}
-                            height={16}
-                            viewBox="0 0 20 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z"
-                              fill="white"
-                            />
-                          </svg>
-                        </span>
-                        <span>10GB cloud storage</span>
-                      </li>
-                    </ul>
-                    <div className="text-center">
-                      <a
-                        className="inline-block px-10 py-4 border border-blueGray-300 hover:border-blueGray-100 rounded-full font-bold text-white"
-                        href="#"
-                      >
-                        Buy now
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full lg:w-1/3 px-3">
-                  <div className="px-12 py-16 bg-gray-500 rounded-3xl">
-                    <div className="pb-8 mb-14 border-b border-gray-400">
-                      <div className="flex justify-between items-center px-3">
-                        <h3 className="text-4xl text-white font-bold font-heading">
-                          Premium
-                        </h3>
-                        <p className="text-lg text-white font-bold">$29,99</p>
-                      </div>
-                    </div>
-                    <ul className="text-lg text-white mb-16">
-                      <li className="flex items-center mb-8">
-                        <span className="mr-6">
-                          <svg
-                            width={20}
-                            height={16}
-                            viewBox="0 0 20 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z"
-                              fill="white"
-                            />
-                          </svg>
-                        </span>
-                        <span>Complete files</span>
-                      </li>
-                      <li className="flex items-center mb-8">
-                        <span className="mr-6">
-                          <svg
-                            width={20}
-                            height={16}
-                            viewBox="0 0 20 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z"
-                              fill="white"
-                            />
-                          </svg>
-                        </span>
-                        <span>20GB cloud storage</span>
-                      </li>
-                      <li className="flex items-center">
-                        <span className="mr-6">
-                          <svg
-                            width={20}
-                            height={16}
-                            viewBox="0 0 20 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z"
-                              fill="white"
-                            />
-                          </svg>
-                        </span>
-                        <span>200+ team members</span>
-                      </li>
-                    </ul>
-                    <div className="text-center">
-                      <a
-                        className="inline-block px-10 py-4 border border-gray-200 hover:border-gray-100 rounded-full font-bold text-white"
-                        href="#"
-                      >
-                        Buy now
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden">
-          <img
-            className="hidden lg:block absolute top-0 left-0 -ml-96 -mt-40"
-            src="zospace-assets/lines/circle.svg"
-            alt=""
-          />
-          <img
-            className="hidden lg:block absolute bottom-0 right-0 -mr-32 -mb-72"
-            src="zospace-assets/lines/circle.svg"
-            alt=""
-          />
-          <div className="relative container px-4 mx-auto">
-            <div>
-              <div className="flex flex-wrap -mx-10">
-                <div className="relative w-full lg:w-1/2 px-10 mb-10 lg:mb-20">
+                <div className="w-full lg:w-1/2 px-4">
                   <img
-                    className="lg:hidden absolute top-0 right-0 -mt-16"
-                    src="zospace-assets/images/stars.svg"
+                    className="w-full rounded-2xl"
+                    src="images/DALL-E-2024-02-14-20-52-00-Design-a-captivating-and-modern-landing-page-banner-that-visually-communicates-the-challenge-of-a-quiz-on-the-top-100-questions-covering-React-JavaSc.webp"
                     alt=""
                   />
-                  <div className="px-16 pt-16 pb-24 bg-gray-600 rounded-lg">
-                    <img />
-                    <h3 className="mt-12 mb-8 text-4xl font-bold text-white">
-                      React
-                    </h3>
-                    <p className="text-lg text-gray-200">
-                      The brown me quam, sagittis porttitor lorem vel, commodo
-                      fringilla nisl.
-                    </p>
-                  </div>
-                </div>
-                <div className="relative w-full lg:w-1/2 px-10 mb-10 lg:mb-20">
-                  <img
-                    className="hidden lg:block absolute top-0 right-0 -mt-16"
-                    src="zospace-assets/images/stars.svg"
-                    alt=""
-                  />
-                  <div className="px-16 pt-16 pb-24 bg-gray-600 rounded-lg">
-                    <img />
-                    <h3
-                      className="mt-12 mb-8 text-4xl font-bold text-white"
-                      contentEditable="false"
-                    >
-                      CSS
-                    </h3>
-                    <p className="text-lg text-gray-200">
-                      It’s over, maecenas tincidunt malesuada dolor sit amet
-                      malesuada.
-                    </p>
-                  </div>
-                </div>
-                <div className="w-full lg:w-1/2 px-10 mb-10 lg:mb-20">
-                  <div className="px-16 pt-16 pb-24 bg-gray-600 rounded-lg">
-                    <img />
-                    <h3 className="mt-12 mb-8 text-4xl font-bold text-white">
-                      HTML
-                    </h3>
-                    <p className="text-lg text-gray-200">
-                      The time, this accumsan augue, posuere posuere elit lorem.
-                    </p>
-                  </div>
-                </div>
-                <div className="w-full lg:w-1/2 px-10">
-                  <div className="px-16 pt-16 pb-24 bg-gray-600 rounded-lg">
-                    <img />
-                    <h3 className="mt-12 mb-8 text-4xl font-bold text-white">
-                      Javascript
-                    </h3>
-                    <p className="text-lg text-gray-200">
-                      Again and again vehicula libero at nibh volutpat lacinia
-                      non sed you see.
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section className="relative pt-20 2xl:pt-40 bg-gray-800">
+        {/* contact form */}
+        <section className="relative pt-20 2xl:pt-20 bg-gray-800">
           <div className="hidden lg:block absolute top-0 right-0 h-full bg-gray-600 w-1/2 rounded-2xl" />
           <div className="container px-4 mx-auto">
             <div className="max-w-5xl mx-auto">
@@ -837,6 +317,7 @@ export default function Index() {
             </div>
           </div>
         </section>
+        {/* footer */}
         <section className="py-20 2xl:py-40 bg-gray-800">
           <div className="container mx-auto px-4 mb-12 md:mb-20">
             {" "}
@@ -844,7 +325,7 @@ export default function Index() {
               {" "}
               <a
                 className="inline-block mb-20 text-white text-xl font-bold"
-                href="#"
+                href="/home"
               >
                 {" "}
                 <img
@@ -858,31 +339,15 @@ export default function Index() {
                 <li className="mb-4 md:mb-0">
                   <a
                     className="font-bold text-white hover:text-gray-100"
-                    href="#"
+                    href="/quizmenu"
                   >
-                    Home
+                    Quizes
                   </a>
                 </li>{" "}
                 <li className="mb-4 md:mb-0">
                   <a
                     className="font-bold text-white hover:text-gray-100"
-                    href="#"
-                  >
-                    Services
-                  </a>
-                </li>{" "}
-                <li className="mb-4 md:mb-0">
-                  <a
-                    className="font-bold text-white hover:text-gray-100"
-                    href="#"
-                  >
-                    Packages
-                  </a>
-                </li>{" "}
-                <li className="mb-4 md:mb-0">
-                  <a
-                    className="font-bold text-white hover:text-gray-100"
-                    href="#"
+                    href="/services"
                   >
                     About
                   </a>
@@ -890,9 +355,9 @@ export default function Index() {
                 <li className="mb-4 md:mb-0">
                   <a
                     className="font-bold text-white hover:text-gray-100"
-                    href="#"
+                    href="/about"
                   >
-                    Reach Out
+                    Contact
                   </a>
                 </li>{" "}
               </ul>
@@ -900,7 +365,7 @@ export default function Index() {
                 {" "}
                 <a
                   className="flex justify-center items-center w-12 h-12 mr-4 bg-gray-600 rounded-full"
-                  href="#"
+                  href="https://www.facebook.com/tulio.dev"
                 >
                   {" "}
                   <svg
@@ -925,7 +390,7 @@ export default function Index() {
                 </a>{" "}
                 <a
                   className="flex justify-center items-center w-12 h-12 mr-4 bg-gray-600 rounded-full"
-                  href="#"
+                  href="https://www.instagram.com/tulio_dev/"
                 >
                   {" "}
                   <svg
@@ -954,7 +419,7 @@ export default function Index() {
                 </a>{" "}
                 <a
                   className="flex justify-center items-center w-12 h-12 bg-gray-600 rounded-full"
-                  href="#"
+                  href="https://twitter.com/user_name_tulio"
                 >
                   {" "}
                   <svg

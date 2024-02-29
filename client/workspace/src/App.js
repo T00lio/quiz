@@ -12,7 +12,7 @@ import SingupDuplicate1Page from "./pages/Singup-duplicate1.js";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<IndexPage />} />
+      <Route path="/home" element={<IndexPage />} />
 
       <Route path="/about" element={<AboutPage />} />
 
