@@ -214,14 +214,14 @@ export default function Quiz() {
               <div className="relative w-full mb-10 lg:mb-20">
                 <div className="px-16 pt-16 pb-24 bg-gray-600 rounded-2xl">
                   <div className="px-16 pt-16 pb-24 bg-gray-600 rounded-lg top-0">
-                    {!showResult ? (
+                    {showResult ? (
                       <>
                         <div className="grid grid-cols-2 grid-rows-2 gap-4" />
 
                         <h3 className="mt-12 mb-8 ml-auto text-4xl font-bold text-white w-50">
                           Welcome to the React Quiz
                         </h3>
-                        <div className="bg-white rounded-xl p-4 justify-center">
+                        <div className="bg-white rounded-xl p-4 w-1/4">
                           <p className="w-25 ml-auto mr-auto">
                             Score 1 out of 10
                           </p>
