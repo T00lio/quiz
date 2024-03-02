@@ -55,9 +55,9 @@ export default function Singup() {
                     </p>{" "}
                   </div>{" "}
                 </div>{" "}
-                <div className="w-full lg:w-1/2 px-4">
+                <div className="w-full lg:w-1/2 px-4 bg-gray-400">
                   {" "}
-                  <div className="px-6 lg:px-20 py-12 lg:py-24 rounded-lg bg-white">
+                  <div className="px-6 lg:px-20 py-12 lg:py-24 rounded-lg bg-gray-400">
                     {" "}
                     <form action="#">
                       {" "}
