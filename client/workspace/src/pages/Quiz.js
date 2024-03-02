@@ -15,7 +15,7 @@ const meta = {
 export default function Quiz() {
   const [number, setNumber] = useState(0);
   const [questions, setQuestions] = useState([]);
-  const [showResult, setShowResult] = useState(true);
+  const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
   const [clickedOption, setClickedOption] = useState("");
 
@@ -202,17 +202,17 @@ export default function Quiz() {
                           You scored {score} out of {questions.length}
                         </h3>
                         <div className="mt-32">
-                          <button
-                            onClick={handleRestart}
-                            className="mr-5 bg-white rounded-full p-5 m-5"
+                          <a
+                            href="/quiz"
+                            className="mr-5 bg-red-500 rounded-full p-5 m-5"
                           >
                             Restart
-                          </button>
+                          </a>
                           <a
                             href="/quizmenu"
-                            className="mr-5 bg-white rounded-full p-5 m-5"
+                            className="mr-5 bg-green-500 rounded-full p-5 m-5"
                           >
-                            go to home/nextquiz
+                            Go to next quiz
                           </a>
                         </div>
                       </>
