@@ -9,7 +9,7 @@ function Header() {
   return (
     <section className="py-8 px-4 lg:px-10 bg-gray-800">
       <nav className="relative flex justify-between items-center">
-        <a className="text-2xl text-white font-bold" href="/home">
+        <a className="text-2xl text-white font-bold" href="/">
           <img className="h-7" src={Logo} alt="" width="auto" />
         </a>
         <div className="lg:hidden">

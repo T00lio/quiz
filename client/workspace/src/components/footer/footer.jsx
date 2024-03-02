@@ -7,7 +7,7 @@ function Footer() {
           {" "}
           <a
             className="inline-block mb-20 text-white text-xl font-bold"
-            href="/home"
+            href="/"
           >
             {" "}
             <img

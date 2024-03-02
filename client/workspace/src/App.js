@@ -12,7 +12,7 @@ import Signin from "./pages/Signin";
 function App() {
   return (
     <Routes>
-      <Route path="/home" element={<IndexPage />} />
+      <Route path="/" element={<IndexPage />} />
 
       <Route path="/about" element={<AboutPage />} />
 
