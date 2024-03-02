@@ -7,7 +7,7 @@ import QuizPage from "./pages/Quiz.js";
 import SingupPage from "./pages/Singup.js";
 import ContactPagePage from "./pages/Contact-page.js";
 import QuizMenuPage from "./pages/Quiz-menu.js";
-import SingupDuplicate1Page from "./pages/Singup-duplicate1.js";
+import Signin from "./pages/Signin";
 
 function App() {
   return (
@@ -18,13 +18,13 @@ function App() {
 
       <Route path="/quiz" element={<QuizPage />} />
 
-      <Route path="/signup" element={<SingupPage />} />
+      <Route path="/signin" element={<SingupPage />} />
 
       <Route path="/contactpage" element={<ContactPagePage />} />
 
       <Route path="/quizmenu" element={<QuizMenuPage />} />
 
-      <Route path="/singin" element={<SingupDuplicate1Page />} />
+      <Route path="/signup" element={<Signin />} />
     </Routes>
   );
 }
