@@ -57,11 +57,11 @@ export default function Singup() {
                 </div>{" "}
                 <div className="w-full lg:w-1/2 px-4 bg-gray-400">
                   {" "}
-                  <div className="px-6 lg:px-20 py-12 lg:py-24 rounded-lg bg-gray-400">
+                  <div className="px-6 lg:px-20 py-12 lg:py-24 rounded-lg bg-gray-600">
                     {" "}
                     <form action="#">
                       {" "}
-                      <h3 className="mb-10 text-2xl font-bold font-heading">
+                      <h3 className="mb-10 text-2xl font-bold font-heading text-white">
                         Register Account
                       </h3>{" "}
                       <div className="flex items-center pl-6 mb-3 bg-white rounded-full border-slate-950">
