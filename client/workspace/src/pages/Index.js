@@ -38,7 +38,7 @@ export default function Index() {
                   </p>
                   <a
                     className="inline-block px-12 py-5 text-lg text-white font-bold bg-blue-500 hover:bg-blue-600 transition duration-200 rounded-2xl"
-                    href="#"
+                    href="/quizmenu"
                   >
                     Boost Your Skills Today
                   </a>
@@ -153,9 +153,12 @@ export default function Index() {
                     </div>
                   </div>
                 </div>
-                <div className="relative w-full lg:w-1/2 px-4 pb-20">
+                <div
+                  className="relative w-full lg:w-1/2 px-4 pb-20"
+                  id="message-form"
+                >
                   <div className="max-w-md lg:ml-20">
-                    <form action="#">
+                    <form action="submit">
                       <h3 className="mb-10 text-2xl font-bold text-white">
                         Send a message!
                       </h3>

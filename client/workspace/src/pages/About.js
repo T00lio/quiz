@@ -53,7 +53,7 @@ export default function About() {
               <img
                 className="lg:absolute lg:h-144 mr-auto mt-35 h-128 top-5 right-20"
                 src="images/IMG-1583.jpeg"
-                alt=""
+                alt="About me"
               />
             </div>
             <div className="flex flex-wrap -m-4">

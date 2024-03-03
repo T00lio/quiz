@@ -57,7 +57,7 @@ export default function ContactPage() {
                       <div className="md:text-right">
                         <a
                           className="inline-block px-12 py-4 border border-gray-300 hover:border-gray-200 rounded-full font-bold text-white"
-                          href="#"
+                          href="/#message-form"
                         >
                           Message
                         </a>
@@ -147,14 +147,11 @@ export default function ContactPage() {
                 </div>
               </div>
               <div className="text-center">
-                <p className="mb-4 text-xl text-gray-300">
-                  The brown fox jumps over the lazy dog.
-                </p>
                 <a
                   className="inline-flex text-blue-400 hover:text-blue-500 font-bold"
-                  href="#"
+                  href="https://tuliosalvatierra.com"
                 >
-                  <span>Learn more</span>
+                  <span>tuliosalvatierra.com</span>
                   <svg
                     className="ml-4 w-4 h-5"
                     width={19}
