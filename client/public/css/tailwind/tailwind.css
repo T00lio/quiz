@@ -1438,6 +1438,10 @@ video {
     padding-bottom: 10rem;
   }
 
+  .\32xl\:pt-10 {
+    padding-top: 2.5rem;
+  }
+
   .\32xl\:pt-20 {
     padding-top: 5rem;
   }

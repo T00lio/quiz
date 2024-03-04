@@ -1,3 +1,6 @@
+import React from "react";
+import "./footer.css";
+
 function Footer() {
   return (
     <section className="py-20 2xl:py-40 bg-gray-800">
@@ -17,8 +20,8 @@ function Footer() {
               width="auto"
             />
           </a>{" "}
-          <ul className="mb-12 md:mb-20 flex flex-wrap md:justify-between text-lg space-x-0">
-            <li className="mb-4 mr-4 md:mb-0">
+          <ul className="nav-link">
+            <li className="mb-4 md:mb-0">
               <a
                 className="font-bold text-white hover:text-gray-100"
                 href="/quizmenu"
@@ -29,7 +32,7 @@ function Footer() {
             <li className="mb-4 md:mb-0">
               <a
                 className="font-bold text-white hover:text-gray-100"
-                href="/services"
+                href="/about"
               >
                 About
               </a>
@@ -37,7 +40,7 @@ function Footer() {
             <li className="mb-4 md:mb-0">
               <a
                 className="font-bold text-white hover:text-gray-100"
-                href="/about"
+                href="/contactpage"
               >
                 Contact
               </a>
@@ -46,7 +49,7 @@ function Footer() {
           <div className="flex justify-center">
             {" "}
             <a
-              className="flex justify-evenly items-center w-12 h-12 mr-4 bg-gray-600 rounded-full"
+              className="flex justify-center items-center w-12 h-12 mr-4 bg-gray-600 rounded-full"
               href="https://www.facebook.com/tulio.dev"
             >
               {" "}
