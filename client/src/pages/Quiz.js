@@ -18,21 +18,21 @@ export default function Quiz() {
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
   const [clickedOption, setClickedOption] = useState("");
+  console.log(showResult);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get("http://localhost:3004/api/questions");
         setQuestions(response.data);
+        console.log(response.data);
       } catch (error) {
-        console.error("Failed to fetch questions:", error);
+        console.log("Failed to fetch questions:", error);
         // Handle the error more visibly if needed
       }
     };
     fetchData();
   }, []);
-
-  const questionData = questions[number];
 
   const handleClicked = (optionId, isCorrect) => {
     setClickedOption(optionId); // Track which button was clicked
@@ -51,26 +51,31 @@ export default function Quiz() {
       if (nextQuest < questions.length) {
         setNumber(nextQuest);
       } else {
-        setShowResult(true);
+        setShowResult(false);
       }
       setClickedOption(""); // Reset clicked option for the next question
     }, 1500);
   };
+  console.log(showResult);
 
   const handleRestart = () => {
     setNumber(0);
     setScore(0);
     setShowResult(false);
   };
+  console.log(showResult);
 
   const handleSkip = () => {
     const nextQuest = number + 1;
     if (nextQuest < questions.length) {
       setNumber(nextQuest);
     } else {
-      setShowResult(true);
+      setShowResult(false);
     }
   };
+  console.log(showResult);
+
+  const questionData = questions[number];
 
   return (
     <React.Fragment>
@@ -96,7 +101,7 @@ export default function Quiz() {
                         </h3>
                         <div className="bg-white rounded-xl p-4 w-1/4">
                           <p className="w-25 ml-auto mr-auto">
-                            Score 1 out of 10
+                            {`Score ${score} out of ${questions.length}`}
                           </p>
                           <h3 className="w-25 ml-auto mr-auto mt-5">
                             Progress {questionData?.id} out of{" "}
@@ -120,7 +125,7 @@ export default function Quiz() {
                                 : "bg-white"
                             }`}
                             onClick={() =>
-                              handleClicked("option1", questionData.correct1)
+                              handleClicked("option1", questionData?.correct1)
                             }
                           >
                             {questionData?.option1}
@@ -129,14 +134,14 @@ export default function Quiz() {
                           <button
                             className={`rounded-xl p-5 mb-5 ${
                               clickedOption === "option2" &&
-                              questionData.correct2 === "TRUE"
+                              questionData?.correct2 === "TRUE"
                                 ? "bg-green-500"
                                 : clickedOption === "option2"
                                 ? "bg-red-500"
                                 : "bg-white"
                             }`}
                             onClick={() =>
-                              handleClicked("option2", questionData.correct2)
+                              handleClicked("option2", questionData?.correct2)
                             }
                           >
                             {questionData?.option2}
@@ -145,14 +150,14 @@ export default function Quiz() {
                           <button
                             className={`rounded-xl p-5 mb-5 ${
                               clickedOption === "option3" &&
-                              questionData.correct3 === "TRUE"
+                              questionData?.correct3 === "TRUE"
                                 ? "bg-green-500"
                                 : clickedOption === "option3"
                                 ? "bg-red-500"
                                 : "bg-white"
                             }`}
                             onClick={() =>
-                              handleClicked("option3", questionData.correct3)
+                              handleClicked("option3", questionData?.correct3)
                             }
                           >
                             {questionData?.option3}
@@ -161,14 +166,14 @@ export default function Quiz() {
                           <button
                             className={`rounded-xl p-5 mb-5 ${
                               clickedOption === "option4" &&
-                              questionData.correct3 === "TRUE"
+                              questionData?.correct3 === "TRUE"
                                 ? "bg-green-500"
                                 : clickedOption === "option4"
                                 ? "bg-red-500"
                                 : "bg-white"
                             }`}
                             onClick={() =>
-                              handleClicked("option4", questionData.correct4)
+                              handleClicked("option4", questionData?.correct4)
                             }
                           >
                             {questionData?.option4}
@@ -179,7 +184,7 @@ export default function Quiz() {
                             onClick={handleRestart}
                             className="mr-5 bg-red-500 rounded-full p-5"
                           >
-                            Restast
+                            Restart
                           </button>
                           <button
                             onClick={handleSkip}
@@ -202,17 +207,17 @@ export default function Quiz() {
                           You scored {score} out of {questions.length}
                         </h3>
                         <div className="mt-32">
-                          <a
-                            href="/quiz"
+                          <button
+                            onClick={handleRestart}
                             className="mr-5 bg-red-500 rounded-full p-5 m-5"
                           >
                             Restart
-                          </a>
+                          </button>
                           <a
                             href="/quizmenu"
                             className="mr-5 bg-green-500 rounded-full p-5 m-5"
                           >
-                            Go to next quiz
+                            Go to quiz menu
                           </a>
                         </div>
                       </>
