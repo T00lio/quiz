@@ -3,6 +3,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import axios from "axios";
 import Footer from "../components/footer/footer";
 import Header from "../components/header/index";
+import Success from "../components/success";
 
 const meta = {
   title: "",
@@ -53,14 +54,12 @@ export default function Quizcopy() {
       } else setClickedOption(""); // Reset clicked option for the next question
     }, 1500);
   };
-  console.log(showResult);
 
   const handleRestart = () => {
     setNumber(0);
     setScore(0);
     setShowResult(false);
   };
-  console.log(showResult);
 
   const handleSkip = () => {
     const nextQuest = number + 1;
@@ -68,7 +67,6 @@ export default function Quizcopy() {
       setNumber(nextQuest);
     }
   };
-  console.log(showResult);
 
   const questionData = questions[number];
 
@@ -88,7 +86,7 @@ export default function Quizcopy() {
                 <div className="px-16 pt-16 pb-24 bg-gray-600 rounded-2xl">
                   <div className="px-16 pt-16 pb-24 bg-gray-600 rounded-lg top-0">
                     <>
-                      {showResult ? (
+                      {!showResult ? (
                         <>
                           <div className="grid grid-cols-2 grid-rows-2 gap-4" />
 
@@ -193,30 +191,10 @@ export default function Quizcopy() {
                         </>
                       ) : (
                         <>
-                          <h1 className="text-5xl mb-2 leading-tight font-bold font-heading text-white">
-                            Congratulations!
-                          </h1>
-                          <h2 className="text-4xl mb-2 leading-tight font-bold font-heading text-white">
-                            You sucesfully completed the quiz, here are your
-                            results:
-                          </h2>
-                          <h3 className="text-4xl mt-2 mb-2 leading-tight font-bold font-heading text-white">
-                            You scored {score} out of {questions.length}
-                          </h3>
-                          <div className="mt-32">
-                            <button
-                              onClick={handleRestart}
-                              className="mr-5 bg-red-500 rounded-full p-5 m-5"
-                            >
-                              Restart
-                            </button>
-                            <a
-                              href="/quizmenu"
-                              className="mr-5 bg-green-500 rounded-full p-5 m-5"
-                            >
-                              Go to quiz menu
-                            </a>
-                          </div>
+                          <Success
+                            score={score}
+                            handleRestart={handleRestart}
+                          />
                         </>
                       )}
                     </>
