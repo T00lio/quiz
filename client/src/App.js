@@ -8,6 +8,7 @@ import SingupPage from "./pages/Singup.js";
 import ContactPagePage from "./pages/Contact-page.js";
 import QuizMenuPage from "./pages/Quiz-menu.js";
 import Signin from "./pages/Signin.js";
+import Quizcopy from "./pages/Quiz-copy.js";
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
       <Route path="/quizmenu" element={<QuizMenuPage />} />
 
       <Route path="/signup" element={<Signin />} />
+
+      <Route path="/quizcopy" element={<Quizcopy />} />
     </Routes>
   );
 }
