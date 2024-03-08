@@ -77,7 +77,7 @@ export default function Quizcopy() {
             <div className="flex flex-wrap -mx-10">
               <div className="relative w-full mb-10 lg:mb-20">
                 <div className="px-16 pt-16 pb-24 bg-gray-600 rounded-2xl">
-                  <div className="px-16 pt-16 pb-24 bg-gray-600 rounded-lg top-0">
+                  <div className=" pt-16 pb-24 bg-gray-600 rounded-lg top-0">
                     <>
                       {!showResult ? (
                         <>
@@ -101,8 +101,8 @@ export default function Quizcopy() {
                               </h3>
                             </div>
                           </div>
-                          <div className="grid-rows-4 flex flex-col ">
-                            <div className="option-container mt-5">
+                          <div className="grid-rows-4 flex flex-col mt-10 bg-gray-500 p-5 rounded-lg">
+                            <div className="option-container mt-5 shadow-xl">
                               {questionData &&
                                 [
                                   "option1",
@@ -125,7 +125,7 @@ export default function Quizcopy() {
                                 ))}
                             </div>
                           </div>
-                          <div className="mt-15 p-15">
+                          <div className="mt-5">
                             <button
                               onClick={handleRestart}
                               className="mr-5 bg-red-500 rounded-full p-5"
