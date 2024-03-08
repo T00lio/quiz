@@ -4,6 +4,7 @@ import axios from "axios";
 import Footer from "../components/footer/footer";
 import Header from "../components/header/index";
 import Success from "../components/success";
+import Option from "../components/option-botton";
 
 const meta = {
   title: "",
@@ -88,28 +89,30 @@ export default function Quizcopy() {
                     <>
                       {!showResult ? (
                         <>
-                          <div className="grid grid-cols-2 grid-rows-2 gap-4" />
+                          <div className="grid grid-cols-2 gap-4" />
 
                           <h3 className="mt-12 mb-8 ml-auto text-4xl font-bold text-white w-50">
                             Welcome to the React Quiz
                           </h3>
-                          <div className="bg-white rounded-xl p-4 w-1/4">
-                            <p className="w-25 ml-auto mr-auto">
-                              {`Score ${score} out of ${questions.length}`}
-                            </p>
-                            <h3 className="w-25 ml-auto mr-auto mt-5">
-                              Progress {questionData?.id} out of{" "}
-                              {questions?.length}
+                          <div className="flex justify-between">
+                            <h3 className="text-2xl mr-auto text-white mb-10 mt-10 font-bold w-1/2">
+                              Question {questionData?.id}:{" "}
+                              {questionData?.question}
                             </h3>
+                            <div className="w-1/4 ml-auto bg-white rounded-xl p-4">
+                              <p className="w-25 ml-auto mr-auto mt-5">
+                                {`Score ${score} / ${questions.length}`}
+                              </p>
+                              <h3 className="w-25 ml-auto mr-auto mt-5">
+                                Progress {questionData?.id} /{" "}
+                                {questions?.length}
+                              </h3>
+                            </div>
                           </div>
-
-                          <h3 className="text-2xl text-white mb-10 mt-10 font-bold">
-                            Question {questionData?.id}:{" "}
-                            {questionData?.question}
-                          </h3>
                           <div></div>
                           <div className="grid-rows-4 flex flex-col ">
                             {/* option1 */}
+                            <Option />
                             <button
                               className={`rounded-xl p-5 mb-5 ${
                                 clickedOption === "option1" &&
