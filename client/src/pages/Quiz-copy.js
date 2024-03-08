@@ -19,15 +19,12 @@ export default function Quizcopy() {
   const [questions, setQuestions] = useState([]);
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
-  const [clickedOption, setClickedOption] = useState("");
-  console.log(showResult);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get("http://localhost:3004/api/questions");
         setQuestions(response.data);
-        console.log(response.data);
       } catch (error) {
         console.log("Failed to fetch questions:", error);
         // Handle the error more visibly if needed
@@ -36,23 +33,18 @@ export default function Quizcopy() {
     fetchData();
   }, []);
 
-  const handleClicked = (optionId, isCorrect) => {
-    setClickedOption(optionId); // Track which button was clicked
-
-    const correct =
-      questionData[`correct${optionId.charAt(optionId.length - 1)}`] === "TRUE";
-
-    // Update the score if the answer is correct
-    if (correct) {
+  const handleOptionSelection = (isCorrect) => {
+    if (isCorrect) {
       setScore(score + 1);
     }
 
-    // Wait for 1.5 seconds before moving to the next question
     setTimeout(() => {
-      const nextQuest = number + 1;
-      if (nextQuest < questions.length) {
-        setNumber(nextQuest);
-      } else setClickedOption(""); // Reset clicked option for the next question
+      const nextQuestion = number + 1;
+      if (nextQuestion < questions.length) {
+        setNumber(nextQuestion);
+      } else {
+        setShowResult(true);
+      }
     }, 1500);
   };
 
@@ -109,73 +101,29 @@ export default function Quizcopy() {
                               </h3>
                             </div>
                           </div>
-                          <div></div>
                           <div className="grid-rows-4 flex flex-col ">
-                            {/* option1 */}
-                            <Option />
-                            <button
-                              className={`rounded-xl p-5 mb-5 ${
-                                clickedOption === "option1" &&
-                                questionData.correct1 === "TRUE"
-                                  ? "bg-green-500"
-                                  : clickedOption === "option1"
-                                  ? "bg-red-500"
-                                  : "bg-white"
-                              }`}
-                              onClick={() =>
-                                handleClicked("option1", questionData?.correct1)
-                              }
-                            >
-                              {questionData?.option1}
-                            </button>
-                            {/* option 2 */}
-                            <button
-                              className={`rounded-xl p-5 mb-5 ${
-                                clickedOption === "option2" &&
-                                questionData?.correct2 === "TRUE"
-                                  ? "bg-green-500"
-                                  : clickedOption === "option2"
-                                  ? "bg-red-500"
-                                  : "bg-white"
-                              }`}
-                              onClick={() =>
-                                handleClicked("option2", questionData?.correct2)
-                              }
-                            >
-                              {questionData?.option2}
-                            </button>
-                            {/* option 3 */}
-                            <button
-                              className={`rounded-xl p-5 mb-5 ${
-                                clickedOption === "option3" &&
-                                questionData?.correct3 === "TRUE"
-                                  ? "bg-green-500"
-                                  : clickedOption === "option3"
-                                  ? "bg-red-500"
-                                  : "bg-white"
-                              }`}
-                              onClick={() =>
-                                handleClicked("option3", questionData?.correct3)
-                              }
-                            >
-                              {questionData?.option3}
-                            </button>
-                            {/* option 4 */}
-                            <button
-                              className={`rounded-xl p-5 mb-5 ${
-                                clickedOption === "option4" &&
-                                questionData?.correct3 === "TRUE"
-                                  ? "bg-green-500"
-                                  : clickedOption === "option4"
-                                  ? "bg-red-500"
-                                  : "bg-white"
-                              }`}
-                              onClick={() =>
-                                handleClicked("option4", questionData?.correct4)
-                              }
-                            >
-                              {questionData?.option4}
-                            </button>
+                            <div className="option-container mt-5">
+                              {questionData &&
+                                [
+                                  "option1",
+                                  "option2",
+                                  "option3",
+                                  "option4",
+                                ].map((optionKey) => (
+                                  <Option
+                                    key={optionKey}
+                                    label={questionData[optionKey]}
+                                    isCorrect={
+                                      questionData[
+                                        `correct${optionKey.charAt(
+                                          optionKey.length - 1
+                                        )}`
+                                      ] === "TRUE"
+                                    }
+                                    onOptionSelected={handleOptionSelection}
+                                  />
+                                ))}
+                            </div>
                           </div>
                           <div className="mt-15 p-15">
                             <button
