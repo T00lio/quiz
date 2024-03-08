@@ -144,7 +144,7 @@ export default function Quizcopy() {
                         <>
                           <Success
                             score={score}
-                            handleRestart={handleRestart}
+                            handleRestart={() => setNumber(0)}
                           />
                         </>
                       )}
