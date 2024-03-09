@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import Footer from "../components/footer/footer";
 import Header from "../components/header/index";
@@ -15,6 +16,7 @@ const meta = {
 };
 
 export default function Quizcopy() {
+  const subject = useParams();
   const [number, setNumber] = useState(0);
   const [questions, setQuestions] = useState([]);
   const [showResult, setShowResult] = useState(false);
@@ -23,7 +25,9 @@ export default function Quizcopy() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3004/api/questions");
+        const response = await axios.get(
+          `http://localhost:3004/api/questions?subject=${subject}`
+        );
         setQuestions(response.data);
       } catch (error) {
         console.log("Failed to fetch questions:", error);
@@ -31,7 +35,7 @@ export default function Quizcopy() {
       }
     };
     fetchData();
-  }, []);
+  }, [subject]);
 
   const handleOptionSelection = (isCorrect) => {
     if (isCorrect) {

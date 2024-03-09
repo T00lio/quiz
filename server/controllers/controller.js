@@ -10,6 +10,12 @@ const Answer = db.answers;
 const getQuestions = async (req, res) => {
   try {
     // const question = await Question.findAll({});
+    const subject = await Answer.findAll({});
+
+    if (!subject) {
+      res.status(404).send({ message: "No questions found" });
+    }
+
     const answer = await Answer.findAll({});
     res.status(200).send(answer);
     console.log(res);

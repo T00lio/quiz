@@ -41,7 +41,7 @@ export default function QuizMenu() {
             <div>
               <div className="flex flex-wrap -mx-10">
                 <div className="relative w-full lg:w-1/2 px-10 mb-10 lg:mb-20">
-                  <Link to="/quiz">
+                  <Link to="/quiz/react">
                     <img
                       className="lg:hidden absolute top-0 right-0 -mt-16"
                       src="zospace-assets/images/stars.svg"
@@ -70,7 +70,7 @@ export default function QuizMenu() {
                 </div>
 
                 <div className="relative w-full lg:w-1/2 px-10 mb-10 lg:mb-20">
-                  <Link to="/quiz">
+                  <Link to="/quiz/css">
                     <div className="px-16 pt-16 pb-24 bg-gray-600 rounded-lg">
                       <span className="flex mb-10 justify-center items-center w-20 h-20 bg-green-500 rounded-lg">
                         <img src={CSS} alt="css-logo" />
@@ -93,7 +93,7 @@ export default function QuizMenu() {
                 </div>
 
                 <div className="w-full lg:w-1/2 px-10 mb-10 lg:mb-20">
-                  <Link to="/quiz">
+                  <Link to="/quiz/html">
                     <div className="px-16 pt-16 pb-24 bg-gray-600 rounded-lg">
                       <span className="flex mb-10 justify-center items-center w-20 h-20 bg-violet-500 rounded-lg">
                         <img src={HTML} alt="html-logo" />
@@ -119,7 +119,7 @@ export default function QuizMenu() {
                 </div>
 
                 <div className="w-full lg:w-1/2 px-10 mb-10 lg:mb-20">
-                  <Link to="/quiz">
+                  <Link to="/quiz/javascript">
                     <div className="px-16 pt-16 pb-24 bg-gray-600 rounded-lg">
                       <span className="flex mb-10 justify-center items-center w-20 h-20 bg-pink-500 rounded-lg">
                         <img src={JS} alt="js-logo" />
