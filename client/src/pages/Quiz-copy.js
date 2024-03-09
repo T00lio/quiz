@@ -16,7 +16,7 @@ const meta = {
 };
 
 export default function Quizcopy() {
-  const subject = useParams();
+  const { subject } = useParams();
   const [number, setNumber] = useState(0);
   const [questions, setQuestions] = useState([]);
   const [showResult, setShowResult] = useState(false);
@@ -28,6 +28,8 @@ export default function Quizcopy() {
         const response = await axios.get(
           `http://localhost:3004/api/questions?subject=${subject}`
         );
+
+        console.log(response.data);
         setQuestions(response.data);
       } catch (error) {
         console.log("Failed to fetch questions:", error);
@@ -88,7 +90,7 @@ export default function Quizcopy() {
                           <div className="grid grid-cols-2 gap-4" />
 
                           <h3 className="mt-12 mb-8 ml-auto text-4xl font-bold text-white w-50">
-                            Welcome to the React Quiz
+                            Welcome to the {subject} Quiz
                           </h3>
                           <div className="flex justify-between">
                             <h3 className="text-2xl mr-auto text-white mb-10 mt-10 font-bold w-1/2">
