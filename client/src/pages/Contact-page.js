@@ -138,9 +138,6 @@ export default function ContactPage() {
                           </p>
                           <p className="text-lg font-bold text-white">60638</p>
                         </div>
-                        <p className="text-gray-400">
-                          The one est bad, semper six. At sem quis, congue
-                        </p>
                       </div>
                     </div>
                   </div>

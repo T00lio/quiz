@@ -62,7 +62,7 @@ export default function Index() {
               <div className="flex flex-wrap -mx-4">
                 <div className="relative w-full lg:w-1/2 px-4 pb-20 overflow-hidden">
                   <img
-                    className="hidden lg:block absolute bottom-0 right-0 w-full h-screen -mr-20 -mb-52"
+                    className="hidden lg:block absolute bottom-0 right-0 w-full h-screen -mr-20 -mb-5"
                     src="zospace-assets/lines/circle.svg"
                     alt=""
                   />
@@ -159,7 +159,7 @@ export default function Index() {
                 >
                   <div className="max-w-md lg:ml-20">
                     <form action="submit">
-                      <h3 className="mb-10 text-2xl font-bold text-white">
+                      <h3 className="mb-10 mt-10 text-2xl font-bold text-white">
                         Send a message!
                       </h3>
                       <input
