@@ -29,7 +29,6 @@ export default function Quizcopy() {
           `http://localhost:3004/api/questions?subject=${subject}`
         );
 
-        console.log(response.data);
         setQuestions(response.data);
       } catch (error) {
         console.log("Failed to fetch questions:", error);
