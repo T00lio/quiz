@@ -1,6 +1,6 @@
 {
-  "include": ["src/**/*"], // Add a valid input file or directory here
-  "exclude": ["./dist"],
+  "include": ["src/**/*, ./dist"], // Add a valid input file or directory here
+  "exclude": ["node_modules"], // Add a valid input file or directory here
 
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
