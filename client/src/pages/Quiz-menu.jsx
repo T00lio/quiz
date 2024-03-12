@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet, HelmetProvider } from "react-helmet-async";
 import ReactJS from "../assets/subject-logos/React.png";
 import CSS from "../assets/subject-logos/CSS.png";
 import HTML from "../assets/subject-logos/HTML.png";
@@ -8,20 +7,9 @@ import { Link } from "react-router-dom";
 import Header from "../components/header";
 import Footer from "../components/footer";
 
-const meta = {
-  title: "",
-  meta: [],
-  link: [],
-  style: [],
-  script: [],
-};
-
 export default function QuizMenu() {
   return (
     <React.Fragment>
-      <HelmetProvider>
-        <Helmet {...meta}></Helmet>
-      </HelmetProvider>
       <>
         {/* header */}
         <Header />
