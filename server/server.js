@@ -24,6 +24,8 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(cors(corsOptions));
+
 var corsOptions = {
   origin: `http://localhost:${port}`,
 };

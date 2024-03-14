@@ -1,7 +1,7 @@
-import { getQuestions } from "../../controllers/controllers.js";
+// import { getQuestions } from "../../controllers/controllers.js";
 
-const router = require("express").Router();
+// const router = require("express").Router();
 
-router.get("/", getQuestions);
+// router.get("/", getQuestions);
 
-export default router;
+// export default router;
