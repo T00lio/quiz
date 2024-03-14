@@ -1,0 +1,3542 @@
+{
+  "React": [
+    {
+      "id": 1,
+      "question": "What is React.js?",
+      "option1": "A server-side programming language",
+      "correct1": false,
+      "option2": "A style sheet language",
+      "correct2": false,
+      "option3": "A JavaScript library for building user interfaces",
+      "correct3": true,
+      "option4": "A database query language",
+      "correct4": false
+    },
+    {
+      "id": 2,
+      "question": "What are the key features of React.js?",
+      "option1": "Virtual DOM and server-side rendering",
+      "correct1": true,
+      "option2": "Type checking and PropTypes",
+      "correct2": false,
+      "option3": "Templates and data binding",
+      "correct3": false,
+      "option4": "Strict file structure",
+      "correct4": false
+    },
+    {
+      "id": 3,
+      "question": "What is JSX?",
+      "option1": "JavaScript extension for short XML",
+      "correct1": false,
+      "option2": "JavaScript Syntax eXtension",
+      "correct2": true,
+      "option3": "Java Secure Execution",
+      "correct3": false,
+      "option4": "JavaScript Serialized XML",
+      "correct4": false
+    },
+    {
+      "id": 4,
+      "question": "What is the significance of the virtual DOM in React.js?",
+      "option1": "Increases direct manipulation of the DOM",
+      "correct1": false,
+      "option2": "Enables the use of virtual reality",
+      "correct2": false,
+      "option3": "Allows a declarative UI",
+      "correct3": false,
+      "option4": "Improves performance by minimizing direct DOM manipulation",
+      "correct4": true
+    },
+    {
+      "id": 5,
+      "question": "What is the difference between a functional component and a class component in React.js?",
+      "option1": "Functional components cannot use hooks",
+      "correct1": false,
+      "option2": "Class components are stateless",
+      "correct2": false,
+      "option3": "Functional components are stateless and class components are stateful",
+      "correct3": true,
+      "option4": "There is no difference",
+      "correct4": false
+    },
+    {
+      "id": 6,
+      "question": "What is the purpose of the constructor in a React component?",
+      "option1": "To compute derived state",
+      "correct1": false,
+      "option2": "To initialize state and bind event handler methods",
+      "correct2": true,
+      "option3": "To handle CSS styling",
+      "correct3": false,
+      "option4": "To register the component with the DOM",
+      "correct4": false
+    },
+    {
+      "id": 7,
+      "question": "What is state in React.js?",
+      "option1": "A permanent storage like a database",
+      "correct1": false,
+      "option2": "A read-only component configuration",
+      "correct2": false,
+      "option3": "An internal data store (object) of a component",
+      "correct3": true,
+      "option4": "External data passed into the component",
+      "correct4": false
+    },
+    {
+      "id": 8,
+      "question": "What is the difference between state and props in React.js?",
+      "option1": "State is immutable while props are mutable",
+      "correct1": false,
+      "option2": "State is internal and controlled by the component itself, props are external and controlled by whatever renders the component",
+      "correct2": true,
+      "option3": "Props can be used to store data, state cannot",
+      "correct3": false,
+      "option4": "There is no difference, both are used for the same purpose",
+      "correct4": false
+    },
+    {
+      "id": 9,
+      "question": "What is a controlled component?",
+      "option1": "A component that controls the behavior of other components",
+      "correct1": false,
+      "option2": "A component that does not allow user input",
+      "correct2": false,
+      "option3": "A component that requires manual handling of DOM updates",
+      "correct3": false,
+      "option4": "A component with form elements where the data is controlled by the state of the component",
+      "correct4": true
+    },
+    {
+      "id": 10,
+      "question": "What are React lifecycle methods?",
+      "option1": "Methods that allow you to run code at specific points in a component's life",
+      "correct1": true,
+      "option2": "HTTP methods that a React component can call",
+      "correct2": false,
+      "option3": "Functions that must be called before a component is used",
+      "correct3": false,
+      "option4": "A sequence of methods to manage component state changes",
+      "correct4": false
+    },
+    {
+      "id": 11,
+      "question": "What is the significance of the render() method in React.js?",
+      "option1": "It is used to update the state of the component",
+      "correct1": false,
+      "option2": "It sends a request to the server",
+      "correct2": false,
+      "option3": "It is used to create a virtual DOM node",
+      "correct3": false,
+      "option4": "It is required for each component to describe what should be rendered on the screen",
+      "correct4": true
+    },
+    {
+      "id": 12,
+      "question": "What is the purpose of keys in React lists?",
+      "option1": "To unlock special list features",
+      "correct1": false,
+      "option2": "To help React identify which items have changed, are added, or are removed",
+      "correct2": true,
+      "option3": "To set a unique style for each item",
+      "correct3": false,
+      "option4": "To improve the search speed within lists",
+      "correct4": false
+    },
+    {
+      "id": 13,
+      "question": "What is context in React.js?",
+      "option1": "It is a state management tool",
+      "correct1": false,
+      "option2": "It is a way to pass data through the component tree without having to pass props down manually at every level",
+      "correct2": true,
+      "option3": "It provides the current time and date",
+      "correct3": false,
+      "option4": "It is a method to handle errors in the application",
+      "correct4": false
+    },
+    {
+      "id": 14,
+      "question": "What are higher-order components (HOCs) in React.js?",
+      "option1": "They are components that render other components",
+      "correct1": true,
+      "option2": "They are the main components that hold the state of the application",
+      "correct2": false,
+      "option3": "They are components that only render HTML",
+      "correct3": false,
+      "option4": "They are the components with the highest z-index",
+      "correct4": false
+    },
+    {
+      "id": 15,
+      "question": "What are React hooks?",
+      "option1": "Functions to hook into React state and lifecycle features from function components",
+      "correct1": true,
+      "option2": "A type of JavaScript function",
+      "correct2": false,
+      "option3": "HTML elements that React components can hook onto",
+      "correct3": false,
+      "option4": "Libraries used to connect React to other frameworks",
+      "correct4": false
+    },
+    {
+      "id": 16,
+      "question": "What are the basic rules of hooks?",
+      "option1": "Hooks can be used in class components",
+      "correct1": false,
+      "option2": "Hooks should only be called at the top level and not inside loops, conditions, or nested functions",
+      "correct2": true,
+      "option3": "Hooks must be written before the component is defined",
+      "correct3": false,
+      "option4": "There are no rules for using hooks",
+      "correct4": false
+    },
+    {
+      "id": 17,
+      "question": "What is the useState hook used for?",
+      "option1": "To update the title of the document",
+      "correct1": false,
+      "option2": "To fetch data from an API",
+      "correct2": false,
+      "option3": "To add state to a function component",
+      "correct3": true,
+      "option4": "To create a callback function",
+      "correct4": false
+    },
+    {
+      "id": 18,
+      "question": "What is the useEffect hook used for?",
+      "option1": "To handle user input",
+      "correct1": false,
+      "option2": "To integrate with third-party libraries",
+      "correct2": false,
+      "option3": "To perform side effects in function components",
+      "correct3": true,
+      "option4": "To replace all lifecycle methods in class components",
+      "correct4": false
+    },
+    {
+      "id": 19,
+      "question": "What is the difference between useCallback and useMemo hooks?",
+      "option1": "useCallback returns a memoized callback, useMemo returns a memoized value",
+      "correct1": true,
+      "option2": "useCallback is used for state management, useMemo is used for rendering",
+      "correct2": false,
+      "option3": "There is no difference, they are interchangeable",
+      "correct3": false,
+      "option4": "useCallback is used to create new components, useMemo is used to cache components",
+      "correct4": false
+    },
+    {
+      "id": 20,
+      "question": "What is React Router?",
+      "option1": "A tool for navigating between different documents in the browser",
+      "correct1": false,
+      "option2": "A core part of the React library for state management",
+      "correct2": false,
+      "option3": "A server-side framework for React applications",
+      "correct3": false,
+      "option4": "A library for routing in React applications, allowing you to handle navigation declaratively",
+      "correct4": true
+    },
+    {
+      "id": 21,
+      "question": "What is Redux?",
+      "option1": "A real-time database",
+      "correct1": false,
+      "option2": "A frontend framework like Angular",
+      "correct2": false,
+      "option3": "A JavaScript library for managing application state",
+      "correct3": true,
+      "option4": "A command-line interface for React",
+      "correct4": false
+    },
+    {
+      "id": 22,
+      "question": "What is the purpose of actions in Redux?",
+      "option1": "To describe state changes in the application",
+      "correct1": true,
+      "option2": "To handle asynchronous code",
+      "correct2": false,
+      "option3": "To directly mutate the application's state",
+      "correct3": false,
+      "option4": "To combine different reducers into one",
+      "correct4": false
+    },
+    {
+      "id": 23,
+      "question": "What are reducers in Redux?",
+      "option1": "Functions that reduce the size of the action payloads",
+      "correct1": false,
+      "option2": "Components that listen for actions",
+      "correct2": false,
+      "option3": "Functions that take the current state and an action to compute a new state",
+      "correct3": true,
+      "option4": "Middleware used to log actions",
+      "correct4": false
+    },
+    {
+      "id": 24,
+      "question": "What is the connect function in Redux?",
+      "option1": "It connects the Redux store to the React router",
+      "correct1": false,
+      "option2": "It is a hook that connects a React component to the Redux store",
+      "correct2": false,
+      "option3": "It connects different reducers into one",
+      "correct3": false,
+      "option4": "It connects a React component to the Redux store",
+      "correct4": true
+    },
+    {
+      "id": 25,
+      "question": "What is the purpose of middleware in Redux?",
+      "option1": "To interrupt the action dispatch process",
+      "correct1": false,
+      "option2": "To provide a third-party extension point between dispatching an action and the moment it reaches the reducer",
+      "correct2": true,
+      "option3": "To replace the store in Redux",
+      "correct3": false,
+      "option4": "To manage the state of the application",
+      "correct4": false
+    },
+    {
+      "id": 26,
+      "question": "What is Redux Thunk?",
+      "option1": "A type of action in Redux",
+      "correct1": false,
+      "option2": "A library for making the Redux store immutable",
+      "correct2": false,
+      "option3": "A middleware that allows you to write action creators that return a function instead of an action",
+      "correct3": true,
+      "option4": "A tool for synchronizing Redux state across multiple stores",
+      "correct4": false
+    },
+    {
+      "id": 27,
+      "question": "What is React Native?",
+      "option1": "A native version of the React library optimized for performance",
+      "correct1": false,
+      "option2": "A framework for building native apps using JavaScript and React",
+      "correct2": true,
+      "option3": "A compiler that converts React code to native mobile code",
+      "correct3": false,
+      "option4": "A plugin for React that adds additional native components",
+      "correct4": false
+    },
+    {
+      "id": 28,
+      "question": "What is the difference between React and React Native?",
+      "option1": "React is for building interfaces, while React Native is for building APIs",
+      "correct1": false,
+      "option2": "React is for web development, while React Native is for building mobile apps",
+      "correct2": true,
+      "option3": "React Native uses a virtual DOM, while React does not",
+      "correct3": false,
+      "option4": "There is no difference, they are the same thing",
+      "correct4": false
+    },
+    {
+      "id": 29,
+      "question": "What are React Native components?",
+      "option1": "The building blocks of a React web application",
+      "correct1": false,
+      "option2": "Native components that are compiled into native iOS and Android components",
+      "correct2": true,
+      "option3": "HTML elements that React Native uses to build the UI",
+      "correct3": false,
+      "option4": "Server-side components that render the mobile app UI",
+      "correct4": false
+    },
+    {
+      "id": 30,
+      "question": "What is the purpose of StyleSheet in React Native?",
+      "option1": "To enhance JavaScript execution speed",
+      "correct1": false,
+      "option2": "To compile styles into native code",
+      "correct2": false,
+      "option3": "To provide a CSS-like styling abstraction",
+      "correct3": true,
+      "option4": "To connect to external style sources like APIs",
+      "correct4": false
+    },
+    {
+      "id": 31,
+      "question": "What is the difference between state and props in React Native?",
+      "option1": "State is mutable while props are immutable",
+      "correct1": true,
+      "option2": "Props are used to store information, while state cannot store information",
+      "correct2": false,
+      "option3": "There is no difference, both are used interchangeably",
+      "correct3": false,
+      "option4": "State cannot be passed to child components, but props can",
+      "correct4": false
+    },
+    {
+      "id": 32,
+      "question": "What is the purpose of AsyncStorage in React Native?",
+      "option1": "To manage app state in memory",
+      "correct1": false,
+      "option2": "To store global variables",
+      "correct2": false,
+      "option3": "To keep data in key-value pairs over app restarts",
+      "correct3": true,
+      "option4": "To synchronize data with a remote database",
+      "correct4": false
+    },
+    {
+      "id": 33,
+      "question": "What is the purpose of the Expo framework in React Native?",
+      "option1": "To expedite the native build process using a cloud service",
+      "correct1": true,
+      "option2": "To add extra security layers to the app",
+      "correct2": false,
+      "option3": "To provide additional native APIs for React Native",
+      "correct3": false,
+      "option4": "To compress the app size",
+      "correct4": false
+    },
+    {
+      "id": 34,
+      "question": "What is the purpose of the shouldComponentUpdate() method?",
+      "option1": "To prevent the component from updating",
+      "correct1": false,
+      "option2": "To update the component every time the state changes",
+      "correct2": false,
+      "option3": "To allow the component to update only when certain conditions are met",
+      "correct3": true,
+      "option4": "To force the component to update",
+      "correct4": false
+    },
+    {
+      "id": 35,
+      "question": "What is the React DevTools?",
+      "option1": "A set of tools for backend development in React",
+      "correct1": false,
+      "option2": "A collection of utilities to help with React application deployment",
+      "correct2": false,
+      "option3": "An extension for Chrome and Firefox that provides a development environment for React applications",
+      "correct3": true,
+      "option4": "A toolkit for converting React code to native mobile code",
+      "correct4": false
+    },
+    {
+      "id": 36,
+      "question": "What is the purpose of the key prop in React?",
+      "option1": "To unlock special component features",
+      "correct1": false,
+      "option2": "To enhance the performance of list rendering",
+      "correct2": false,
+      "option3": "To trigger component re-rendering",
+      "correct3": false,
+      "option4": "To help React identify which items have changed, are added, or are removed in lists",
+      "correct4": true
+    },
+    {
+      "id": 37,
+      "question": "What are the different ways to style components in React?",
+      "option1": "Inline styles, CSS stylesheets, and styled-components",
+      "correct1": true,
+      "option2": "Only inline styles are allowed in React",
+      "correct2": false,
+      "option3": "Using external libraries like Bootstrap only",
+      "correct3": false,
+      "option4": "Using styles attribute in HTML tags only",
+      "correct4": false
+    },
+    {
+      "id": 38,
+      "question": "What is the purpose of React Fragments?",
+      "option1": "To debug React applications",
+      "correct1": false,
+      "option2": "To enhance performance by reducing the number of nodes in the DOM",
+      "correct2": false,
+      "option3": "To group a list of children without adding extra nodes to the DOM",
+      "correct3": true,
+      "option4": "To wrap components in a security layer",
+      "correct4": false
+    },
+    {
+      "id": 39,
+      "question": "What are controlled components in React forms?",
+      "option1": "Components that cannot be modified by the user",
+      "correct1": false,
+      "option2": "Components where form data is handled by the DOM, not React",
+      "correct2": false,
+      "option3": "Components that do not allow user input",
+      "correct3": false,
+      "option4": "Components where form data is controlled by the state within the React component",
+      "correct4": true
+    },
+    {
+      "id": 40,
+      "question": "What is the purpose of the children prop in React?",
+      "option1": "To set the child elements of a component from an external source",
+      "correct1": false,
+      "option2": "To define the data type of child elements",
+      "correct2": false,
+      "option3": "To pass and render child elements included between the opening and closing tags of a component",
+      "correct3": true,
+      "option4": "To identify the child components that require updates",
+      "correct4": false
+    },
+    {
+      "id": 41,
+      "question": "What is the difference between shallow rendering and full rendering in React testing?",
+      "option1": "Shallow rendering can only render parent components, while full rendering can render child components as well",
+      "correct1": false,
+      "option2": "Shallow rendering tests components without their children, while full rendering tests components with their children",
+      "correct2": true,
+      "option3": "Shallow rendering is faster because it compiles components, while full rendering does not",
+      "correct3": false,
+      "option4": "Shallow rendering is used only in production, while full rendering is used in development",
+      "correct4": false
+    },
+    {
+      "id": 42,
+      "question": "What are React portals?",
+      "option1": "A way to optimize React components for better performance",
+      "correct1": false,
+      "option2": "A debugging tool for React development",
+      "correct2": false,
+      "option3": "A method for rendering children into a DOM node that exists outside the hierarchy of the parent component",
+      "correct3": true,
+      "option4": "A pattern for managing state in large React applications",
+      "correct4": false
+    },
+    {
+      "id": 43,
+      "question": "What is the purpose of the React.memo() function?",
+      "option1": "To store data in the browser's memory for quick access",
+      "correct1": false,
+      "option2": "To memorize the state of the component and prevent re-renders",
+      "correct2": false,
+      "option3": "To enable memory-safe component unmounting",
+      "correct3": false,
+      "option4": "To memoize a functional component so that it only re-renders when its props change",
+      "correct4": true
+    },
+    {
+      "id": 44,
+      "question": "What are the differences between a controlled component and an uncontrolled component?",
+      "option1": "Controlled components do not handle their state, while uncontrolled components do",
+      "correct1": false,
+      "option2": "Controlled components are not reusable, while uncontrolled components are reusable",
+      "correct2": false,
+      "option3": "Controlled components have mutable state, while uncontrolled components have immutable state",
+      "correct3": false,
+      "option4": "Controlled components have their state controlled by React, while uncontrolled components manage their own state",
+      "correct4": true
+    },
+    {
+      "id": 45,
+      "question": "What is the purpose of error boundaries in React?",
+      "option1": "To provide a way to gracefully handle errors in an application's UI",
+      "correct1": true,
+      "option2": "To prevent the application from crashing when an error occurs",
+      "correct2": false,
+      "option3": "To log errors in the development console",
+      "correct3": false,
+      "option4": "To display a stack trace for debugging purposes",
+      "correct4": false
+    },
+    {
+      "id": 46,
+      "question": "What is the React.StrictMode?",
+      "option1": "A mode that enforces strict coding conventions",
+      "correct1": false,
+      "option2": "A higher-order component for enforcing strict prop types",
+      "correct2": false,
+      "option3": "A development tool that highlights potential problems in an application",
+      "correct3": true,
+      "option4": "A component that restricts the use of certain JavaScript features",
+      "correct4": false
+    },
+    {
+      "id": 47,
+      "question": "What is the purpose of the React.Fragment component?",
+      "option1": "To provide a way to return multiple elements from a component's render method without adding an extra node to the DOM",
+      "correct1": true,
+      "option2": "To fragment a component into smaller, more manageable pieces",
+      "correct2": false,
+      "option3": "To enhance performance by reducing the depth of the component tree",
+      "correct3": false,
+      "option4": "To group a set of components and pass them as props to another component",
+      "correct4": false
+    },
+    {
+      "id": 48,
+      "question": "What is the significance of the 'key' attribute when rendering an array of components?",
+      "option1": "It is used to specify the order in which components should be rendered",
+      "correct1": false,
+      "option2": "It is a global identifier for managing focus, clipboard operations, and other interactions",
+      "correct2": false,
+      "option3": "It is an optimization technique to help React identify which items have changed, are added, or are removed",
+      "correct3": true,
+      "option4": "It is only needed for components that have a complex state to manage",
+      "correct4": false
+    },
+    {
+      "id": 49,
+      "question": "What is the useReducer hook in React?",
+      "option1": "A hook that enables the use of Redux-like reducers for state management within a React component",
+      "correct1": true,
+      "option2": "A hook used for reducing the number of components in an application",
+      "correct2": false,
+      "option3": "A hook that combines multiple state variables into one",
+      "correct3": false,
+      "option4": "A hook to reduce the memory footprint of a React application",
+      "correct4": false
+    },
+    {
+      "id": 50,
+      "question": "What is the purpose of the useContext hook in React?",
+      "option1": "To create a new context for a React app",
+      "correct1": false,
+      "option2": "To join multiple contexts together into one",
+      "correct2": false,
+      "option3": "To enable a React component to subscribe to context changes",
+      "correct3": true,
+      "option4": "To optimize context data for better performance",
+      "correct4": false
+    },
+    {
+      "id": 51,
+      "question": "What is the difference between React and ReactDOM?",
+      "option1": "React is a programming language, ReactDOM is a library",
+      "correct1": false,
+      "option2": "React is for building components, ReactDOM is for rendering them to the DOM",
+      "correct2": true,
+      "option3": "React is a framework, ReactDOM is a component library",
+      "correct3": false,
+      "option4": "There is no difference, they are just different names for the same thing",
+      "correct4": false
+    },
+    {
+      "id": 52,
+      "question": "What is the purpose of React.createRef()?",
+      "option1": "To create a new state variable in a functional component",
+      "correct1": false,
+      "option2": "To generate a unique key for list items",
+      "correct2": false,
+      "option3": "To create a reference to a DOM element",
+      "correct3": true,
+      "option4": "To clone an existing component with new props",
+      "correct4": false
+    },
+    {
+      "id": 53,
+      "question": "What is the purpose of the forwardRef() function?",
+      "option1": "To enhance the performance of function components",
+      "correct1": false,
+      "option2": "To pass a ref through a component to one of its children",
+      "correct2": true,
+      "option3": "To duplicate a ref and its current value",
+      "correct3": false,
+      "option4": "To update the parent component's state from a child component",
+      "correct4": false
+    },
+    {
+      "id": 54,
+      "question": "What is the purpose of React.lazy() and Suspense in React?",
+      "option1": "To postpone the execution of a function until the component is unmounted",
+      "correct1": false,
+      "option2": "To delay the loading of a component until it's needed",
+      "correct2": true,
+      "option3": "To add a delay to a network request",
+      "correct3": false,
+      "option4": "To make a component fall asleep when not in use",
+      "correct4": false
+    },
+    {
+      "id": 55,
+      "question": "What is the purpose of the useImperativeHandle() hook?",
+      "option1": "To directly interact with a child component's imperative code",
+      "correct1": true,
+      "option2": "To handle the component's lifecycle imperatively",
+      "correct2": false,
+      "option3": "To create a handle for managing direct DOM interactions",
+      "correct3": false,
+      "option4": "To control the rendering of the component imperatively",
+      "correct4": false
+    },
+    {
+      "id": 56,
+      "question": "What is the purpose of the useLayoutEffect() hook?",
+      "option1": "To trigger an effect only when the layout changes",
+      "correct1": false,
+      "option2": "To synchronize with the layout and paint steps of the browser",
+      "correct2": true,
+      "option3": "To layout the components on the page using CSS grid",
+      "correct3": false,
+      "option4": "To optimize layout performance",
+      "correct4": false
+    },
+    {
+      "id": 57,
+      "question": "What is the purpose of the useDebugValue() hook?",
+      "option1": "To provide a debugging value for a custom hook in React DevTools",
+      "correct1": true,
+      "option2": "To set a default value for useState or useReducer",
+      "correct2": false,
+      "option3": "To display a component's state and props in the console",
+      "correct3": false,
+      "option4": "To debug performance issues in a React application",
+      "correct4": false
+    },
+    {
+      "id": 58,
+      "question": "What is the purpose of the memo() function in React?",
+      "option1": "To memorize function component instances for performance optimization",
+      "correct1": false,
+      "option2": "To remember the last state of a component before it unmounts",
+      "correct2": false,
+      "option3": "To create a memoized version of a function component",
+      "correct3": true,
+      "option4": "To write memory-efficient code in functional components",
+      "correct4": false
+    },
+    {
+      "id": 59,
+      "question": "What is the purpose of the create-react-app tool?",
+      "option1": "To create a new React application with best practices and optimal configurations",
+      "correct1": true,
+      "option2": "To create a new React component",
+      "correct2": false,
+      "option3": "To compile React applications into standalone executables",
+      "correct3": false,
+      "option4": "To generate React documentation automatically",
+      "correct4": false
+    },
+    {
+      "id": 60,
+      "question": "What is the purpose of the React Developer Tools extension?",
+      "option1": "To enhance the features of the browser for React app development",
+      "correct1": false,
+      "option2": "To optimize React code automatically",
+      "correct2": false,
+      "option3": "To provide a performance analysis of React applications",
+      "correct3": false,
+      "option4": "To inspect and debug React component hierarchies in the browser",
+      "correct4": true
+    },
+    {
+      "id": 61,
+      "question": "What is the purpose of the shouldComponentUpdate() method in React class components?",
+      "option1": "To trigger an update to the component",
+      "correct1": false,
+      "option2": "To allow a component to update as a result of a change in state or props",
+      "correct2": true,
+      "option3": "To prevent the component from rendering",
+      "correct3": false,
+      "option4": "To update the state of a component",
+      "correct4": false
+    },
+    {
+      "id": 62,
+      "question": "What is the purpose of the componentWillUnmount() method in React class components?",
+      "option1": "To keep the component mounted in the DOM",
+      "correct1": false,
+      "option2": "To initialize the component state",
+      "correct2": false,
+      "option3": "To perform cleanup tasks when the component is about to be removed from the DOM",
+      "correct3": true,
+      "option4": "To update the component when its parent component's state changes",
+      "correct4": false
+    },
+    {
+      "id": 63,
+      "question": "What is the purpose of the componentDidCatch() method in React class components?",
+      "option1": "To catch JavaScript errors anywhere in the child component tree",
+      "correct1": true,
+      "option2": "To catch events that occur in the component",
+      "correct2": false,
+      "option3": "To intercept all the API calls in the component",
+      "correct3": false,
+      "option4": "To replace the deprecated componentWillCatch lifecycle method",
+      "correct4": false
+    },
+    {
+      "id": 64,
+      "question": "What is the purpose of the getDerivedStateFromProps() method in React class components?",
+      "option1": "To derive the state from the component's props",
+      "correct1": true,
+      "option2": "To get the previous state before an update is applied",
+      "correct2": false,
+      "option3": "To invoke a function before the component receives new props",
+      "correct3": false,
+      "option4": "To replace the componentWillReceiveProps lifecycle method",
+      "correct4": false
+    },
+    {
+      "id": 65,
+      "question": "What is the purpose of the getSnapshotBeforeUpdate() method in React class components?",
+      "option1": "To create a backup of the current state",
+      "correct1": false,
+      "option2": "To take a snapshot of the DOM before it is updated",
+      "correct2": true,
+      "option3": "To capture the component's state before it mounts",
+      "correct3": false,
+      "option4": "To get the previous props or state before the component updates",
+      "correct4": false
+    },
+    {
+      "id": 66,
+      "question": "What is the purpose of the ReactDOMServer package in React?",
+      "option1": "To provide methods for rendering components to static markup",
+      "correct1": true,
+      "option2": "To facilitate the server-side routing in React applications",
+      "correct2": false,
+      "option3": "To enable server-side scripting capabilities",
+      "correct3": false,
+      "option4": "To handle server requests and responses in a React app",
+      "correct4": false
+    },
+    {
+      "id": 67,
+      "question": "What is the purpose of the ReactDOM.hydrate() method?",
+      "option1": "To update a component's properties",
+      "correct1": false,
+      "option2": "To retrieve the component's state from local storage",
+      "correct2": false,
+      "option3": "To hydrate a server-rendered markup",
+      "correct3": true,
+      "option4": "To refresh the component when it has become dehydrated",
+      "correct4": false
+    },
+    {
+      "id": 68,
+      "question": "What are some benefits of using React for web development?",
+      "option1": "Low learning curve, bidirectional data flow, and built-in PHP support",
+      "correct1": false,
+      "option2": "Component-based architecture, declarative UI, and a strong ecosystem",
+      "correct2": true,
+      "option3": "Automatic code optimization, native mobile app development, and AI integration",
+      "correct3": false,
+      "option4": "Built-in authentication, high performance on mobile devices, and AngularJS integration",
+      "correct4": false
+    },
+    {
+      "id": 69,
+      "question": "What are some limitations or challenges of using React?",
+      "option1": "High performance in graphics-intensive applications, excellent SEO support, and low memory usage",
+      "correct1": false,
+      "option2": "SEO challenges, the rapid pace of development, and JSX learning curve",
+      "correct2": true,
+      "option3": "Integration with other frameworks like Angular, automatic testing capabilities, and native browser support",
+      "correct3": false,
+      "option4": "High security risks, limited support for virtual DOM, and poor documentation",
+      "correct4": false
+    },
+    {
+      "id": 70,
+      "question": "How does React differ from other JavaScript frameworks like Angular or Vue?",
+      "option1": "React is a full-fledged framework, while Angular and Vue are not",
+      "correct1": false,
+      "option2": "React combines the UI and the business logic, while Angular and Vue recommend separating them",
+      "correct2": false,
+      "option3": "React focuses on the view layer only and is library-centric, while Angular is a comprehensive framework, and Vue offers a progressive framework",
+      "correct3": true,
+      "option4": "React does not support components, while Angular and Vue do",
+      "correct4": false
+    },
+    {
+      "id": 71,
+      "question": "What is the purpose of the componentWillUnmount() method in React class components?",
+      "option1": "To fetch data required by the component during render",
+      "correct1": false,
+      "option2": "To set up subscriptions and event listeners",
+      "correct2": false,
+      "option3": "To perform cleanup tasks and release resources",
+      "correct3": true,
+      "option4": "To initialize the component's state",
+      "correct4": false
+    },
+    {
+      "id": 72,
+      "question": "What is the purpose of the componentDidCatch() method in React class components?",
+      "option1": "To catch and log errors that occur during rendering, in lifecycle methods, and in constructors of the whole tree below them",
+      "correct1": true,
+      "option2": "To handle AJAX request errors",
+      "correct2": false,
+      "option3": "To catch global application errors",
+      "correct3": false,
+      "option4": "To catch syntax errors in the codebase",
+      "correct4": false
+    },
+    {
+      "id": 73,
+      "question": "What is the purpose of the getDerivedStateFromProps() method in React class components?",
+      "option1": "To replace the componentWillReceiveProps method for updating state in response to a change in props",
+      "correct1": true,
+      "option2": "To invoke asynchronous operations like data fetching",
+      "correct2": false,
+      "option3": "To store the previous instance of props for comparison",
+      "correct3": false,
+      "option4": "To directly mutate the component's state",
+      "correct4": false
+    },
+    {
+      "id": 74,
+      "question": "What is the purpose of the getSnapshotBeforeUpdate() method in React class components?",
+      "option1": "To store the current state before the DOM is updated",
+      "correct1": false,
+      "option2": "To create a backup of the entire component tree",
+      "correct2": false,
+      "option3": "To capture some information from the DOM before it is potentially changed during the update phase",
+      "correct3": true,
+      "option4": "To take a snapshot of the props before the component updates",
+      "correct4": false
+    },
+    {
+      "id": 75,
+      "question": "What is the purpose of the ReactDOMServer package in React?",
+      "option1": "To enable WebSocket communication in React",
+      "correct1": false,
+      "option2": "To render components to static HTML on the server and send them to the client",
+      "correct2": true,
+      "option3": "To manipulate the DOM in React applications server-side",
+      "correct3": false,
+      "option4": "To serve React applications over HTTP",
+      "correct4": false
+    },
+    {
+      "id": 76,
+      "question": "What is the purpose of the ReactDOM.hydrate() method?",
+      "option1": "To hydrate server-rendered markup and attach event listeners to it",
+      "correct1": true,
+      "option2": "To refresh the page when the component's state changes",
+      "correct2": false,
+      "option3": "To merge multiple React trees into one",
+      "correct3": false,
+      "option4": "To synchronize the virtual DOM with the actual DOM",
+      "correct4": false
+    },
+    {
+      "id": 77,
+      "question": "What are some benefits of using React for web development?",
+      "option1": "Automatic state management, two-way data binding, and integrated package management",
+      "correct1": false,
+      "option2": "Modular architecture, reusability of components, and rich ecosystem",
+      "correct2": true,
+      "option3": "Built-in validation tools, automatic code splitting, and direct access to the DOM",
+      "correct3": false,
+      "option4": "No need for JavaScript knowledge, built-in authentication features, and seamless backend integration",
+      "correct4": false
+    },
+    {
+      "id": 78,
+      "question": "What are some limitations or challenges of using React?",
+      "option1": "Overly simple and lacking in features for complex applications",
+      "correct1": false,
+      "option2": "Requires a deep understanding of reactive programming principles",
+      "correct2": false,
+      "option3": "High pace of development, JSX learning curve, and SEO difficulties",
+      "correct3": true,
+      "option4": "Limited by JavaScript performance in the browser, no support for mobile development, and poor documentation",
+      "correct4": false
+    },
+    {
+      "id": 79,
+      "question": "How does React differ from other JavaScript frameworks like Angular or Vue?",
+      "option1": "React is only a view library, while Angular and Vue are full-featured frameworks",
+      "correct1": true,
+      "option2": "React does not support component-based architecture, unlike Angular or Vue",
+      "correct2": false,
+      "option3": "React uses traditional data binding, while Angular and Vue use a virtual DOM",
+      "correct3": false,
+      "option4": "React is not based on JavaScript, while Angular and Vue are",
+      "correct4": false
+    },
+    {
+      "id": 80,
+      "question": "What are some best practices for optimizing performance in React applications?",
+      "option1": "Always mutate the state directly for faster updates",
+      "correct1": false,
+      "option2": "Use React.PureComponent and React.memo to prevent unnecessary re-renders",
+      "correct2": true,
+      "option3": "Load all data upfront to reduce the need for asynchronous loading",
+      "correct3": false,
+      "option4": "Frequent use of forceUpdate() to ensure the UI is up-to-date",
+      "correct4": false
+    },
+    {
+      "id": 81,
+      "question": "How can you handle forms in React?",
+      "option1": "Using a global variable to track form input values",
+      "correct1": false,
+      "option2": "Using the document.getElementById() method",
+      "correct2": false,
+      "option3": "Using controlled components that manage form data with state",
+      "correct3": true,
+      "option4": "Forms cannot be handled directly in React; a library is always needed",
+      "correct4": false
+    },
+    {
+      "id": 82,
+      "question": "How can you handle routing in React?",
+      "option1": "Using an anchor tag to navigate between views",
+      "correct1": false,
+      "option2": "Using the built-in Route component provided by React",
+      "correct2": false,
+      "option3": "Using the ReactRouter library to define routes",
+      "correct3": true,
+      "option4": "Routing is automatically handled by React; no additional code is necessary",
+      "correct4": false
+    },
+    {
+      "id": 83,
+      "question": "What is Redux and how does it work with React?",
+      "option1": "A database that provides real-time data syncing with React",
+      "correct1": false,
+      "option2": "A state management library that creates a single source of truth for state in React apps",
+      "correct2": true,
+      "option3": "A React plugin for rendering 3D graphics",
+      "correct3": false,
+      "option4": "A routing library exclusively for React",
+      "correct4": false
+    },
+    {
+      "id": 84,
+      "question": "What is React Native and how is it different from React?",
+      "option1": "React Native is a version of React designed for building native desktop applications",
+      "correct1": false,
+      "option2": "React Native is a styling framework that works with React to build responsive designs",
+      "correct2": false,
+      "option3": "React Native is a framework for building native mobile apps using React and JavaScript",
+      "correct3": true,
+      "option4": "There is no difference; React Native is simply the latest version of React",
+      "correct4": false
+    },
+    {
+      "id": 85,
+      "question": "What is the purpose of the useState() hook in React?",
+      "option1": "To create a link to an external state management library",
+      "correct1": false,
+      "option2": "To fetch data from an API and maintain it in the state",
+      "correct2": false,
+      "option3": "To store and update local state in a functional component",
+      "correct3": true,
+      "option4": "To manage the URL state of the application",
+      "correct4": false
+    },
+    {
+      "id": 86,
+      "question": "What is the purpose of the useEffect() hook in React?",
+      "option1": "To manipulate the DOM directly, bypassing React's virtual DOM",
+      "correct1": false,
+      "option2": "To optimize computational heavy calculations by caching",
+      "correct2": false,
+      "option3": "To handle side effects in functional components",
+      "correct3": true,
+      "option4": "To enforce the execution of an effect on every render",
+      "correct4": false
+    },
+    {
+      "id": 87,
+      "question": "What is the purpose of the useContext() hook in React?",
+      "option1": "To create a new context for state management",
+      "correct1": false,
+      "option2": "To access and subscribe to React context without a Consumer",
+      "correct2": true,
+      "option3": "To update the context value from a child component",
+      "correct3": false,
+      "option4": "To use context as a mechanism for dependency injection",
+      "correct4": false
+    },
+    {
+      "id": 88,
+      "question": "What is the purpose of the useReducer() hook in React?",
+      "option1": "To reduce the number of components in a React application",
+      "correct1": false,
+      "option2": "To combine multiple state variables into one",
+      "correct2": false,
+      "option3": "To manage complex state logic in functional components",
+      "correct3": true,
+      "option4": "To incrementally reduce the size of the payload sent in a network request",
+      "correct4": false
+    },
+    {
+      "id": 89,
+      "question": "What is the purpose of the useRef() hook in React?",
+      "option1": "To store a mutable reference to a DOM element",
+      "correct1": true,
+      "option2": "To create a reference to a function that can be passed as a callback",
+      "correct2": false,
+      "option3": "To reference the previous value of a state variable after an update",
+      "correct3": false,
+      "option4": "To update the parent component from a child component without causing a re-render",
+      "correct4": false
+    },
+    {
+      "id": 90,
+      "question": "What is the purpose of the useMemo() hook in React?",
+      "option1": "To memoize a function and prevent it from being recreated on every render",
+      "correct1": false,
+      "option2": "To memorize the component rendering and prevent unnecessary re-renders",
+      "correct2": false,
+      "option3": "To remember the last dispatched action in the useReducer hook",
+      "correct3": false,
+      "option4": "To memoize expensive calculations and only recompute them when necessary",
+      "correct4": true
+    },
+    {
+      "id": 91,
+      "question": "What is the purpose of the useCallback() hook in React?",
+      "option1": "To cache the instance of a function between component re-renders",
+      "correct1": true,
+      "option2": "To initiate a network request upon component mounting",
+      "correct2": false,
+      "option3": "To provide a callback to a child component for data retrieval",
+      "correct3": false,
+      "option4": "To delay the execution of a function until the component is updated",
+      "correct4": false
+    },
+    {
+      "id": 92,
+      "question": "What is server-side rendering (SSR) in React?",
+      "option1": "Storing React component states on the server for persistence",
+      "correct1": false,
+      "option2": "Rendering React components on the server and sending the HTML to the client",
+      "correct2": true,
+      "option3": "Using a React server to handle API requests and responses",
+      "correct3": false,
+      "option4": "Serving static files generated by React in a server environment",
+      "correct4": false
+    },
+    {
+      "id": 93,
+      "question": "What are some common ways to optimize performance in React applications?",
+      "option1": "Using inline styles for components to reduce the CSS computation",
+      "correct1": false,
+      "option2": "Making all components pure and stateless",
+      "correct2": false,
+      "option3": "Minimizing component re-renders and optimizing state updates",
+      "correct3": true,
+      "option4": "Increasing the use of React class components over functional ones",
+      "correct4": false
+    },
+    {
+      "id": 94,
+      "question": "What is the purpose of React.memo() in functional components?",
+      "option1": "To memorize component hierarchy",
+      "correct1": false,
+      "option2": "To prevent a component from re-rendering unless its props have changed",
+      "correct2": true,
+      "option3": "To memoize function calls within a component",
+      "correct3": false,
+      "option4": "To store data in the component's memory for persistent state",
+      "correct4": false
+    },
+    {
+      "id": 95,
+      "question": "How can you optimize the rendering of a large list of items in React?",
+      "option1": "By rendering all items at once to reduce the number of rendering cycles",
+      "correct1": false,
+      "option2": "Using the `useMemo` hook to memorize the list items",
+      "correct2": false,
+      "option3": "Implementing pagination or virtualization to only render visible items",
+      "correct3": true,
+      "option4": "Increasing the `key` prop value for each item to improve performance",
+      "correct4": false
+    },
+    {
+      "id": 96,
+      "question": "What is the purpose of the componentDidCatch() method in React class components?",
+      "option1": "To handle exceptions in event handlers",
+      "correct1": false,
+      "option2": "To catch errors in the rendering phase and lifecycle methods of the component tree",
+      "correct2": true,
+      "option3": "To intercept all network errors in the application",
+      "correct3": false,
+      "option4": "To catch syntax and logical errors during the component compilation process",
+      "correct4": false
+    },
+    {
+      "id": 97,
+      "question": "How can you pass data between components in React?",
+      "option1": "Using a centralized store like Redux",
+      "correct1": false,
+      "option2": "Through global variables accessible by all components",
+      "correct2": false,
+      "option3": "Via props for parent-child components and context for deep hierarchies",
+      "correct3": true,
+      "option4": "By saving data to localStorage and reading from it in each component",
+      "correct4": false
+    },
+    {
+      "id": 98,
+      "question": "What are React keys, and why are they important?",
+      "option1": "Keys are global identifiers used to optimize network requests",
+      "correct1": false,
+      "option2": "Keys are used for encrypting component data",
+      "correct2": false,
+      "option3": "Keys help React identify which items have changed, are added, or are removed in lists",
+      "correct3": true,
+      "option4": "Keys are references to component instances used for managing component state",
+      "correct4": false
+    },
+    {
+      "id": 99,
+      "question": "What is prop drilling, and how can it be avoided in React?",
+      "option1": "Prop drilling is the process of styling components, avoided by using CSS modules",
+      "correct1": false,
+      "option2": "Prop drilling is passing data through multiple components, avoided by using context or state management libraries",
+      "correct2": true,
+      "option3": "Prop drilling is a method for validating props, avoided by using TypeScript",
+      "correct3": false,
+      "option4": "Prop drilling is the direct mutation of props, avoided by using the `useState` hook",
+      "correct4": false
+    },
+    {
+      "id": 100,
+      "question": "How can user input validation be implemented in a React application?",
+      "option1": "By using the HTML5 `validate` attribute on form inputs",
+      "correct1": false,
+      "option2": "Using React's built-in `validateForm` method",
+      "correct2": false,
+      "option3": "By implementing stateful logic and conditional rendering for error messages",
+      "correct3": true,
+      "option4": "Validation cannot be done in React; it must be handled by the server",
+      "correct4": false
+    }
+  ],
+  "HTML": [
+    {
+      "id": 101,
+      "question": "What does HTML stand for?",
+      "option1": "HyperText Markup Language",
+      "correct1": true,
+      "option2": "Hyperlink and Text Markup Language",
+      "correct2": false,
+      "option3": "High-Level Textual Markup Language",
+      "correct3": false,
+      "option4": "HyperTech Markup Language",
+      "correct4": false
+    },
+    {
+      "id": 102,
+      "question": "What is the latest version of HTML?",
+      "option1": "HTML5",
+      "correct1": true,
+      "option2": "HTML4",
+      "correct2": false,
+      "option3": "HTML 3.2",
+      "correct3": false,
+      "option4": "HTML 6",
+      "correct4": false
+    },
+    {
+      "id": 103,
+      "question": "Explain the basic structure of an HTML document.",
+      "option1": "A series of HTML tags including doctype, html, head, title, body",
+      "correct1": true,
+      "option2": "A set of paragraphs and links",
+      "correct2": false,
+      "option3": "Only a body tag with content",
+      "correct3": false,
+      "option4": "A single html tag with text",
+      "correct4": false
+    },
+    {
+      "id": 104,
+      "question": "What are HTML tags?",
+      "option1": "Standardized codes used to format and structure a web document",
+      "correct1": true,
+      "option2": "Programming functions in JavaScript",
+      "correct2": false,
+      "option3": "Commands used in CSS styling",
+      "correct3": false,
+      "option4": "Database query commands",
+      "correct4": false
+    },
+    {
+      "id": 105,
+      "question": "Differentiate between HTML elements and HTML tags.",
+      "option1": "Elements are the entire object, tags are the opening and closing parts",
+      "correct1": true,
+      "option2": "Tags are the entire object, elements are the opening and closing parts",
+      "correct2": false,
+      "option3": "Elements and tags are the same",
+      "correct3": false,
+      "option4": "Elements are CSS styles, tags are HTML components",
+      "correct4": false
+    },
+    {
+      "id": 106,
+      "question": "What is an HTML attribute?",
+      "option1": "A specification that defines a property of an element",
+      "correct1": true,
+      "option2": "A type of HTML element",
+      "correct2": false,
+      "option3": "A CSS style rule",
+      "correct3": false,
+      "option4": "A JavaScript function",
+      "correct4": false
+    },
+    {
+      "id": 107,
+      "question": "Explain the purpose of the <meta> tag in HTML.",
+      "option1": "Provides metadata about the HTML document",
+      "correct1": true,
+      "option2": "Defines the main content of the document",
+      "correct2": false,
+      "option3": "Creates links to other documents",
+      "correct3": false,
+      "option4": "Stylizes the document",
+      "correct4": false
+    },
+    {
+      "id": 108,
+      "question": "What is the purpose of HTML comments?",
+      "option1": "To add non-displayed notes in the code",
+      "correct1": true,
+      "option2": "To create links between pages",
+      "correct2": false,
+      "option3": "To emphasize text",
+      "correct3": false,
+      "option4": "To define the structure of the document",
+      "correct4": false
+    },
+    {
+      "id": 109,
+      "question": "How do you create a hyperlink in HTML?",
+      "option1": "Using the <a> tag with an 'href' attribute",
+      "correct1": true,
+      "option2": "With the <link> tag",
+      "correct2": false,
+      "option3": "Using the <hyperlink> tag",
+      "correct3": false,
+      "option4": "Through the <href> element",
+      "correct4": false
+    },
+    {
+      "id": 110,
+      "question": "What is the HTML DOCTYPE declaration, and why is it important?",
+      "option1": "Tells the browser which version of HTML the page is written in",
+      "correct1": true,
+      "option2": "Defines the character encoding",
+      "correct2": false,
+      "option3": "Specifies the page's title",
+      "correct3": false,
+      "option4": "Includes external CSS files",
+      "correct4": false
+    },
+    {
+      "id": 111,
+      "question": "Describe the head and body sections of an HTML document.",
+      "option1": "Head contains meta-information, Body contains the content displayed",
+      "correct1": true,
+      "option2": "Head is for visible content, Body for scripts",
+      "correct2": false,
+      "option3": "Both sections are interchangeable",
+      "correct3": false,
+      "option4": "Head defines the page structure, Body links external resources",
+      "correct4": false
+    },
+    {
+      "id": 112,
+      "question": "What is the purpose of the <title> element in the head section?",
+      "option1": "Defines the title of the document, shown in browser tab",
+      "correct1": true,
+      "option2": "Describes the main topic of the document",
+      "correct2": false,
+      "option3": "Styles the document",
+      "correct3": false,
+      "option4": "Creates a heading for the document",
+      "correct4": false
+    },
+    {
+      "id": 113,
+      "question": "Explain the use of the <base> element in HTML.",
+      "option1": "Specifies the base URL/target for all relative URLs in a document",
+      "correct1": true,
+      "option2": "Defines the basic structure of the document",
+      "correct2": false,
+      "option3": "Is the first element in the head section",
+      "correct3": false,
+      "option4": "Sets the default language",
+      "correct4": false
+    },
+    {
+      "id": 114,
+      "question": "What is an anchor name, and how is it used in HTML?",
+      "option1": "A name given to a bookmark within a page, used for internal links",
+      "correct1": true,
+      "option2": "A name for the primary link in a document",
+      "correct2": false,
+      "option3": "A user-defined HTML tag",
+      "correct3": false,
+      "option4": "The default name for the <a> tag",
+      "correct4": false
+    },
+    {
+      "id": 115,
+      "question": "Explain the difference between absolute and relative URLs.",
+      "option1": "Absolute is a full URL, relative is a partial path/link",
+      "correct1": true,
+      "option2": "Absolute URLs are faster, relative URLs are slower",
+      "correct2": false,
+      "option3": "Absolute URLs are for internal links, relative for external",
+      "correct3": false,
+      "option4": "No difference, they function the same",
+      "correct4": false
+    },
+    {
+      "id": 116,
+      "question": "How do you embed an image in an HTML document?",
+      "option1": "Using the <img> tag with a 'src' attribute",
+      "correct1": true,
+      "option2": "With the <image> tag",
+      "correct2": false,
+      "option3": "Using the <media> tag",
+      "correct3": false,
+      "option4": "Through CSS using the 'background-image' property",
+      "correct4": false
+    },
+    {
+      "id": 117,
+      "question": "What are the attributes used to specify image dimensions in HTML?",
+      "option1": "width' and 'height' attributes",
+      "correct1": true,
+      "option2": "size' and 'length' attributes",
+      "correct2": false,
+      "option3": "dimension' and 'scale' attributes",
+      "correct3": false,
+      "option4": "large' and 'small' attributes",
+      "correct4": false
+    },
+    {
+      "id": 118,
+      "question": "What is the purpose of the alt attribute in the <img> tag?",
+      "option1": "Provides alternative text for the image",
+      "correct1": true,
+      "option2": "Changes the image appearance",
+      "correct2": false,
+      "option3": "Specifies the image source",
+      "correct3": false,
+      "option4": "Defines the image dimensions",
+      "correct4": false
+    },
+    {
+      "id": 119,
+      "question": "How do you create ordered (numbered) and unordered (bulleted) lists in HTML?",
+      "option1": "Using <ol> for ordered and <ul> for unordered lists",
+      "correct1": true,
+      "option2": "<list> tag with type attribute for both",
+      "correct2": false,
+      "option3": "<nl> for numbered and <bl> for bulleted lists",
+      "correct3": false,
+      "option4": "<dl> for both types of lists",
+      "correct4": false
+    },
+    {
+      "id": 120,
+      "question": "Describe the difference between a <div> and a <span> element.",
+      "option1": "<div> is block-level, <span> is inline",
+      "correct1": true,
+      "option2": "No difference, they are interchangeable",
+      "correct2": false,
+      "option3": "<div> is for text only, <span> for images",
+      "correct3": false,
+      "option4": "<div> is inline, <span> is block-level",
+      "correct4": false
+    },
+    {
+      "id": 121,
+      "question": "Explain the <em> and <strong> elements in HTML.",
+      "option1": "<em> for emphasis, <strong> for strong importance",
+      "correct1": true,
+      "option2": "<em> for quotes, <strong> for warnings",
+      "correct2": false,
+      "option3": "Both for changing color",
+      "correct3": false,
+      "option4": "<em> for underlining, <strong> for bold",
+      "correct4": false
+    },
+    {
+      "id": 122,
+      "question": "What is the <abbr> element used for?",
+      "option1": "Defines an abbreviation or acronym",
+      "correct1": true,
+      "option2": "Creates a new paragraph",
+      "correct2": false,
+      "option3": "Inserts an image",
+      "correct3": false,
+      "option4": "Designates a special character",
+      "correct4": false
+    },
+    {
+      "id": 123,
+      "question": "How do you create superscript and subscript text in HTML?",
+      "option1": "Using <sup> for superscript and <sub> for subscript",
+      "correct1": true,
+      "option2": "With <super> and <suber>",
+      "correct2": false,
+      "option3": "Using CSS properties only",
+      "correct3": false,
+      "option4": "<top> for superscript and <bottom> for subscript",
+      "correct4": false
+    },
+    {
+      "id": 124,
+      "question": "What does the <br> tag do, and how is it different from <p>?",
+      "option1": "<br> breaks line without margin, <p> creates a new paragraph with margin",
+      "correct1": true,
+      "option2": "<br> and <p> do the same thing",
+      "correct2": false,
+      "option3": "<br> creates a paragraph, <p> breaks line",
+      "correct3": false,
+      "option4": "<br> for bold text, <p> for plain text",
+      "correct4": false
+    },
+    {
+      "id": 125,
+      "question": "Describe the <blockquote> and <q> elements in HTML.",
+      "option1": "<blockquote> for long quotes, <q> for inline quotes",
+      "correct1": true,
+      "option2": "Both for inserting images",
+      "correct2": false,
+      "option3": "<blockquote> for headings, <q> for footers",
+      "correct3": false,
+      "option4": "<blockquote> for lists, <q> for tables",
+      "correct4": false
+    },
+    {
+      "id": 126,
+      "question": "How do you create an external link in HTML?",
+      "option1": "Using the <a> tag with an 'href' attribute for the URL",
+      "correct1": true,
+      "option2": "With the <link> tag",
+      "correct2": false,
+      "option3": "Using the <external> tag",
+      "correct3": false,
+      "option4": "Through the <href> element",
+      "correct4": false
+    },
+    {
+      "id": 127,
+      "question": "What is an HTML form, and how is it structured?",
+      "option1": "A way to collect user input, structured with input fields and a submit button",
+      "correct1": true,
+      "option2": "A method to display data, using lists and tables",
+      "correct2": false,
+      "option3": "A CSS styling feature",
+      "correct3": false,
+      "option4": "JavaScript code to manipulate data",
+      "correct4": false
+    },
+    {
+      "id": 128,
+      "question": "How do you create radio buttons and checkboxes in HTML forms?",
+      "option1": "<input type='radio'> for radio buttons, <input type='checkbox'> for checkboxes",
+      "correct1": true,
+      "option2": "<button> for both",
+      "correct2": false,
+      "option3": "<select> for radio buttons, <option> for checkboxes",
+      "correct3": false,
+      "option4": "<radio> and <check> tags",
+      "correct4": false
+    },
+    {
+      "id": 129,
+      "question": "What is the purpose of the required attribute in form fields?",
+      "option1": "Makes a field mandatory to fill out",
+      "correct1": true,
+      "option2": "Formats the field with a specific style",
+      "correct2": false,
+      "option3": "Links the field to a database",
+      "correct3": false,
+      "option4": "Automatically fills the field with default data",
+      "correct4": false
+    },
+    {
+      "id": 130,
+      "question": "How can you disable a form field in HTML?",
+      "option1": "Using the 'disabled' attribute",
+      "correct1": true,
+      "option2": "With CSS",
+      "correct2": false,
+      "option3": "Using JavaScript only",
+      "correct3": false,
+      "option4": "By setting its value to 'null'",
+      "correct4": false
+    },
+    {
+      "id": 131,
+      "question": "What are semantic HTML elements, and why are they important?",
+      "option1": "Elements that clearly describe their meaning, important for accessibility and SEO",
+      "correct1": true,
+      "option2": "Elements that enhance the look of the page",
+      "correct2": false,
+      "option3": "Elements used for animations",
+      "correct3": false,
+      "option4": "Elements that are deprecated",
+      "correct4": false
+    },
+    {
+      "id": 132,
+      "question": "List some of the semantic elements introduced in HTML5.",
+      "option1": "<article>, <section>, <nav>, <header>, <footer>",
+      "correct1": true,
+      "option2": "<frame>, <basefont>, <center>",
+      "correct2": false,
+      "option3": "<blink>, <marquee>, <font>",
+      "correct3": false,
+      "option4": "<spacer>, <layer>, <nobr>",
+      "correct4": false
+    },
+    {
+      "id": 133,
+      "question": "Explain the purpose of the <header> and <footer> elements.",
+      "option1": "<header> for introductory content, <footer> for end-of-section content",
+      "correct1": true,
+      "option2": "<header> for top navigation, <footer> for additional links",
+      "correct2": false,
+      "option3": "Both for decorative purposes",
+      "correct3": false,
+      "option4": "<header> for HTML head, <footer> for HTML body",
+      "correct4": false
+    },
+    {
+      "id": 134,
+      "question": "What is the <article> element used for in HTML5?",
+      "option1": "Defines independent, self-contained content",
+      "correct1": true,
+      "option2": "Stylizes text",
+      "correct2": false,
+      "option3": "Creates links to articles",
+      "correct3": false,
+      "option4": "Marks text as important",
+      "correct4": false
+    },
+    {
+      "id": 135,
+      "question": "Describe the <nav> and <aside> elements in HTML5.",
+      "option1": "<nav> for navigation links, <aside> for tangentially related content",
+      "correct1": true,
+      "option2": "Both for advertising content",
+      "correct2": false,
+      "option3": "<nav> for main content, <aside> for footnotes",
+      "correct3": false,
+      "option4": "<nav> for tables, <aside> for images",
+      "correct4": false
+    },
+    {
+      "id": 136,
+      "question": "How do you embed audio and video in an HTML document?",
+      "option1": "Using <audio> and <video> tags",
+      "correct1": true,
+      "option2": "With <media> and <sound> tags",
+      "correct2": false,
+      "option3": "Using <mp3> and <mpeg> tags",
+      "correct3": false,
+      "option4": "Through CSS",
+      "correct4": false
+    },
+    {
+      "id": 137,
+      "question": "What are the attributes used for controlling video playback in HTML5?",
+      "option1": "controls', 'autoplay', 'loop'",
+      "correct1": true,
+      "option2": "play', 'stop', 'repeat'",
+      "correct2": false,
+      "option3": "forward', 'backward', 'pause'",
+      "correct3": false,
+      "option4": "start', 'end', 'hold'",
+      "correct4": false
+    },
+    {
+      "id": 138,
+      "question": "How can you ensure that your videos are accessible to users with disabilities?",
+      "option1": "Use subtitles, captions, and audio descriptions",
+      "correct1": true,
+      "option2": "Increase the volume",
+      "correct2": false,
+      "option3": "Use high contrast colors",
+      "correct3": false,
+      "option4": "Make videos shorter",
+      "correct4": false
+    },
+    {
+      "id": 139,
+      "question": "Explain the purpose of the <canvas> element in HTML5.",
+      "option1": "Used for drawing graphics via scripting",
+      "correct1": true,
+      "option2": "For embedding videos",
+      "correct2": false,
+      "option3": "Creating clickable buttons",
+      "correct3": false,
+      "option4": "For adding background images",
+      "correct4": false
+    },
+    {
+      "id": 140,
+      "question": "What is the purpose of the <meta> tag with the charset attribute?",
+      "option1": "Specifies the character encoding of the HTML document",
+      "correct1": true,
+      "option2": "Defines the document's title",
+      "correct2": false,
+      "option3": "Controls the viewport settings",
+      "correct3": false,
+      "option4": "Sets the default language",
+      "correct4": false
+    },
+    {
+      "id": 141,
+      "question": "How do you set the character encoding for an HTML document?",
+      "option1": "Using the <meta charset='UTF-8'> tag",
+      "correct1": true,
+      "option2": "With the <encoding> tag",
+      "correct2": false,
+      "option3": "In the CSS file",
+      "correct3": false,
+      "option4": "Via JavaScript",
+      "correct4": false
+    },
+    {
+      "id": 142,
+      "question": "What is the viewport meta tag used for in HTML?",
+      "option1": "Controls how a webpage is displayed on mobile devices",
+      "correct1": true,
+      "option2": "Sets the initial zoom level",
+      "correct2": false,
+      "option3": "Defines the page layout",
+      "correct3": false,
+      "option4": "Specifies background color",
+      "correct4": false
+    },
+    {
+      "id": 143,
+      "question": "Describe the Geolocation API in HTML5.",
+      "option1": "Allows a web page to access the user's geographical location",
+      "correct1": true,
+      "option2": "Provides weather information",
+      "correct2": false,
+      "option3": "Tracks user movement on the page",
+      "correct3": false,
+      "option4": "Shows a map of the user's country",
+      "correct4": false
+    },
+    {
+      "id": 144,
+      "question": "What is the Web Storage API, and how is it different from cookies?",
+      "option1": "Allows data storage across browser sessions, more secure and larger storage than cookies",
+      "correct1": true,
+      "option2": "Same as cookies, but faster",
+      "correct2": false,
+      "option3": "Only stores session data, unlike cookies",
+      "correct3": false,
+      "option4": "Used for client-side database storage",
+      "correct4": false
+    },
+    {
+      "id": 145,
+      "question": "Explain the purpose of the Fetch API in HTML5.",
+      "option1": "Used for making network requests to fetch resources",
+      "correct1": true,
+      "option2": "Loads images faster",
+      "correct2": false,
+      "option3": "Updates HTML content dynamically",
+      "correct3": false,
+      "option4": "A faster version of the XMLHttpRequest API",
+      "correct4": false
+    },
+    {
+      "id": 146,
+      "question": "What is the purpose of the Web Workers API?",
+      "option1": "Allows running scripts in the background without affecting page performance",
+      "correct1": true,
+      "option2": "Improves graphics rendering",
+      "correct2": false,
+      "option3": "Manages multiple user sessions",
+      "correct3": false,
+      "option4": "Enhances security of web pages",
+      "correct4": false
+    },
+    {
+      "id": 147,
+      "question": "How can you perform client-side form validation in HTML?",
+      "option1": "Using HTML5 form attributes like 'required', 'min', 'max'",
+      "correct1": true,
+      "option2": "Only with JavaScript",
+      "correct2": false,
+      "option3": "By setting the 'validate' attribute on the form",
+      "correct3": false,
+      "option4": "Using CSS",
+      "correct4": false
+    },
+    {
+      "id": 148,
+      "question": "Explain the use of the pattern attribute in form inputs.",
+      "option1": "Specifies a regular expression that the input's value must match",
+      "correct1": true,
+      "option2": "Sets a pattern for styling the input",
+      "correct2": false,
+      "option3": "Controls the layout of the form",
+      "correct3": false,
+      "option4": "Animates the input when interacted with",
+      "correct4": false
+    },
+    {
+      "id": 149,
+      "question": "Describe the constraint validation API in HTML5.",
+      "option1": "Provides a way to validate the value of form elements before submission",
+      "correct1": true,
+      "option2": "Applies visual constraints on form elements",
+      "correct2": false,
+      "option3": "Restricts the type of data entered in the database",
+      "correct3": false,
+      "option4": "Automatically fills form fields",
+      "correct4": false
+    },
+    {
+      "id": 150,
+      "question": "What is the purpose of the <datalist> element in HTML forms?",
+      "option1": "Provides an autocomplete feature for form inputs",
+      "correct1": true,
+      "option2": "Creates a drop-down list of options",
+      "correct2": false,
+      "option3": "Stores data temporarily on the client-side",
+      "correct3": false,
+      "option4": "Formats and styles form elements",
+      "correct4": false
+    },
+    {
+      "id": 151,
+      "question": "Why is web accessibility important, and how can you improve it in HTML?",
+      "option1": "Ensures website usability for all, improved with semantic elements and alt attributes",
+      "correct1": true,
+      "option2": "Only for enhancing visual appeal",
+      "correct2": false,
+      "option3": "Increases website speed",
+      "correct3": false,
+      "option4": "Used for search engine optimization",
+      "correct4": false
+    },
+    {
+      "id": 152,
+      "question": "What is ARIA, and how can it be used to enhance accessibility?",
+      "option1": "Accessible Rich Internet Applications, used to make web content more accessible",
+      "correct1": true,
+      "option2": "A programming language for web development",
+      "correct2": false,
+      "option3": "A tool for responsive design",
+      "correct3": false,
+      "option4": "A JavaScript library",
+      "correct4": false
+    },
+    {
+      "id": 153,
+      "question": "Explain the purpose of alt text for images and when to use it.",
+      "option1": "Provides a textual alternative for images, used for accessibility and when images cannot be displayed",
+      "correct1": true,
+      "option2": "Decorates images",
+      "correct2": false,
+      "option3": "Displays when the image is loading",
+      "correct3": false,
+      "option4": "For image captions only",
+      "correct4": false
+    },
+    {
+      "id": 154,
+      "question": "What are the best practices for writing clean and maintainable HTML code?",
+      "option1": "Use semantic elements, keep code well-organized, and comment where necessary",
+      "correct1": true,
+      "option2": "Focus solely on visual layout",
+      "correct2": false,
+      "option3": "Use as many different styles as possible",
+      "correct3": false,
+      "option4": "Write everything in one line for performance",
+      "correct4": false
+    },
+    {
+      "id": 155,
+      "question": "How can you optimize the performance of a web page through HTML?",
+      "option1": "Minimize the use of heavy elements, optimize images, and use efficient coding practices",
+      "correct1": true,
+      "option2": "Use more inline CSS",
+      "correct2": false,
+      "option3": "Add more multimedia content",
+      "correct3": false,
+      "option4": "Frequent use of animations",
+      "correct4": false
+    },
+    {
+      "id": 156,
+      "question": "Describe the use of semantic HTML elements in improving SEO.",
+      "option1": "Semantic elements help search engines understand the content and structure, improving SEO",
+      "correct1": true,
+      "option2": "No impact on SEO",
+      "correct2": false,
+      "option3": "Semantic elements slow down the site, negatively affecting SEO",
+      "correct3": false,
+      "option4": "Only useful for website design, not SEO",
+      "correct4": false
+    },
+    {
+      "id": 157,
+      "question": "List some HTML elements that have been deprecated in HTML5.",
+      "option1": "<font>, <center>, <frame>",
+      "correct1": true,
+      "option2": "<div>, <span>, <a>",
+      "correct2": false,
+      "option3": "<header>, <footer>, <section>",
+      "correct3": false,
+      "option4": "<p>, <h1>, <img>",
+      "correct4": false
+    },
+    {
+      "id": 158,
+      "question": "What should you use instead of deprecated HTML elements?",
+      "option1": "Use CSS for styling, and semantic HTML for structure",
+      "correct1": true,
+      "option2": "Continue using deprecated elements",
+      "correct2": false,
+      "option3": "Replace with JavaScript functions",
+      "correct3": false,
+      "option4": "Use only inline styles",
+      "correct4": false
+    },
+    {
+      "id": 159,
+      "question": "Explain the concept of HTML entities and give an example.",
+      "option1": "Special characters in HTML, like &amp; for &",
+      "correct1": true,
+      "option2": "Tags for creating new elements",
+      "correct2": false,
+      "option3": "A way to insert JavaScript code",
+      "correct3": false,
+      "option4": "Method for linking external files",
+      "correct4": false
+    },
+    {
+      "id": 160,
+      "question": "How can you embed SVG (Scalable Vector Graphics) in an HTML document?",
+      "option1": "Using the <svg> element or <img> tag with an SVG file",
+      "correct1": true,
+      "option2": "Through CSS only",
+      "correct2": false,
+      "option3": "With the <vector> tag",
+      "correct3": false,
+      "option4": "Using the <canvas> element",
+      "correct4": false
+    },
+    {
+      "id": 161,
+      "question": "Describe the difference between inline and block-level elements in HTML.",
+      "option1": "Inline elements don't start on a new line, block-level elements do",
+      "correct1": true,
+      "option2": "No difference, both are the same",
+      "correct2": false,
+      "option3": "Inline elements are for graphics, block-level for text",
+      "correct3": false,
+      "option4": "Inline elements are faster to load",
+      "correct4": false
+    },
+    {
+      "id": 162,
+      "question": "What is the purpose of the <details> and <summary> elements in HTML5?",
+      "option1": "<details> creates a disclosure widget, <summary> provides a visible heading",
+      "correct1": true,
+      "option2": "<details> for main content, <summary> for side content",
+      "correct2": false,
+      "option3": "Both for creating tables",
+      "correct3": false,
+      "option4": "<details> for forms, <summary> for buttons",
+      "correct4": false
+    },
+    {
+      "id": 163,
+      "question": "How do you create custom HTML data attributes, and why are they useful?",
+      "option1": "Prefixing the attribute with 'data-', useful for storing extra information",
+      "correct1": true,
+      "option2": "Using the 'custom' attribute",
+      "correct2": false,
+      "option3": "Through CSS",
+      "correct3": false,
+      "option4": "By using JavaScript only",
+      "correct4": false
+    },
+    {
+      "id": 164,
+      "question": "Explain the differences between the 'GET' and 'POST' methods in HTML forms.",
+      "option1": "GET' appends data to URL, 'POST' sends data as HTTP message body",
+      "correct1": true,
+      "option2": "No difference, both send data to the server",
+      "correct2": false,
+      "option3": "GET' is secure, 'POST' is not",
+      "correct3": false,
+      "option4": "GET' for sending data, 'POST' for receiving data",
+      "correct4": false
+    },
+    {
+      "id": 165,
+      "question": "What is the purpose of the Content Security Policy (CSP) in HTML?",
+      "option1": "Helps prevent cross-site scripting and other attacks",
+      "correct1": true,
+      "option2": "Optimizes page loading speed",
+      "correct2": false,
+      "option3": "Ensures compatibility with older browsers",
+      "correct3": false,
+      "option4": "Automatically adjusts content size",
+      "correct4": false
+    },
+    {
+      "id": 166,
+      "question": "How can you include JavaScript code within an HTML document?",
+      "option1": "Using the <script> tag",
+      "correct1": true,
+      "option2": "With the <javascript> tag",
+      "correct2": false,
+      "option3": "By linking a JavaScript file in CSS",
+      "correct3": false,
+      "option4": "Using the <js> element",
+      "correct4": false
+    },
+    {
+      "id": 167,
+      "question": "Describe the purpose of the <iframe> element in HTML.",
+      "option1": "Embeds another HTML page within the current page",
+      "correct1": true,
+      "option2": "For creating image frames",
+      "correct2": false,
+      "option3": "Enhances website security",
+      "correct3": false,
+      "option4": "Used for styling content",
+      "correct4": false
+    },
+    {
+      "id": 168,
+      "question": "What are some common challenges when it comes to cross-browser compatibility in HTML?",
+      "option1": "Differences in how browsers interpret HTML/CSS, requiring testing and adjustments",
+      "correct1": true,
+      "option2": "All browsers render HTML/CSS the same",
+      "correct2": false,
+      "option3": "Only relevant for mobile browsers",
+      "correct3": false,
+      "option4": "Solved entirely by HTML5",
+      "correct4": false
+    },
+    {
+      "id": 169,
+      "question": "How can you handle Internet Explorer-specific issues in HTML and CSS?",
+      "option1": "Using conditional comments and IE-specific CSS properties or JavaScript",
+      "correct1": true,
+      "option2": "Internet Explorer has no specific issues",
+      "correct2": false,
+      "option3": "Avoiding HTML and CSS completely",
+      "correct3": false,
+      "option4": "By only using inline styles",
+      "correct4": false
+    },
+    {
+      "id": 170,
+      "question": "What is responsive web design, and how can you achieve it in HTML and CSS?",
+      "option1": "Design that adapts to different screen sizes, achieved with media queries and fluid grids",
+      "correct1": true,
+      "option2": "Fixed layout design for all devices",
+      "correct2": false,
+      "option3": "Using only HTML, without CSS",
+      "correct3": false,
+      "option4": "Responsive design is automatically handled by the browser",
+      "correct4": false
+    },
+    {
+      "id": 171,
+      "question": "Explain the purpose of media queries in responsive web design.",
+      "option1": "Used to apply different styles for different screen sizes and devices",
+      "correct1": true,
+      "option2": "Only for changing fonts",
+      "correct2": false,
+      "option3": "For creating animations",
+      "correct3": false,
+      "option4": "To improve website security",
+      "correct4": false
+    },
+    {
+      "id": 172,
+      "question": "How do you create a mobile-first responsive web design?",
+      "option1": "Design for small screens first, then use media queries to adjust for larger screens",
+      "correct1": true,
+      "option2": "Start with desktop design, then reduce for mobile",
+      "correct2": false,
+      "option3": "Design separately for each device",
+      "correct3": false,
+      "option4": "Use fixed sizes for all elements",
+      "correct4": false
+    },
+    {
+      "id": 173,
+      "question": "How can version control systems (e.g., Git) be used for HTML projects?",
+      "option1": "Track changes, collaborate, and manage different versions of the project",
+      "correct1": true,
+      "option2": "Only for backup purposes",
+      "correct2": false,
+      "option3": "Version control is not used in HTML projects",
+      "correct3": false,
+      "option4": "For automating HTML code writing",
+      "correct4": false
+    },
+    {
+      "id": 174,
+      "question": "What are the benefits of using collaborative tools like GitHub for HTML development?",
+      "option1": "Facilitates collaboration, version control, and code sharing",
+      "correct1": true,
+      "option2": "Only for storing code online",
+      "correct2": false,
+      "option3": "GitHub does not offer any benefits for HTML development",
+      "correct3": false,
+      "option4": "For automatic code generation",
+      "correct4": false
+    },
+    {
+      "id": 175,
+      "question": "Describe some common security vulnerabilities in HTML applications.",
+      "option1": "Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF), SQL Injection",
+      "correct1": true,
+      "option2": "HTML applications are secure by default",
+      "correct2": false,
+      "option3": "Only phishing attacks",
+      "correct3": false,
+      "option4": "Vulnerabilities related to hardware",
+      "correct4": false
+    },
+    {
+      "id": 176,
+      "question": "How can you prevent Cross-Site Scripting (XSS) attacks in HTML?",
+      "option1": "Sanitize user input, use Content Security Policy (CSP)",
+      "correct1": true,
+      "option2": "XSS attacks cannot be prevented",
+      "correct2": false,
+      "option3": "By using HTTPS",
+      "correct3": false,
+      "option4": "Only through server-side measures",
+      "correct4": false
+    },
+    {
+      "id": 177,
+      "question": "What is Content Security Policy (CSP), and how does it enhance security?",
+      "option1": "A policy that helps to detect and mitigate certain types of attacks, like XSS and data injection",
+      "correct1": true,
+      "option2": "Optimizes website performance",
+      "correct2": false,
+      "option3": "For responsive design",
+      "correct3": false,
+      "option4": "Controls user access to website content",
+      "correct4": false
+    },
+    {
+      "id": 178,
+      "question": "How can you optimize the loading speed of an HTML web page?",
+      "option1": "Minimize file sizes, optimize images, use async/defer for scripts",
+      "correct1": true,
+      "option2": "Use more animations and high-quality images",
+      "correct2": false,
+      "option3": "By increasing the number of HTTP requests",
+      "correct3": false,
+      "option4": "Loading all scripts in the <head>",
+      "correct4": false
+    },
+    {
+      "id": 179,
+      "question": "Explain the purpose of browser caching in HTML.",
+      "option1": "Stores webpage resources locally to reduce loading times on subsequent visits",
+      "correct1": true,
+      "option2": "To track user activity",
+      "correct2": false,
+      "option3": "Only for saving user data",
+      "correct3": false,
+      "option4": "Increases server load",
+      "correct4": false
+    },
+    {
+      "id": 180,
+      "question": "What is lazy loading, and how can it be implemented in HTML?",
+      "option1": "Loading content as needed (e.g., when scrolling), implemented using attributes like 'loading=lazy'",
+      "correct1": true,
+      "option2": "Loading all content immediately",
+      "correct2": false,
+      "option3": "Only applicable for JavaScript",
+      "correct3": false,
+      "option4": "By making server requests for each item",
+      "correct4": false
+    },
+    {
+      "id": 181,
+      "question": "How can you optimize an HTML page for search engines (SEO)?",
+      "option1": "Use semantic HTML, meta tags, and optimize content for keywords",
+      "correct1": true,
+      "option2": "Frequent use of images and videos",
+      "correct2": false,
+      "option3": "Ignore meta tags",
+      "correct3": false,
+      "option4": "Use only inline CSS",
+      "correct4": false
+    },
+    {
+      "id": 182,
+      "question": "Explain the importance of meta tags in SEO.",
+      "option1": "Meta tags provide information about the webpage to search engines",
+      "correct1": true,
+      "option2": "No impact on SEO",
+      "correct2": false,
+      "option3": "Only for styling webpages",
+      "correct3": false,
+      "option4": "Meta tags are for scripting",
+      "correct4": false
+    },
+    {
+      "id": 183,
+      "question": "What is the purpose of the robots.txt file in HTML SEO?",
+      "option1": "Instructs web crawlers which pages to crawl or ignore",
+      "correct1": true,
+      "option2": "Enhances webpage security",
+      "correct2": false,
+      "option3": "For redirecting users to different pages",
+      "correct3": false,
+      "option4": "Improves page loading speed",
+      "correct4": false
+    },
+    {
+      "id": 184,
+      "question": "Describe some common accessibility challenges and how to address them in HTML.",
+      "option1": "Lack of alt text, poor contrast, non-semantic HTML; use alt attributes, sufficient contrast, semantic HTML",
+      "correct1": true,
+      "option2": "Accessibility is automatically handled by browsers",
+      "correct2": false,
+      "option3": "Only use <div> and <span>",
+      "correct3": false,
+      "option4": "Accessibility is not a concern in HTML",
+      "correct4": false
+    },
+    {
+      "id": 185,
+      "question": "How do you create custom HTML data attributes, and why are they useful?",
+      "option1": "Prefixing the attribute with 'data-', useful for storing extra information",
+      "correct1": true,
+      "option2": "Using the 'custom' attribute",
+      "correct2": false,
+      "option3": "Through CSS",
+      "correct3": false,
+      "option4": "By using JavaScript only",
+      "correct4": false
+    },
+    {
+      "id": 186,
+      "question": "Explain the differences between the 'GET' and 'POST' methods in HTML forms.",
+      "option1": "GET' appends data to URL, 'POST' sends data as HTTP message body",
+      "correct1": true,
+      "option2": "No difference, both send data to the server",
+      "correct2": false,
+      "option3": "GET' is secure, 'POST' is not",
+      "correct3": false,
+      "option4": "GET' for sending data, 'POST' for receiving data",
+      "correct4": false
+    },
+    {
+      "id": 187,
+      "question": "What is the purpose of the Content Security Policy (CSP) in HTML?",
+      "option1": "Helps prevent cross-site scripting and other attacks",
+      "correct1": true,
+      "option2": "Optimizes page loading speed",
+      "correct2": false,
+      "option3": "Ensures compatibility with older browsers",
+      "correct3": false,
+      "option4": "Automatically adjusts content size",
+      "correct4": false
+    },
+    {
+      "id": 188,
+      "question": "How can you include JavaScript code within an HTML document?",
+      "option1": "Using the <script> tag",
+      "correct1": true,
+      "option2": "With the <javascript> tag",
+      "correct2": false,
+      "option3": "By linking a JavaScript file in CSS",
+      "correct3": false,
+      "option4": "Using the <js> element",
+      "correct4": false
+    },
+    {
+      "id": 189,
+      "question": "Describe the purpose of the <iframe> element in HTML.",
+      "option1": "Embeds another HTML page within the current page",
+      "correct1": true,
+      "option2": "For creating image frames",
+      "correct2": false,
+      "option3": "Enhances website security",
+      "correct3": false,
+      "option4": "Used for styling content",
+      "correct4": false
+    },
+    {
+      "id": 190,
+      "question": "What are some common challenges when it comes to cross-browser compatibility in HTML?",
+      "option1": "Differences in how browsers interpret HTML/CSS, requiring testing and adjustments",
+      "correct1": true,
+      "option2": "All browsers render HTML/CSS the same",
+      "correct2": false,
+      "option3": "Only relevant for mobile browsers",
+      "correct3": false,
+      "option4": "Solved entirely by HTML5",
+      "correct4": false
+    },
+    {
+      "id": 191,
+      "question": "How can you handle Internet Explorer-specific issues in HTML and CSS?",
+      "option1": "Using conditional comments and IE-specific CSS properties or JavaScript",
+      "correct1": true,
+      "option2": "Internet Explorer has no specific issues",
+      "correct2": false,
+      "option3": "Avoiding HTML and CSS completely",
+      "correct3": false,
+      "option4": "By only using inline styles",
+      "correct4": false
+    },
+    {
+      "id": 192,
+      "question": "What is responsive web design, and how can you achieve it in HTML and CSS?",
+      "option1": "Design that adapts to different screen sizes, achieved with media queries and fluid grids",
+      "correct1": true,
+      "option2": "Fixed layout design for all devices",
+      "correct2": false,
+      "option3": "Using only HTML, without CSS",
+      "correct3": false,
+      "option4": "Responsive design is automatically handled by the browser",
+      "correct4": false
+    },
+    {
+      "id": 193,
+      "question": "Explain the purpose of media queries in responsive web design.",
+      "option1": "Used to apply different styles for different screen sizes and devices",
+      "correct1": true,
+      "option2": "Only for changing fonts",
+      "correct2": false,
+      "option3": "For creating animations",
+      "correct3": false,
+      "option4": "To improve website security",
+      "correct4": false
+    },
+    {
+      "id": 194,
+      "question": "How do you create a mobile-first responsive web design?",
+      "option1": "Design for small screens first, then use media queries to adjust for larger screens",
+      "correct1": true,
+      "option2": "Start with desktop design, then reduce for mobile",
+      "correct2": false,
+      "option3": "Design separately for each device",
+      "correct3": false,
+      "option4": "Use fixed sizes for all elements",
+      "correct4": false
+    },
+    {
+      "id": 195,
+      "question": "How can version control systems (e.g., Git) be used for HTML projects?",
+      "option1": "Track changes, collaborate, and manage different versions of the project",
+      "correct1": true,
+      "option2": "Only for backup purposes",
+      "correct2": false,
+      "option3": "Version control is not used in HTML projects",
+      "correct3": false,
+      "option4": "For automating HTML code writing",
+      "correct4": false
+    },
+    {
+      "id": 196,
+      "question": "What are the benefits of using collaborative tools like GitHub for HTML development?",
+      "option1": "Facilitates collaboration, version control, and code sharing",
+      "correct1": true,
+      "option2": "Only for storing code online",
+      "correct2": false,
+      "option3": "GitHub does not offer any benefits for HTML development",
+      "correct3": false,
+      "option4": "For automatic code generation",
+      "correct4": false
+    },
+    {
+      "id": 197,
+      "question": "Describe some common security vulnerabilities in HTML applications.",
+      "option1": "Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF), SQL Injection",
+      "correct1": true,
+      "option2": "HTML applications are secure by default",
+      "correct2": false,
+      "option3": "Only phishing attacks",
+      "correct3": false,
+      "option4": "Vulnerabilities related to hardware",
+      "correct4": false
+    },
+    {
+      "id": 198,
+      "question": "How can you prevent Cross-Site Scripting (XSS) attacks in HTML?",
+      "option1": "Sanitize user input, use Content Security Policy (CSP)",
+      "correct1": true,
+      "option2": "XSS attacks cannot be prevented",
+      "correct2": false,
+      "option3": "By using HTTPS",
+      "correct3": false,
+      "option4": "Only through server-side measures",
+      "correct4": false
+    },
+    {
+      "id": 199,
+      "question": "What is Content Security Policy (CSP), and how does it enhance security?",
+      "option1": "A policy that helps to detect and mitigate certain types of attacks, like XSS and data injection",
+      "correct1": true,
+      "option2": "Optimizes website performance",
+      "correct2": false,
+      "option3": "For responsive design",
+      "correct3": false,
+      "option4": "Controls user access to website content",
+      "correct4": false
+    },
+    {
+      "id": 200,
+      "question": "How can you optimize the loading speed of an HTML web page?",
+      "option1": "Minimize file sizes, optimize images, use async/defer for scripts",
+      "correct1": true,
+      "option2": "Use more animations and high-quality images",
+      "correct2": false,
+      "option3": "By increasing the number of HTTP requests",
+      "correct3": false,
+      "option4": "Loading all scripts in the <head>",
+      "correct4": false
+    }
+  ],
+  "CSS": [
+    {
+      "id": 201,
+      "question": "What does CSS stand for?",
+      "option1": "Cascading Style Sheets",
+      "correct1": true,
+      "option2": "Creative Style Sheets",
+      "correct2": false,
+      "option3": "Colorful Style Sheets",
+      "correct3": false,
+      "option4": "Computer Style Sheets",
+      "correct4": false
+    },
+    {
+      "id": 202,
+      "question": "How do you include CSS in an HTML document?",
+      "option1": "<style> tag",
+      "correct1": false,
+      "option2": "Using the link element",
+      "correct2": true,
+      "option3": "<css> tag",
+      "correct3": false,
+      "option4": "Using the script tag",
+      "correct4": false
+    },
+    {
+      "id": 203,
+      "question": "Explain the difference between inline, internal, and external CSS.",
+      "option1": "Inline is in the HTML element, internal is in the <head>, external is linked via file",
+      "correct1": true,
+      "option2": "There is no difference",
+      "correct2": false,
+      "option3": "Inline is faster",
+      "correct3": false,
+      "option4": "External can be in the <body>",
+      "correct4": false
+    },
+    {
+      "id": 204,
+      "question": "What is a CSS selector?",
+      "option1": "Identifies HTML elements",
+      "correct1": true,
+      "option2": "Is a JavaScript function",
+      "correct2": false,
+      "option3": "Defines a font style",
+      "correct3": false,
+      "option4": "None of the above",
+      "correct4": false
+    },
+    {
+      "id": 205,
+      "question": "How do you select an element by its ID in CSS?",
+      "option1": "Identifies HTML elements",
+      "correct1": true,
+      "option2": "Is a JavaScript function",
+      "correct2": false,
+      "option3": "Defines a font style",
+      "correct3": false,
+      "option4": "None of the above",
+      "correct4": false
+    },
+    {
+      "id": 206,
+      "question": "What is the universal selector in CSS?",
+      "option1": "Using the . notation",
+      "correct1": false,
+      "option2": "Using the # notation",
+      "correct2": true,
+      "option3": "Using the : notation",
+      "correct3": false,
+      "option4": "Using the ? notation",
+      "correct4": false
+    },
+    {
+      "id": 207,
+      "question": "Explain the box model in CSS.",
+      "option1": "Describes how elements are framed",
+      "correct1": true,
+      "option2": "Sets the color scheme",
+      "correct2": false,
+      "option3": "Aligns text within an element",
+      "correct3": false,
+      "option4": "Controls the element's opacity",
+      "correct4": false
+    },
+    {
+      "id": 208,
+      "question": "How do you center an element horizontally in CSS?",
+      "option1": "Use margin: auto;",
+      "correct1": true,
+      "option2": "Set text-align: center;",
+      "correct2": false,
+      "option3": "Apply float: center;",
+      "correct3": false,
+      "option4": "Use align-items: center;",
+      "correct4": false
+    },
+    {
+      "id": 209,
+      "question": "What is the purpose of the CSS \"float\" property?",
+      "option1": "To remove elements from the normal flow",
+      "correct1": false,
+      "option2": "To wrap text around elements",
+      "correct2": true,
+      "option3": "To increase element size",
+      "correct3": false,
+      "option4": "To add scroll functionality",
+      "correct4": false
+    },
+    {
+      "id": 210,
+      "question": "Describe the difference between \"display: none\" and \"visibility: hidden.\"",
+      "option1": "display: none' removes the element, while 'visibility: hidden' keeps the space",
+      "correct1": true,
+      "option2": "No difference",
+      "correct2": false,
+      "option3": "visibility: hidden' removes the element, 'display: none' keeps the space",
+      "correct3": false,
+      "option4": "Both remove the element and its space",
+      "correct4": false
+    },
+    {
+      "id": 211,
+      "question": "How can you override a CSS rule specificity?",
+      "option1": "Using !important",
+      "correct1": true,
+      "option2": "Adding more classes",
+      "correct2": false,
+      "option3": "Using inline styles",
+      "correct3": false,
+      "option4": "By including CSS at the bottom",
+      "correct4": false
+    },
+    {
+      "id": 212,
+      "question": "What is the difference between margin and padding in CSS?",
+      "option1": "Margin is outside, padding is inside",
+      "correct1": true,
+      "option2": "No difference",
+      "correct2": false,
+      "option3": "Padding is outside, margin is inside",
+      "correct3": false,
+      "option4": "Margin is for width, padding is for height",
+      "correct4": false
+    },
+    {
+      "id": 213,
+      "question": "Explain the concept of CSS pseudo-classes.",
+      "option1": "Special states of elements",
+      "correct1": true,
+      "option2": "Classes added by JavaScript",
+      "correct2": false,
+      "option3": "Inherited styles",
+      "correct3": false,
+      "option4": "Default styles for elements",
+      "correct4": false
+    },
+    {
+      "id": 214,
+      "question": "How do you apply CSS styles to links that have been visited?",
+      "option1": "Using :visited pseudo-class",
+      "correct1": true,
+      "option2": "With .visited class",
+      "correct2": false,
+      "option3": "Applying inline styles",
+      "correct3": false,
+      "option4": "Using :link pseudo-class",
+      "correct4": false
+    },
+    {
+      "id": 215,
+      "question": "What is the purpose of the \"clear\" property in CSS?",
+      "option1": "Prevents elements from overlapping",
+      "correct1": false,
+      "option2": "Controls the flow of floated elements",
+      "correct2": true,
+      "option3": "Clears background color",
+      "correct3": false,
+      "option4": "Removes an element from the document",
+      "correct4": false
+    },
+    {
+      "id": 216,
+      "question": "Describe the CSS \"position\" property values.",
+      "option1": "Controls the positioning of elements",
+      "correct1": true,
+      "option2": "Defines how content is justified",
+      "correct2": false,
+      "option3": "Sets the transparency level",
+      "correct3": false,
+      "option4": "Determines the element's display type",
+      "correct4": false
+    },
+    {
+      "id": 217,
+      "question": "What is the purpose of the \"z-index\" property in CSS?",
+      "option1": "Determines stacking order of elements",
+      "correct1": true,
+      "option2": "Controls the zoom level",
+      "correct2": false,
+      "option3": "Sets the background color",
+      "correct3": false,
+      "option4": "Defines the element's flex behavior",
+      "correct4": false
+    },
+    {
+      "id": 218,
+      "question": "How do you create a CSS animation?",
+      "option1": "Using @keyframes and the animation property",
+      "correct1": true,
+      "option2": "With JavaScript",
+      "correct2": false,
+      "option3": "Using the transition property",
+      "correct3": false,
+      "option4": "Applying static positioning",
+      "correct4": false
+    },
+    {
+      "id": 219,
+      "question": "What is the difference between \"display: block\" and \"display: inline\" elements?",
+      "option1": "Block takes up the full width, inline does not",
+      "correct1": true,
+      "option2": "No difference",
+      "correct2": false,
+      "option3": "Inline can have width and height",
+      "correct3": false,
+      "option4": "Block is not used in HTML5",
+      "correct4": false
+    },
+    {
+      "id": 220,
+      "question": "How can you hide an element from screen readers but still make it visible to sighted users in CSS?",
+      "option1": "Using visibility: hidden",
+      "correct1": false,
+      "option2": "Using the aria-hidden attribute",
+      "correct2": true,
+      "option3": "Applying display: none",
+      "correct3": false,
+      "option4": "Setting opacity to 0",
+      "correct4": false
+    },
+    {
+      "id": 221,
+      "question": "What is the CSS \"box-sizing\" property used for?",
+      "option1": "Controls how the overall size of boxes is calculated",
+      "correct1": true,
+      "option2": "Changes the box model to flexbox",
+      "correct2": false,
+      "option3": "Sets the maximum size of a box",
+      "correct3": false,
+      "option4": "Defines new boxes inside an element",
+      "correct4": false
+    },
+    {
+      "id": 222,
+      "question": "Explain the purpose of the CSS \"overflow\" property.",
+      "option1": "Specifies what should happen if content overflows an element's box",
+      "correct1": true,
+      "option2": "Sets the document's layout direction",
+      "correct2": false,
+      "option3": "Controls the zoom level of the page",
+      "correct3": false,
+      "option4": "Manages the depth of the elements",
+      "correct4": false
+    },
+    {
+      "id": 223,
+      "question": "How do you create a fixed header that remains at the top of the page while scrolling?",
+      "option1": "Using position: fixed and top: 0",
+      "correct1": true,
+      "option2": "Applying position: absolute",
+      "correct2": false,
+      "option3": "Setting overflow: hidden",
+      "correct3": false,
+      "option4": "Using a sticky positioning",
+      "correct4": false
+    },
+    {
+      "id": 224,
+      "question": "What is the purpose of the CSS \"transform\" property?",
+      "option1": "Allows you to rotate, scale, and move elements",
+      "correct1": true,
+      "option2": "Changes the color of elements",
+      "correct2": false,
+      "option3": "Applies shadow effects",
+      "correct3": false,
+      "option4": "Controls element visibility",
+      "correct4": false
+    },
+    {
+      "id": 225,
+      "question": "Describe the CSS \"flexbox\" layout model.",
+      "option1": "A layout model for distributing space along a single column or row",
+      "correct1": true,
+      "option2": "A method for creating animations",
+      "correct2": false,
+      "option3": "Used for aligning text only",
+      "correct3": false,
+      "option4": "A plugin for older browsers",
+      "correct4": false
+    },
+    {
+      "id": 226,
+      "question": "What is the CSS \"grid\" layout system?",
+      "option1": "Using specific syntax like -webkit- or -moz-",
+      "correct1": true,
+      "option2": "Applying global styles",
+      "correct2": false,
+      "option3": "Through JavaScript detection",
+      "correct3": false,
+      "option4": "Using inline styles only",
+      "correct4": false
+    },
+    {
+      "id": 227,
+      "question": "How do you apply CSS styles to specific browser vendors using prefixes?",
+      "option1": "Adds shadow effects around elements",
+      "correct1": true,
+      "option2": "Creates an overflow effect",
+      "correct2": false,
+      "option3": "Implements animations",
+      "correct3": false,
+      "option4": "Designs a new box model",
+      "correct4": false
+    },
+    {
+      "id": 228,
+      "question": "Explain the purpose of the CSS \"box-shadow\" property.",
+      "option1": "To apply different styles for different devices or screen sizes",
+      "correct1": true,
+      "option2": "For creating animations",
+      "correct2": false,
+      "option3": "To add browser-specific styles",
+      "correct3": false,
+      "option4": "To define color schemes",
+      "correct4": false
+    },
+    {
+      "id": 229,
+      "question": "What is the CSS \"media query\" used for?",
+      "option1": "Defines how properties change from one state to another over time",
+      "correct1": true,
+      "option2": "Is used for creating web animations",
+      "correct2": false,
+      "option3": "Allows for the transformation of elements",
+      "correct3": false,
+      "option4": "Specifies the layout of web pages",
+      "correct4": false
+    },
+    {
+      "id": 230,
+      "question": "Describe the CSS \"transition\" property.",
+      "option1": "em' is relative to the font size of the element, 'rem' is relative to the root element's font size",
+      "correct1": true,
+      "option2": "No difference",
+      "correct2": false,
+      "option3": "em' affects padding and margin, 'rem' does not",
+      "correct3": false,
+      "option4": "rem' is only for font size, 'em' for all",
+      "correct4": false
+    },
+    {
+      "id": 231,
+      "question": "What is the difference between \"em\" and \"rem\" units in CSS?",
+      "option1": "Using media queries",
+      "correct1": true,
+      "option2": "Fixed widths and heights",
+      "correct2": false,
+      "option3": "Using 'em' units for everything",
+      "correct3": false,
+      "option4": "JavaScript event listeners",
+      "correct4": false
+    },
+    {
+      "id": 232,
+      "question": "How do you create a responsive design in CSS?",
+      "option1": "Based on elements, classes, and id selectors",
+      "correct1": true,
+      "option2": "Alphabetical order",
+      "correct2": false,
+      "option3": "First come, first served",
+      "correct3": false,
+      "option4": "Length of the CSS file",
+      "correct4": false
+    },
+    {
+      "id": 233,
+      "question": "Explain the CSS specificity hierarchy.",
+      "option1": "To add decoration before or after an element's content",
+      "correct1": true,
+      "option2": "To hide content",
+      "correct2": false,
+      "option3": "To create new HTML elements",
+      "correct3": false,
+      "option4": "To apply advanced animations",
+      "correct4": false
+    },
+    {
+      "id": 234,
+      "question": "What is the purpose of the CSS \"pseudo-elements\" (::before and ::after)?",
+      "option1": "Using the 'title' attribute",
+      "correct1": false,
+      "option2": "Using '::before' and '::after' with 'hover'",
+      "correct2": true,
+      "option3": "JavaScript event handlers",
+      "correct3": false,
+      "option4": "HTML 'data-' attributes",
+      "correct4": false
+    },
+    {
+      "id": 235,
+      "question": "How do you create a CSS tooltip?",
+      "option1": "Forces an element to inherit styles from its parent",
+      "correct1": true,
+      "option2": "Makes an element transparent",
+      "correct2": false,
+      "option3": "Removes inheritance",
+      "correct3": false,
+      "option4": "Sets default browser styles",
+      "correct4": false
+    },
+    {
+      "id": 236,
+      "question": "Describe the CSS \"inherit\" keyword.",
+      "option1": "References the current color of an element for use in other properties",
+      "correct1": true,
+      "option2": "Sets the color to a default value",
+      "correct2": false,
+      "option3": "Animates color changes",
+      "correct3": false,
+      "option4": "Creates a color palette",
+      "correct4": false
+    },
+    {
+      "id": 237,
+      "question": "What is the purpose of the \"currentColor\" keyword in CSS?",
+      "option1": "Using 'vertical-align' property",
+      "correct1": true,
+      "option2": "Flexbox",
+      "correct2": false,
+      "option3": "Grid layout",
+      "correct3": false,
+      "option4": "Position absolute",
+      "correct4": false
+    },
+    {
+      "id": 238,
+      "question": "How can you vertically align an element in CSS?",
+      "option1": "Allows clipping of an element to a basic shape",
+      "correct1": true,
+      "option2": "Creates a path for text to flow",
+      "correct2": false,
+      "option3": "Masks an element with another",
+      "correct3": false,
+      "option4": "Defines a clipping region",
+      "correct4": true
+    },
+    {
+      "id": 239,
+      "question": "Explain the CSS \"clip-path\" property.",
+      "option1": "Controls whether the user can select text/content",
+      "correct1": true,
+      "option2": "Sets the font family",
+      "correct2": false,
+      "option3": "Enables user interaction",
+      "correct3": false,
+      "option4": "Applies user-specific styles",
+      "correct4": false
+    },
+    {
+      "id": 240,
+      "question": "What is the purpose of the \"user-select\" property in CSS?",
+      "option1": "Using '@keyframes' and 'animation'",
+      "correct1": true,
+      "option2": "HTML <carousel> tag",
+      "correct2": false,
+      "option3": "Using only 'position: fixed'",
+      "correct3": false,
+      "option4": "CSS 'display: none' for inactive slides",
+      "correct4": false
+    },
+    {
+      "id": 241,
+      "question": "How do you create a CSS slideshow or carousel?",
+      "option1": "Makes an element's position relative until a certain scroll point",
+      "correct1": true,
+      "option2": "Sticks an element permanently to the top",
+      "correct2": false,
+      "option3": "Completely removes an element from the document flow",
+      "correct3": false,
+      "option4": "Is a synonym for 'position: fixed'",
+      "correct4": false
+    },
+    {
+      "id": 242,
+      "question": "Describe the CSS 'position: sticky' property.",
+      "option1": "Allows an element to stick to the viewport during scroll",
+      "correct1": true,
+      "option2": "Positions an element relative to its normal position",
+      "correct2": false,
+      "option3": "Fixes an element's position relative to the viewport",
+      "correct3": false,
+      "option4": "Inherits the position property from its parent element",
+      "correct4": false
+    },
+    {
+      "id": 243,
+      "question": "How can you create a responsive navigation menu in CSS?"
+    },
+    {
+      "id": 244,
+      "question": "Explain the CSS \"text-overflow\" property."
+    },
+    {
+      "id": 245,
+      "question": "What is the CSS \"backface-visibility\" property used for?"
+    },
+    {
+      "id": 246,
+      "question": "How do you create a gradient background in CSS?"
+    },
+    {
+      "id": 247,
+      "question": "Describe the CSS \"object-fit\" property."
+    },
+    {
+      "id": 248,
+      "question": "What is the purpose of the \"will-change\" property in CSS?"
+    },
+    {
+      "id": 249,
+      "question": "How can you create a CSS dropdown menu?"
+    },
+    {
+      "id": 250,
+      "question": "Explain the CSS \"rem\" unit."
+    },
+    {
+      "id": 251,
+      "question": "What is the CSS \"line-height\" property used for?"
+    },
+    {
+      "id": 252,
+      "question": "How do you create a CSS flip animation?"
+    },
+    {
+      "id": 253,
+      "question": "Describe the CSS \"pseudo-class\" :nth-child()."
+    },
+    {
+      "id": 254,
+      "question": "What is the CSS \"aspect-ratio\" property used for?"
+    },
+    {
+      "id": 255,
+      "question": "How do you create a CSS sticky footer?"
+    },
+    {
+      "id": 256,
+      "question": "Explain the purpose of the CSS \"contain\" property."
+    },
+    {
+      "id": 257,
+      "question": "What is the CSS \"mix-blend-mode\" property?"
+    },
+    {
+      "id": 258,
+      "question": "How can you create a CSS hamburger menu?"
+    },
+    {
+      "id": 259,
+      "question": "Describe the CSS \"counter\" property."
+    },
+    {
+      "id": 260,
+      "question": "What is the purpose of the \"currentColor\" keyword in CSS?"
+    },
+    {
+      "id": 261,
+      "question": "How do you create a CSS loading spinner?"
+    },
+    {
+      "id": 262,
+      "question": "Explain the CSS \"text-transform\" property."
+    },
+    {
+      "id": 263,
+      "question": "What is the CSS \"filter\" property used for?"
+    },
+    {
+      "id": 264,
+      "question": "Describe the CSS \"outline\" property."
+    },
+    {
+      "id": 265,
+      "question": "How can you create a CSS accordion?"
+    },
+    {
+      "id": 266,
+      "question": "What is the purpose of the CSS \"overscroll-behavior\" property?"
+    },
+    {
+      "id": 267,
+      "question": "How do you create a CSS parallax effect?"
+    },
+    {
+      "id": 268,
+      "question": "Explain the CSS \"place-items\" property in the \"grid\" layout."
+    },
+    {
+      "id": 269,
+      "question": "What is the CSS \"mix-blend-mode\" property used for?"
+    },
+    {
+      "id": 270,
+      "question": "Describe the CSS \"backdrop-filter\" property."
+    },
+    {
+      "id": 271,
+      "question": "How can you create a CSS responsive image gallery?"
+    },
+    {
+      "id": 272,
+      "question": "Explain the CSS \"aspect-ratio\" property."
+    },
+    {
+      "id": 273,
+      "question": "What is the purpose of the \"initial\" keyword in CSS?"
+    },
+    {
+      "id": 274,
+      "question": "How do you create a CSS toggle switch?"
+    },
+    {
+      "id": 275,
+      "question": "Describe the CSS \"mask\" property."
+    },
+    {
+      "id": 276,
+      "question": "What is the CSS \"pointer-events\" property used for?"
+    },
+    {
+      "id": 277,
+      "question": "How can you create a CSS progress bar?"
+    },
+    {
+      "id": 278,
+      "question": "Explain the CSS \"currentColor\" keyword."
+    },
+    {
+      "id": 279,
+      "question": "What is the CSS \"offset\" property in animations?"
+    },
+    {
+      "id": 280,
+      "question": "How do you create a CSS timeline?"
+    },
+    {
+      "id": 281,
+      "question": "Describe the CSS \"backface-visibility\" property."
+    },
+    {
+      "id": 282,
+      "question": "What is the CSS \"resize\" property used for?"
+    },
+    {
+      "id": 283,
+      "question": "How can you create a CSS card flip effect?"
+    },
+    {
+      "id": 284,
+      "question": "Explain the CSS \"min-content\" and \"max-content\" values."
+    },
+    {
+      "id": 285,
+      "question": "What is the CSS \"caret-color\" property used for?"
+    },
+    {
+      "id": 286,
+      "question": "How do you create a CSS tooltip with arrow?"
+    },
+    {
+      "id": 287,
+      "question": "Describe the CSS \"will-change\" property."
+    },
+    {
+      "id": 288,
+      "question": "What is the CSS \"gap\" property used for in the \"grid\" layout?"
+    },
+    {
+      "id": 289,
+      "question": "How can you create a CSS tabbed navigation menu?"
+    },
+    {
+      "id": 290,
+      "question": "Explain the CSS \"hyphens\" property."
+    },
+    {
+      "id": 291,
+      "question": "What is the purpose of the \"attr()\" function in CSS?"
+    },
+    {
+      "id": 292,
+      "question": "How do you create a CSS hamburger button animation?"
+    },
+    {
+      "id": 293,
+      "question": "Describe the CSS \"initial-letter\" property."
+    },
+    {
+      "id": 294,
+      "question": "What is the CSS \"contain-intrinsic-size\" property used for?"
+    },
+    {
+      "id": 295,
+      "question": "How can you create a CSS responsive video player?"
+    },
+    {
+      "id": 296,
+      "question": "Explain the CSS \"text-justify\" property."
+    },
+    {
+      "id": 297,
+      "question": "What is the CSS \"ch\" unit?"
+    },
+    {
+      "id": 298,
+      "question": "How do you create a CSS slide-in sidebar menu?"
+    },
+    {
+      "id": 299,
+      "question": "Describe the CSS \"place-content\" property in the \"grid\" layout."
+    },
+    {
+      "id": 300,
+      "question": "What is the purpose of the \"revert\" keyword in CSS?"
+    }
+  ],
+  "Javascript": [
+    {
+      "301": 302,
+      "What is JavaScript?": "Explain the difference between JavaScript and Java."
+    },
+    {
+      "301": 303,
+      "What is JavaScript?": "How do you include JavaScript code in an HTML document?"
+    },
+    {
+      "301": 304,
+      "What is JavaScript?": "What are JavaScript variables?"
+    },
+    {
+      "301": 305,
+      "What is JavaScript?": "What are the different ways to declare variables in JavaScript?"
+    },
+    {
+      "301": 306,
+      "What is JavaScript?": "Describe the scope of variables in JavaScript."
+    },
+    {
+      "301": 307,
+      "What is JavaScript?": "What is the purpose of the \"use strict\" directive in JavaScript?"
+    },
+    {
+      "301": 308,
+      "What is JavaScript?": "How do you comment in JavaScript?"
+    },
+    {
+      "301": 309,
+      "What is JavaScript?": "Explain the difference between \"==\" and \"===\" in JavaScript."
+    },
+    {
+      "301": 310,
+      "What is JavaScript?": "What is NaN in JavaScript, and how can you check for it?"
+    },
+    {
+      "301": 311,
+      "What is JavaScript?": "How do you declare a constant variable in JavaScript?"
+    },
+    {
+      "301": 312,
+      "What is JavaScript?": "Describe the concept of hoisting in JavaScript."
+    },
+    {
+      "301": 313,
+      "What is JavaScript?": "What is a closure in JavaScript?"
+    },
+    {
+      "301": 314,
+      "What is JavaScript?": "Explain the purpose of the \"this\" keyword in JavaScript."
+    },
+    {
+      "301": 315,
+      "What is JavaScript?": "How do you create an object in JavaScript?"
+    },
+    {
+      "301": 316,
+      "What is JavaScript?": "Describe the difference between \"null\" and \"undefined\" in JavaScript."
+    },
+    {
+      "301": 317,
+      "What is JavaScript?": "What is an IIFE (Immediately Invoked Function Expression) in JavaScript?"
+    },
+    {
+      "301": 318,
+      "What is JavaScript?": "How do you compare two objects for equality in JavaScript?"
+    },
+    {
+      "301": 319,
+      "What is JavaScript?": "What are JavaScript data types?"
+    },
+    {
+      "301": 320,
+      "What is JavaScript?": "Describe the difference between primitive and reference data types in JavaScript."
+    },
+    {
+      "301": 321,
+      "What is JavaScript?": "What is a callback function in JavaScript?"
+    },
+    {
+      "301": 322,
+      "What is JavaScript?": "Explain the concept of asynchronous programming in JavaScript."
+    },
+    {
+      "301": 323,
+      "What is JavaScript?": "How do you handle errors in JavaScript?"
+    },
+    {
+      "301": 324,
+      "What is JavaScript?": "Describe the purpose of the \"try...catch\" statement in JavaScript."
+    },
+    {
+      "301": 325,
+      "What is JavaScript?": "What is a promise in JavaScript?"
+    },
+    {
+      "301": 326,
+      "What is JavaScript?": "How do you create and use a promise in JavaScript?"
+    },
+    {
+      "301": 327,
+      "What is JavaScript?": "Explain the concept of event handling in JavaScript."
+    },
+    {
+      "301": 328,
+      "What is JavaScript?": "How do you add an event listener to an HTML element in JavaScript?"
+    },
+    {
+      "301": 329,
+      "What is JavaScript?": "What is the JavaScript Event Loop?"
+    },
+    {
+      "301": 330,
+      "What is JavaScript?": "Describe the difference between \"nullish\" (??) and \"logical OR\" (||) operators in JavaScript."
+    },
+    {
+      "301": 331,
+      "What is JavaScript?": "How do you declare and use arrow functions in JavaScript?"
+    },
+    {
+      "301": 332,
+      "What is JavaScript?": "What is the \"rest\" parameter in JavaScript functions?"
+    },
+    {
+      "301": 333,
+      "What is JavaScript?": "Explain the \"spread\" operator in JavaScript."
+    },
+    {
+      "301": 334,
+      "What is JavaScript?": "How can you clone an object in JavaScript?"
+    },
+    {
+      "301": 335,
+      "What is JavaScript?": "Describe the purpose of the \"map\" method in JavaScript."
+    },
+    {
+      "301": 336,
+      "What is JavaScript?": "What is the difference between \"map\" and \"forEach\" in JavaScript?"
+    },
+    {
+      "301": 337,
+      "What is JavaScript?": "How do you create and manipulate arrays in JavaScript?"
+    },
+    {
+      "301": 338,
+      "What is JavaScript?": "Explain the concept of \"destructuring\" in JavaScript."
+    },
+    {
+      "301": 339,
+      "What is JavaScript?": "What are template literals in JavaScript?"
+    },
+    {
+      "301": 340,
+      "What is JavaScript?": "How do you work with asynchronous code using \"async/await\" in JavaScript?"
+    },
+    {
+      "301": 341,
+      "What is JavaScript?": "Describe the purpose of the \"fetch\" API in JavaScript."
+    },
+    {
+      "301": 342,
+      "What is JavaScript?": "How do you create and use classes in JavaScript (ES6)?"
+    },
+    {
+      "301": 343,
+      "What is JavaScript?": "Explain the concept of inheritance in JavaScript."
+    },
+    {
+      "301": 344,
+      "What is JavaScript?": "How do you handle modules in JavaScript (ES6)?"
+    },
+    {
+      "301": 345,
+      "What is JavaScript?": "What is the purpose of the JavaScript \"localStorage\" and \"sessionStorage\" objects?"
+    },
+    {
+      "301": 346,
+      "What is JavaScript?": "How can you prevent the default behavior of an HTML element in JavaScript?"
+    },
+    {
+      "301": 347,
+      "What is JavaScript?": "Describe the concept of event delegation in JavaScript."
+    },
+    {
+      "301": 348,
+      "What is JavaScript?": "What is the \"addEventListener\" method used for in JavaScript?"
+    },
+    {
+      "301": 349,
+      "What is JavaScript?": "How do you check if an element has a specific class in JavaScript?"
+    },
+    {
+      "301": 350,
+      "What is JavaScript?": "Explain the concept of \"closures\" in JavaScript."
+    },
+    {
+      "301": 351,
+      "What is JavaScript?": "How can you create and use cookies in JavaScript?"
+    },
+    {
+      "301": 352,
+      "What is JavaScript?": "Describe the difference between \"localStorage\" and \"sessionStorage\" in JavaScript."
+    },
+    {
+      "301": 353,
+      "What is JavaScript?": "What is the JavaScript \"window\" object used for?"
+    },
+    {
+      "301": 354,
+      "What is JavaScript?": "How do you navigate to a different URL in JavaScript?"
+    },
+    {
+      "301": 355,
+      "What is JavaScript?": "What is the purpose of the \"setTimeout\" function in JavaScript?"
+    },
+    {
+      "301": 356,
+      "What is JavaScript?": "How do you compare two arrays for equality in JavaScript?"
+    },
+    {
+      "301": 357,
+      "What is JavaScript?": "Explain the purpose of the \"reduce\" method in JavaScript."
+    },
+    {
+      "301": 358,
+      "What is JavaScript?": "What is the JavaScript \"prototype\" property?"
+    },
+    {
+      "301": 359,
+      "What is JavaScript?": "Describe the concept of event propagation in JavaScript."
+    },
+    {
+      "301": 360,
+      "What is JavaScript?": "How do you prevent event propagation in JavaScript?"
+    },
+    {
+      "301": 361,
+      "What is JavaScript?": "What is a callback hell (pyramid of doom) in JavaScript?"
+    },
+    {
+      "301": 362,
+      "What is JavaScript?": "How can you handle callback hell in JavaScript?"
+    },
+    {
+      "301": 363,
+      "What is JavaScript?": "Explain the concept of \"memoization\" in JavaScript."
+    },
+    {
+      "301": 364,
+      "What is JavaScript?": "How do you create and manipulate dates and times in JavaScript?"
+    },
+    {
+      "301": 365,
+      "What is JavaScript?": "What is the JavaScript \"fetch\" API used for?"
+    },
+    {
+      "301": 366,
+      "What is JavaScript?": "Describe the purpose of the \"XMLHttpRequest\" object in JavaScript."
+    },
+    {
+      "301": 367,
+      "What is JavaScript?": "How do you create and use regular expressions in JavaScript?"
+    },
+    {
+      "301": 368,
+      "What is JavaScript?": "What is the purpose of the \"Object.keys\" method in JavaScript?"
+    },
+    {
+      "301": 369,
+      "What is JavaScript?": "Explain the concept of \"currying\" in JavaScript."
+    },
+    {
+      "301": 370,
+      "What is JavaScript?": "How do you implement currying in JavaScript?"
+    },
+    {
+      "301": 371,
+      "What is JavaScript?": "What is the JavaScript \"Promise.all\" method used for?"
+    },
+    {
+      "301": 372,
+      "What is JavaScript?": "Describe the difference between \"map\" and \"filter\" in JavaScript."
+    },
+    {
+      "301": 373,
+      "What is JavaScript?": "How do you convert a JSON string to an object in JavaScript?"
+    },
+    {
+      "301": 374,
+      "What is JavaScript?": "What is the \"async/await\" syntax used for in JavaScript?"
+    },
+    {
+      "301": 375,
+      "What is JavaScript?": "Explain the concept of \"promisify\" in JavaScript."
+    },
+    {
+      "301": 376,
+      "What is JavaScript?": "How do you implement a \"debounce\" function in JavaScript?"
+    },
+    {
+      "301": 377,
+      "What is JavaScript?": "What is the purpose of the \"localStorage\" object in JavaScript?"
+    },
+    {
+      "301": 378,
+      "What is JavaScript?": "Describe the difference between \"localStorage\" and \"sessionStorage\" in JavaScript."
+    },
+    {
+      "301": 379,
+      "What is JavaScript?": "How can you check if a value is an array in JavaScript?"
+    },
+    {
+      "301": 380,
+      "What is JavaScript?": "Explain the concept of the JavaScript \"Event Loop.\""
+    },
+    {
+      "301": 381,
+      "What is JavaScript?": "What is the purpose of the JavaScript \"Map\" object?"
+    },
+    {
+      "301": 382,
+      "What is JavaScript?": "How do you create and use a \"Set\" object in JavaScript?"
+    },
+    {
+      "301": 383,
+      "What is JavaScript?": "Describe the difference between \"Set\" and \"Array\" in JavaScript."
+    },
+    {
+      "301": 384,
+      "What is JavaScript?": "What is the JavaScript \"Generator\" function used for?"
+    },
+    {
+      "301": 385,
+      "What is JavaScript?": "How do you create and use a generator function in JavaScript?"
+    },
+    {
+      "301": 386,
+      "What is JavaScript?": "What is the purpose of the JavaScript \"WeakMap\" object?"
+    },
+    {
+      "301": 387,
+      "What is JavaScript?": "Describe the concept of \"memoization\" in JavaScript."
+    },
+    {
+      "301": 388,
+      "What is JavaScript?": "How do you create a shallow copy of an object in JavaScript?"
+    },
+    {
+      "301": 389,
+      "What is JavaScript?": "Explain the purpose of the \"Object.assign\" method in JavaScript."
+    },
+    {
+      "301": 390,
+      "What is JavaScript?": "What is the JavaScript \"Proxy\" object used for?"
+    },
+    {
+      "301": 391,
+      "What is JavaScript?": "How do you create and use a \"Proxy\" object in JavaScript?"
+    },
+    {
+      "301": 392,
+      "What is JavaScript?": "Describe the purpose of the JavaScript \"Intl\" object."
+    },
+    {
+      "301": 393,
+      "What is JavaScript?": "What is the JavaScript \"Array.from\" method used for?"
+    },
+    {
+      "301": 394,
+      "What is JavaScript?": "Explain the concept of \"caching\" in JavaScript."
+    },
+    {
+      "301": 395,
+      "What is JavaScript?": "How do you create a custom error class in JavaScript?"
+    },
+    {
+      "301": 396,
+      "What is JavaScript?": "What is the purpose of the JavaScript \"BigInt\" data type?"
+    },
+    {
+      "301": 397,
+      "What is JavaScript?": "Describe the concept of \"dependency injection\" in JavaScript."
+    },
+    {
+      "301": 398,
+      "What is JavaScript?": "How do you implement dependency injection in JavaScript?"
+    },
+    {
+      "301": 399,
+      "What is JavaScript?": "What is the JavaScript \"Symbol\" data type used for?"
+    },
+    {
+      "301": 400,
+      "What is JavaScript?": "Explain the concept of \"event-driven programming\" in JavaScript."
+    }
+  ]
+}

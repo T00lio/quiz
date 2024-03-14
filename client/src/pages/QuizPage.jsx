@@ -5,6 +5,7 @@ import Footer from "../components/footer/footer";
 import Header from "../components/header/index";
 import Success from "../components/success";
 import Option from "../components/option-botton";
+import "../assets/mock-data/data.json";
 
 export default function Quizcopy() {
   const { subject } = useParams();
