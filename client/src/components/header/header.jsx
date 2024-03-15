@@ -90,7 +90,7 @@ function Header() {
         <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80" />
         <nav className="relative flex flex-col py-4 h-1/5 w-1/5 bg-gray-700 overflow-y-auto">
           <div className="flex items-center mb-16 pr-6">
-            <a className="ml-10 text-2xl text-white font-bold" href="/home">
+            <a className="ml-10 text-xl text-white font-bold" href="/home">
               <img src={Logo} alt="" width="auto" className="px-4" />
             </a>
           </div>
@@ -138,7 +138,7 @@ function Header() {
               </a>
             </nav>
             <footer className="navbar-footer">
-              <p className="mt-6 mb-4 text-md text-center text-white bottom-0">
+              <p className="mt-10 mb-4 text-md text-center text-white bottom-0">
                 <a href="https://www.tuliosalvatierra.com">
                   2024 tuliosalvatierra.com
                 </a>
