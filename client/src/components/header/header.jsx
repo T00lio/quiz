@@ -6,6 +6,7 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    console.log(isMenuOpen);
   };
   return (
     <section className="lg:px-10 bg-gray-800">
@@ -71,44 +72,49 @@ function Header() {
             </li>
           </ul>
         </nav>
-        <div className="hidden lg:block">
+        <nav className="hidden lg:block">
           <a
             className="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full"
             href="/signin"
           >
             Sign Up
           </a>
-        </div>
+        </nav>
       </nav>
-      <div className="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+      {/* dropdown menu */}
+      <div
+        className={`${
+          isMenuOpen ? "lg:hidden" : "hidden"
+        } navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50 bg-black`}
+      >
         <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80" />
-        <nav className="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+        <nav className="relative flex flex-col py-4 h-1/5 w-1/5 bg-gray-700 overflow-y-auto">
           <div className="flex items-center mb-16 pr-6">
-            <a className="ml-10 text-2xl text-gray-800 font-bold" href="/home">
-              <img className="h-7" src={Logo} alt="" width="auto" />
+            <a className="ml-10 text-2xl text-white font-bold" href="/home">
+              <img src={Logo} alt="" width="auto" className="px-4" />
             </a>
           </div>
-          <div>
+          <div className="navbar-item">
             <ul>
-              <li className="mb-1 px-10">
+              <li className="mb-2 px-10">
                 <a
-                  className="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl"
+                  className="block pl-8 py-4 text-xl text-white hover:bg-blueGray-50 rounded-xl"
                   href="/quizmenu"
                 >
                   Quizes
                 </a>
               </li>
-              <li className="mb-1 px-10">
+              <li className="mb-2 px-10">
                 <a
-                  className="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl"
+                  className="block pl-8 py-4 text-xl text-white hover:bg-blueGray-50 rounded-xl"
                   href="/about"
                 >
                   About
                 </a>
               </li>
-              <li className="mb-1 px-10">
+              <li className="mb-4 px-10">
                 <a
-                  className="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl"
+                  className="block pl-8 py-4 text-xl text-white hover:bg-blueGray-50 rounded-xl"
                   href="/contactpage"
                 >
                   Contact
@@ -117,9 +123,9 @@ function Header() {
             </ul>
           </div>
           <div className="mt-auto px-10">
-            <div className="pt-6">
+            <nav className="py-5 flex-center">
               <a
-                className="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full"
+                className="block mb-4 py-4 px-12 text-white  text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full mr-4"
                 href="/signin"
               >
                 Sign in
@@ -130,10 +136,14 @@ function Header() {
               >
                 Sign up
               </a>
-            </div>
-            <p className="mt-6 mb-4 text-lg text-center">
-              <span>2024 tuliosalvatierra.com</span>
-            </p>
+            </nav>
+            <footer className="navbar-footer">
+              <p className="mt-6 mb-4 text-md text-center text-white bottom-0">
+                <a href="https://www.tuliosalvatierra.com">
+                  2024 tuliosalvatierra.com
+                </a>
+              </p>
+            </footer>
           </div>
         </nav>
       </div>
