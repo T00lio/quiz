@@ -4,7 +4,7 @@ import axios from "axios";
 import Footer from "../components/footer/footer";
 import Header from "../components/header/index";
 import Success from "../components/success";
-import Option from "../components/option-botton";
+import OptionButton from "../components/option-botton/OptionButton";
 
 export default function Quizcopy() {
   const { subject } = useParams();
@@ -96,7 +96,7 @@ export default function Quizcopy() {
                             {questionData &&
                               ["option1", "option2", "option3", "option4"].map(
                                 (optionKey) => (
-                                  <Option
+                                  <OptionButton
                                     key={optionKey}
                                     label={questionData[optionKey]}
                                     isCorrect={

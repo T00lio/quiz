@@ -1,2 +1,1 @@
-import Option from "./option-botton";
-export default Option;
+export { default } from "./OptionButton.jsx";
