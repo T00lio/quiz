@@ -1,6 +1,7 @@
 import React from "react";
-import Header from "../components/header";
-import Footer from "../components/footer";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import landingImage from "../assets/images/landing.webp";
 
 export default function Index() {
   return (
@@ -31,11 +32,7 @@ export default function Index() {
                 </a>
               </div>
               <div className="w-full lg:w-1/2 px-4">
-                <img
-                  className="w-full rounded-2xl"
-                  src="images/DALL-E-2024-02-14-20-52-00-Design-a-captivating-and-modern-landing-page-banner-that-visually-communicates-the-challenge-of-a-quiz-on-the-top-100-questions-covering-React-JavaSc.webp"
-                  alt=""
-                />
+                <img className="w-full rounded-2xl" src={landingImage} alt="" />
               </div>
             </div>
           </div>

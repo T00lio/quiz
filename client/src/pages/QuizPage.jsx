@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Footer from "../components/footer/footer";
-import Header from "../components/header/index";
-import Success from "../components/success";
-import OptionButton from "../components/option-botton/OptionButton";
+import Footer from "../components/Footer/Footer";
+import Header from "../components/Header/index";
+import Success from "../components/Success";
+import OptionButton from "../components/OptionButton/OptionButton";
 
 export default function Quizcopy() {
   const { subject } = useParams();
@@ -23,7 +23,6 @@ export default function Quizcopy() {
         setQuestions(response.data);
       } catch (error) {
         console.log("Failed to fetch questions:", error);
-        // Handle the error more visibly if needed
       }
     };
     fetchData();

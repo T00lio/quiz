@@ -3,8 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import IndexPage from "./pages/IndexPage.jsx";
 import AboutPage from "./pages/About.jsx";
 import SingupPage from "./pages/Singup.jsx";
-import ContactPagePage from "./pages/Contact-page.jsx";
-import QuizMenuPage from "./pages/Quiz-menu.jsx";
+import Contact from "./pages/Contact.jsx";
+import QuizMenuPage from "./pages/QuizMenu.jsx";
 import Signin from "./pages/Signin.jsx";
 import Quizcopy from "./pages/QuizPage.jsx";
 
@@ -18,7 +18,7 @@ function App() {
 
         <Route path="/signin" element={<SingupPage />} />
 
-        <Route path="/contactpage" element={<ContactPagePage />} />
+        <Route path="/contact" element={<Contact />} />
 
         <Route path="/quizmenu" element={<QuizMenuPage />} />
 
