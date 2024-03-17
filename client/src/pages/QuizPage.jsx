@@ -6,7 +6,7 @@ import Header from "../components/Header/index";
 import Success from "../components/Success";
 import OptionButton from "../components/OptionButton/OptionButton";
 
-export default function Quizcopy() {
+export default function Quiz() {
   const { subject } = useParams();
   const [number, setNumber] = useState(0);
   const [questions, setQuestions] = useState([]);

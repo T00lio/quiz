@@ -1,12 +1,12 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import IndexPage from "./pages/IndexPage.jsx";
+import IndexPage from "./pages/Index.jsx";
 import AboutPage from "./pages/About.jsx";
 import SingupPage from "./pages/Singup.jsx";
 import Contact from "./pages/Contact.jsx";
 import QuizMenuPage from "./pages/QuizMenu.jsx";
 import Signin from "./pages/Signin.jsx";
-import Quizcopy from "./pages/QuizPage.jsx";
+import Quiz from "./pages/QuizPage.jsx";
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
 
         <Route path="/signup" element={<Signin />} />
 
-        <Route path="/quiz/:subject" element={<Quizcopy />} />
+        <Route path="/quiz/:subject" element={<Quiz />} />
       </Routes>
     </>
   );
