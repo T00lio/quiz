@@ -18,6 +18,7 @@ export default function Index() {
                 <span className="text-lg font-bold text-blue-400">
                   Challenge Accepted?
                 </span>
+                {process.evn.REACT_APP_API_URL}
                 <h2 className="max-w-2xl mt-12 mb-12 text-6xl 2xl:text-8xl text-white font-bold font-heading">
                   Start mastring now and join the elite!
                 </h2>
