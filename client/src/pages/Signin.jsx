@@ -17,7 +17,7 @@ export default function Signin() {
     }
     try {
       const response = await backendLogin({ email, password });
-      alert("Message sent!");
+      console.log(response, "response");
     } catch (error) {
       setError("Invalid email or password");
     }
@@ -70,10 +70,12 @@ export default function Signin() {
               </div>
               <div className="w-full lg:w-1/2 px-4">
                 <div className="px-6 lg:px-20 py-12 lg:py-24 bg-gray-600 rounded-lg">
+                  {/* Form body */}
                   <form onSubmit={handleSubmit}>
                     <h3 className="mb-10 text-2xl text-white font-bold font-heading">
                       Register Account
                     </h3>
+                    {error && <p className="text-red-500 mb-5">{error}</p>}
                     <div className="flex items-center pl-6 mb-3 bg- rounded-full bg-white">
                       <span className="inline-block pr-3 py-2 border-r border-gray-50">
                         <svg

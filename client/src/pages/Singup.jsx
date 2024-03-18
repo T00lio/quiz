@@ -17,7 +17,7 @@ export default function Singup() {
     }
     try {
       const response = await backendLogin({ email, password });
-      alert("Message sent!");
+      console.log(response, "response");
     } catch (error) {
       setError("Invalid email or password");
     }
@@ -69,10 +69,12 @@ export default function Singup() {
               </div>
               <div className="w-full lg:w-1/2 px-4 bg-gray-400">
                 <div className="px-6 lg:px-20 py-12 lg:py-24 rounded-lg bg-gray-600">
+                  {/* Form body */}
                   <form onSubmit={handleSubmit}>
                     <h3 className="mb-10 text-2xl font-bold font-heading text-white">
                       Register Account
                     </h3>
+                    {error && <p style={{ color: "red" }}>{error}</p>}
                     <div className="flex items-center pl-6 mb-3 bg-white rounded-full border-slate-950">
                       <span className="inline-block pr-3 py-2 border-r border-gray-50">
                         <svg
@@ -115,7 +117,7 @@ export default function Singup() {
                       <input
                         className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none"
                         type="email"
-                        placeholder="example@shuffle.dev"
+                        placeholder="john.doe@mail.com"
                       />
                     </div>
                     <div className="flex items-center pl-6 mb-3 bg-white rounded-full">
@@ -148,9 +150,11 @@ export default function Singup() {
                       <p className="-mt-2 text-sm text-gray-400 mb-5">
                         Social sign in
                       </p>
+                      {/* Google sign in */}
                       <button className="mb-3 py-4 w-full bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full transition duration-200">
                         Google
                       </button>
+                      {/* Github sign in */}
                       <button className="py-4 w-full bg-black hover:bg-black-400 text-white font-bold rounded-full transition duration-200">
                         Github
                       </button>
