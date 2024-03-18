@@ -1,9 +1,23 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 
 import { TELEPHONE, PORTFOLIO_URL } from "../../global const/index";
 
 function ContactFrom() {
+  useEffect(() => {
+    const checkHashAndScroll = () => {
+      const { hash } = window.location;
+      if (hash) {
+        const id = hash.replace("#", "");
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+    };
+    checkHashAndScroll();
+  }, []);
+
   const formRef = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
