@@ -178,9 +178,11 @@ export default function Signin() {
                       <p className="-mt-2 text-sm text-gray-400 mb-5">
                         Also register with your Socials:
                       </p>
+                      {/* Google button */}
                       <button className="mb-3 py-4 w-full bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full transition duration-200">
                         Google
                       </button>
+                      {/* Github button */}
                       <button className="py-4 w-full bg-black hover:bg-black-400 text-white font-bold rounded-full transition duration-200">
                         Github
                       </button>
