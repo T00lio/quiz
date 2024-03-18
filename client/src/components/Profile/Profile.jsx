@@ -14,7 +14,7 @@ function Profile() {
           <p>{user.email}</p>
           <LogoutButton />
 
-          <pre>{JSON.stringify(user, null, 2)}</pre>
+          <div>{JSON.stringify(user, null, 2)}</div>
         </>
       ) : (
         <>
