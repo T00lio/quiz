@@ -1,7 +1,7 @@
 import React from "react";
-
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { PORTFOLIO_URL, TELEPHONE } from "../global const/index";
 
 export default function ContactPage() {
   return (
@@ -25,7 +25,7 @@ export default function ContactPage() {
               Have a question?
             </span>
             <h2 className="mt-10 text-5xl font-bold font-heading text-white">
-              Contact with us
+              Contact us
             </h2>
           </div>
           <div className="max-w-4xl mx-auto">
@@ -71,9 +71,7 @@ export default function ContactPage() {
                         />
                       </svg>
                     </span>
-                    <p className="text-lg font-bold text-white">
-                      +1 786 314 6121
-                    </p>
+                    <p className="text-lg font-bold text-white">{TELEPHONE}</p>
                   </div>
                 </div>
                 <div className="py-6 px-8 mb-10 bg-gray-600 rounded-lg">
@@ -134,7 +132,7 @@ export default function ContactPage() {
             <div className="text-center">
               <a
                 className="inline-flex text-blue-400 hover:text-blue-500 font-bold"
-                href="https://tuliosalvatierra.com"
+                href={PORTFOLIO_URL}
               >
                 <span>tuliosalvatierra.com</span>
                 <svg
