@@ -7,6 +7,7 @@ import Contact from "./pages/Contact.jsx";
 import QuizMenuPage from "./pages/QuizMenu.jsx";
 import Signin from "./pages/Signin.jsx";
 import Quiz from "./pages/QuizPage.jsx";
+import Profile from "./pages/Profile.jsx";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/signup" element={<Signin />} />
 
         <Route path="/quiz/:subject" element={<Quiz />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </>
   );
