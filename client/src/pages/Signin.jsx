@@ -145,6 +145,7 @@ export default function Signin() {
                         className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none"
                         type="password"
                         placeholder="Password"
+                        autoComplete="new-password"
                       />
                     </div>
                     <div className="flex items-center pl-6 mb-6 bg-white rounded-full">
@@ -171,6 +172,7 @@ export default function Signin() {
                         className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none"
                         type="password"
                         placeholder="Repeat password"
+                        autoComplete="new-password"
                       />
                     </div>
 

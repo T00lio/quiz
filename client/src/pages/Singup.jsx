@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "../components/Header/index";
 import Footer from "../components/Footer/index";
+import GoogleButton from "../components/GoogleButton";
 
 export default function Singup() {
   const [error, setError] = useState(null);
@@ -144,6 +145,7 @@ export default function Singup() {
                         className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none"
                         type="password"
                         placeholder="Password"
+                        autoComplete="new-password"
                       />
                     </div>
                     <div className="flex-col mb-10 p-5">
@@ -151,9 +153,8 @@ export default function Singup() {
                         Social sign in
                       </p>
                       {/* Google sign in */}
-                      <button className="mb-3 py-4 w-full bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full transition duration-200">
-                        Google
-                      </button>
+                      <GoogleButton />
+
                       {/* Github sign in */}
                       <button className="py-4 w-full bg-black hover:bg-black-400 text-white font-bold rounded-full transition duration-200">
                         Github
