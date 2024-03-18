@@ -1,8 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header/index";
 import Footer from "../components/Footer/index";
 
 export default function Signin() {
+  const [error, setError] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const email = formData.get("email");
+    const password = formData.get("password");
+
+    if (!email || !password) {
+      setError("Please fill all the fields");
+      return;
+    }
+    try {
+      const response = await backendLogin({ email, password });
+      alert("Message sent!");
+    } catch (error) {
+      setError("Invalid email or password");
+    }
+  };
+
+  const backendLogin = ({ email, password }) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (email === "salvacorp@gmail.com" && password === "123456") {
+          resolve({ message: "Login success!" });
+        } else {
+          reject({ message: "Invalid email or password" });
+        }
+      }, 1000);
+    });
+  };
   return (
     <React.Fragment>
       {/* header */}
@@ -39,7 +70,7 @@ export default function Signin() {
               </div>
               <div className="w-full lg:w-1/2 px-4">
                 <div className="px-6 lg:px-20 py-12 lg:py-24 bg-gray-600 rounded-lg">
-                  <form action="#">
+                  <form onSubmit={handleSubmit}>
                     <h3 className="mb-10 text-2xl text-white font-bold font-heading">
                       Register Account
                     </h3>
@@ -140,19 +171,7 @@ export default function Signin() {
                         placeholder="Repeat password"
                       />
                     </div>
-                    {/* <div className="inline-flex mb-10">
-                        <input className="mr-4" type="checkbox" />
-                        <p className="-mt-2 text-sm text-gray-200">
-                          By singning up, you agree to our
-                          <a className="text-white" href="google.com">
-                            Terms, Data Policy
-                          </a>
-                          and
-                          <a className="text-white" href="google.com">
-                            Cookies.
-                          </a>
-                        </p>
-                      </div> */}
+
                     <div className="flex-col mb-10 p-5">
                       <p className="-mt-2 text-sm text-gray-400 mb-5">
                         Also register with your Socials:
@@ -164,7 +183,10 @@ export default function Signin() {
                         Github
                       </button>
                     </div>
-                    <button className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">
+                    <button
+                      type="submit"
+                      className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200"
+                    >
                       Get started
                     </button>
                   </form>
