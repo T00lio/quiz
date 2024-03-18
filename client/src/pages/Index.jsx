@@ -5,7 +5,6 @@ import landingImage from "../assets/images/landing.webp";
 import ContactForm from "../components/ContactForm";
 
 export default function Index() {
-  console.log(process.env.REACT_APP_PUBLIC_KEY);
   return (
     <React.Fragment>
       {/* header */}
