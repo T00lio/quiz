@@ -5,7 +5,7 @@ import Footer from "../components/footer/footer";
 import Header from "../components/header/index";
 import Success from "../components/success";
 import Option from "../components/option-botton";
-import "../assets/mock-data/data.json";
+import { React, HTML, CSS, Javascript } from "../assets/mock-data/data.json";
 
 export default function Quizcopy() {
   const { subject } = useParams();
@@ -14,20 +14,33 @@ export default function Quizcopy() {
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          `http://localhost:3004/api/questions?subject=${subject}`
-        );
+  // Fetch data from the server
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         `http://localhost:3004/api/questions?subject=${subject}`
+  //       );
 
-        setQuestions(response.data);
-      } catch (error) {
-        console.log("Failed to fetch questions:", error);
-        // Handle the error more visibly if needed
-      }
+  //       setQuestions(response.data);
+  //     } catch (error) {
+  //       console.log("Failed to fetch questions:", error);
+  //       // Handle the error more visibly if needed
+  //     }
+  //   };
+  //   fetchData();
+  // }, [subject]);
+
+  // Mock data
+
+  useEffect(() => {
+    const mockData = {
+      React,
+      HTML,
+      CSS,
+      Javascript,
     };
-    fetchData();
+    setQuestions(mockData[subject]);
   }, [subject]);
 
   const handleOptionSelection = (isCorrect) => {
