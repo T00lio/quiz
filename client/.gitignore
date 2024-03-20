@@ -3,4 +3,5 @@ node_modules
 /build
 /public/build
 .env
-/public/css/*
+client/public/css/tailwind/tailwind.css
+client/public/css/tailwind/tailwind.min.css
