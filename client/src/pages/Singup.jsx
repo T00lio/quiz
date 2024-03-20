@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Header from "../components/Header/index";
 import Footer from "../components/Footer/index";
 import GoogleButton from "../components/GoogleButton";
 
-export default function Singup() {
+export default function SingUp() {
   const [error, setError] = useState(null);
 
   const handleSubmit = async (e) => {
@@ -36,7 +36,7 @@ export default function Singup() {
     });
   };
   return (
-    <React.Fragment>
+    <>
       <Header />
       {/* Sign in section */}
       <section className="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden">
@@ -175,6 +175,6 @@ export default function Singup() {
       </section>
       {/* footer */}
       <Footer />
-    </React.Fragment>
+    </>
   );
 }

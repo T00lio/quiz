@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Header from "../components/Header/index";
 import Footer from "../components/Footer";
 
@@ -35,7 +35,7 @@ export default function SignIn() {
     });
   };
   return (
-    <React.Fragment>
+    <>
       {/* header */}
       <Header />
       {/* Sign in section */}
@@ -204,6 +204,6 @@ export default function SignIn() {
       </section>
       {/* footer */}
       <Footer />
-    </React.Fragment>
+    </>
   );
 }

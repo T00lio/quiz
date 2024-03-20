@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 
 import { TELEPHONE, PORTFOLIO_URL } from "../../global const/index";
 
-function ContactFrom() {
+function ContactForm() {
   useEffect(() => {
     const checkHashAndScroll = () => {
       const { hash } = window.location;
@@ -197,4 +197,4 @@ function ContactFrom() {
   );
 }
 
-export default ContactFrom;
+export default ContactForm;
