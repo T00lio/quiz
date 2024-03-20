@@ -1,4 +1,3 @@
-import React from "react";
 import "./Footer.css";
 import { MENU_ITEMS } from "../../global const/index";
 

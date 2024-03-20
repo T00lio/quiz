@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Logo from "../../assets/zospace-assets/images/logo.svg";
 import "./Header.css";
 import "../../global const/index";

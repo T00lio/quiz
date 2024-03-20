@@ -1,4 +1,3 @@
-import React from "react";
 import { Routes, Route } from "react-router-dom";
 import IndexPage from "./pages/Index.jsx";
 import AboutPage from "./pages/About.jsx";
