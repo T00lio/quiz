@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/index.js";
 import { PORTFOLIO_URL, TELEPHONE } from "../global const/index";
 
 export default function ContactPage() {

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Header from "../components/Header/index";
-import Footer from "../components/Footer/index";
+import Footer from "../components/Footer";
 
-export default function Signin() {
+export default function SignIn() {
   const [error, setError] = useState(null);
 
   const handleSubmit = async (e) => {
