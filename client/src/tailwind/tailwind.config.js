@@ -1,10 +1,5 @@
 module.exports = {
-  content: [
-    "./src/pug/*.pug",
-    "./src/html/*.html",
-    "./src/pages/*.js",
-    "./public/*.html",
-  ],
+  content: ["./src/html/*.html", "./src/pages/*.js"],
 
   theme: {
     screens: {
