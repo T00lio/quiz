@@ -4,8 +4,8 @@ import CSS from "../assets/subject-logos/CSS.png";
 import HTML from "../assets/subject-logos/HTML.png";
 import JS from "../assets/subject-logos/JavaScript.png";
 import { Link } from "react-router-dom";
-import Header from "../components/header";
-import Footer from "../components/footer";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function QuizMenu() {
   return (
