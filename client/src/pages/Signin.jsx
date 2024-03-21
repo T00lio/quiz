@@ -1,10 +1,41 @@
-import React from "react";
-import Header from "../components/header/index";
-import Footer from "../components/footer/index";
+import { useState } from "react";
+import Header from "../components/Header/index";
+import Footer from "../components/Footer";
 
-export default function Signin() {
+export default function SignIn() {
+  const [error, setError] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const email = formData.get("email");
+    const password = formData.get("password");
+
+    if (!email || !password) {
+      setError("Please fill all the fields");
+      return;
+    }
+    try {
+      const response = await backendLogin({ email, password });
+      console.log(response, "response");
+    } catch (error) {
+      setError("Invalid email or password");
+    }
+  };
+
+  const backendLogin = ({ email, password }) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (email === "salvacorp@gmail.com" && password === "123456") {
+          resolve({ message: "Login success!" });
+        } else {
+          reject({ message: "Invalid email or password" });
+        }
+      }, 1000);
+    });
+  };
   return (
-    <React.Fragment>
+    <>
       {/* header */}
       <Header />
       {/* Sign in section */}
@@ -39,10 +70,12 @@ export default function Signin() {
               </div>
               <div className="w-full lg:w-1/2 px-4">
                 <div className="px-6 lg:px-20 py-12 lg:py-24 bg-gray-600 rounded-lg">
-                  <form action="#">
+                  {/* Form body */}
+                  <form onSubmit={handleSubmit}>
                     <h3 className="mb-10 text-2xl text-white font-bold font-heading">
                       Register Account
                     </h3>
+                    {error && <p className="text-red-500 mb-5">{error}</p>}
                     <div className="flex items-center pl-6 mb-3 bg- rounded-full bg-white">
                       <span className="inline-block pr-3 py-2 border-r border-gray-50">
                         <svg
@@ -112,6 +145,7 @@ export default function Signin() {
                         className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none"
                         type="password"
                         placeholder="Password"
+                        autoComplete="new-password"
                       />
                     </div>
                     <div className="flex items-center pl-6 mb-6 bg-white rounded-full">
@@ -138,33 +172,27 @@ export default function Signin() {
                         className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none"
                         type="password"
                         placeholder="Repeat password"
+                        autoComplete="new-password"
                       />
                     </div>
-                    {/* <div className="inline-flex mb-10">
-                        <input className="mr-4" type="checkbox" />
-                        <p className="-mt-2 text-sm text-gray-200">
-                          By singning up, you agree to our
-                          <a className="text-white" href="google.com">
-                            Terms, Data Policy
-                          </a>
-                          and
-                          <a className="text-white" href="google.com">
-                            Cookies.
-                          </a>
-                        </p>
-                      </div> */}
+
                     <div className="flex-col mb-10 p-5">
                       <p className="-mt-2 text-sm text-gray-400 mb-5">
                         Also register with your Socials:
                       </p>
+                      {/* Google button */}
                       <button className="mb-3 py-4 w-full bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full transition duration-200">
                         Google
                       </button>
+                      {/* Github button */}
                       <button className="py-4 w-full bg-black hover:bg-black-400 text-white font-bold rounded-full transition duration-200">
                         Github
                       </button>
                     </div>
-                    <button className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">
+                    <button
+                      type="submit"
+                      className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200"
+                    >
                       Get started
                     </button>
                   </form>
@@ -176,6 +204,6 @@ export default function Signin() {
       </section>
       {/* footer */}
       <Footer />
-    </React.Fragment>
+    </>
   );
 }

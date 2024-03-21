@@ -1,10 +1,42 @@
-import React from "react";
-import Header from "../components/header/index";
-import Footer from "../components/footer/index";
+import { useState } from "react";
+import Header from "../components/Header/index";
+import Footer from "../components/Footer/index";
+import GoogleButton from "../components/GoogleButton";
 
-export default function Singup() {
+export default function SingUp() {
+  const [error, setError] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const email = formData.get("email");
+    const password = formData.get("password");
+
+    if (!email || !password) {
+      setError("Please fill all the fields");
+      return;
+    }
+    try {
+      const response = await backendLogin({ email, password });
+      console.log(response, "response");
+    } catch (error) {
+      setError("Invalid email or password");
+    }
+  };
+
+  const backendLogin = ({ email, password }) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (email === "salvacorp@gmail.com" && password === "123456") {
+          resolve({ message: "Login success!" });
+        } else {
+          reject({ message: "Invalid email or password" });
+        }
+      }, 1000);
+    });
+  };
   return (
-    <React.Fragment>
+    <>
       <Header />
       {/* Sign in section */}
       <section className="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden">
@@ -38,10 +70,12 @@ export default function Singup() {
               </div>
               <div className="w-full lg:w-1/2 px-4 bg-gray-400">
                 <div className="px-6 lg:px-20 py-12 lg:py-24 rounded-lg bg-gray-600">
-                  <form action="#">
+                  {/* Form body */}
+                  <form onSubmit={handleSubmit}>
                     <h3 className="mb-10 text-2xl font-bold font-heading text-white">
                       Register Account
                     </h3>
+                    {error && <p style={{ color: "red" }}>{error}</p>}
                     <div className="flex items-center pl-6 mb-3 bg-white rounded-full border-slate-950">
                       <span className="inline-block pr-3 py-2 border-r border-gray-50">
                         <svg
@@ -84,7 +118,7 @@ export default function Singup() {
                       <input
                         className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none"
                         type="email"
-                        placeholder="example@shuffle.dev"
+                        placeholder="john.doe@mail.com"
                       />
                     </div>
                     <div className="flex items-center pl-6 mb-3 bg-white rounded-full">
@@ -111,20 +145,25 @@ export default function Singup() {
                         className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none"
                         type="password"
                         placeholder="Password"
+                        autoComplete="new-password"
                       />
                     </div>
                     <div className="flex-col mb-10 p-5">
                       <p className="-mt-2 text-sm text-gray-400 mb-5">
                         Social sign in
                       </p>
-                      <button className="mb-3 py-4 w-full bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full transition duration-200">
-                        Google
-                      </button>
+                      {/* Google sign in */}
+                      <GoogleButton />
+
+                      {/* Github sign in */}
                       <button className="py-4 w-full bg-black hover:bg-black-400 text-white font-bold rounded-full transition duration-200">
                         Github
                       </button>
                     </div>
-                    <button className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">
+                    <button
+                      type="submit"
+                      className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200"
+                    >
                       Get started
                     </button>
                   </form>
@@ -136,6 +175,6 @@ export default function Singup() {
       </section>
       {/* footer */}
       <Footer />
-    </React.Fragment>
+    </>
   );
 }
