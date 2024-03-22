@@ -4,8 +4,8 @@ import AboutPage from "./pages/About";
 import SingupPage from "./pages/Singup";
 import Contact from "./pages/Contact";
 import QuizMenuPage from "./pages/QuizMenu";
-import Signin from "./pages/Signin.jsx";
-import Quizcopy from "./pages/QuizPage.jsx";
+import Signin from "./pages/Signin";
+import Quizcopy from "./pages/QuizPage";
 
 function App() {
   return (
