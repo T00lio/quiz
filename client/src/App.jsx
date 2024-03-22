@@ -1,10 +1,10 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import IndexPage from "./pages/IndexPage.jsx";
-import AboutPage from "./pages/About.jsx";
-import SingupPage from "./pages/Singup.jsx";
-import Contact from "./pages/Contact.jsx";
-import QuizMenuPage from "./pages/QuizMenu.jsx";
+import IndexPage from "./pages/IndexPage";
+import AboutPage from "./pages/About";
+import SingupPage from "./pages/Singup";
+import Contact from "./pages/Contact";
+import QuizMenuPage from "./pages/QuizMenu";
 import Signin from "./pages/Signin.jsx";
 import Quizcopy from "./pages/QuizPage.jsx";
 

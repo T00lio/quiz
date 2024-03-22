@@ -1,1 +1,1 @@
-export { default } from "./OptionButton.jsx";
+export { default } from "./OptionButton";

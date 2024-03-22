@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Footer from "../components/Footer/Footer";
-import Header from "../components/Header/index";
-import Success from "../components/Success";
+import Footer from "../components/footer";
+import Header from "../components/header";
+import Success from "../components/success/Success";
 import OptionButton from "../components/OptionButton/OptionButton";
 
 export default function Quizcopy() {
