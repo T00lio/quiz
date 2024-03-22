@@ -1,10 +1,9 @@
-import React from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
 
 export default function Singup() {
   return (
-    <React.Fragment>
+    <>
       <Header />
       {/* Sign in section */}
       <section className="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden">
@@ -136,6 +135,6 @@ export default function Singup() {
       </section>
       {/* footer */}
       <Footer />
-    </React.Fragment>
+    </>
   );
 }

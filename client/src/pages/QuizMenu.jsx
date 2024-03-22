@@ -1,4 +1,3 @@
-import React from "react";
 import ReactJS from "../assets/subject-logos/React.png";
 import CSS from "../assets/subject-logos/CSS.png";
 import HTML from "../assets/subject-logos/HTML.png";
@@ -9,7 +8,7 @@ import Footer from "../components/footer";
 
 export default function QuizMenu() {
   return (
-    <React.Fragment>
+    <>
       <>
         {/* header */}
         <Header />
@@ -135,6 +134,6 @@ export default function QuizMenu() {
         {/* footer */}
         <Footer />
       </>
-    </React.Fragment>
+    </>
   );
 }

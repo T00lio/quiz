@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Footer from "../components/footer";
@@ -59,7 +59,7 @@ export default function Quizcopy() {
   const questionData = questions[number];
 
   return (
-    <React.Fragment>
+    <>
       {/* header */}
       <Header />
       {/* main */}
@@ -143,6 +143,6 @@ export default function Quizcopy() {
       </section>
       {/* footer */}
       <Footer />
-    </React.Fragment>
+    </>
   );
 }

@@ -1,11 +1,10 @@
-import React from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import landingImage from "../assets/images/landing.webp";
 
 export default function Index() {
   return (
-    <React.Fragment>
+    <>
       {/* header */}
       <Header />
       {/* content */}
@@ -178,6 +177,6 @@ export default function Index() {
       </section>
       {/* footer */}
       <Footer />
-    </React.Fragment>
+    </>
   );
 }

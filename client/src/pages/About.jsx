@@ -1,10 +1,9 @@
-import React from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
 
 export default function About() {
   return (
-    <React.Fragment>
+    <>
       {/* header */}
       <Header />
       {/* content section */}
@@ -103,6 +102,6 @@ export default function About() {
 
       {/* footer */}
       <Footer />
-    </React.Fragment>
+    </>
   );
 }
