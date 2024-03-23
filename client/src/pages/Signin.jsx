@@ -1,10 +1,9 @@
-import React from "react";
-import Header from "../components/header/index";
-import Footer from "../components/footer/index";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
-export default function Signin() {
+export default function SignUpPage() {
   return (
-    <React.Fragment>
+    <>
       {/* header */}
       <Header />
       {/* Sign in section */}
@@ -33,7 +32,7 @@ export default function Signin() {
                   </h2>
                   <p className="text-lg text-gray-200">
                     <span>The brown fox jumps over</span>
-                    <span className="text-white">the lazy dog.</span>
+                    <span className="text-white"> the lazy dog.</span>
                   </p>
                 </div>
               </div>
@@ -140,19 +139,6 @@ export default function Signin() {
                         placeholder="Repeat password"
                       />
                     </div>
-                    {/* <div className="inline-flex mb-10">
-                        <input className="mr-4" type="checkbox" />
-                        <p className="-mt-2 text-sm text-gray-200">
-                          By singning up, you agree to our
-                          <a className="text-white" href="google.com">
-                            Terms, Data Policy
-                          </a>
-                          and
-                          <a className="text-white" href="google.com">
-                            Cookies.
-                          </a>
-                        </p>
-                      </div> */}
                     <div className="flex-col mb-10 p-5">
                       <p className="-mt-2 text-sm text-gray-400 mb-5">
                         Also register with your Socials:
@@ -176,6 +162,6 @@ export default function Signin() {
       </section>
       {/* footer */}
       <Footer />
-    </React.Fragment>
+    </>
   );
 }

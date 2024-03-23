@@ -1,12 +1,11 @@
-import React from "react";
 import { Routes, Route } from "react-router-dom";
-import IndexPage from "./pages/IndexPage.jsx";
-import AboutPage from "./pages/About.jsx";
-import SingupPage from "./pages/Singup.jsx";
-import ContactPagePage from "./pages/Contact-page.jsx";
-import QuizMenuPage from "./pages/Quiz-menu.jsx";
-import Signin from "./pages/Signin.jsx";
-import Quizcopy from "./pages/QuizPage.jsx";
+import IndexPage from "./pages/IndexPage";
+import AboutPage from "./pages/About";
+import SingInPage from "./pages/Singup";
+import Contact from "./pages/Contact";
+import QuizMenuPage from "./pages/QuizMenu";
+import SignUpPage from "./pages/Signin";
+import QuizComponent from "./pages/QuizPage";
 
 function App() {
   return (
@@ -16,15 +15,15 @@ function App() {
 
         <Route path="/about" element={<AboutPage />} />
 
-        <Route path="/signin" element={<SingupPage />} />
+        <Route path="/signin" element={<SingInPage />} />
 
-        <Route path="/contactpage" element={<ContactPagePage />} />
+        <Route path="/contact" element={<Contact />} />
 
         <Route path="/quizmenu" element={<QuizMenuPage />} />
 
-        <Route path="/signup" element={<Signin />} />
+        <Route path="/signup" element={<SignUpPage />} />
 
-        <Route path="/quiz/:subject" element={<Quizcopy />} />
+        <Route path="/quiz/:subject" element={<QuizComponent />} />
       </Routes>
     </>
   );
