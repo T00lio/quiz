@@ -3,10 +3,10 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import Success from "../components/Success";
+import SuccessSection from "../components/Success";
 import OptionButton from "../components/OptionButton";
 
-export default function QuizComponent() {
+function QuizComponent() {
   const { subject } = useParams();
   const [number, setNumber] = useState(0);
   const [questions, setQuestions] = useState([]);
@@ -128,9 +128,9 @@ export default function QuizComponent() {
                       </>
                     ) : (
                       <>
-                        <Success
+                        <SuccessSection
                           score={score}
-                          handleRestart={() => setNumber(0)}
+                          handleRestart={handleRestart}
                         />
                       </>
                     )}
@@ -146,3 +146,5 @@ export default function QuizComponent() {
     </>
   );
 }
+
+export default QuizComponent;

@@ -1,4 +1,4 @@
-function Success({ score, handleRestart }) {
+function SuccessSection({ score, handleRestart }) {
   return (
     <>
       <h1 className="text-5xl mb-2 leading-tight font-bold font-heading text-white">
@@ -25,4 +25,4 @@ function Success({ score, handleRestart }) {
   );
 }
 
-export default Success;
+export default SuccessSection;
