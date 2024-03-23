@@ -1,4 +1,4 @@
-# The Shuffle Editor (https://shuffle.dev)
+# Top 100 Quiz App
 
 ## 1. Getting Started
 
