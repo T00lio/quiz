@@ -22,11 +22,8 @@ npm run build
 
 ## 3. Contact
 
-If you have found any bugs in the Shuffle Editor, have any questions, 
+If you have found any bugs in the App, have any questions, 
 comments or ideas for new features, feel free to contact us:
 
-support@shuffle.dev
+salvacorp@gmail.com
 
-## 4. Credits & Special thanks
-
-We use placeholders from https://unsplash.com/
