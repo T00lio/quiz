@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import IndexPage from "./pages/IndexPage";
 import AboutPage from "./pages/About";
-import SingupPage from "./pages/Singup";
+import SingInPage from "./pages/Singup";
 import Contact from "./pages/Contact";
 import QuizMenuPage from "./pages/QuizMenu";
-import Signin from "./pages/Signin";
-import Quizcopy from "./pages/QuizPage";
+import SignUpPage from "./pages/Signin";
+import QuizComponent from "./pages/QuizPage";
 
 function App() {
   return (
@@ -15,15 +15,15 @@ function App() {
 
         <Route path="/about" element={<AboutPage />} />
 
-        <Route path="/signin" element={<SingupPage />} />
+        <Route path="/signin" element={<SingInPage />} />
 
         <Route path="/contact" element={<Contact />} />
 
         <Route path="/quizmenu" element={<QuizMenuPage />} />
 
-        <Route path="/signup" element={<Signin />} />
+        <Route path="/signup" element={<SignUpPage />} />
 
-        <Route path="/quiz/:subject" element={<Quizcopy />} />
+        <Route path="/quiz/:subject" element={<QuizComponent />} />
       </Routes>
     </>
   );

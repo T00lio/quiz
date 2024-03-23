@@ -1,7 +1,7 @@
 import Header from "../components/header";
 import Footer from "../components/footer";
 
-export default function Singup() {
+export default function SingInPage() {
   return (
     <>
       <Header />
@@ -30,8 +30,8 @@ export default function Singup() {
                     updates on more quizes
                   </h2>
                   <p className="text-lg text-gray-200">
-                    <span>repetition repetition repetion</span>
-                    <span className="text-white">is the key to success</span>
+                    <span>repetition repetition repetion </span>
+                    <span className="text-white"> is the key to success</span>
                   </p>
                 </div>
               </div>

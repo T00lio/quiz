@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Footer from "../components/footer";
-import Header from "../components/header";
-import Success from "../components/success";
-import OptionButton from "../components/OptionButton/OptionButton";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import Success from "../components/Success";
+import OptionButton from "../components/OptionButton";
 
-export default function Quizcopy() {
+export default function QuizComponent() {
   const { subject } = useParams();
   const [number, setNumber] = useState(0);
   const [questions, setQuestions] = useState([]);
