@@ -5,7 +5,7 @@
 The project's source files are placed in ./src/ directory. 
 
 * ./src/{framework}/ - settings used to build CSS.
-* ./src/pages/ - all your pages (templates) are stored in separate .js files.
+* ./src/pages/ - all pages are stored in separate .jsx files.
 
 ## 2. Installation
 
