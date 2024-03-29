@@ -18,6 +18,7 @@ export default function Index() {
                 <span className="text-lg font-bold text-blue-400">
                   Challenge Accepted?
                 </span>
+
                 <h2 className="max-w-2xl mt-12 mb-12 text-6xl 2xl:text-8xl text-white font-bold font-heading">
                   Start mastring now and join the elite!
                 </h2>
