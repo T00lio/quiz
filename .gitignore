@@ -3,4 +3,4 @@ client/node_modules
 client/build
 client/public/build
 .env
-client/public/css
+client/public/css/tailwind
