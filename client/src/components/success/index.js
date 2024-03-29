@@ -1,1 +1,1 @@
-export { default } from "./SuccessComponent";
+export { default } from "./Success";

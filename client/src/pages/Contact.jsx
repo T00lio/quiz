@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { PORTFOLIO_URL, TELEPHONE } from "../constants";
 
 export default function ContactPage() {
   return (
@@ -7,11 +8,7 @@ export default function ContactPage() {
       {/* header */}
       <Header />
       <section className="relative py-20 2xl:py-40 bg-gray-800">
-        <img
-          className="hidden lg:block absolute top-0 left-0 w-2/5"
-          src="zospace-assets/images/map.svg"
-          alt=""
-        />
+        <img className="hidden lg:block absolute top-0 left-0 w-2/5" src="zospace-assets/images/map.svg" alt="" />
         <img
           className="hidden lg:block absolute top-0 left-0 mt-40 ml-40"
           src="zospace-assets/images/office-tag.svg"
@@ -19,12 +16,8 @@ export default function ContactPage() {
         />
         <div className="relative container px-4 mx-auto">
           <div className="text-center mb-20">
-            <span className="text-lg text-blue-400 font-bold">
-              Have a question?
-            </span>
-            <h2 className="mt-10 text-5xl font-bold font-heading text-white">
-              Contact with us
-            </h2>
+            <span className="text-lg text-blue-400 font-bold">Have a question?</span>
+            <h2 className="mt-10 text-5xl font-bold font-heading text-white">Contact us</h2>
           </div>
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-wrap -mx-4 mb-20">
@@ -37,13 +30,11 @@ export default function ContactPage() {
                   />
                   <div className="px-14 py-8">
                     <div className="mb-6 py-px bg-gray-500" />
-                    <h3 className="mb-8 lg:mb-4 text-xl text-white font-bold">
-                      Have any question? Send a message!
-                    </h3>
+                    <h3 className="mb-8 lg:mb-4 text-xl text-white font-bold">Have any question? Send a message!</h3>
                     <div className="md:text-right">
                       <a
                         className="inline-block px-12 py-4 border border-gray-300 hover:border-gray-200 rounded-full font-bold text-white"
-                        href="/#message-form"
+                        href="/#contact-form"
                       >
                         Message
                       </a>
@@ -69,9 +60,7 @@ export default function ContactPage() {
                         />
                       </svg>
                     </span>
-                    <p className="text-lg font-bold text-white">
-                      +1 786 314 6121
-                    </p>
+                    <p className="text-lg font-bold text-white">{TELEPHONE}</p>
                   </div>
                 </div>
                 <div className="py-6 px-8 mb-10 bg-gray-600 rounded-lg">
@@ -91,9 +80,7 @@ export default function ContactPage() {
                         />
                       </svg>
                     </span>
-                    <p className="text-lg font-bold text-white">
-                      email@mail.com
-                    </p>
+                    <p className="text-lg font-bold text-white">email@mail.com</p>
                   </div>
                 </div>
                 <div className="py-6 px-8">
@@ -119,9 +106,7 @@ export default function ContactPage() {
                     </span>
                     <div>
                       <div className="pb-4 pr-16 mb-6 border-b border-gray-500">
-                        <p className="text-lg font-bold text-white">
-                          Chicago, Illinois
-                        </p>
+                        <p className="text-lg font-bold text-white">Chicago, Illinois</p>
                         <p className="text-lg font-bold text-white">60638</p>
                       </div>
                     </div>
@@ -130,10 +115,7 @@ export default function ContactPage() {
               </div>
             </div>
             <div className="text-center">
-              <a
-                className="inline-flex text-blue-400 hover:text-blue-500 font-bold"
-                href="https://tuliosalvatierra.com"
-              >
+              <a className="inline-flex text-blue-400 hover:text-blue-500 font-bold" href={PORTFOLIO_URL}>
                 <span>tuliosalvatierra.com</span>
                 <svg
                   className="ml-4 w-4 h-5"
