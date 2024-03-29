@@ -1,11 +1,11 @@
-# The Shuffle Editor (https://shuffle.dev)
+# Top 100 Quiz App
 
 ## 1. Getting Started
 
 The project's source files are placed in ./src/ directory. 
 
 * ./src/{framework}/ - settings used to build CSS.
-* ./src/pages/ - all your pages (templates) are stored in separate .js files.
+* ./src/pages/ - all pages are stored in separate .jsx files.
 
 ## 2. Installation
 
@@ -22,11 +22,8 @@ npm run build
 
 ## 3. Contact
 
-If you have found any bugs in the Shuffle Editor, have any questions, 
+If you have found any bugs in the App, have any questions, 
 comments or ideas for new features, feel free to contact us:
 
-support@shuffle.dev
+salvacorp@gmail.com
 
-## 4. Credits & Special thanks
-
-We use placeholders from https://unsplash.com/

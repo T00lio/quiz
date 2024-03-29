@@ -1,5 +1,7 @@
 module.exports = {
-  content: ["./src/html/*.html", "./src/pages/*.js"],
+  mode: "jit",
+  purge: ["./src/**/*.{html,js,jsx,ts,tsx}"],
+  content: ["./src/**/*.html", "./src/**/*.js", "./src/**/*.jsx"],
 
   theme: {
     screens: {
