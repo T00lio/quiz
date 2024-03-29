@@ -1,10 +1,9 @@
-import React from "react";
-import Header from "../components/header/index";
-import Footer from "../components/footer/index";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
-export default function Singup() {
+export default function SingInPage() {
   return (
-    <React.Fragment>
+    <>
       <Header />
       {/* Sign in section */}
       <section className="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden">
@@ -31,8 +30,8 @@ export default function Singup() {
                     updates on more quizes
                   </h2>
                   <p className="text-lg text-gray-200">
-                    <span>repetition repetition repetion</span>
-                    <span className="text-white">is the key to success</span>
+                    <span>repetition repetition repetion </span>
+                    <span className="text-white"> is the key to success</span>
                   </p>
                 </div>
               </div>
@@ -136,6 +135,6 @@ export default function Singup() {
       </section>
       {/* footer */}
       <Footer />
-    </React.Fragment>
+    </>
   );
 }

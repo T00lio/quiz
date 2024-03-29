@@ -1,48 +1,35 @@
-import React from "react";
-import "./footer.css";
+import "./Footer.css";
+import { MENU_ITEMS } from "../../constants/index";
 
 function Footer() {
   return (
     <section className="py-20 2xl:py-40 bg-gray-800">
       <div className="container mx-auto px-4 mb-12 md:mb-20">
         <div className="max-w-4xl mx-auto text-center">
-          <a
-            className="inline-block mb-20 text-white text-xl font-bold"
-            href="/"
-          >
-            <img
-              className="h-7"
-              src="images/portfolio-logologo.svg"
-              alt=""
-              width="auto"
-            />
+          <a className="inline-block mb-20 text-white text-xl font-bold" href="/">
+            <img className="h-7" src="images/portfolio-logologo.svg" alt="" width="auto" />
           </a>
           <ul className="nav-link">
-            <li className="mb-4 md:mb-0">
-              <a
-                className="font-bold text-white hover:text-gray-100"
-                href="/quizmenu"
-              >
-                Quizes
-              </a>
-            </li>
-            <li className="mb-4 md:mb-0">
-              <a
-                className="font-bold text-white hover:text-gray-100"
-                href="/about"
-              >
-                About
-              </a>
-            </li>
-            <li className="mb-4 md:mb-0">
-              <a
-                className="font-bold text-white hover:text-gray-100"
-                href="/contactpage"
-              >
-                Contact
-              </a>
-            </li>
+            {MENU_ITEMS.map((item, index) => (
+              <>
+                <li key={index}>
+                  <a className="text-white font-bold text-lg" href={item.url}>
+                    {item.title}
+                  </a>
+                </li>
+                {index === MENU_ITEMS.length - 1 ? (
+                  ""
+                ) : (
+                  <span className="separator">
+                    <svg width={5} height={5} viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B" />
+                    </svg>
+                  </span>
+                )}
+              </>
+            ))}
           </ul>
+          {/* social links */}
           <div className="flex justify-center">
             <a
               className="flex justify-center items-center w-12 h-12 mr-4 bg-gray-600 rounded-full"

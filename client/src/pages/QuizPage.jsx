@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Footer from "../components/footer/footer";
-import Header from "../components/header/index";
-import Success from "../components/success";
-import Option from "../components/option-botton";
-import { React, HTML, CSS, Javascript } from "../assets/mock-data/data.json";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import SuccessSection from "../components/Success";
+import OptionButton from "../components/OptionButton";
 
-export default function Quizcopy() {
+function QuizComponent() {
   const { subject } = useParams();
   const [number, setNumber] = useState(0);
   const [questions, setQuestions] = useState([]);
@@ -74,7 +73,7 @@ export default function Quizcopy() {
   const questionData = questions[number];
 
   return (
-    <React.Fragment>
+    <>
       {/* header */}
       <Header />
       {/* main */}
@@ -97,9 +96,7 @@ export default function Quizcopy() {
                             Question {questionData?.id}:{questionData?.question}
                           </h3>
                           <div className="w-1/4 ml-auto bg-white rounded-xl p-4">
-                            <p className="w-25 ml-auto mr-auto mt-5">
-                              {`Score ${score} / ${questions.length}`}
-                            </p>
+                            <p className="w-25 ml-auto mr-auto mt-5">{`Score ${score} / ${questions.length}`}</p>
                             <h3 className="w-25 ml-auto mr-auto mt-5">
                               Progress {questionData?.id} / {questions?.length}
                             </h3>
@@ -108,45 +105,30 @@ export default function Quizcopy() {
                         <div className="grid-rows-4 flex flex-col mt-10 bg-gray-500 p-5 rounded-lg">
                           <div className="option-container mt-5 shadow-xl">
                             {questionData &&
-                              ["option1", "option2", "option3", "option4"].map(
-                                (optionKey) => (
-                                  <Option
-                                    key={optionKey}
-                                    label={questionData[optionKey]}
-                                    isCorrect={
-                                      questionData[
-                                        `correct${optionKey.charAt(
-                                          optionKey.length - 1
-                                        )}`
-                                      ] === "TRUE"
-                                    }
-                                    onOptionSelected={handleOptionSelection}
-                                  />
-                                )
-                              )}
+                              ["option1", "option2", "option3", "option4"].map((optionKey) => (
+                                <OptionButton
+                                  key={optionKey}
+                                  label={questionData[optionKey]}
+                                  isCorrect={
+                                    questionData[`correct${optionKey.charAt(optionKey.length - 1)}`] === "TRUE"
+                                  }
+                                  onOptionSelected={handleOptionSelection}
+                                />
+                              ))}
                           </div>
                         </div>
                         <div className="mt-5">
-                          <button
-                            onClick={handleRestart}
-                            className="mr-5 bg-red-500 rounded-full p-5"
-                          >
+                          <button onClick={handleRestart} className="mr-5 bg-red-500 rounded-full p-5">
                             Restart
                           </button>
-                          <button
-                            onClick={handleSkip}
-                            className="mr-5 rounded-full p-5 bg-white"
-                          >
+                          <button onClick={handleSkip} className="mr-5 rounded-full p-5 bg-white">
                             skip question
                           </button>
                         </div>
                       </>
                     ) : (
                       <>
-                        <Success
-                          score={score}
-                          handleRestart={() => setNumber(0)}
-                        />
+                        <SuccessSection score={score} handleRestart={handleRestart} />
                       </>
                     )}
                   </>
@@ -158,6 +140,8 @@ export default function Quizcopy() {
       </section>
       {/* footer */}
       <Footer />
-    </React.Fragment>
+    </>
   );
 }
+
+export default QuizComponent;
