@@ -1,6 +1,5 @@
-import React from "react";
-import "./Footer.css";
-import { MENU_ITEMS } from "../../global const/index";
+import "./footer.css";
+import { MENU_ITEMS } from "../../constants/index";
 
 function Footer() {
   return (

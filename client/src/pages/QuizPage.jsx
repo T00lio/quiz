@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Footer from "../components/Footer/Footer";
-import Header from "../components/Header/index";
-import Success from "../components/Success";
-import OptionButton from "../components/OptionButton/OptionButton";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import SuccessSection from "../components/Success";
+import OptionButton from "../components/OptionButton";
 
-export default function Quiz() {
+function QuizComponent() {
   const { subject } = useParams();
   const [number, setNumber] = useState(0);
   const [questions, setQuestions] = useState([]);
@@ -59,7 +59,7 @@ export default function Quiz() {
   const questionData = questions[number];
 
   return (
-    <React.Fragment>
+    <>
       {/* header */}
       <Header />
       {/* main */}
@@ -128,9 +128,9 @@ export default function Quiz() {
                       </>
                     ) : (
                       <>
-                        <Success
+                        <SuccessSection
                           score={score}
-                          handleRestart={() => setNumber(0)}
+                          handleRestart={handleRestart}
                         />
                       </>
                     )}
@@ -143,6 +143,8 @@ export default function Quiz() {
       </section>
       {/* footer */}
       <Footer />
-    </React.Fragment>
+    </>
   );
 }
+
+export default QuizComponent;

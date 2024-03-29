@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Logo from "../../assets/zospace-assets/images/logo.svg";
-import "./Header.css";
-import "../../global const/index";
-import { MENU_ITEMS } from "../../global const/index";
+import "./header.css";
+import "../../constants/index";
+import { MENU_ITEMS } from "../../constants/index";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

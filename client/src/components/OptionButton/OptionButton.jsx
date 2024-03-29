@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 function OptionButton({ label, isCorrect, onOptionSelected }) {
   const [isSelected, setIsSelected] = useState(false);

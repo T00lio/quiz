@@ -1,1 +1,1 @@
-export { default } from "./Success.jsx";
+export { default } from "./SuccessComponent";

@@ -1,11 +1,10 @@
-import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { PORTFOLIO_URL, TELEPHONE } from "../global const/index";
 
 export default function ContactPage() {
   return (
-    <React.Fragment>
+    <>
       {/* header */}
       <Header />
       <section className="relative py-20 2xl:py-40 bg-gray-800">
@@ -155,6 +154,6 @@ export default function ContactPage() {
       </section>
       {/* footer */}
       <Footer />
-    </React.Fragment>
+    </>
   );
 }
