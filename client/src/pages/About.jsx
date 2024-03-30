@@ -1,7 +1,5 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Header from "../components/Header/index";
-import Footer from "../components/Footer/index";
 
 export default function About() {
   return (

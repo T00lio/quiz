@@ -1,7 +1,40 @@
+import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-export default function SignUpPage() {
+function SignUpPage() {
+  const [error, setError] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const email = formData.get("email");
+    const password = formData.get("password");
+
+    if (!email || !password) {
+      setError("Please fill all the fields");
+      return;
+    }
+    try {
+      const response = await backendLogin({ email, password });
+      console.log(response, "response");
+    } catch (error) {
+      setError("Invalid email or password");
+    }
+  };
+
+  const backendLogin = ({ email, password }) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (email === "salvacorp@gmail.com" && password === "123456") {
+          resolve({ message: "Login success!" });
+        } else {
+          reject({ message: "Invalid email or password" });
+        }
+      }, 1000);
+    });
+  };
+
   return (
     <>
       {/* header */}
@@ -111,6 +144,7 @@ export default function SignUpPage() {
                         className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none"
                         type="password"
                         placeholder="Password"
+                        autoComplete="new-password"
                       />
                     </div>
                     <div className="flex items-center pl-6 mb-6 bg-white rounded-full">
@@ -137,15 +171,18 @@ export default function SignUpPage() {
                         className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none"
                         type="password"
                         placeholder="Repeat password"
+                        autoComplete="new-password"
                       />
                     </div>
                     <div className="flex-col mb-10 p-5">
                       <p className="-mt-2 text-sm text-gray-400 mb-5">
                         Also register with your Socials:
                       </p>
+                      {/* Google button */}
                       <button className="mb-3 py-4 w-full bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full transition duration-200">
                         Google
                       </button>
+                      {/* Github button */}
                       <button className="py-4 w-full bg-black hover:bg-black-400 text-white font-bold rounded-full transition duration-200">
                         Github
                       </button>
@@ -165,3 +202,5 @@ export default function SignUpPage() {
     </>
   );
 }
+
+export default SignUpPage;

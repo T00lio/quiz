@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Logo from "../../assets/zospace-assets/images/logo.svg";
-import "./Header.css";
+import "./header.css";
 import "../../constants/index";
 import { MENU_ITEMS } from "../../constants/index";
 
