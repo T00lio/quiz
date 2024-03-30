@@ -1,7 +1,40 @@
+import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export default function SingInPage() {
+  const [, setError] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const email = formData.get("email");
+    const password = formData.get("password");
+
+    if (!email || !password) {
+      setError("Please fill all the fields");
+      return;
+    }
+    try {
+      const response = await backendLogin({ email, password });
+      console.log(response, "response");
+    } catch (error) {
+      setError("Invalid email or password");
+    }
+  };
+
+  const backendLogin = ({ email, password }) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (email === "salvacorp@gmail.com" && password === "123456") {
+          resolve({ message: "Login success!" });
+        } else {
+          reject({ message: "Invalid email or password" });
+        }
+      }, 1000);
+    });
+  };
+
   return (
     <>
       <Header />
@@ -123,7 +156,10 @@ export default function SingInPage() {
                         Github
                       </button>
                     </div>
-                    <button className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">
+                    <button
+                      className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200"
+                      onClick={handleSubmit}
+                    >
                       Get started
                     </button>
                   </form>

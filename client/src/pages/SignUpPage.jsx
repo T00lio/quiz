@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 function SignUpPage() {
-  const [error, setError] = useState(null);
+  const [, setError] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -187,7 +187,10 @@ function SignUpPage() {
                         Github
                       </button>
                     </div>
-                    <button className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">
+                    <button
+                      className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200"
+                      onClick={handleSubmit}
+                    >
                       Get started
                     </button>
                   </form>
