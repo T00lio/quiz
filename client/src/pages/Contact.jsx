@@ -1,6 +1,6 @@
 import Header from "../components/Header";
-import Footer from "../components/Footer/index.js";
-import { PORTFOLIO_URL, TELEPHONE } from "../global const/index";
+import Footer from "../components/Footer";
+import { PORTFOLIO_URL, TELEPHONE } from "../constants";
 
 export default function ContactPage() {
   return (
@@ -44,7 +44,7 @@ export default function ContactPage() {
                     <div className="md:text-right">
                       <a
                         className="inline-block px-12 py-4 border border-gray-300 hover:border-gray-200 rounded-full font-bold text-white"
-                        href="/#formRef"
+                        href="/#contact-form"
                       >
                         Message
                       </a>

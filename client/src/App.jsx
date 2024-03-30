@@ -1,12 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import IndexPage from "./pages/Index.jsx";
-import AboutPage from "./pages/About.jsx";
-import SingupPage from "./pages/SingUp.jsx";
-import Contact from "./pages/Contact.jsx";
-import QuizMenuPage from "./pages/QuizMenu.jsx";
-import SignIn from "./pages/SignIn.jsx";
-import Quiz from "./pages/QuizPage.jsx";
-import Profile from "./pages/Profile.jsx";
+import IndexPage from "./pages/Index";
+import AboutPage from "./pages/About";
+import SingInPage from "./pages/SignUpPage";
+import Contact from "./pages/Contact";
+import QuizMenuPage from "./pages/QuizMenu";
+import SignUpPage from "./pages/SignInPage";
+import QuizComponent from "./pages/QuizPage";
 
 function App() {
   return (
@@ -16,16 +15,15 @@ function App() {
 
         <Route path="/about" element={<AboutPage />} />
 
-        <Route path="/signin" element={<SingupPage />} />
+        <Route path="/signin" element={<SingInPage />} />
 
         <Route path="/contact" element={<Contact />} />
 
         <Route path="/quizmenu" element={<QuizMenuPage />} />
 
-        <Route path="/signup" element={<SignIn />} />
+        <Route path="/signup" element={<SignUpPage />} />
 
-        <Route path="/quiz/:subject" element={<Quiz />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/quiz/:subject" element={<QuizComponent />} />
       </Routes>
     </>
   );

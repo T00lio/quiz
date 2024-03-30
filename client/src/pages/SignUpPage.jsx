@@ -1,42 +1,10 @@
-import { useState } from "react";
-import Header from "../components/Header/index";
-import Footer from "../components/Footer/index";
-import GoogleButton from "../components/GoogleButton";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
-export default function SingUp() {
-  const [error, setError] = useState(null);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    const email = formData.get("email");
-    const password = formData.get("password");
-
-    if (!email || !password) {
-      setError("Please fill all the fields");
-      return;
-    }
-    try {
-      const response = await backendLogin({ email, password });
-      console.log(response, "response");
-    } catch (error) {
-      setError("Invalid email or password");
-    }
-  };
-
-  const backendLogin = ({ email, password }) => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        if (email === "salvacorp@gmail.com" && password === "123456") {
-          resolve({ message: "Login success!" });
-        } else {
-          reject({ message: "Invalid email or password" });
-        }
-      }, 1000);
-    });
-  };
+export default function SignUpPage() {
   return (
     <>
+      {/* header */}
       <Header />
       {/* Sign in section */}
       <section className="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden">
@@ -56,27 +24,25 @@ export default function SingUp() {
               <div className="w-full lg:w-1/2 px-4 mb-16 lg:mb-0">
                 <div className="max-w-md">
                   <span className="text-lg text-blue-400 font-bold">
-                    Sign in to your Account
+                    Register Account
                   </span>
                   <h2 className="mt-8 mb-12 text-5xl font-bold font-heading text-white">
-                    Sign in your account to keep track of you scores and receive
-                    updates on more quizes
+                    Start testing your knowledge on these topics and develop
+                    your skills
                   </h2>
                   <p className="text-lg text-gray-200">
-                    <span>repetition repetition repetion</span>
-                    <span className="text-white">is the key to success</span>
+                    <span>The brown fox jumps over</span>
+                    <span className="text-white"> the lazy dog.</span>
                   </p>
                 </div>
               </div>
-              <div className="w-full lg:w-1/2 px-4 bg-gray-400">
-                <div className="px-6 lg:px-20 py-12 lg:py-24 rounded-lg bg-gray-600">
-                  {/* Form body */}
-                  <form onSubmit={handleSubmit}>
-                    <h3 className="mb-10 text-2xl font-bold font-heading text-white">
+              <div className="w-full lg:w-1/2 px-4">
+                <div className="px-6 lg:px-20 py-12 lg:py-24 bg-gray-600 rounded-lg">
+                  <form action="#">
+                    <h3 className="mb-10 text-2xl text-white font-bold font-heading">
                       Register Account
                     </h3>
-                    {error && <p style={{ color: "red" }}>{error}</p>}
-                    <div className="flex items-center pl-6 mb-3 bg-white rounded-full border-slate-950">
+                    <div className="flex items-center pl-6 mb-3 bg- rounded-full bg-white">
                       <span className="inline-block pr-3 py-2 border-r border-gray-50">
                         <svg
                           className="w-5 h-5"
@@ -118,10 +84,10 @@ export default function SingUp() {
                       <input
                         className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none"
                         type="email"
-                        placeholder="john.doe@mail.com"
+                        placeholder="email@mail.com"
                       />
                     </div>
-                    <div className="flex items-center pl-6 mb-3 bg-white rounded-full">
+                    <div className="flex items-center pl-6 mb-3 rounded-full bg-white">
                       <span className="inline-block pr-3 py-2 border-r border-gray-50">
                         <svg
                           className="w-5 h-5"
@@ -145,25 +111,46 @@ export default function SingUp() {
                         className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none"
                         type="password"
                         placeholder="Password"
-                        autoComplete="new-password"
+                      />
+                    </div>
+                    <div className="flex items-center pl-6 mb-6 bg-white rounded-full">
+                      <span className="inline-block pr-3 py-2 border-r border-gray-50">
+                        <svg
+                          className="w-5 h-5"
+                          width={20}
+                          height={21}
+                          viewBox="0 0 20 21"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M15.6243 13.5625C15.3939 13.5625 15.2077 13.7581 15.2077 14V16.4517C15.2077 18.2573 14.0443 20.125 12.0973 20.125H5.42975C3.56848 20.125 1.87435 18.3741 1.87435 16.4517V10.5H15.6243C15.8547 10.5 16.041 10.3044 16.041 10.0625C16.041 9.82058 15.8547 9.625 15.6243 9.625H15.2077V5.95175C15.2077 2.39183 12.8635 0 9.37435 0H7.70768C4.21855 0 1.87435 2.39183 1.87435 5.95175V9.625H1.45768C1.22728 9.625 1.04102 9.82058 1.04102 10.0625V16.4517C1.04102 18.8322 3.13268 21 5.42975 21H12.0972C14.3089 21 16.0409 19.0023 16.0409 16.4517V14C16.041 13.7581 15.8547 13.5625 15.6243 13.5625ZM2.70768 5.95175C2.70768 2.86783 4.67022 0.875 7.70768 0.875H9.37435C12.4119 0.875 14.3743 2.86783 14.3743 5.95175V9.625H2.70768V5.95175Z"
+                            fill="black"
+                          />
+                          <path
+                            d="M18.8815 9.3711C18.7482 9.17377 18.4878 9.12827 18.3003 9.26701L8.58655 16.4919L6.75235 14.5655C6.58942 14.3944 6.32608 14.3944 6.16322 14.5655C6.00028 14.7366 6.00028 15.0131 6.16322 15.1842L8.24655 17.3717C8.32695 17.4561 8.43362 17.4999 8.54115 17.4999C8.62488 17.4999 8.70868 17.4732 8.78282 17.4194L18.7828 9.98185C18.9703 9.84143 19.0141 9.56843 18.8815 9.3711Z"
+                            fill="black"
+                          />
+                        </svg>
+                      </span>
+                      <input
+                        className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none"
+                        type="password"
+                        placeholder="Repeat password"
                       />
                     </div>
                     <div className="flex-col mb-10 p-5">
                       <p className="-mt-2 text-sm text-gray-400 mb-5">
-                        Social sign in
+                        Also register with your Socials:
                       </p>
-                      {/* Google sign in */}
-                      <GoogleButton />
-
-                      {/* Github sign in */}
+                      <button className="mb-3 py-4 w-full bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full transition duration-200">
+                        Google
+                      </button>
                       <button className="py-4 w-full bg-black hover:bg-black-400 text-white font-bold rounded-full transition duration-200">
                         Github
                       </button>
                     </div>
-                    <button
-                      type="submit"
-                      className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200"
-                    >
+                    <button className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">
                       Get started
                     </button>
                   </form>

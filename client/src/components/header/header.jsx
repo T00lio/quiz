@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Logo from "../../assets/zospace-assets/images/logo.svg";
 import "./Header.css";
-import "../../global const/index";
-import { MENU_ITEMS } from "../../global const/index";
+import "../../constants/index";
+import { MENU_ITEMS } from "../../constants/index";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,35 +34,32 @@ function Header() {
           </button>
         </nav>
         <nav className="navlinks">
-          <>
-            {" "}
-            <ul className="flex items-center text-white space-x-2">
-              {MENU_ITEMS.map((item, index) => (
-                <>
-                  <li key={index}>
-                    <a className="text-white font-bold text-lg" href={item.url}>
-                      {item.title}
-                    </a>
-                  </li>
-                  {index === MENU_ITEMS.length - 1 ? (
-                    ""
-                  ) : (
-                    <span className="separator">
-                      <svg
-                        width={5}
-                        height={5}
-                        viewBox="0 0 5 5"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B" />
-                      </svg>
-                    </span>
-                  )}
-                </>
-              ))}
-            </ul>
-          </>
+          <ul className="flex items-center text-white space-x-2">
+            {MENU_ITEMS.map((item, index) => (
+              <>
+                <li key={index}>
+                  <a className="text-white font-bold text-lg" href={item.url}>
+                    {item.title}
+                  </a>
+                </li>
+                {index === MENU_ITEMS.length - 1 ? (
+                  ""
+                ) : (
+                  <span className="separator">
+                    <svg
+                      width={5}
+                      height={5}
+                      viewBox="0 0 5 5"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B" />
+                    </svg>
+                  </span>
+                )}
+              </>
+            ))}
+          </ul>
         </nav>
         <nav className="hidden lg:block">
           <a

@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 
 export default function QuizMenu() {
   return (
-    <React.Fragment>
+    <>
       <>
         {/* header */}
         <Header />
@@ -134,6 +134,6 @@ export default function QuizMenu() {
         {/* footer */}
         <Footer />
       </>
-    </React.Fragment>
+    </>
   );
 }
