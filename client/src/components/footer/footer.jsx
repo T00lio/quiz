@@ -120,7 +120,7 @@ function Footer() {
       </div>
       <p className="text-center text-lg text-white pt-12 px-4 border-t border-gray-500">
         <span>
-          © 2024 <a href="tuliosalvatierra.com">tuliosalvatierra.com </a>
+          2024 <a href="tuliosalvatierra.com">tuliosalvatierra.com </a>
         </span>
         <span className="text-gray-300"> All rights reserved.</span>
       </p>
