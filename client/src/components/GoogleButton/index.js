@@ -1,1 +1,1 @@
-export { default } from "./GoogleButton.jsx";
+export { default } from "./GoogleButton";

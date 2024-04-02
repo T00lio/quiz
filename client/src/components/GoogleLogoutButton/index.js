@@ -1,1 +1,1 @@
-export { default } from "../GoogleLogoutButton/LogoutButton.jsx";
+export { default } from "../GoogleLogoutButton";
