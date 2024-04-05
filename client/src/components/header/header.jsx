@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import Logo from "../../assets/zospace-assets/images/logo.svg";
 import "./header.css";
@@ -36,8 +37,8 @@ function Header() {
         <nav className="navlinks">
           <ul className="flex items-center text-white space-x-2">
             {MENU_ITEMS.map((item, index) => (
-              <>
-                <li key={index}>
+              <React.Fragment key={index}>
+                <li>
                   <a className="text-white font-bold text-lg" href={item.url}>
                     {item.title}
                   </a>
@@ -57,7 +58,7 @@ function Header() {
                     </svg>
                   </span>
                 )}
-              </>
+              </React.Fragment>
             ))}
           </ul>
         </nav>

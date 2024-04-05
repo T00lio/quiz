@@ -1,5 +1,6 @@
 import "./footer.css";
 import { MENU_ITEMS } from "../../constants/index";
+import React from "react";
 
 function Footer() {
   return (
@@ -19,8 +20,8 @@ function Footer() {
           </a>
           <ul className="nav-link">
             {MENU_ITEMS.map((item, index) => (
-              <>
-                <li key={index}>
+              <React.Fragment key={index}>
+                <li>
                   <a className="text-white font-bold text-lg" href={item.url}>
                     {item.title}
                   </a>
@@ -40,7 +41,7 @@ function Footer() {
                     </svg>
                   </span>
                 )}
-              </>
+              </React.Fragment>
             ))}
           </ul>
           {/* social links */}
