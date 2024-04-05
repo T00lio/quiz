@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import "./Footer.css";
+import "./footer.css";
 import { MENU_ITEMS } from "../../constants/index";
 import React from "react";
 
@@ -8,8 +8,16 @@ function Footer() {
     <section className="py-20 2xl:py-40 bg-gray-800">
       <div className="container mx-auto px-4 mb-12 md:mb-20">
         <div className="max-w-4xl mx-auto text-center">
-          <a className="inline-block mb-20 text-white text-xl font-bold" href="/">
-            <img className="h-7" src="images/portfolio-logologo.svg" alt="" width="auto" />
+          <a
+            className="inline-block mb-20 text-white text-xl font-bold"
+            href="/"
+          >
+            <img
+              className="h-7"
+              src="images/portfolio-logologo.svg"
+              alt=""
+              width="auto"
+            />
           </a>
           <ul className="nav-link">
             {MENU_ITEMS.map((item, index) => (
@@ -23,7 +31,13 @@ function Footer() {
                   ""
                 ) : (
                   <span className="separator">
-                    <svg width={5} height={5} viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg
+                      width={5}
+                      height={5}
+                      viewBox="0 0 5 5"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
                       <circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B" />
                     </svg>
                   </span>
