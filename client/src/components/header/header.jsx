@@ -1,7 +1,6 @@
-import React from "react";
-import { useState } from "react";
+import { useState, Fragment } from "react";
 import Logo from "../../assets/zospace-assets/images/logo.svg";
-import "./header.css";
+import "./Header.css";
 import "../../constants/index";
 import { MENU_ITEMS } from "../../constants/index";
 
@@ -37,7 +36,7 @@ function Header() {
         <nav className="navlinks">
           <ul className="flex items-center text-white space-x-2">
             {MENU_ITEMS.map((item, index) => (
-              <React.Fragment key={index}>
+              <Fragment key={`menu-item-${index}`}>
                 <li>
                   <a className="text-white font-bold text-lg" href={item.url}>
                     {item.title}
@@ -47,18 +46,12 @@ function Header() {
                   ""
                 ) : (
                   <span className="separator">
-                    <svg
-                      width={5}
-                      height={5}
-                      viewBox="0 0 5 5"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
+                    <svg width={5} height={5} viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B" />
                     </svg>
                   </span>
                 )}
-              </React.Fragment>
+              </Fragment>
             ))}
           </ul>
         </nav>
@@ -87,26 +80,17 @@ function Header() {
           <div className="navbar-item">
             <ul>
               <li className="mb-2 px-10">
-                <a
-                  className="block pl-8 py-4 text-xl text-white hover:bg-blueGray-50 rounded-xl"
-                  href="/quizmenu"
-                >
+                <a className="block pl-8 py-4 text-xl text-white hover:bg-blueGray-50 rounded-xl" href="/quizmenu">
                   Quizes
                 </a>
               </li>
               <li className="mb-2 px-10">
-                <a
-                  className="block pl-8 py-4 text-xl text-white hover:bg-blueGray-50 rounded-xl"
-                  href="/about"
-                >
+                <a className="block pl-8 py-4 text-xl text-white hover:bg-blueGray-50 rounded-xl" href="/about">
                   About
                 </a>
               </li>
               <li className="mb-4 px-10">
-                <a
-                  className="block pl-8 py-4 text-xl text-white hover:bg-blueGray-50 rounded-xl"
-                  href="/contactpage"
-                >
+                <a className="block pl-8 py-4 text-xl text-white hover:bg-blueGray-50 rounded-xl" href="/contactpage">
                   Contact
                 </a>
               </li>
@@ -129,9 +113,7 @@ function Header() {
             </nav>
             <footer className="navbar-footer">
               <p className="mt-10 mb-4 text-md text-center text-white bottom-0">
-                <a href="https://www.tuliosalvatierra.com">
-                  2024 tuliosalvatierra.com
-                </a>
+                <a href="https://www.tuliosalvatierra.com">2024 tuliosalvatierra.com</a>
               </p>
             </footer>
           </div>
