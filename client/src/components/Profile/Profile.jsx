@@ -3,7 +3,8 @@ import LogoutButton from "../GoogleLogoutButton/LogoutButton";
 
 function Profile() {
   const { user } = useAuth0();
-  return (
+
+  return user ? (
     <div>
       <>
         <h1>Profile</h1>
@@ -15,7 +16,7 @@ function Profile() {
         <div>{JSON.stringify(user, null, 2)}</div>
       </>
     </div>
-  );
+  ) : null;
 }
 
 export default Profile;
