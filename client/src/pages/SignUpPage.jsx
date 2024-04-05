@@ -64,8 +64,11 @@ function SignUpPage() {
                     your skills
                   </h2>
                   <p className="text-lg text-gray-200">
-                    <span>The brown fox jumps over</span>
-                    <span className="text-white"> the lazy dog.</span>
+                    <span>Sign up to get stronger knowledge on </span>
+                    <span className="text-white">
+                      {" "}
+                      React, HTML, CSS & Javascript
+                    </span>
                   </p>
                 </div>
               </div>
