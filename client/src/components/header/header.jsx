@@ -95,7 +95,7 @@ function Header() {
         <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80" />
         <nav className="relative flex flex-col py-8 h-full w-full bg-gray overflow-y-auto">
           <div className="flex items-center mb-16 pr-6">
-            <a className="ml-10 text-xl text-white font-bold" href="/home">
+            <a className="ml-10 text-xl text-white font-bold" href="/">
               <img src={Logo} alt="" width="auto" className="px-4" />
             </a>
           </div>
