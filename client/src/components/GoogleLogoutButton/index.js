@@ -1,1 +1,1 @@
-export { default } from "../GoogleLogoutButton";
+export { default } from "./GoogleLogoutButton";
