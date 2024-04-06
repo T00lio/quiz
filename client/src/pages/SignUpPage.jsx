@@ -5,7 +5,7 @@ import GoogleButton from "../components/GoogleButton/GoogleButton";
 import GithubButton from "../components/GithubButton";
 
 function SignUpPage() {
-  const [, setError] = useState(null);
+  const [error, setError] = useState(null);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -158,7 +158,7 @@ function SignUpPage() {
                         autoComplete="new-password"
                       />
                     </div>
-
+                    {error && <p style={{ color: "red" }}>{error}</p>}
                     <button
                       className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200"
                       type="submit"
