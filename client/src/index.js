@@ -16,7 +16,7 @@ root.render(
       <Auth0Provider
         domain={domain}
         clientId={clientId}
-        authorizationParams={{ redirect_uri: "http://localhost:3000/profile" }} // Fix: Assign redirect_uri property using correct syntax
+        authorizationParams={{ redirect_uri: "http://localhost:3000" }} // Fix: Assign redirect_uri property using correct syntax
       >
         <App />
       </Auth0Provider>
