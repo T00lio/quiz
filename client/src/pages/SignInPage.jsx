@@ -1,13 +1,17 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import GoogleButton from "../components/GoogleButton/GoogleButton";
+import GithubButton from "../components/GithubButton";
 
 export default function SingInPage() {
-  const [, setError] = useState(null);
+  const [error, setError] = useState(null);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+
     const email = formData.get("email");
     const password = formData.get("password");
 
@@ -17,9 +21,9 @@ export default function SingInPage() {
     }
     try {
       const response = await backendLogin({ email, password });
-      console.log(response, "response");
+      console.log(response);
     } catch (error) {
-      setError("Invalid email or password");
+      setError(error.message);
     }
   };
 
@@ -28,6 +32,7 @@ export default function SingInPage() {
       setTimeout(() => {
         if (email === "salvacorp@gmail.com" && password === "123456") {
           resolve({ message: "Login success!" });
+          console.log(email, password);
         } else {
           reject({ message: "Invalid email or password" });
         }
@@ -62,17 +67,17 @@ export default function SingInPage() {
                     Sign in your account to keep track of you scores and receive
                     updates on more quizes
                   </h2>
-                  <p className="text-lg text-gray-200">
+                  <p className="text-lg text-gray-400">
                     <span>repetition repetition repetion </span>
                     <span className="text-white"> is the key to success</span>
                   </p>
                 </div>
               </div>
-              <div className="w-full lg:w-1/2 px-4 bg-gray-400">
-                <div className="px-6 lg:px-20 py-12 lg:py-24 rounded-lg bg-gray-600">
-                  <form action="#">
+              <div className="w-full lg:w-1/2 px-4 bg-gray-400 rounded-lg bg-opacity-25">
+                <div className="px-6 lg:px-20 py-12 lg:py-24 h-1/2">
+                  <form onSubmit={handleSubmit}>
                     <h3 className="mb-10 text-2xl font-bold font-heading text-white">
-                      Register Account
+                      Sign in Account
                     </h3>
                     <div className="flex items-center pl-6 mb-3 bg-white rounded-full border-slate-950">
                       <span className="inline-block pr-3 py-2 border-r border-gray-50">
@@ -113,10 +118,15 @@ export default function SingInPage() {
                           />
                         </svg>
                       </span>
+                      <label className="sr-only" htmlFor="email">
+                        Email
+                      </label>
                       <input
                         className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none"
                         type="email"
-                        placeholder="example@shuffle.dev"
+                        name="email"
+                        placeholder="exampl@mail.com"
+                        autoComplete="email"
                       />
                     </div>
                     <div className="flex items-center pl-6 mb-3 bg-white rounded-full">
@@ -139,29 +149,33 @@ export default function SingInPage() {
                           />
                         </svg>
                       </span>
+                      <label className="sr-only" htmlFor="password">
+                        Password
+                      </label>
                       <input
                         className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none"
                         type="password"
+                        name="password"
                         placeholder="Password"
+                        autoComplete="new-password"
                       />
                     </div>
+                    {error && <p style={{ color: "red" }}>{error}</p>}
+                    <button
+                      className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200"
+                      type="submit"
+                    >
+                      Sign in
+                    </button>
                     <div className="flex-col mb-10 p-5">
                       <p className="-mt-2 text-sm text-gray-400 mb-5">
                         Social sign in
                       </p>
-                      <button className="mb-3 py-4 w-full bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full transition duration-200">
-                        Google
-                      </button>
-                      <button className="py-4 w-full bg-black hover:bg-black-400 text-white font-bold rounded-full transition duration-200">
-                        Github
-                      </button>
+                      {/* Google button */}
+                      <GoogleButton />
+                      {/* Github button */}
+                      <GithubButton />
                     </div>
-                    <button
-                      className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200"
-                      onClick={handleSubmit}
-                    >
-                      Get started
-                    </button>
                   </form>
                 </div>
               </div>

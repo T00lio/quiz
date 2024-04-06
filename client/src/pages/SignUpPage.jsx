@@ -2,13 +2,16 @@ import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import GoogleButton from "../components/GoogleButton/GoogleButton";
+import GithubButton from "../components/GithubButton";
 
 function SignUpPage() {
   const [, setError] = useState(null);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+
     const email = formData.get("email");
     const password = formData.get("password");
 
@@ -18,9 +21,9 @@ function SignUpPage() {
     }
     try {
       const response = await backendLogin({ email, password });
-      console.log(response, "response");
+      console.log(response);
     } catch (error) {
-      setError("Invalid email or password");
+      setError(error.message);
     }
   };
 
@@ -29,6 +32,7 @@ function SignUpPage() {
       setTimeout(() => {
         if (email === "salvacorp@gmail.com" && password === "123456") {
           resolve({ message: "Login success!" });
+          console.log(email, password);
         } else {
           reject({ message: "Invalid email or password" });
         }
@@ -42,7 +46,11 @@ function SignUpPage() {
       <Header />
       {/* Sign in section */}
       <section className="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden">
-        <img className="hidden lg:block absolute inset-0 mt-32" src="zospace-assets/lines/line-mountain.svg" alt="" />
+        <img
+          className="hidden lg:block absolute inset-0 mt-32"
+          src="zospace-assets/lines/line-mountain.svg"
+          alt=""
+        />
         <img
           className="hidden lg:block absolute inset-y-0 right-0 -mr-40 -mt-32"
           src="zospace-assets/lines/line-right-long.svg"
@@ -53,20 +61,28 @@ function SignUpPage() {
             <div className="flex flex-wrap items-center -mx-4">
               <div className="w-full lg:w-1/2 px-4 mb-16 lg:mb-0">
                 <div className="max-w-md">
-                  <span className="text-lg text-blue-400 font-bold">Register Account</span>
+                  <span className="text-lg text-blue-400 font-bold">
+                    Register Account
+                  </span>
                   <h2 className="mt-8 mb-12 text-5xl font-bold font-heading text-white">
-                    Start testing your knowledge on these topics and develop your skills
+                    Start testing your knowledge on these topics and develop
+                    your skills
                   </h2>
                   <p className="text-lg text-gray-200">
                     <span>Sign up to get stronger knowledge on </span>
-                    <span className="text-white"> React, HTML, CSS & Javascript</span>
+                    <span className="text-white">
+                      {" "}
+                      React, HTML, CSS & Javascript
+                    </span>
                   </p>
                 </div>
               </div>
               <div className="w-full lg:w-1/2 px-4">
-                <div className="px-6 lg:px-20 py-12 lg:py-24 bg-gray-600 rounded-lg">
-                  <form action="#">
-                    <h3 className="mb-10 text-2xl text-white font-bold font-heading">Register Account</h3>
+                <div className="px-6 lg:px-20 py-12 lg:py-24 bg-gray-400 bg-opacity-25 rounded-lg">
+                  <form onSubmit={handleSubmit}>
+                    <h3 className="mb-10 text-2xl text-white font-bold font-heading">
+                      Register Account
+                    </h3>
                     <div className="flex items-center pl-6 mb-3 bg- rounded-full bg-white">
                       <span className="inline-block pr-3 py-2 border-r border-gray-50">
                         <svg
@@ -87,7 +103,14 @@ function SignUpPage() {
                             d="M5.3126 10.3816C2.38448 10.3816 0.103516 13.0524 0.103516 16.2253V19.8214C0.103516 20.0696 0.304772 20.2709 0.55303 20.2709H14.0385C14.2867 20.2709 14.488 20.0696 14.488 19.8214C14.488 19.5732 14.2867 19.3719 14.0385 19.3719H1.00255V16.2253C1.00255 13.4399 2.98344 11.2806 5.3126 11.2806H9.27892C10.5443 11.2806 11.6956 11.9083 12.4939 12.9335C12.6465 13.1293 12.9289 13.1644 13.1248 13.0119C13.3207 12.8594 13.3558 12.5769 13.2033 12.381C12.2573 11.1664 10.8566 10.3816 9.27892 10.3816H5.3126Z"
                             fill="black"
                           />
-                          <rect x={15} y={15} width={5} height={1} rx="0.5" fill="black" />
+                          <rect
+                            x={15}
+                            y={15}
+                            width={5}
+                            height={1}
+                            rx="0.5"
+                            fill="black"
+                          />
                           <rect
                             x={17}
                             y={18}
@@ -102,7 +125,9 @@ function SignUpPage() {
                       <input
                         className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none"
                         type="email"
-                        placeholder="email@mail.com"
+                        name="email"
+                        autoComplete="email"
+                        placeholder="example@email.com"
                       />
                     </div>
                     <div className="flex items-center pl-6 mb-3 rounded-full bg-white">
@@ -128,52 +153,27 @@ function SignUpPage() {
                       <input
                         className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none"
                         type="password"
+                        name="password"
                         placeholder="Password"
                         autoComplete="new-password"
                       />
                     </div>
-                    <div className="flex items-center pl-6 mb-6 bg-white rounded-full">
-                      <span className="inline-block pr-3 py-2 border-r border-gray-50">
-                        <svg
-                          className="w-5 h-5"
-                          width={20}
-                          height={21}
-                          viewBox="0 0 20 21"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M15.6243 13.5625C15.3939 13.5625 15.2077 13.7581 15.2077 14V16.4517C15.2077 18.2573 14.0443 20.125 12.0973 20.125H5.42975C3.56848 20.125 1.87435 18.3741 1.87435 16.4517V10.5H15.6243C15.8547 10.5 16.041 10.3044 16.041 10.0625C16.041 9.82058 15.8547 9.625 15.6243 9.625H15.2077V5.95175C15.2077 2.39183 12.8635 0 9.37435 0H7.70768C4.21855 0 1.87435 2.39183 1.87435 5.95175V9.625H1.45768C1.22728 9.625 1.04102 9.82058 1.04102 10.0625V16.4517C1.04102 18.8322 3.13268 21 5.42975 21H12.0972C14.3089 21 16.0409 19.0023 16.0409 16.4517V14C16.041 13.7581 15.8547 13.5625 15.6243 13.5625ZM2.70768 5.95175C2.70768 2.86783 4.67022 0.875 7.70768 0.875H9.37435C12.4119 0.875 14.3743 2.86783 14.3743 5.95175V9.625H2.70768V5.95175Z"
-                            fill="black"
-                          />
-                          <path
-                            d="M18.8815 9.3711C18.7482 9.17377 18.4878 9.12827 18.3003 9.26701L8.58655 16.4919L6.75235 14.5655C6.58942 14.3944 6.32608 14.3944 6.16322 14.5655C6.00028 14.7366 6.00028 15.0131 6.16322 15.1842L8.24655 17.3717C8.32695 17.4561 8.43362 17.4999 8.54115 17.4999C8.62488 17.4999 8.70868 17.4732 8.78282 17.4194L18.7828 9.98185C18.9703 9.84143 19.0141 9.56843 18.8815 9.3711Z"
-                            fill="black"
-                          />
-                        </svg>
-                      </span>
-                      <input
-                        className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none"
-                        type="password"
-                        placeholder="Repeat password"
-                        autoComplete="new-password"
-                      />
-                    </div>
-                    <div className="flex-col mb-10 p-5">
-                      <p className="-mt-2 text-sm text-gray-400 mb-5">Also register with your Socials:</p>
+
+                    <button
+                      className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200"
+                      type="submit"
+                    >
+                      Get Registered
+                    </button>
+                    <div className="flex-col mt-10 ">
+                      <p className="-mt-2 text-md text-gray-400 mb-5">
+                        Also register with your Socials:
+                      </p>
                       {/* Google button */}
                       <GoogleButton />
                       {/* Github button */}
-                      <button className="py-4 w-full bg-black hover:bg-black-400 text-white font-bold rounded-full transition duration-200">
-                        Github
-                      </button>
+                      <GithubButton />
                     </div>
-                    <button
-                      className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200"
-                      onClick={handleSubmit}
-                    >
-                      Get started
-                    </button>
                   </form>
                 </div>
               </div>

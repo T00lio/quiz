@@ -14,10 +14,10 @@ function App() {
     <Routes>
       <Route path="/" element={<IndexPage />} />
       <Route path="/about" element={<AboutPage />} />
-      <Route path="/signin" element={<SingInPage />} />
+      <Route path="/signup" element={<SingInPage />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/quizmenu" element={<QuizMenuPage />} />
-      <Route path="/signup" element={<SignUpPage />} />
+      <Route path="/signin" element={<SignUpPage />} />
       <Route path="/quiz/:subject" element={<QuizComponent />} />
 
       <Route element={<PrivateRoute />}>
