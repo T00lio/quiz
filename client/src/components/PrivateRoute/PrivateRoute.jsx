@@ -1,12 +1,16 @@
-import { Outlet, redirect } from "react-router-dom";
+import { useEffect } from "react";
+import { Outlet, useNavigate } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 
 function PrivateRoute() {
-  const { isAuthenticated } = useAuth0();
+  const { isLoading, isAuthenticated } = useAuth0();
+  const navigate = useNavigate();
 
-  if (!isAuthenticated) {
-    redirect("/signin");
-  }
+  useEffect(() => {
+    if (!isLoading && !isAuthenticated) {
+      navigate("/signin");
+    }
+  }, [isAuthenticated, isLoading]);
 
   return <Outlet />;
 }
