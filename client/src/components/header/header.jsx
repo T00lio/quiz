@@ -12,10 +12,7 @@ function Header() {
 
   useEffect(() => {
     const closeMenu = (event) => {
-      if (
-        event.target.closest(".navbar-menu") ||
-        event.target.closest(".navbar-burger")
-      ) {
+      if (event.target.closest(".navbar-menu") || event.target.closest(".navbar-burger")) {
         return;
       }
       setIsMenuOpen(false);
@@ -62,13 +59,7 @@ function Header() {
                   ""
                 ) : (
                   <span className="separator">
-                    <svg
-                      width={5}
-                      height={5}
-                      viewBox="0 0 5 5"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
+                    <svg width={5} height={5} viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B" />
                     </svg>
                   </span>
@@ -80,7 +71,7 @@ function Header() {
         <nav className="hidden lg:block">
           <a
             className="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full"
-            href="/signin"
+            href="/signup"
           >
             Sign Up
           </a>
@@ -132,9 +123,7 @@ function Header() {
             </nav>
             <footer className="navbar-footer">
               <p className="mt-10 mb-4 text-md text-center text-white bottom-0">
-                <a href="https://www.tuliosalvatierra.com">
-                  2024 tuliosalvatierra.com
-                </a>
+                <a href="https://www.tuliosalvatierra.com">2024 tuliosalvatierra.com</a>
               </p>
             </footer>
           </div>
