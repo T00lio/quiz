@@ -22,12 +22,7 @@ function ContactForm() {
     e.preventDefault();
 
     emailjs
-      .sendForm(
-        "service_isyf2b9",
-        "template_84llydk",
-        formRef.current,
-        "lRQEHERgGdBoUqxEY"
-      )
+      .sendForm("service_isyf2b9", "template_84llydk", formRef.current, "lRQEHERgGdBoUqxEY")
 
       .then(
         (response) => {
@@ -35,7 +30,7 @@ function ContactForm() {
         },
         (error) => {
           console.log("Failed...", error);
-        }
+        },
       );
     formRef.current.reset();
   };
@@ -54,12 +49,8 @@ function ContactForm() {
               />
               <div className="relative max-w-md">
                 <div className="pb-16 mb-8 border-b border-gray-400">
-                  <span className="text-lg text-blue-400 font-bold">
-                    Have a question?
-                  </span>
-                  <h2 className="mt-10 mb-16 text-5xl font-bold font-heading text-white">
-                    Contact with us
-                  </h2>
+                  <span className="text-lg text-blue-400 font-bold">Have a question?</span>
+                  <h2 className="mt-10 mb-16 text-5xl font-bold font-heading text-white">Contact with us</h2>
                   <div className="py-6 px-8 mb-4 bg-gray-600 rounded-lg">
                     <div className="flex items-center">
                       <span className="flex items-center justify-center w-12 h-12 mr-8 bg-blue-500 rounded-lg">
@@ -77,9 +68,7 @@ function ContactForm() {
                           />
                         </svg>
                       </span>
-                      <p className="text-lg font-bold text-white">
-                        {TELEPHONE}
-                      </p>
+                      <p className="text-lg font-bold text-white">{TELEPHONE}</p>
                     </div>
                   </div>
                   <div className="py-6 px-8 mb-4 bg-gray-600 rounded-lg">
@@ -99,9 +88,7 @@ function ContactForm() {
                           />
                         </svg>
                       </span>
-                      <p className="text-lg font-bold text-white">
-                        salvacorp@gmail.com
-                      </p>
+                      <p className="text-lg font-bold text-white">salvacorp@gmail.com</p>
                     </div>
                   </div>
                   <div className="py-6 px-8 mb-4 bg-gray-600 rounded-lg">
@@ -125,32 +112,24 @@ function ContactForm() {
                           />
                         </svg>
                       </span>
-                      <p className="text-lg font-bold text-white">
-                        Chicago, IL.
-                      </p>
+                      <p className="text-lg font-bold text-white">Chicago, IL.</p>
                     </div>
                   </div>
                 </div>
                 <div className="max-w-xs">
                   <p className="text-gray-400">
-                    for more detail visit my portfolio :{" "}
-                    <a href={PORTFOLIO_URL}>tuliosalvatierra.com</a>
+                    for more detail visit my portfolio : <a href={PORTFOLIO_URL}>tuliosalvatierra.com</a>
                   </p>
                 </div>
               </div>
             </div>
-            <div
-              className="relative w-full lg:w-1/2 px-4 pb-20"
-              id="message-form"
-            >
+            <div className="relative w-full lg:w-1/2 px-4 pb-20" id="message-form">
               <div className="max-w-md lg:ml-20">
                 <form onSubmit={sendEmail} ref={formRef} id="contact-form">
-                  <h3 className="mb-10 mt-10 text-2xl font-bold text-white">
-                    Send a message!
-                  </h3>
+                  <h3 className="mb-10 mt-10 text-2xl font-bold text-white">Send a message!</h3>
                   <input
                     autoComplete="on"
-                    className="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-900 focus:outline-none rounded-2xl"
+                    className="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-100 focus:outline-none rounded-2xl"
                     type="email"
                     placeholder="example@mail.com"
                     name="email"
@@ -160,19 +139,19 @@ function ContactForm() {
                     autoComplete="on"
                     type="text"
                     name="name"
-                    className="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-900 focus:outline-none rounded-2xl"
+                    className="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-100 focus:outline-none rounded-2xl"
                     placeholder="Name"
                   />
                   <input
                     autoComplete="on"
-                    className="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-900 focus:outline-none rounded-2xl"
+                    className="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-100 focus:outline-none rounded-2xl"
                     type="text"
                     placeholder="Subject"
                     name="subject"
                   />
                   <textarea
                     autoComplete="on"
-                    className="w-full mb-6 px-12 py-4 bg-white font-bold placeholder-gray-900 resize-none focus:outline-none rounded-2xl"
+                    className="w-full mb-6 px-12 py-4 bg-white font-bold placeholder-gray-100 resize-none focus:outline-none rounded-2xl"
                     cols={30}
                     rows={10}
                     placeholder="Your message"

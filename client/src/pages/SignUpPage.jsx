@@ -46,11 +46,7 @@ function SignUpPage() {
       <Header />
       {/* Sign in section */}
       <section className="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden">
-        <img
-          className="hidden lg:block absolute inset-0 mt-32"
-          src="zospace-assets/lines/line-mountain.svg"
-          alt=""
-        />
+        <img className="hidden lg:block absolute inset-0 mt-32" src="zospace-assets/lines/line-mountain.svg" alt="" />
         <img
           className="hidden lg:block absolute inset-y-0 right-0 -mr-40 -mt-32"
           src="zospace-assets/lines/line-right-long.svg"
@@ -61,28 +57,20 @@ function SignUpPage() {
             <div className="flex flex-wrap items-center -mx-4">
               <div className="w-full lg:w-1/2 px-4 mb-16 lg:mb-0">
                 <div className="max-w-md">
-                  <span className="text-lg text-blue-400 font-bold">
-                    Register Account
-                  </span>
+                  <span className="text-lg text-blue-400 font-bold">Register Account</span>
                   <h2 className="mt-8 mb-12 text-5xl font-bold font-heading text-white">
-                    Start testing your knowledge on these topics and develop
-                    your skills
+                    Start testing your knowledge on these topics and develop your skills
                   </h2>
                   <p className="text-lg text-gray-200">
                     <span>Sign up to get stronger knowledge on </span>
-                    <span className="text-white">
-                      {" "}
-                      React, HTML, CSS & Javascript
-                    </span>
+                    <span className="text-white"> React, HTML, CSS & Javascript</span>
                   </p>
                 </div>
               </div>
               <div className="w-full lg:w-1/2 px-4">
                 <div className="px-6 lg:px-20 py-12 lg:py-24 bg-gray-400 bg-opacity-25 rounded-lg">
                   <form onSubmit={handleSubmit}>
-                    <h3 className="mb-10 text-2xl text-white font-bold font-heading">
-                      Register Account
-                    </h3>
+                    <h3 className="mb-10 text-2xl text-white font-bold font-heading">Register Account</h3>
                     <div className="flex items-center pl-6 mb-3 bg- rounded-full bg-white">
                       <span className="inline-block pr-3 py-2 border-r border-gray-50">
                         <svg
@@ -103,14 +91,7 @@ function SignUpPage() {
                             d="M5.3126 10.3816C2.38448 10.3816 0.103516 13.0524 0.103516 16.2253V19.8214C0.103516 20.0696 0.304772 20.2709 0.55303 20.2709H14.0385C14.2867 20.2709 14.488 20.0696 14.488 19.8214C14.488 19.5732 14.2867 19.3719 14.0385 19.3719H1.00255V16.2253C1.00255 13.4399 2.98344 11.2806 5.3126 11.2806H9.27892C10.5443 11.2806 11.6956 11.9083 12.4939 12.9335C12.6465 13.1293 12.9289 13.1644 13.1248 13.0119C13.3207 12.8594 13.3558 12.5769 13.2033 12.381C12.2573 11.1664 10.8566 10.3816 9.27892 10.3816H5.3126Z"
                             fill="black"
                           />
-                          <rect
-                            x={15}
-                            y={15}
-                            width={5}
-                            height={1}
-                            rx="0.5"
-                            fill="black"
-                          />
+                          <rect x={15} y={15} width={5} height={1} rx="0.5" fill="black" />
                           <rect
                             x={17}
                             y={18}
@@ -123,7 +104,7 @@ function SignUpPage() {
                         </svg>
                       </span>
                       <input
-                        className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none"
+                        className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-100 rounded-r-full focus:outline-none"
                         type="email"
                         name="email"
                         autoComplete="email"
@@ -151,7 +132,7 @@ function SignUpPage() {
                         </svg>
                       </span>
                       <input
-                        className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none"
+                        className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-100 rounded-r-full focus:outline-none"
                         type="password"
                         name="password"
                         placeholder="Password"
@@ -166,9 +147,7 @@ function SignUpPage() {
                       Get Registered
                     </button>
                     <div className="flex-col mt-10 ">
-                      <p className="-mt-2 text-md text-gray-400 mb-5">
-                        Also register with your Socials:
-                      </p>
+                      <p className="-mt-2 text-md text-gray-400 mb-5">Also register with your Socials:</p>
                       {/* Google button */}
                       <GoogleButton />
                       {/* Github button */}
