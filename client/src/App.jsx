@@ -8,6 +8,7 @@ import SignUpPage from "./pages/SignInPage";
 import QuizComponent from "./pages/QuizPage";
 import ProfilePage from "./pages/Profile";
 import PrivateRoute from "./components/PrivateRoute";
+import "./App.css";
 
 function App() {
   return (
