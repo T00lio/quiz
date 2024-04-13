@@ -10,7 +10,7 @@ function PrivateRoute() {
     if (!isLoading && !isAuthenticated) {
       navigate("/signin");
     }
-  }, [isAuthenticated, isLoading]);
+  }, [isAuthenticated, isLoading, navigate]);
 
   return <Outlet />;
 }
