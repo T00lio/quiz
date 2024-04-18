@@ -1,7 +1,7 @@
 import Footer from "../components/Footer";
 import SignInForm from "../components/SignInForm";
 import SignInLanding from "../components/SignInLanding";
-import { PORTFOLIO_URL } from "../constants";
+import { PORTFOLIO_URL } from "../Constants";
 
 export default function SignInPage() {
   return (

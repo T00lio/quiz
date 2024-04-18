@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import "./footer.css";
-import { MENU_ITEMS } from "../../constants/index";
+import { MENU_ITEMS } from "../../Constants/index";
 import React from "react";
 
 function Footer() {

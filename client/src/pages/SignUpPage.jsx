@@ -1,4 +1,4 @@
-import { PORTFOLIO_URL } from "../constants";
+import { PORTFOLIO_URL } from "../Constants";
 import SignUpLanding from "../components/SignUpLanding";
 import SignUpForm from "../components/SignUpForm/SignUpForm";
 import Footer from "../components/Footer";

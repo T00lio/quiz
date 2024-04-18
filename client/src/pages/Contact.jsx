@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { PORTFOLIO_URL, TELEPHONE } from "../constants";
+import { PORTFOLIO_URL, TELEPHONE } from "../Constants";
 
 export default function ContactPage() {
   return (
