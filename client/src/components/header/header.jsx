@@ -3,8 +3,10 @@ import Logo from "../../assets/zospace-assets/images/logo.svg";
 import "./header.css";
 import "../../Constants/index";
 import { MENU_ITEMS } from "../../Constants/index";
+import { UserAuth } from "../../Context/authContext";
 
 function Header() {
+  const { userInfo, logout } = UserAuth();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -78,18 +80,30 @@ function Header() {
           </ul>
         </div>
         <nav className="navlinks">
-          <a
-            className="block mr-4 py-4 px-12 text-white  text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full"
-            href="/signin"
-          >
-            Sign in
-          </a>
-          <a
-            className="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200"
-            href="/signup"
-          >
-            Sign up
-          </a>
+          {userInfo ? (
+            <a
+              className="block mr-4 py-4 px-12 text-white  text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full"
+              href="/profile"
+              onClick={logout}
+            >
+              Signend in as {userInfo.name}
+            </a>
+          ) : (
+            <>
+              <a
+                className="block mr-4 py-4 px-12 text-white  text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full"
+                href="/signin"
+              >
+                Sign in
+              </a>
+              <a
+                className="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200"
+                href="/signup"
+              >
+                Sign up
+              </a>
+            </>
+          )}
         </nav>
       </nav>
       {/* dropdown menu */}
