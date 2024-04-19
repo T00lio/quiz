@@ -16,7 +16,9 @@ function QuizComponent() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3004/api/questions?subject=${subject}`);
+        const response = await axios.get(
+          `http://localhost:3004/api/questions?subject=${subject}`
+        );
 
         setQuestions(response.data);
       } catch (error) {
@@ -89,30 +91,45 @@ function QuizComponent() {
                         <div className="grid-rows-4 flex flex-col mt-10 bg-gray-500 p-5 rounded-lg">
                           <div className="option-container mt-5 shadow-xl">
                             {questionData &&
-                              ["option1", "option2", "option3", "option4"].map((optionKey) => (
-                                <OptionButton
-                                  key={optionKey}
-                                  label={questionData[optionKey]}
-                                  isCorrect={
-                                    questionData[`correct${optionKey.charAt(optionKey.length - 1)}`] === "TRUE"
-                                  }
-                                  onOptionSelected={handleOptionSelection}
-                                />
-                              ))}
+                              ["option1", "option2", "option3", "option4"].map(
+                                (optionKey) => (
+                                  <OptionButton
+                                    key={optionKey}
+                                    label={questionData[optionKey]}
+                                    isCorrect={
+                                      questionData[
+                                        `correct${optionKey.charAt(
+                                          optionKey.length - 1
+                                        )}`
+                                      ] === "TRUE"
+                                    }
+                                    onOptionSelected={handleOptionSelection}
+                                  />
+                                )
+                              )}
                           </div>
                         </div>
                         <div className="mt-5">
-                          <button onClick={handleRestart} className="mr-5 bg-red-500 rounded-full p-5">
+                          <button
+                            onClick={handleRestart}
+                            className="mr-5 bg-red-500 rounded-full p-5"
+                          >
                             Restart
                           </button>
-                          <button onClick={handleSkip} className="mr-5 rounded-full p-5 bg-white">
+                          <button
+                            onClick={handleSkip}
+                            className="mr-5 rounded-full p-5 bg-white"
+                          >
                             skip question
                           </button>
                         </div>
                       </>
                     ) : (
                       <>
-                        <SuccessSection score={score} handleRestart={handleRestart} />
+                        <SuccessSection
+                          score={score}
+                          handleRestart={handleRestart}
+                        />
                       </>
                     )}
                   </>

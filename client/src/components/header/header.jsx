@@ -3,9 +3,13 @@ import Logo from "../../assets/zospace-assets/images/logo.svg";
 import "./header.css";
 import "../../constants/index";
 import { MENU_ITEMS } from "../../constants/index";
+import { useAuth0 } from "@auth0/auth0-react";
+import LogoutButton from "../GoogleLogoutButton/LogoutButton";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { isAuthenticated, user } = useAuth0();
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -77,14 +81,27 @@ function Header() {
             ))}
           </ul>
         </div>
-        <nav className="hidden lg:block">
-          <a
-            className="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full"
-            href="/signin"
-          >
-            Sign Up
-          </a>
-        </nav>
+        {!isAuthenticated ? (
+          <nav className="navlinks">
+            <a
+              className="block mr-4 py-4 px-12 text-white  text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full"
+              href="/signin"
+            >
+              Sign in
+            </a>
+            <a
+              className="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200"
+              href="/signup"
+            >
+              Sign up
+            </a>
+          </nav>
+        ) : (
+          <div style={{ display: "inline-flex", alignItems: "center" }}>
+            <span style={{ color: "white", marginRight: "8px" }}>{user?.name || "Tulio"}</span>
+            <LogoutButton />
+          </div>
+        )}
       </nav>
       {/* dropdown menu */}
       <div

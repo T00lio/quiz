@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { TELEPHONE, PORTFOLIO_URL } from "../../constants";
 
@@ -129,7 +129,7 @@ function ContactForm() {
                   <h3 className="mb-10 mt-10 text-2xl font-bold text-white">Send a message!</h3>
                   <input
                     autoComplete="on"
-                    className="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-900 focus:outline-none rounded-2xl"
+                    className="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-100 focus:outline-none rounded-2xl"
                     type="email"
                     placeholder="example@mail.com"
                     name="email"
@@ -139,19 +139,19 @@ function ContactForm() {
                     autoComplete="on"
                     type="text"
                     name="name"
-                    className="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-900 focus:outline-none rounded-2xl"
+                    className="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-100 focus:outline-none rounded-2xl"
                     placeholder="Name"
                   />
                   <input
                     autoComplete="on"
-                    className="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-900 focus:outline-none rounded-2xl"
+                    className="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-100 focus:outline-none rounded-2xl"
                     type="text"
                     placeholder="Subject"
                     name="subject"
                   />
                   <textarea
                     autoComplete="on"
-                    className="w-full mb-6 px-12 py-4 bg-white font-bold placeholder-gray-900 resize-none focus:outline-none rounded-2xl"
+                    className="w-full mb-6 px-12 py-4 bg-white font-bold placeholder-gray-100 resize-none focus:outline-none rounded-2xl"
                     cols={30}
                     rows={10}
                     placeholder="Your message"

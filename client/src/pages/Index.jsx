@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import landingImage from "../assets/images/landing.webp";
@@ -6,7 +5,7 @@ import ContactForm from "../components/ContactForm";
 
 export default function Index() {
   return (
-    <React.Fragment>
+    <>
       {/* header */}
       <Header />
       {/* content */}
@@ -44,6 +43,6 @@ export default function Index() {
       <ContactForm />
       {/* footer */}
       <Footer />
-    </React.Fragment>
+    </>
   );
 }

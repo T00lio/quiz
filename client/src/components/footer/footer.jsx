@@ -1,5 +1,7 @@
+import { Fragment } from "react";
 import "./footer.css";
 import { MENU_ITEMS } from "../../constants/index";
+import React from "react";
 
 function Footer() {
   return (
@@ -19,8 +21,8 @@ function Footer() {
           </a>
           <ul className="nav-link">
             {MENU_ITEMS.map((item, index) => (
-              <>
-                <li key={index}>
+              <Fragment key={`menu-item-${index}`}>
+                <li>
                   <a className="text-white font-bold text-lg" href={item.url}>
                     {item.title}
                   </a>
@@ -40,7 +42,7 @@ function Footer() {
                     </svg>
                   </span>
                 )}
-              </>
+              </Fragment>
             ))}
           </ul>
           {/* social links */}
@@ -120,9 +122,9 @@ function Footer() {
       </div>
       <p className="text-center text-lg text-white pt-12 px-4 border-t border-gray-500">
         <span>
-          © 2024 <a href="tuliosalvatierra.com">tuliosalvatierra.com</a>
+          2024 <a href="tuliosalvatierra.com">tuliosalvatierra.com </a>
         </span>
-        <span className="text-gray-300">All rights reserved.</span>
+        <span className="text-gray-300"> All rights reserved.</span>
       </p>
     </section>
   );
