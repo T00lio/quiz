@@ -8,6 +8,7 @@ function GoogleButton() {
   return (
     <div>
       <button
+        type="button"
         onClick={() => loginWithRedirect()}
         className="mb-3 py-4 w-full bg-black hover:bg-gray-200 text-white font-bold rounded-full transition duration-200"
       >
