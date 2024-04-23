@@ -4,6 +4,10 @@ export const ABOUT_URL = "/about";
 
 export const CONTACT_URL = "/contact";
 
+export const PORTFOLIO_URL = "https://tuliosalvatierra.com";
+
+export const TELEPHONE = "786-314-6121";
+
 export const MENU_ITEMS = [
   {
     title: "Quizes",

@@ -1,0 +1,7 @@
+node_modules
+/.cache
+/build
+/public/build
+.env
+/public/css/tailwind/tailwind.css
+/public/css/tailwind/tailwind.min.css
