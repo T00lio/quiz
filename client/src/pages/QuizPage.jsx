@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Footer from "../components/footer/footer";
+import Footer from "../components/Footer/Footer";
 import Header from "../components/header/index";
 import SuccessSection from "../components/success";
 import OptionButton from "../components/option-botton";
