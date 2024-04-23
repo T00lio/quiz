@@ -1,22 +1,9 @@
-import React from "react";
-import { Helmet, HelmetProvider } from "react-helmet-async";
-import Header from "../components/header";
-import Footer from "../components/footer";
-
-const meta = {
-  title: "",
-  meta: [],
-  link: [],
-  style: [],
-  script: [],
-};
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function About() {
   return (
-    <React.Fragment>
-      <HelmetProvider>
-        <Helmet {...meta}></Helmet>
-      </HelmetProvider>
+    <>
       <>
         {/* header */}
         <Header />
@@ -40,7 +27,7 @@ export default function About() {
                     create it. Initially I only considered to do a simple React
                     quiz, but then I challenged myself and decided to add more
                     topics and it turned out to be simple that I originally
-                    thought{" "}
+                    thought
                   </p>
                   <a
                     className="inline-block px-12 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200"
@@ -88,7 +75,7 @@ export default function About() {
                     </h3>
                     <p className="text-lg text-white">
                       By repeating the question, you will memorize these inside
-                      and out, think of it like a workout. More reps, more gains{" "}
+                      and out, think of it like a workout. More reps, more gains
                     </p>
                   </div>
                 </div>
@@ -118,6 +105,6 @@ export default function About() {
         {/* footer */}
         <Footer />
       </>
-    </React.Fragment>
+    </>
   );
 }

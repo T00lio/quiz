@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
-      name="description"
-      content="Web site created using the Shuffle Editor"
+      name="Top 100 Quiz"
+      content="Web site created to test your knowledge of the top 100 most popular interview questions for React, JavaScript, and CSS."
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
@@ -35,7 +35,18 @@
       href="https://fonts.googleapis.com/css?family=Roboto+Flex:400&amp;subset=latin"
     />
     <script src="js/main.js"></script>
-    <title>React App</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "lRQEHERgGdBoUqxEY",
+        });
+      })();
+    </script>
+    <title>top 100 quiz</title>
   </head>
   <body class="antialiased bg-body text-body font-body">
     <noscript>You need to enable JavaScript to run this app.</noscript>

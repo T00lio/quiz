@@ -1,58 +1,56 @@
-import React from "react";
+import { Fragment } from "react";
 import "./footer.css";
+import { MENU_ITEMS } from "../../constants/index";
+import React from "react";
 
 function Footer() {
   return (
     <section className="py-20 2xl:py-40 bg-gray-800">
       <div className="container mx-auto px-4 mb-12 md:mb-20">
-        {" "}
         <div className="max-w-4xl mx-auto text-center">
-          {" "}
           <a
             className="inline-block mb-20 text-white text-xl font-bold"
             href="/"
           >
-            {" "}
             <img
               className="h-7"
               src="images/portfolio-logologo.svg"
               alt=""
               width="auto"
             />
-          </a>{" "}
+          </a>
           <ul className="nav-link">
-            <li className="mb-4 md:mb-0">
-              <a
-                className="font-bold text-white hover:text-gray-100"
-                href="/quizmenu"
-              >
-                Quizes
-              </a>
-            </li>{" "}
-            <li className="mb-4 md:mb-0">
-              <a
-                className="font-bold text-white hover:text-gray-100"
-                href="/about"
-              >
-                About
-              </a>
-            </li>{" "}
-            <li className="mb-4 md:mb-0">
-              <a
-                className="font-bold text-white hover:text-gray-100"
-                href="/contactpage"
-              >
-                Contact
-              </a>
-            </li>{" "}
+            {MENU_ITEMS.map((item, index) => (
+              <Fragment key={`menu-item-${index}`}>
+                <li>
+                  <a className="text-white font-bold text-lg" href={item.url}>
+                    {item.title}
+                  </a>
+                </li>
+                {index === MENU_ITEMS.length - 1 ? (
+                  ""
+                ) : (
+                  <span className="separator">
+                    <svg
+                      width={5}
+                      height={5}
+                      viewBox="0 0 5 5"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B" />
+                    </svg>
+                  </span>
+                )}
+              </Fragment>
+            ))}
           </ul>
+          {/* social links */}
           <div className="flex justify-center">
-            {" "}
             <a
               className="flex justify-center items-center w-12 h-12 mr-4 bg-gray-600 rounded-full"
               href="https://www.facebook.com/tulio.dev"
             >
-              {" "}
               <svg
                 className="h-4 w-4 text-white"
                 width={18}
@@ -72,12 +70,11 @@ function Footer() {
                   />
                 </g>
               </svg>
-            </a>{" "}
+            </a>
             <a
               className="flex justify-center items-center w-12 h-12 mr-4 bg-gray-600 rounded-full"
               href="https://www.instagram.com/tulio_dev/"
             >
-              {" "}
               <svg
                 className="h-4 w-4 text-white"
                 width={18}
@@ -101,12 +98,11 @@ function Footer() {
                   />
                 </g>
               </svg>
-            </a>{" "}
+            </a>
             <a
               className="flex justify-center items-center w-12 h-12 bg-gray-600 rounded-full"
               href="https://twitter.com/user_name_tulio"
             >
-              {" "}
               <svg
                 className="w-4 h-4 text-white"
                 width={18}
@@ -120,16 +116,15 @@ function Footer() {
                   fill="white"
                 />
               </svg>
-            </a>{" "}
-          </div>{" "}
+            </a>
+          </div>
         </div>
-      </div>{" "}
+      </div>
       <p className="text-center text-lg text-white pt-12 px-4 border-t border-gray-500">
-        {" "}
         <span>
-          © 2024 <a href="tuliosalvatierra.com">tuliosalvatierra.com</a>
-        </span>{" "}
-        <span className="text-gray-300">All rights reserved.</span>
+          2024 <a href="tuliosalvatierra.com">tuliosalvatierra.com </a>
+        </span>
+        <span className="text-gray-300"> All rights reserved.</span>
       </p>
     </section>
   );

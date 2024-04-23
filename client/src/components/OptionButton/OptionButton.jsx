@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-function Option({ label, isCorrect, onOptionSelected }) {
+function OptionButton({ label, isCorrect, onOptionSelected }) {
   const [isSelected, setIsSelected] = useState(false);
 
   const handleClick = () => {
@@ -23,11 +23,11 @@ function Option({ label, isCorrect, onOptionSelected }) {
     <button
       className={`flex rounded-xl p-5 mb-5 ${buttonClass}`}
       onClick={handleClick}
-      disabled={isSelected} // Prevents further clicks until state is reset
+      disabled={isSelected}
     >
       {label}
     </button>
   );
 }
 
-export default Option;
+export default OptionButton;
