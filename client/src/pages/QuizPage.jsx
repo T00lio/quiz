@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+import mockData from "../mock-data.json";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SuccessSection from "../components/Success";
@@ -16,11 +16,11 @@ function QuizComponent() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:3004/api/questions?subject=${subject}`
+        const filetredData = mockData.filter(
+          (data) => data.subject === subject
         );
-
-        setQuestions(response.data);
+        setQuestions(filetredData);
+        console.log(filetredData);
       } catch (error) {
         console.log("Failed to fetch questions:", error);
       }
@@ -53,6 +53,10 @@ function QuizComponent() {
     const nextQuest = number + 1;
     if (nextQuest < questions.length) {
       setNumber(nextQuest);
+    }
+
+    if (nextQuest === questions.length) {
+      setShowResult(true);
     }
   };
 
@@ -88,8 +92,8 @@ function QuizComponent() {
                             </h3>
                           </div>
                         </div>
-                        <div className="grid-rows-4 flex flex-col mt-10 bg-gray-500 p-5 rounded-lg">
-                          <div className="option-container mt-5 shadow-xl">
+                        <div className="grid-rows-4 flex flex-col mt-10 bg-gray-600 p-5 rounded-lg">
+                          <div className="option-container mt-5 ">
                             {questionData &&
                               ["option1", "option2", "option3", "option4"].map(
                                 (optionKey) => (
@@ -129,6 +133,7 @@ function QuizComponent() {
                         <SuccessSection
                           score={score}
                           handleRestart={handleRestart}
+                          numberOfQuestions={questions.length}
                         />
                       </>
                     )}

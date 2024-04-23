@@ -1,4 +1,4 @@
-function SuccessSection({ score, handleRestart }) {
+function SuccessSection({ score, handleRestart, questions }) {
   return (
     <>
       <h1 className="text-5xl mb-2 leading-tight font-bold font-heading text-white">
@@ -8,7 +8,7 @@ function SuccessSection({ score, handleRestart }) {
         You sucesfully completed the quiz, here are your results:
       </h2>
       <h3 className="text-4xl mt-2 mb-2 leading-tight font-bold font-heading text-white">
-        You scored {score} out of 100.
+        You scored {score} out of 5.
       </h3>
       <div className="mt-32">
         <button
