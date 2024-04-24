@@ -1,6 +1,15 @@
 import { useState } from "react";
+import React from "react";
 
-function OptionButton({ label, isCorrect, onOptionSelected }) {
+function OptionButton({
+  label,
+  isCorrect,
+  onOptionSelected,
+}: {
+  label: string;
+  isCorrect: boolean;
+  onOptionSelected: (isCorrect: boolean) => void;
+}) {
   const [isSelected, setIsSelected] = useState(false);
 
   const handleClick = () => {

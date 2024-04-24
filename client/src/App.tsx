@@ -9,6 +9,7 @@ import QuizComponent from "./pages/QuizPage";
 import ProfilePage from "./pages/Profile";
 import PrivateRoute from "./components/PrivateRoute";
 import "./App.css";
+import React from "react";
 
 function App() {
   return (

@@ -1,3 +1,4 @@
+import React from "react";
 import ReactJS from "../assets/subject-logos/React.png";
 import CSS from "../assets/subject-logos/CSS.png";
 import HTML from "../assets/subject-logos/HTML.png";

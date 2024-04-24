@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Footer from "../components/Footer";
@@ -9,7 +10,7 @@ import OptionButton from "../components/OptionButton";
 function QuizComponent() {
   const { subject } = useParams();
   const [number, setNumber] = useState(0);
-  const [questions, setQuestions] = useState([]);
+  const [questions, setQuestions] = useState<QuestionData[]>([]);
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
 
@@ -28,7 +29,7 @@ function QuizComponent() {
     fetchData();
   }, [subject]);
 
-  const handleOptionSelection = (isCorrect) => {
+  const handleOptionSelection = (isCorrect: boolean) => {
     if (isCorrect) {
       setScore(score + 1);
     }
@@ -55,6 +56,19 @@ function QuizComponent() {
       setNumber(nextQuest);
     }
   };
+
+  interface QuestionData {
+    id: number;
+    question: string;
+    option1: string;
+    option2: string;
+    option3: string;
+    option4: string;
+    correct1: string;
+    correct2: string;
+    correct3: string;
+    correct4: string;
+  }
 
   const questionData = questions[number];
 
@@ -95,12 +109,14 @@ function QuizComponent() {
                                 (optionKey) => (
                                   <OptionButton
                                     key={optionKey}
-                                    label={questionData[optionKey]}
+                                    label={questionData[
+                                      optionKey as keyof QuestionData
+                                    ].toString()}
                                     isCorrect={
                                       questionData[
                                         `correct${optionKey.charAt(
                                           optionKey.length - 1
-                                        )}`
+                                        )}` as keyof QuestionData
                                       ] === "TRUE"
                                     }
                                     onOptionSelected={handleOptionSelection}
