@@ -1,11 +1,23 @@
 import { useState, useEffect } from "react";
-import React from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SuccessSection from "../components/Success";
 import OptionButton from "../components/OptionButton";
+
+interface QuestionData {
+  id: number;
+  question: string;
+  option1: string;
+  option2: string;
+  option3: string;
+  option4: string;
+  correct1: string;
+  correct2: string;
+  correct3: string;
+  correct4: string;
+}
 
 function QuizComponent() {
   const { subject } = useParams();
@@ -56,19 +68,6 @@ function QuizComponent() {
       setNumber(nextQuest);
     }
   };
-
-  interface QuestionData {
-    id: number;
-    question: string;
-    option1: string;
-    option2: string;
-    option3: string;
-    option4: string;
-    correct1: string;
-    correct2: string;
-    correct3: string;
-    correct4: string;
-  }
 
   const questionData = questions[number];
 

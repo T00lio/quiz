@@ -1,4 +1,3 @@
-import React from "react";
 import { PORTFOLIO_URL } from "../constants";
 import SignUpLanding from "../components/SignUpLanding";
 import SignUpForm from "../components/SignUpForm/SignUpForm";

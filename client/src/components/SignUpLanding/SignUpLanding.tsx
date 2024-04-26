@@ -1,5 +1,3 @@
-import React from "react";
-
 function SignUpLanding() {
   return (
     <div className="max-w-md">

@@ -1,4 +1,3 @@
-import React from "react";
 import { useState, Fragment, useEffect } from "react";
 import Logo from "../../assets/zospace-assets/images/logo.svg";
 import "./header.css";
