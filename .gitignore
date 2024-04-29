@@ -1,4 +1,5 @@
 client/node_modules
+node_modules
 /.cache
 client/build
 client/public/build
