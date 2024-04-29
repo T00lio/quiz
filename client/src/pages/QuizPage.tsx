@@ -6,10 +6,23 @@ import Header from "../components/Header";
 import SuccessSection from "../components/success";
 import OptionButton from "../components/OptionButton";
 
+interface QuestionData {
+  id: number;
+  question: string;
+  option1: string;
+  option2: string;
+  option3: string;
+  option4: string;
+  correct1: string;
+  correct2: string;
+  correct3: string;
+  correct4: string;
+}
+
 function QuizComponent() {
   const { subject } = useParams();
   const [number, setNumber] = useState(0);
-  const [questions, setQuestions] = useState([]);
+  const [questions, setQuestions] = useState<QuestionData[]>([]);
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
 
@@ -28,7 +41,7 @@ function QuizComponent() {
     fetchData();
   }, [subject]);
 
-  const handleOptionSelection = (isCorrect) => {
+  const handleOptionSelection = (isCorrect: boolean) => {
     if (isCorrect) {
       setScore(score + 1);
     }
@@ -95,12 +108,14 @@ function QuizComponent() {
                                 (optionKey) => (
                                   <OptionButton
                                     key={optionKey}
-                                    label={questionData[optionKey]}
+                                    label={questionData[
+                                      optionKey as keyof QuestionData
+                                    ].toString()}
                                     isCorrect={
                                       questionData[
                                         `correct${optionKey.charAt(
                                           optionKey.length - 1
-                                        )}`
+                                        )}` as keyof QuestionData
                                       ] === "TRUE"
                                     }
                                     onOptionSelected={handleOptionSelection}

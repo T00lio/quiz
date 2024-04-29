@@ -4,30 +4,35 @@ import GoogleButton from "../GoogleButton";
 import GithubButton from "../GithubButton";
 
 function SignInForm() {
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
   let navigate = useNavigate();
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const formData = new FormData(event.target as HTMLFormElement) as FormData;
 
-    const formData = new FormData(event.target);
-
-    const email = formData.get("email");
-    const password = formData.get("password");
+    const email = formData.get("email") as string | null;
+    const password = formData.get("password") as string | null;
 
     if (!email || !password) {
-      setError("Please fill all the fields");
+      setError("Please fill all fields");
       return;
     }
     try {
       const response = await backendLogin({ email, password });
       console.log(response);
-    } catch (error) {
+    } catch (error: any) {
       setError(error.message);
     }
   };
 
-  const backendLogin = ({ email, password }) => {
+  const backendLogin = ({
+    email,
+    password,
+  }: {
+    email: string;
+    password: string;
+  }) => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         if (email === "salvacorp@gmail.com" && password === "123456") {

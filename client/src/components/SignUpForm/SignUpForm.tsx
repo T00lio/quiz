@@ -4,17 +4,17 @@ import GoogleButton from "../GoogleButton/GoogleButton";
 import GithubButton from "../GithubButton/GithubButton";
 
 function SignUpForm() {
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
   let navigate = useNavigate();
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const formData = new FormData(event.target);
+    const formData = new FormData(event.target as HTMLFormElement) as FormData;
 
-    const email = formData.get("email");
-    const password = formData.get("password");
-    const confirmPassword = formData.get("confirmPassword");
+    const email = formData.get("email") as string | null;
+    const password = formData.get("password") as string | null;
+    const confirmPassword = formData.get("confirmPassword") as string | null;
 
     if (!email) {
       setError("Please fill email field");
@@ -35,12 +35,18 @@ function SignUpForm() {
     try {
       const response = await backendLogin({ email, password });
       console.log(response);
-    } catch (error) {
+    } catch (error: any) {
       setError(error.message);
     }
   };
 
-  const backendLogin = ({ email, password }) => {
+  const backendLogin = ({
+    email,
+    password,
+  }: {
+    email: string;
+    password: string;
+  }) => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         if (email === "salvacorp@gmail.com" && password === "123456") {

@@ -1,4 +1,10 @@
-function SuccessSection({ score, handleRestart }) {
+function SuccessSection({
+  score,
+  handleRestart,
+}: {
+  score: number;
+  handleRestart: () => void;
+}) {
   return (
     <>
       <h1 className="text-5xl mb-2 leading-tight font-bold font-heading text-white">
