@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import mockData from "../mock-data.json";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import SuccessSection from "../components/Success";
+import SuccessSection from "../components/success";
 import OptionButton from "../components/OptionButton";
 
 function QuizComponent() {
@@ -16,9 +16,7 @@ function QuizComponent() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const filetredData = mockData.filter(
-          (data) => data.subject === subject
-        );
+        const filetredData = mockData.filter((data) => data.subject === subject);
         setQuestions(filetredData);
         console.log(filetredData);
       } catch (error) {
@@ -95,35 +93,23 @@ function QuizComponent() {
                         <div className="grid-rows-4 flex flex-col mt-10 bg-gray-600 p-5 rounded-lg">
                           <div className="option-container mt-5 ">
                             {questionData &&
-                              ["option1", "option2", "option3", "option4"].map(
-                                (optionKey) => (
-                                  <OptionButton
-                                    key={optionKey}
-                                    label={questionData[optionKey]}
-                                    isCorrect={
-                                      questionData[
-                                        `correct${optionKey.charAt(
-                                          optionKey.length - 1
-                                        )}`
-                                      ] === "TRUE"
-                                    }
-                                    onOptionSelected={handleOptionSelection}
-                                  />
-                                )
-                              )}
+                              ["option1", "option2", "option3", "option4"].map((optionKey) => (
+                                <OptionButton
+                                  key={optionKey}
+                                  label={questionData[optionKey]}
+                                  isCorrect={
+                                    questionData[`correct${optionKey.charAt(optionKey.length - 1)}`] === "TRUE"
+                                  }
+                                  onOptionSelected={handleOptionSelection}
+                                />
+                              ))}
                           </div>
                         </div>
                         <div className="mt-5">
-                          <button
-                            onClick={handleRestart}
-                            className="mr-5 bg-red-500 rounded-full p-5"
-                          >
+                          <button onClick={handleRestart} className="mr-5 bg-red-500 rounded-full p-5">
                             Restart
                           </button>
-                          <button
-                            onClick={handleSkip}
-                            className="mr-5 rounded-full p-5 bg-white"
-                          >
+                          <button onClick={handleSkip} className="mr-5 rounded-full p-5 bg-white">
                             skip question
                           </button>
                         </div>
