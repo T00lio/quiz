@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import SuccessSection from "../components/Success";
+import SuccessSection from "../components/success";
 import OptionButton from "../components/OptionButton";
 
 function QuizComponent() {
