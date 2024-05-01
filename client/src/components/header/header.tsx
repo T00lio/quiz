@@ -15,11 +15,9 @@ function Header() {
   };
 
   useEffect(() => {
-    const closeMenu = (event) => {
-      if (
-        event.target.closest(".navbar-menu") ||
-        event.target.closest(".navbar-burger")
-      ) {
+    const closeMenu = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (target.closest(".navbar-menu") || target.closest(".navbar-burger")) {
         return;
       }
       setIsMenuOpen(false);
@@ -98,7 +96,9 @@ function Header() {
           </nav>
         ) : (
           <div style={{ display: "inline-flex", alignItems: "center" }}>
-            <span style={{ color: "white", marginRight: "8px" }}>{user?.name || "Tulio"}</span>
+            <span style={{ color: "white", marginRight: "8px" }}>
+              {user?.name || "Tulio"}
+            </span>
             <LogoutButton />
           </div>
         )}
