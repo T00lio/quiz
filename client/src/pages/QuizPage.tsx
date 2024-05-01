@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import mockData from "../mock-data.json";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import SuccessSection from "../components/success";
+import SuccessSection from "../components/Success";
 import OptionButton from "../components/OptionButton";
 
 interface QuestionData {
@@ -30,7 +30,7 @@ function QuizComponent() {
     const fetchData = async () => {
       try {
         const filetredData = mockData.filter(
-          (data) => data.subject === subject
+          (data: { subject: string | undefined }) => data.subject === subject
         );
         setQuestions(filetredData);
         console.log(filetredData);
@@ -60,6 +60,7 @@ function QuizComponent() {
     setNumber(0);
     setScore(0);
     setShowResult(false);
+    console.log("Restarted", number, score, showResult);
   };
 
   const handleSkip = () => {
@@ -148,7 +149,6 @@ function QuizComponent() {
                         <SuccessSection
                           score={score}
                           handleRestart={handleRestart}
-                          numberOfQuestions={questions.length}
                         />
                       </>
                     )}
