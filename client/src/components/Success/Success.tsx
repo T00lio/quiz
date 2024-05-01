@@ -1,10 +1,14 @@
-function SuccessSection({
-  score,
-  handleRestart,
-}: {
+interface SuccessSectionProps {
   score: number;
   handleRestart: () => void;
-}) {
+  numberOfQuestions: number;
+}
+
+const SuccessSection: React.FC<SuccessSectionProps> = ({
+  score,
+  handleRestart,
+  numberOfQuestions,
+}) => {
   return (
     <>
       <h1 className="text-5xl mb-2 leading-tight font-bold font-heading text-white">
@@ -14,7 +18,7 @@ function SuccessSection({
         You sucesfully completed the quiz, here are your results:
       </h2>
       <h3 className="text-4xl mt-2 mb-2 leading-tight font-bold font-heading text-white">
-        You scored {score} out of 100.
+        You scored {score} out of {numberOfQuestions}.
       </h3>
       <div className="mt-32">
         <button
@@ -29,6 +33,6 @@ function SuccessSection({
       </div>
     </>
   );
-}
+};
 
 export default SuccessSection;

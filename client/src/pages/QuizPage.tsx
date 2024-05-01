@@ -149,6 +149,7 @@ function QuizComponent() {
                         <SuccessSection
                           score={score}
                           handleRestart={handleRestart}
+                          numberOfQuestions={questions.length}
                         />
                       </>
                     )}
