@@ -62,21 +62,18 @@ export const useMutation = ({ mutateFn, adapter }) => {
   const [isError, setIsError] = useState(false);
   const [data, setData] = useState(null);
 
-  const mutate = useCallback(
-    async (data) => {
-      try {
-        setIsLoading(true);
-        const response = await mutateFn(data);
-        if (adapter) setData(adapter(response));
-        else setData(response);
-      } catch (error) {
-        setIsError(error);
-      } finally {
-        setIsLoading(false);
-      }
-    },
-    [adapter, mutateFn]
-  );
+  const mutate = useCallback(async (data) => {
+    try {
+      setIsLoading(true);
+      const response = await mutateFn(data);
+      if (adapter) setData(adapter(response));
+      else setData(response);
+    } catch (error) {
+      setIsError(error);
+    } finally {
+      setIsLoading(false);
+    }
+  }, []);
 
   return { isLoading, isError, data, mutate };
 };
