@@ -37,7 +37,9 @@ export function getUserAdapter(user) {
     let quizId = "";
 
     if (quizzes.length) {
-      const quizInProgress = quizzes.find((quiz) => quiz.status === "in_progress");
+      const quizInProgress = quizzes.find(
+        (quiz) => quiz.status === "in_progress"
+      );
       quizId = quizInProgress?.id || null;
     } else {
       quizId = null;
@@ -60,18 +62,21 @@ export const useMutation = ({ mutateFn, adapter }) => {
   const [isError, setIsError] = useState(false);
   const [data, setData] = useState(null);
 
-  const mutate = useCallback(async (data) => {
-    try {
-      setIsLoading(true);
-      const response = await mutateFn(data);
-      if (adapter) setData(adapter(response));
-      else setData(response);
-    } catch (error) {
-      setIsError(error);
-    } finally {
-      setIsLoading(false);
-    }
-  }, []);
+  const mutate = useCallback(
+    async (data) => {
+      try {
+        setIsLoading(true);
+        const response = await mutateFn(data);
+        if (adapter) setData(adapter(response));
+        else setData(response);
+      } catch (error) {
+        setIsError(error);
+      } finally {
+        setIsLoading(false);
+      }
+    },
+    [adapter, mutateFn]
+  );
 
   return { isLoading, isError, data, mutate };
 };

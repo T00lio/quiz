@@ -3,7 +3,7 @@ import IndexPage from "./pages/Index";
 import AboutPage from "./pages/About";
 import SingInPage from "./pages/SignUpPage";
 import Contact from "./pages/Contact";
-import QuizMenuPage from "./pages/QuizMenu";
+import QuizMenuPage from "./pages/QuizPage_new";
 import SignUpPage from "./pages/SignInPage";
 import QuizPage from "./pages/QuizPage_new";
 import ProfilePage from "./pages/Profile";
