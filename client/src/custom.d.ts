@@ -18,11 +18,6 @@ declare module "*.png" {
   const content: string;
   export default content;
 }
-// For SignUpLanding.tsx or SignUpLanding.ts
-declare module "./SignUpLanding" {
-  const defaultExport: React.ComponentType; // Adjust type as necessary, e.g., any specific props type
-  export default defaultExport;
-}
 
 declare module "React" {
   export type ComponentType = React.ComponentType;
