@@ -3,9 +3,9 @@ import IndexPage from "./pages/Index";
 import AboutPage from "./pages/About";
 import SingInPage from "./pages/SignUpPage";
 import Contact from "./pages/Contact";
-import QuizMenuPage from "./pages/QuizMenu";
+import QuizMenuPage from "./pages/QuizPage_new";
 import SignUpPage from "./pages/SignInPage";
-import QuizComponent from "./pages/QuizPage";
+import QuizPage from "./pages/QuizPage_new";
 import ProfilePage from "./pages/Profile";
 import PrivateRoute from "./components/PrivateRoute";
 import "./App.css";
@@ -19,7 +19,7 @@ function App() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/quizmenu" element={<QuizMenuPage />} />
       <Route path="/signin" element={<SignUpPage />} />
-      <Route path="/quiz/:subject" element={<QuizComponent />} />
+      <Route path="/quiz/:quizId" element={<QuizPage />} />
 
       <Route element={<PrivateRoute />}>
         <Route path="/profile" element={<ProfilePage />} />
