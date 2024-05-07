@@ -33,7 +33,6 @@
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2"
   },
-
   "scripts": {
     "css-compile": "tailwindcss build -i src/tailwind/tailwind.css -c src/tailwind/tailwind.config.js -o public/css/tailwind/tailwind.css",
     "css-minified": "tailwindcss build -i src/tailwind/tailwind.css -c src/tailwind/tailwind.config.js -o public/css/tailwind/tailwind.min.css --minify",
@@ -41,7 +40,8 @@
     "start": "npm-run-all css && react-scripts start",
     "build": "npm-run-all css && react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "ci": "npm ci"
   },
   "eslintConfig": {
     "extends": [
