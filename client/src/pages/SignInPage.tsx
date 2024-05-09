@@ -1,4 +1,4 @@
-import Footer from "../components/Footer";
+import Footer from "../components/footer";
 import SignInForm from "../components/SigninForm";
 import SignInLanding from "../components/SignInLanding";
 import { PORTFOLIO_URL } from "../constants";
