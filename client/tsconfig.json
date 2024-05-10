@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5", // Compile to ECMAScript 5
+    "target": "ES2016", // Compile to ECMAScript 5
     "module": "esnext", // Use ESNext as the module code generation
     "lib": ["dom", "dom.iterable", "esnext"], // Include typings for DOM and latest ECMAScript features
     "allowJs": true, // Allow JavaScript files to be compiled
