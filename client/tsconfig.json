@@ -22,5 +22,11 @@
     }
   },
   "include": ["src/**/*", "dist/**/*"],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "src/assets/js/main.js",
+    "src/firebase.js",
+    "src/index.js",
+    "src/tailwind/tailwind.config.js",
+    "node_modules"
+  ]
 }
