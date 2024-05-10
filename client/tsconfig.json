@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "ES2016", // Compile to ECMAScript 5
+    "target": "es5", // Compile to ECMAScript 5
     "module": "esnext", // Use ESNext as the module code generation
-    //"lib": ["dom", "dom.iterable", "esnext"], // Include typings for DOM and latest ECMAScript features
+    "lib": ["dom", "dom.iterable", "esnext"], // Include typings for DOM and latest ECMAScript features
     "allowJs": true, // Allow JavaScript files to be compiled
     "skipLibCheck": true, // Skip type checking of declaration files
     "esModuleInterop": true, // Enables compatibility with Babel-style module imports
@@ -12,7 +12,7 @@
     "moduleResolution": "node", // Use Node.js-style module resolution
     "resolveJsonModule": true, // Allow importing JSON modules
     "isolatedModules": true, // Ensures that each file can be transpiled independently
-    "noEmit": true, // Do not output files (useful when using with webpack or Babel)
+    //"noEmit": true, // Do not output files (useful when using with webpack or Babel)
     "jsx": "react-jsx", // Support JSX in .tsx files: "react", "react-jsx", "react-jsxdev"
     "baseUrl": "./", // Base directory to resolve non-absolute module names
     "paths": {
