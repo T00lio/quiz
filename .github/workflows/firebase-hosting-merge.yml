@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: /quiz/quiz/client/build
+        working-directory: quiz/client/build
     steps:
       - name: List files in the directory
         run: ls -la
@@ -23,4 +23,4 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_QUIZ_APP_772A7 }}
           channelId: live
           projectId: quiz-app-772a7
-          entryPoint: /quiz/quiz/client/build
+          entryPoint: quiz/client/build
