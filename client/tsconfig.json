@@ -13,7 +13,7 @@
     "resolveJsonModule": true, // Allow importing JSON modules
     "isolatedModules": true, // Ensures that each file can be transpiled independently
     //"noEmit": true, // Do not output files (useful when using with webpack or Babel)
-    "jsx": "react-jsx", // Support JSX in .tsx files: "react", "react-jsx", "react-jsxdev"
+    "jsx": "react", // Support JSX in .tsx files: "react", "react-jsx", "react-jsxdev"
     "baseUrl": "./", // Base directory to resolve non-absolute module names
     "paths": {
       // Map relative paths for modules
