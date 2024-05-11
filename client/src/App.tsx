@@ -3,7 +3,7 @@ import IndexPage from "./pages/Index";
 import AboutPage from "./pages/About";
 import SingInPage from "./pages/SignUpPage";
 import Contact from "./pages/Contact";
-import QuizMenuPage from "./pages/QuizPage_new";
+import QuizMenu from "./pages/QuizMenu";
 import SignUpPage from "./pages/SignInPage";
 import QuizPage from "./pages/QuizPage_new";
 import ProfilePage from "./pages/Profile";
@@ -17,7 +17,7 @@ function App() {
       <Route path="/about" element={<AboutPage />} />
       <Route path="/signup" element={<SingInPage />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/quizmenu" element={<QuizMenuPage />} />
+      <Route path="/quizmenu" element={<QuizMenu />} />
       <Route path="/signin" element={<SignUpPage />} />
       <Route path="/quiz/:quizId" element={<QuizPage />} />
 
