@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: /home/runner/work/quiz/quiz/client/build
+        working-directory: quiz/quiz/client/build
     steps:
       - uses: actions/checkout@v4
       - run: npm run build
