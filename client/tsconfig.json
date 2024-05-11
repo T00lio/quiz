@@ -1,25 +1,20 @@
 {
   "compilerOptions": {
-    "target": "es5", // Compile to ECMAScript 5
-    "module": "esnext", // Use ESNext as the module code generation
-    "lib": ["dom", "dom.iterable", "esnext"], // Include typings for DOM and latest ECMAScript features
-    "allowJs": true, // Allow JavaScript files to be compiled
-    "skipLibCheck": true, // Skip type checking of declaration files
-    "esModuleInterop": true, // Enables compatibility with Babel-style module imports
-    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
-    "strict": true, // Enable all strict type-checking options
-    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file
-    "moduleResolution": "node", // Use Node.js-style module resolution
-    "resolveJsonModule": true, // Allow importing JSON modules
-    "isolatedModules": true, // Ensures that each file can be transpiled independently
-    //"noEmit": true, // Do not output files (useful when using with webpack or Babel)
-    "jsx": "react", // Support JSX in .tsx files: "react", "react-jsx", "react-jsxdev"
-    "baseUrl": "./", // Base directory to resolve non-absolute module names
-    "paths": {
-      // Map relative paths for modules
-      "@components/*": ["src/components/*"],
-      "@utils/*": ["src/utils/*"]
-    }
+    "target": "es5",
+    "module": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": "src",
+    "noEmit": true
   },
   "include": ["src/**/*", "dist/**/*"],
   "exclude": ["src/tailwind/tailwind.config.js", "node_modules"]
