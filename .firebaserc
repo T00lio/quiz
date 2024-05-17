@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "main": "quiz-90271",
+    "default": "quiz-90271"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}
