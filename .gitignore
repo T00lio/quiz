@@ -1,6 +1,6 @@
 client/node_modules
 node_modules
-public
+
 /.cache
 client
 .env
