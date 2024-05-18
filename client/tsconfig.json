@@ -118,7 +118,7 @@
     "custom.d.ts",
     "src/**/*",
     "src/types/**/*.d.ts",
-    "src/components/Header/tempHeader.tsx"
+    "src/components/Header/Header.tsx"
   ],
 
   "exclude": ["node_modules", "build"]
