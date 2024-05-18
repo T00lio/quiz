@@ -13,8 +13,9 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "baseUrl": "src",
-    "noEmit": true
+    "noEmit": true,
+    "types": ["react", "react-dom"]
   },
-  "include": ["src/**/*", "dist/**/*"],
+  "include": ["src/**/*"],
   "exclude": ["src/tailwind/tailwind.config.js", "node_modules"]
 }

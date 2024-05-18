@@ -2,7 +2,6 @@ client/node_modules
 node_modules
 public
 /.cache
-client/build
-client/public/build
+client
 .env
 client/public/css/tailwind
