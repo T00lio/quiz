@@ -1,7 +1,5 @@
 client/node_modules
 node_modules
-
 /.cache
-client
 .env
 client/public/css/tailwind
