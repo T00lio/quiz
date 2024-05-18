@@ -118,7 +118,8 @@
     "custom.d.ts",
     "src/**/*",
     "src/types/**/*.d.ts",
-    "src/components/Header/Header.tsx"
+    "src/components/Header/Header.tsx",
+    "src/components/Footer/Footer.tsx"
   ],
 
   "exclude": ["node_modules", "build"]
