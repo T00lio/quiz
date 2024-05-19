@@ -33,7 +33,7 @@ export default function About() {
                     className="inline-block px-12 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200"
                     href="/quizmenu"
                   >
-                    Try it now
+                    Try it now!
                   </a>
                 </div>
               </div>
