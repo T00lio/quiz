@@ -1,5 +1,5 @@
 import TempHeader from "../components/tempHeader";
-import TempFooter from "../components/Footer";
+import TempFooter from "../components/TempFooter";
 import landingImage from "../assets/images/landing.webp";
 import ContactForm from "../components/ContactForm";
 
