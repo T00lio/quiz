@@ -1,5 +1,5 @@
 import TempHeader from "../components/tempHeader";
-import TempFooter from "../components/Footer";
+import TempFooter from "../components/TempFooter";
 import { PORTFOLIO_URL, TELEPHONE } from "../constants";
 
 export default function ContactPage() {
