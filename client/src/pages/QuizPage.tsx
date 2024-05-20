@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+import TempHeader from "../components/tempHeader";
 import SuccessSection from "../components/Success";
 import OptionButton from "../components/OptionButton";
 
@@ -74,7 +74,7 @@ function QuizComponent() {
   return (
     <>
       {/* header */}
-      <Header />
+      <TempHeader />
       {/* main */}
       <section className="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden bs-section-dragged">
         <div className="relative container px-4 mx-auto">

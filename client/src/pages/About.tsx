@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import TempHeader from "../components/tempHeader";
 import Footer from "../components/Footer";
 
 export default function About() {
@@ -6,7 +6,7 @@ export default function About() {
     <>
       <>
         {/* header */}
-        <Header />
+        <TempHeader />
         {/* content section */}
         <section className="relative pt-20 pb-20 2xl:pb-40 overflow-hidden bg-black">
           <div className="container px-4 mx-auto">

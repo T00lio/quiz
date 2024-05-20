@@ -3,7 +3,7 @@ import CSS from "../assets/subject-logos/CSS.png";
 import HTML from "../assets/subject-logos/HTML.png";
 import JS from "../assets/subject-logos/JavaScript.png";
 import { Link } from "react-router-dom";
-import Header from "../components/Header";
+import TempHeader from "../components/tempHeader";
 import Footer from "../components/Footer";
 
 export default function QuizMenu() {
@@ -11,7 +11,7 @@ export default function QuizMenu() {
     <>
       <>
         {/* header */}
-        <Header />
+        <TempHeader />
         {/* content section */}
         <section className="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden">
           <img

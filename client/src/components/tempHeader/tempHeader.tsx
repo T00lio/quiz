@@ -6,7 +6,7 @@ import { MENU_ITEMS } from "../../constants/index";
 import { useAuth0 } from "@auth0/auth0-react";
 import LogoutButton from "../GoogleLogoutButton/LogoutButton";
 
-function Header() {
+function TempHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isAuthenticated, user } = useAuth0();
 
@@ -161,4 +161,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default TempHeader;

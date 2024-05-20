@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import TempHeader from "../components/tempHeader";
 import Footer from "../components/Footer";
 import { PORTFOLIO_URL, TELEPHONE } from "../constants";
 
@@ -6,7 +6,7 @@ export default function ContactPage() {
   return (
     <>
       {/* header */}
-      <Header />
+      <TempHeader />
       <section className="relative py-20 2xl:py-40 bg-gray-800">
         <img
           className="hidden lg:block absolute top-0 left-0 w-2/5"

@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import TempHeader from "../components/tempHeader";
 import Footer from "../components/Footer";
 import landingImage from "../assets/images/landing.webp";
 import ContactForm from "../components/ContactForm";
@@ -7,7 +7,7 @@ export default function Index() {
   return (
     <>
       {/* header */}
-      <Header />
+      <TempHeader />
       {/* content */}
       <section className="relative pt-20 2xl:pt-20 bg-gray-800 pb-20">
         <div className="relative container px-4 pt-12 md:pt-20 mx-auto mb-20">

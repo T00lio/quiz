@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import TempHeader from "../components/tempHeader";
 import Footer from "../components/Footer";
 import Profile from "../components/Profile";
 
@@ -6,7 +6,7 @@ export default function ProfilePage() {
   return (
     <>
       {/* header */}
-      <Header />
+      <TempHeader />
       <Profile />
       {/* footer */}
       <Footer />
