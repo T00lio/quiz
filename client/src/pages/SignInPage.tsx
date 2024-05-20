@@ -1,4 +1,4 @@
-import Footer from "../components/Footer";
+import TempFooter from "../components/TempFooter";
 import SignInForm from "../components/SigninForm";
 import SignInLanding from "../components/SignInLanding";
 import { PORTFOLIO_URL } from "../constants";
@@ -40,7 +40,7 @@ export default function SignInPage() {
           tuliosalvatierra.com
         </a>
       </div>
-      <Footer />
+      <TempFooter />
     </>
   );
 }

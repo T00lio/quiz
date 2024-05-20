@@ -1,5 +1,5 @@
 import TempHeader from "../components/tempHeader";
-import Footer from "../components/Footer";
+import TempFooter from "../components/Footer";
 import { PORTFOLIO_URL, TELEPHONE } from "../constants";
 
 export default function ContactPage() {
@@ -153,7 +153,7 @@ export default function ContactPage() {
         </div>
       </section>
       {/* footer */}
-      <Footer />
+      <TempFooter />
     </>
   );
 }

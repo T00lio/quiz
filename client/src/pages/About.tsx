@@ -1,5 +1,5 @@
 import TempHeader from "../components/tempHeader";
-import Footer from "../components/Footer";
+import TempFooter from "../components/TempFooter";
 
 export default function About() {
   return (
@@ -103,7 +103,7 @@ export default function About() {
         </section>
 
         {/* footer */}
-        <Footer />
+        <TempFooter />
       </>
     </>
   );

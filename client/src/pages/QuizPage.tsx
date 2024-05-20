@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Footer from "../components/Footer";
+import TempFooter from "../components/TempFooter";
 import TempHeader from "../components/tempHeader";
 import SuccessSection from "../components/Success";
 import OptionButton from "../components/OptionButton";
@@ -155,7 +155,7 @@ function QuizComponent() {
         </div>
       </section>
       {/* footer */}
-      <Footer />
+      <TempFooter />
     </>
   );
 }

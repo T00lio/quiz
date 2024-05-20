@@ -1,5 +1,5 @@
 import TempHeader from "../components/tempHeader";
-import Footer from "../components/Footer";
+import TempFooter from "../components/TempFooter";
 import Profile from "../components/Profile";
 
 export default function ProfilePage() {
@@ -9,7 +9,7 @@ export default function ProfilePage() {
       <TempHeader />
       <Profile />
       {/* footer */}
-      <Footer />
+      <TempFooter />
     </>
   );
 }

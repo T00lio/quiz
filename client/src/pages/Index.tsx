@@ -1,5 +1,5 @@
 import TempHeader from "../components/tempHeader";
-import Footer from "../components/Footer";
+import TempFooter from "../components/Footer";
 import landingImage from "../assets/images/landing.webp";
 import ContactForm from "../components/ContactForm";
 
@@ -42,7 +42,7 @@ export default function Index() {
       {/* contact form */}
       <ContactForm />
       {/* footer */}
-      <Footer />
+      <TempFooter />
     </>
   );
 }

@@ -4,7 +4,7 @@ import HTML from "../assets/subject-logos/HTML.png";
 import JS from "../assets/subject-logos/JavaScript.png";
 import { Link } from "react-router-dom";
 import TempHeader from "../components/tempHeader";
-import Footer from "../components/Footer";
+import TempFooter from "../components/TempFooter";
 
 export default function QuizMenu() {
   return (
@@ -132,7 +132,7 @@ export default function QuizMenu() {
           </div>
         </section>
         {/* footer */}
-        <Footer />
+        <TempFooter />
       </>
     </>
   );
