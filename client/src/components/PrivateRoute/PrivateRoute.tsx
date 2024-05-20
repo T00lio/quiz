@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
+import { useAppUser } from "../UserContext";
 
 function PrivateRoute() {
-  const { isLoading, isAuthenticated } = useAuth0();
+  const { isLoading, isAuthenticated } = useAppUser();
   const navigate = useNavigate();
 
   useEffect(() => {

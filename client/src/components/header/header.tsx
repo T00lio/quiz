@@ -3,12 +3,12 @@ import Logo from "../../assets/zospace-assets/images/logo.svg";
 import "./header.css";
 import "../../constants/index";
 import { MENU_ITEMS } from "../../constants/index";
-import { useAuth0 } from "@auth0/auth0-react";
 import LogoutButton from "../GoogleLogoutButton/LogoutButton";
+import { useAppUser } from "../UserContext";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { isAuthenticated, user } = useAuth0();
+  const { isAuthenticated, appUser } = useAppUser();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -64,13 +64,7 @@ function Header() {
                   ""
                 ) : (
                   <span className="separator">
-                    <svg
-                      width={5}
-                      height={5}
-                      viewBox="0 0 5 5"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
+                    <svg width={5} height={5} viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B" />
                     </svg>
                   </span>
@@ -96,9 +90,7 @@ function Header() {
           </nav>
         ) : (
           <div style={{ display: "inline-flex", alignItems: "center" }}>
-            <span style={{ color: "white", marginRight: "8px" }}>
-              {user?.name || "Tulio"}
-            </span>
+            <span style={{ color: "white", marginRight: "8px" }}>{appUser?.name || "Tulio"}</span>
             <LogoutButton />
           </div>
         )}
@@ -149,9 +141,7 @@ function Header() {
             </nav>
             <footer className="navbar-footer">
               <p className="mt-10 mb-4 text-md text-center text-white bottom-0">
-                <a href="https://www.tuliosalvatierra.com">
-                  2024 tuliosalvatierra.com
-                </a>
+                <a href="https://www.tuliosalvatierra.com">2024 tuliosalvatierra.com</a>
               </p>
             </footer>
           </div>

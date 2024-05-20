@@ -1,11 +1,12 @@
-import { useAuth0 } from "@auth0/auth0-react";
+import { useAppUser } from "../UserContext";
 
 function LogoutButton() {
-  const { logout } = useAuth0();
+  const { logout } = useAppUser();
+
   return (
     <div>
       <button
-        onClick={() => logout({ logoutParams: { openUrl: false } })}
+        onClick={() => logout()}
         className="mb-3 py-4 w-full bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full transition duration-200"
       >
         Logout

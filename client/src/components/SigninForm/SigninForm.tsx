@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import GoogleButton from "../GoogleButton";
 import GithubButton from "../GithubButton";
+import { useAppUser } from "../UserContext";
 
 function SignInForm() {
   const [error, setError] = useState<string | null>(null);
-  let navigate = useNavigate();
+  const { signIn } = useAppUser();
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -18,43 +18,14 @@ function SignInForm() {
       setError("Please fill all fields");
       return;
     }
-    try {
-      const response = await backendLogin({ email, password });
-      console.log(response);
-    } catch (error: any) {
-      setError(error.message);
-    }
-  };
-
-  const backendLogin = ({
-    email,
-    password,
-  }: {
-    email: string;
-    password: string;
-  }) => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        if (email === "salvacorp@gmail.com" && password === "123456") {
-          resolve({ message: "Login success!" });
-          navigate("/");
-          console.log(email, password);
-        } else {
-          reject({ message: "Invalid email or password" });
-        }
-      }, 1000);
-    });
+    await signIn({ email, password });
   };
 
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <h3 className="mb-10 text-2xl font-bold font-heading text-white">
-          Sign in Account
-        </h3>
-        <div className="p-2">
-          {error && <p style={{ color: "red" }}>{error}</p>}
-        </div>
+        <h3 className="mb-10 text-2xl font-bold font-heading text-white">Sign in Account</h3>
+        <div className="p-2">{error && <p style={{ color: "red" }}>{error}</p>}</div>
         <div className="flex items-center pl-6 mb-3 bg-white rounded-full border-slate-950">
           <span className="inline-block pr-3 py-2 border-r border-gray-50">
             <svg
@@ -76,15 +47,7 @@ function SignInForm() {
                 fill="black"
               />
               <rect x={15} y={15} width={5} height={1} rx="0.5" fill="black" />
-              <rect
-                x={17}
-                y={18}
-                width={5}
-                height={1}
-                rx="0.5"
-                transform="rotate(-90 17 18)"
-                fill="black"
-              />
+              <rect x={17} y={18} width={5} height={1} rx="0.5" transform="rotate(-90 17 18)" fill="black" />
             </svg>
           </span>
 
@@ -132,9 +95,7 @@ function SignInForm() {
           Sign in
         </button>
         <div className="flex-col mt-10">
-          <p className="-mt-2 text-sm text-gray-400 mb-5 text-center">
-            Or sign in with your socials
-          </p>
+          <p className="-mt-2 text-sm text-gray-400 mb-5 text-center">Or sign in with your socials</p>
           {/* Google button */}
           <GoogleButton />
           {/* Github button */}

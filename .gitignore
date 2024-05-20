@@ -1,6 +1,0 @@
-client/node_modules
-/.cache
-client/build
-client/public/build
-.env
-client/public/css/tailwind
