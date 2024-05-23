@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import IndexPage from "./pages/Index";
 import AboutPage from "./pages/About";
 import SingInPage from "./pages/SignUpPage";
+import ResetPassword from "./pages/ResetPassword";
 import Contact from "./pages/Contact";
 import QuizMenu from "./pages/QuizMenu";
 import SignUpPage from "./pages/SignInPage";
@@ -19,6 +20,7 @@ function App() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/quizmenu" element={<QuizMenu />} />
       <Route path="/signin" element={<SignUpPage />} />
+      <Route path="/reset-password" element={<ResetPassword />} />
       <Route path="/quiz/:quizId" element={<QuizPage />} />
 
       <Route element={<PrivateRoute />}>

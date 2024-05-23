@@ -1,15 +1,15 @@
 import LogoutButton from "../GoogleLogoutButton/LogoutButton";
-import { useAppUser } from "../UserContext";
+import { useUser } from "../UserContext";
 
 function Profile() {
-  const { appUser: user } = useAppUser();
+  const { user } = useUser();
 
   return user ? (
     <div>
       <>
         <h1>Profile</h1>
-        <h1>{user?.name}</h1>
-        <img src={user?.picture} alt={user?.name} />
+        <h1>{user.name}</h1>
+        <img src={user.picture} alt={user.name} />
         <p>{user.email}</p>
         <LogoutButton />
 

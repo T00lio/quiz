@@ -4,11 +4,12 @@ import "./header.css";
 import "../../constants/index";
 import { MENU_ITEMS } from "../../constants/index";
 import LogoutButton from "../GoogleLogoutButton/LogoutButton";
-import { useAppUser } from "../UserContext";
+import { useUser } from "../UserContext";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { isAuthenticated, appUser } = useAppUser();
+  const { isAuthenticated, user } = useUser();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -75,24 +76,28 @@ function Header() {
         </div>
         {!isAuthenticated ? (
           <nav className="navlinks">
-            <a
+            <NavLink
+              to="/signin"
               className="block mr-4 py-4 px-12 text-white  text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full"
-              href="/signin"
             >
               Sign in
-            </a>
-            <a
+            </NavLink>
+            <NavLink
               className="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200"
-              href="/signup"
+              to="/signup"
             >
               Sign up
-            </a>
+            </NavLink>
           </nav>
         ) : (
-          <div style={{ display: "inline-flex", alignItems: "center" }}>
-            <span style={{ color: "white", marginRight: "8px" }}>{appUser?.name || "Tulio"}</span>
-            <LogoutButton />
-          </div>
+          user && (
+            <div style={{ display: "inline-flex", alignItems: "center" }}>
+              <NavLink to="/profile">
+                <span style={{ color: "white", marginRight: "8px" }}>{user.name}</span>
+              </NavLink>
+              <LogoutButton />
+            </div>
+          )
         )}
       </nav>
       {/* dropdown menu */}

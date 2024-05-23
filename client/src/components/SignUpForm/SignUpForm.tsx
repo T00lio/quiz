@@ -1,13 +1,32 @@
 import { useState } from "react";
 import GoogleButton from "../GoogleButton/GoogleButton";
 import GithubButton from "../GithubButton/GithubButton";
-import { useAppUser } from "../UserContext";
+import { useUser } from "../UserContext";
+import { fetchFn, handleDefaultError, useMutation } from "../../utils";
+import { useNavigate } from "react-router-dom";
+import { ApiResponse, User } from "../UserContext/UserContext";
+
+interface SignupParams {
+  email: string;
+  password: string;
+}
 
 function SignUpForm() {
   const [error, setError] = useState<string | null>(null);
-  const { signUp } = useAppUser();
+  const { setUser } = useUser();
+  let navigate = useNavigate();
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const { mutate: signUp } = useMutation({
+    mutationFn: (variables: SignupParams): Promise<ApiResponse<User>> =>
+      fetchFn("/auth/signup", { method: "POST", credentials: "include", requestBody: variables }),
+    onSuccess: ({ data }) => {
+      setUser(data);
+      navigate("/");
+    },
+    onError: handleDefaultError,
+  });
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const formData = new FormData(event.target as HTMLFormElement) as FormData;
@@ -32,7 +51,7 @@ function SignUpForm() {
       setError("Passwords do not match");
       return;
     }
-    await signUp({ email, password });
+    signUp({ email, password });
   };
 
   return (

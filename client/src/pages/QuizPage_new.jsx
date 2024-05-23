@@ -14,7 +14,7 @@ function QuizPage() {
     data,
     isLoading,
   } = useMutation({
-    mutateFn: (props) => mockFetch(`/api/quiz/${quizId}`, props),
+    mutationFn: (props) => mockFetch(`/api/quiz/${quizId}`, props),
     adapter: getQuizDetails,
   });
 
@@ -39,9 +39,7 @@ function QuizPage() {
                 <div className=" pt-16 pb-24 bg-gray-600 rounded-lg top-0">
                   <>
                     {isLoading ? "Loading" : null}
-                    {!showResult && !isLoading && data ? (
-                      <Quiz {...data} updateQuiz={updateQuiz} />
-                    ) : null}
+                    {!showResult && !isLoading && data ? <Quiz {...data} updateQuiz={updateQuiz} /> : null}
                     {showResult ? (
                       <>
                         <SuccessSection

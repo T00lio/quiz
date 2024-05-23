@@ -1,16 +1,16 @@
 import { useEffect } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
-import { useAppUser } from "../UserContext";
+import { useUser } from "../UserContext";
 
 function PrivateRoute() {
-  const { isLoading, isAuthenticated } = useAppUser();
-  const navigate = useNavigate();
+  const { isFetched, isAuthenticated } = useUser();
+  let navigate = useNavigate();
 
   useEffect(() => {
-    if (!isLoading && !isAuthenticated) {
+    if (isFetched && !isAuthenticated) {
       navigate("/signin");
     }
-  }, [isAuthenticated, isLoading, navigate]);
+  }, [isAuthenticated, isFetched, navigate]);
 
   return <Outlet />;
 }

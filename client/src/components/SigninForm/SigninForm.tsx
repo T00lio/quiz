@@ -1,11 +1,51 @@
 import { useState } from "react";
 import GoogleButton from "../GoogleButton";
 import GithubButton from "../GithubButton";
-import { useAppUser } from "../UserContext";
+import { useUser } from "../UserContext";
+import ResetPasswordModal from "../ResetPasswordModal";
+import { useNavigate } from "react-router-dom";
+import { ErrorResponse, fetchFn, handleDefaultError, useMutation } from "../../utils";
+import { ApiResponse, User } from "../UserContext/UserContext";
+import { toast } from "react-toastify";
+
+interface SigninParams {
+  email: string;
+  password: string;
+}
 
 function SignInForm() {
+  const [email, setEmail] = useState("");
   const [error, setError] = useState<string | null>(null);
-  const { signIn } = useAppUser();
+  const [noPassWordConfigured, setNoPasswordConfigured] = useState<boolean>(false);
+
+  const { setUser } = useUser();
+  let navigate = useNavigate();
+
+  const { mutate: signIn } = useMutation({
+    mutationFn: (variables: SigninParams): Promise<ApiResponse<User>> =>
+      fetchFn("/auth/signin", { method: "POST", credentials: "include", requestBody: variables }),
+    onSuccess: ({ data }) => {
+      setUser(data);
+      navigate("/");
+    },
+    onError: (error: unknown) => {
+      if (typeof error === "object" && error !== null && "message" in error) {
+        if (error.message === "NoPasswordConfigured") {
+          setNoPasswordConfigured(true);
+        } else {
+          toast.error((error as ErrorResponse).message);
+        }
+      } else {
+        toast.error("An unexpected error occurred");
+      }
+    },
+  });
+
+  const { mutate: forgotPassword } = useMutation({
+    mutationFn: (variables: { email: string }): Promise<User> =>
+      fetchFn("/auth/forgot-password", { method: "POST", credentials: "include", requestBody: variables }),
+    onError: handleDefaultError,
+  });
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -18,7 +58,13 @@ function SignInForm() {
       setError("Please fill all fields");
       return;
     }
-    await signIn({ email, password });
+    setEmail(email);
+    signIn({ email, password });
+  };
+
+  const handleModalConfirm = () => {
+    forgotPassword({ email });
+    setNoPasswordConfigured(false);
   };
 
   return (
@@ -110,6 +156,11 @@ function SignInForm() {
           </a>
         </p>
       </div>
+      <ResetPasswordModal
+        isOpen={noPassWordConfigured}
+        onClose={() => setNoPasswordConfigured(false)}
+        onConfirm={handleModalConfirm}
+      />
     </>
   );
 }

@@ -7,7 +7,7 @@ import { useMutation, getUserAdapter } from "../utils";
 
 export default function QuizMenu() {
   const { data, mutate, isLoading } = useMutation({
-    mutateFn: () => mockFetch("/api/user"),
+    mutationFn: () => mockFetch("/api/user"),
     adapter: getUserAdapter,
   });
 
@@ -39,11 +39,7 @@ export default function QuizMenu() {
               <div>
                 <div className="flex flex-wrap -mx-10">
                   {data?.subjects?.map(({ name, quizId }, index) => (
-                    <Subject
-                      key={`${name}-${index}`}
-                      name={name}
-                      quizId={quizId}
-                    />
+                    <Subject key={`${name}-${index}`} name={name} quizId={quizId} />
                   ))}
                 </div>
               </div>
