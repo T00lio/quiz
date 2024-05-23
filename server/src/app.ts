@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
-import authRouter from "./routes/auth";
+import authRoutes from "./modules/auth/routes/auth.routes";
 import Cookies from "cookies";
 // import errorHandler from './middleware/errorHandler';
 
@@ -36,6 +36,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(errorHandler);
 
 // Routes
-app.use("/auth", authRouter);
+app.use("/auth", authRoutes);
 
 export default app;
