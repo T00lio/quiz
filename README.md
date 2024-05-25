@@ -34,8 +34,10 @@ To run the server locally, follow these steps:
 
 1. Open a new terminal window.
 2. Navigate to the server directory of the project.
-3. Run the command `npm run start` to start the server.
-4. The server will start running on `http://localhost:3000`.
-5. You can now access the quiz application by opening your web browser and navigating to `http://localhost:5173`.
+3. Add a `.env` file in the root of the project and add the content of the `.env.temp` file to it.
+4. Check for any environment variables that need to be updated (JWT, ).
+5. Run the command `npm run start` to start the server.
+6. The server will start running on `http://localhost:3000`.
+7. You can now access the quiz application by opening your web browser and navigating to `http://localhost:5173`.
 
 Note: Make sure you have already installed the necessary dependencies by running `npm install` before starting the server.
