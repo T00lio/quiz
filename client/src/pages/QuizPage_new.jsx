@@ -39,7 +39,9 @@ function QuizPage() {
                 <div className=" pt-16 pb-24 bg-gray-600 rounded-lg top-0">
                   <>
                     {isLoading ? "Loading" : null}
-                    {!showResult && !isLoading && data ? <Quiz {...data} updateQuiz={updateQuiz} /> : null}
+                    {!showResult && !isLoading && data ? (
+                      <Quiz {...data} updateQuiz={updateQuiz} />
+                    ) : null}
                     {showResult ? (
                       <>
                         <SuccessSection

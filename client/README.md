@@ -1,3 +1,14 @@
+## Getting Started
+
+1. Clone the repository to your local machine.
+2. Install the necessary dependencies by running `npm install`.
+3. Start the application by running `npm run start`.
+4. Open your web browser and navigate to `http://localhost:5173`.
+5. You will be presented with a series of questions.
+6. Select the correct answer for each question.
+7. After answering all the questions, you will receive your quiz score.
+8. Enjoy and challenge yourself with different quizzes!
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
