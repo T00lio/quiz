@@ -1,4 +1,6 @@
 import express from "express";
+import dotenv from "dotenv";
+import path from "path";
 import cors from "cors";
 import bodyParser from "body-parser";
 import authRoutes from "./modules/auth/routes/auth.routes";
@@ -9,7 +11,7 @@ const app = express();
 
 // Middlewares
 // Configuración de variables de entorno
-require("dotenv").config();
+dotenv.config({ path: path.resolve(__dirname, "..", `.env.${process.env.NODE_ENV}`) });
 app.use(bodyParser.json());
 
 // Middleware para habilitar CORS

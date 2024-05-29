@@ -4,10 +4,12 @@
   "description": "",
   "main": "dist/server.js",
   "scripts": {
-    "build": "npx tsc",
-    "start": "npx tsc && node dist/server.js",
-    "dev": "nodemon src/server.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "cross-env NODE_ENV=production npx tsc",
+    "start:js": "node dist/server.js",
+    "start": "cross-env NODE_ENV=development nodemon src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "prisma migrate dev",
+    "migrate:prod": "prisma migrate deploy"
   },
   "author": "",
   "license": "ISC",
@@ -18,11 +20,9 @@
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "express-jwt": "^8.4.1",
     "express-validator": "^7.0.1",
     "google-auth-library": "^9.10.0",
     "jsonwebtoken": "^9.0.2",
-    "jwks-rsa": "^3.1.0",
     "nodemailer": "^6.9.13",
     "nodemon": "^3.0.1",
     "prisma": "^5.14.0",
@@ -36,7 +36,7 @@
     "@types/jsonwebtoken": "^9.0.6",
     "@types/node": "^20.12.12",
     "@types/nodemailer": "^6.4.15",
-    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
     "ts-node": "^10.9.2"
   }
 }

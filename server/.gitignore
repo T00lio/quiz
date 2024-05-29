@@ -4,3 +4,5 @@
 /public/build
 /dist
 .env
+.env.development
+.env.production
