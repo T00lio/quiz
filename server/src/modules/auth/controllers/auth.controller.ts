@@ -138,6 +138,7 @@ export async function postLogout(req: Request, res: Response) {
       }
     }
     res.clearCookie("access_token");
+    res.clearCookie("refresh_token");
     res.json({ message: "Successfully logged out" });
   } catch (error) {
     console.error("Error during logout:", error);
@@ -158,7 +159,9 @@ export async function postForgotPassword(req: Request, res: Response) {
     });
 
     if (!user) {
-      return res.status(400).json({ message: "User with this email does not exist." });
+      return res
+        .status(400)
+        .json({ message: "User with this email does not exist." });
     }
 
     const resetToken = generateResetToken({ userId: user.id });
@@ -167,7 +170,9 @@ export async function postForgotPassword(req: Request, res: Response) {
     // Aquí enviarías el email con el enlace de restablecimiento. Por ejemplo:
     await sendResetPasswordEmail(email, resetLink);
 
-    res.status(200).json({ message: "Password reset link sent to your email." });
+    res
+      .status(200)
+      .json({ message: "Password reset link sent to your email." });
   } catch (err) {
     console.error("Error sending password reset email:", err);
     res.status(500).json({ error: "Server error" });
