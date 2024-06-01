@@ -24,7 +24,7 @@ interface UserProviderProps {
 export interface User {
   email: string;
   name: string;
-  picture: string | null;
+  picture: string;
 }
 
 export interface ApiResponse<T = void> {
