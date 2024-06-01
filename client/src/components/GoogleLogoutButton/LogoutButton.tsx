@@ -5,7 +5,8 @@ function LogoutButton() {
   const { setUser } = useUser();
 
   const { mutate: postAuthLogout } = useMutation({
-    mutationFn: () => fetchFn("/auth/logout", { method: "POST", credentials: "include" }),
+    mutationFn: () =>
+      fetchFn("/auth/logout", { method: "POST", credentials: "include" }),
     onError: handleDefaultError,
     onSuccess: () => setUser(null),
   });

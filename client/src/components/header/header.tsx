@@ -1,5 +1,6 @@
 import { useState, Fragment, useEffect } from "react";
 import Logo from "../../assets/zospace-assets/images/logo.svg";
+import UserAvatar from "../UserAvatar";
 import "./header.css";
 import "../../constants/index";
 import { MENU_ITEMS } from "../../constants/index";
@@ -88,22 +89,11 @@ function Header() {
             >
               Sign in
             </NavLink>
-            <NavLink
-              className="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200"
-              to="/signup"
-            >
-              Sign up
-            </NavLink>
           </nav>
         ) : (
           user && (
             <div style={{ display: "inline-flex", alignItems: "center" }}>
-              <NavLink to="/profile">
-                <span style={{ color: "white", marginRight: "8px" }}>
-                  {user.name}
-                </span>
-              </NavLink>
-              <LogoutButton />
+              <UserAvatar />
             </div>
           )
         )}
@@ -144,12 +134,6 @@ function Header() {
                 href="/signin"
               >
                 Sign in
-              </a>
-              <a
-                className="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200"
-                href="/signup"
-              >
-                Sign up
               </a>
             </nav>
             <footer className="navbar-footer">
