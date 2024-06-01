@@ -6,7 +6,7 @@ import {
   ReactNode,
   FC,
 } from "react";
-import { fetchFn, handleDefaultError, useMutation } from "../../utils";
+import { fetchFn, useMutation } from "../../utils";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -24,7 +24,7 @@ interface UserProviderProps {
 export interface User {
   email: string;
   name: string;
-  picture: string;
+  picture: string | null;
 }
 
 export interface ApiResponse<T = void> {

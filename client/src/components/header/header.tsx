@@ -4,7 +4,6 @@ import UserAvatar from "../UserAvatar";
 import "./header.css";
 import "../../constants/index";
 import { MENU_ITEMS } from "../../constants/index";
-import LogoutButton from "../GoogleLogoutButton/LogoutButton";
 import { useUser } from "../UserContext";
 import { NavLink } from "react-router-dom";
 

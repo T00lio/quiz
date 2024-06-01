@@ -5,15 +5,15 @@ import useLogout from "../../hooks/useLogout";
 export default function UserAvatr() {
   const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const user = useUser();
+  const { user } = useUser();
   const logout = useLogout();
 
   useEffect(() => {
     setIsLoading(true);
-    if (!user.picture === null) {
+    if (user && user.picture) {
       setAvatarUrl(user.picture);
     } else {
-      setAvatarUrl(`https://i.pravatar.cc/50`);
+      setAvatarUrl("https://i.pravatar.cc/50");
     }
     setIsLoading(false);
   }, [user]);
