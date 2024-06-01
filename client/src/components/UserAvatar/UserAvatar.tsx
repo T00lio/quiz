@@ -1,6 +1,5 @@
 import { MouseEventHandler, useEffect, useState } from "react";
 import { useUser } from "../UserContext";
-import { fetchFn, handleDefaultError, useMutation } from "../../utils";
 import useLogout from "../../hooks/useLogout";
 
 export default function UserAvatr() {
