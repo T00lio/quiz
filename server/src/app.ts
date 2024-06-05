@@ -3,6 +3,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import authRoutes from "./modules/auth/routes/auth.routes";
 import Cookies from "cookies";
+
 // import errorHandler from './middleware/errorHandler';
 
 const app = express();
@@ -17,7 +18,7 @@ app.use(
   cors({
     origin: `http://localhost:5173`,
     credentials: true,
-  }),
+  })
 );
 
 // Middleware para manejar cookies

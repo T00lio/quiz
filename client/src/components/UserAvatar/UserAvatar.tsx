@@ -22,9 +22,14 @@ export default function UserAvatr() {
     <h1>Loading...</h1>
   ) : (
     <div className="grid grid-cols-1">
-      <div className="border-8">
+      <div className="rounded-full">
         <a href="/profile">
-          <img src={avatarUrl || ""} alt="" className="rounded-full" />
+          <img
+            src={avatarUrl || ""}
+            alt=""
+            className="rounded-full"
+            style={{ height: "35px" }}
+          />
         </a>
       </div>
       <footer>

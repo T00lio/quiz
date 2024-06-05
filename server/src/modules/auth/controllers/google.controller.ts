@@ -14,6 +14,7 @@ export async function getGoogle(req: Request, res: Response) {
       scope: ["openid", "profile", "email"],
       prompt: "consent",
     });
+    console.log("authUrl", authUrl);
     // Redirigir al cliente a la URL de autorización de Google
     res.redirect(authUrl);
     // res.json({ message: "User already exists", data: { authUrl } });
