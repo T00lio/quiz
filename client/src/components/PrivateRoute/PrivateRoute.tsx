@@ -4,7 +4,7 @@ import { useUser } from "../UserContext";
 
 function PrivateRoute() {
   const { isFetched, isAuthenticated } = useUser();
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!isAuthenticated) {

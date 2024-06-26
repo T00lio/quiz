@@ -12,7 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 interface UserContextType {
   user: User | null;
-  setUser: (user: any) => void;
+  setUser: (user: User | null) => void;
   isFetched: boolean;
   isLoading: boolean;
   isAuthenticated: boolean;

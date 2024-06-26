@@ -1,11 +1,11 @@
 import LogoutButton from "../GoogleLogoutButton/LogoutButton";
 import { useUser } from "../UserContext";
 import RecomendedLearning from "../../components/RecomendedLearning";
-
 import ProfilePageQuizReport from "../../components/ProfilePageQuizReport";
 
 function Profile() {
   const { user } = useUser();
+  console.log(user);
 
   const randomUsername = () => {
     const randomUsernames = [
