@@ -5,7 +5,7 @@ export default function UserAvatr() {
   const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const { user } = useUser();
-
+  console.log(user);
   useEffect(() => {
     setIsLoading(true);
     if (user && user.picture) {

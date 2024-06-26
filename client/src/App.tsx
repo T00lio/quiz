@@ -23,8 +23,8 @@ function App() {
       <Route path="/reset-password" element={<ResetPassword />} />
       <Route path="/quiz/:quizId" element={<QuizPage />} />
 
-      <Route element={<PrivateRoute />}>
-        <Route path="/profile" element={<ProfilePage />} />
+      <Route path="/profile" element={<PrivateRoute />}>
+        <Route path="" element={<ProfilePage />} />
       </Route>
     </Routes>
   );

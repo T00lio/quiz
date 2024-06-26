@@ -14,14 +14,18 @@ interface SignupParams {
 function SignUpForm() {
   const [error, setError] = useState<string | null>(null);
   const { setUser } = useUser();
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   const { mutate: signUp } = useMutation({
     mutationFn: (variables: SignupParams): Promise<ApiResponse<User>> =>
-      fetchFn("/auth/signup", { method: "POST", credentials: "include", requestBody: variables }),
+      fetchFn("/auth/signup", {
+        method: "POST",
+        credentials: "include",
+        requestBody: variables,
+      }),
     onSuccess: ({ data }) => {
       setUser(data);
-      navigate("/");
+      navigate("/profile");
     },
     onError: handleDefaultError,
   });
@@ -57,8 +61,12 @@ function SignUpForm() {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <h3 className="mb-10 text-2xl text-white font-bold font-heading">Register Account</h3>
-        <div className="p-2">{error && <p style={{ color: "red" }}>{error}</p>}</div>
+        <h3 className="mb-10 text-2xl text-white font-bold font-heading">
+          Register Account
+        </h3>
+        <div className="p-2">
+          {error && <p style={{ color: "red" }}>{error}</p>}
+        </div>
         <div className="flex items-center pl-6 mb-3 bg- rounded-full bg-white">
           <span className="inline-block pr-3 py-2 border-r border-gray-50">
             <svg
@@ -80,7 +88,15 @@ function SignUpForm() {
                 fill="black"
               />
               <rect x={15} y={15} width={5} height={1} rx="0.5" fill="black" />
-              <rect x={17} y={18} width={5} height={1} rx="0.5" transform="rotate(-90 17 18)" fill="black" />
+              <rect
+                x={17}
+                y={18}
+                width={5}
+                height={1}
+                rx="0.5"
+                transform="rotate(-90 17 18)"
+                fill="black"
+              />
             </svg>
           </span>
           <input
@@ -155,7 +171,9 @@ function SignUpForm() {
           Get Registered
         </button>
         <div className="flex-col mt-10">
-          <p className="-mt-2 text-md text-gray-400 mb-5 text-center">Or login with your Socials:</p>
+          <p className="-mt-2 text-md text-gray-400 mb-5 text-center">
+            Or login with your Socials:
+          </p>
           {/* Google button */}
           <GoogleButton />
           {/* Github button */}
