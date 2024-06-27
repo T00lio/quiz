@@ -32,7 +32,7 @@ const quizData = [
 
 export default function ProfilePageQuizReport() {
   return (
-    <div className="grid grid-cols-1 gap-4 px-4 py-4 bg-white rounded-lg w-full md:grid-cols-2 lg:grid-cols-4 mb-5">
+    <div className="grid grid-cols-1 gap-4 px-4 py-4  rounded-lg w-full md:grid-cols-2 lg:grid-cols-4 mb-5">
       {quizData.map((quiz, index) => (
         <div key={index} className="bg-gray-100 rounded-xl border p-4 mb-4">
           <div className="flex flex-col items-center mb-4">

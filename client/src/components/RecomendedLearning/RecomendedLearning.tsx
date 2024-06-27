@@ -9,7 +9,7 @@ export default function RecommendedLearning() {
           <h2 className="text-2xl font-bold text-white mb-4 capitalize">
             {topic}
           </h2>
-          <div className="flex flex-row mb-5">
+          <div className="flex  mb-5">
             {recommendations[topic].map((item) => (
               <Card
                 key={item.url}

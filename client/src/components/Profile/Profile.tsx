@@ -81,7 +81,7 @@ function Profile() {
             <h3 className="mt-12 mb-8 text-4xl font-bold text-white">Logout</h3>
             <div className="w-full px-10 mb-10 lg:mb-20 bg-gray-600 rounded-lg">
               <div className="grid grid-cols-1 gap-9 px-4 py-4  ">
-                <div className="w-32 h-24rounded-xl">
+                <div className="w-32 h-32 rounded-xl flex-row">
                   <LogoutButton />
                 </div>
               </div>
