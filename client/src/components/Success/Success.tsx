@@ -25,7 +25,7 @@ const SuccessSection: React.FC<SuccessSectionProps> = ({
           onClick={handleRestart}
           className="mr-5 bg-red-500 rounded-full p-5 m-5"
         >
-          Restart
+          Try again
         </button>
         <a href="/quizmenu" className="mr-5 bg-green-500 rounded-full p-5 m-5">
           Go to quiz menu

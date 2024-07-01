@@ -32,7 +32,11 @@ export default function QuizMenu() {
           alt=""
         />
         {isLoading ? (
-          "Is Loading"
+          <div className="relative container px-4 mx-auto">
+            <div className="flex flex-wrap -mx-10 min-h-full">
+              <div className="loader"></div>
+            </div>
+          </div>
         ) : data ? (
           <div className="relative container px-4 mx-auto">
             <div>

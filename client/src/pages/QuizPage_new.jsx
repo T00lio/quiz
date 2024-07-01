@@ -22,7 +22,7 @@ function QuizPage() {
     updateQuiz({ operation: "resume" });
   }, [updateQuiz]);
 
-  const showResult = false;
+  const showResult = data && data.totals === data.questionIndex;
 
   const handleRestart = () => {};
 
@@ -36,9 +36,9 @@ function QuizPage() {
           <div className="flex flex-wrap -mx-10">
             <div className="relative w-full mb-10 lg:mb-20">
               <div className="px-16 pt-16 pb-24 bg-gray-600 rounded-2xl">
-                <div className=" pt-16 pb-24 bg-gray-600 rounded-lg top-0">
+                <div className="pt-16 pb-24 bg-gray-600 rounded-lg top-0  min-h-full">
                   <>
-                    {isLoading ? "Loading" : null}
+                    {isLoading ? <div className="loader"></div> : null}
                     {!showResult && !isLoading && data ? (
                       <Quiz {...data} updateQuiz={updateQuiz} />
                     ) : null}
