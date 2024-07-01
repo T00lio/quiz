@@ -8,6 +8,18 @@ export default function About() {
       <Header />
       {/* content section */}
       <section className="relative pt-20 pb-20 2xl:pb-40 overflow-hidden">
+        <img
+          className="hidden lg:block absolute top-0 left-0 -ml-96 -mt-40"
+          style={{ zIndex: -1 }}
+          src="zospace-assets/lines/circle.svg"
+          alt=""
+        />
+        <img
+          className="hidden lg:block absolute bottom-0 right-0 -mr-32 -mb-72"
+          style={{ zIndex: -1 }}
+          src="zospace-assets/lines/circle.svg"
+          alt=""
+        />
         <div className="container px-4 mx-auto">
           <div className="flex flex-wrap mb-16 lg:mb-28">
             <div className="w-full lg:w-1/2 mb-16 lg:mb-0">
@@ -36,22 +48,22 @@ export default function About() {
               </div>
             </div>
             <img
-              className="lg:absolute lg:h-144 mr-auto mt-35 h-128 top-5 right-20"
+              className="lg:relative lg:h-144 m-auto  rounded-lg shadow-lg"
               src="images/IMG-1583.jpeg"
               alt="About me"
             />
           </div>
           <div className="flex flex-wrap -m-4">
             <div className="w-full lg:w-1/3 p-4">
-              <div className="flex pt-8 ">
+              <div className="flex pt-8 flex-col items bg-gray-500 p-6 rounded-lg shadow-md opacity-5">
                 <div className="mr-8">
-                  <span className="flex justify-center items-center w-14 h-14 bg-blue-50 text-lg font-bold rounded-full">
+                  <span className="flex justify-center items-center w-14 h-14 bg-blue-50 text-lg font-bold rounded-full mb-5">
                     1
                   </span>
                 </div>
                 <div className="max-w-xs">
                   <h3 className="mb-6 text-lg font-bold font-heading text-gray-300">
-                    Register account - Feature in progress
+                    Register account
                   </h3>
                   <p className="text-lg text-white">
                     In order to keep track of your scores, register an account
@@ -61,9 +73,9 @@ export default function About() {
               </div>
             </div>
             <div className="w-full lg:w-1/3 p-4">
-              <div className="flex pt-8 ">
+              <div className="flex pt-8 flex-col items bg-gray-500 p-6 rounded-lg shadow-md opacity-5">
                 <div className="mr-8">
-                  <span className="flex justify-center items-center w-14 h-14 bg-blue-50 text-lg font-bold rounded-full">
+                  <span className="flex justify-center items-center w-14 h-14 bg-blue-50 text-lg font-bold rounded-full mb-5">
                     2
                   </span>
                 </div>
@@ -79,9 +91,9 @@ export default function About() {
               </div>
             </div>
             <div className="w-full lg:w-1/3 p-4">
-              <div className="flex pt-8">
+              <div className="flex pt-8 flex-col items bg-gray-500 p-6 rounded-lg shadow-md opacity-5">
                 <div className="mr-8">
-                  <span className="flex justify-center items-center w-14 h-14 bg-blue-50 text-lg font-bold rounded-full">
+                  <span className="flex justify-center items-center w-14 h-14 bg-blue-50 text-lg font-bold rounded-full mb-5">
                     3
                   </span>
                 </div>

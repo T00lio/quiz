@@ -2,6 +2,8 @@ export const QUIZ_MENU_URL = "/quizmenu";
 
 export const ABOUT_URL = "/about";
 
+export const HOME_URL = "/";
+
 export const CONTACT_URL = "/contact";
 
 export const PORTFOLIO_URL = "https://tuliosalvatierra.com";
@@ -9,6 +11,11 @@ export const PORTFOLIO_URL = "https://tuliosalvatierra.com";
 export const TELEPHONE = "786-314-6121";
 
 export const MENU_ITEMS = [
+  {
+    title: "Home",
+    url: HOME_URL,
+  },
+
   {
     title: "Quizes",
     url: QUIZ_MENU_URL,
