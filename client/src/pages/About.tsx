@@ -47,11 +47,13 @@ export default function About() {
                 </a>
               </div>
             </div>
-            <img
-              className="lg:relative lg:h-144 m-auto  rounded-lg shadow-lg"
-              src="images/IMG-1583.jpeg"
-              alt="About me"
-            />
+            <div className="w-full lg:w-1/2">
+              <img
+                className="rounded-lg shadow-lg object-fit max-h-half-screen lg:max-h-full w-full lg:w-auto"
+                src="images/IMG-1583.jpeg"
+                alt="About me"
+              />
+            </div>
           </div>
           <div className="flex flex-wrap -m-4">
             <div className="w-full lg:w-1/3 p-4">
@@ -111,7 +113,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* footer */}
       <Footer />
     </>
