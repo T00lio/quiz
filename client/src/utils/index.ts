@@ -21,7 +21,13 @@ function parseQuestionOptions(question: any) {
   return options;
 }
 
-export function getQuizDetails({ quizState, questions }: { quizState: any; questions: any }) {
+export function getQuizDetails({
+  quizState,
+  questions,
+}: {
+  quizState: any;
+  questions: any;
+}) {
   const currentQuestion = questions[quizState.currentQuestionId];
   const options = parseQuestionOptions(currentQuestion);
 
@@ -36,21 +42,25 @@ export function getQuizDetails({ quizState, questions }: { quizState: any; quest
 }
 
 export function getUserAdapter(user: any) {
-  const subjectsFormatted = user.subjects.map(({ name, quizzes }: { name: any; quizzes: any }) => {
-    let quizId: string | null = "";
+  const subjectsFormatted = user.subjects.map(
+    ({ name, quizzes }: { name: any; quizzes: any }) => {
+      let quizId: string | null = "";
 
-    if (quizzes.length) {
-      const quizInProgress = quizzes.find((quiz: any) => quiz.status === "in_progress");
-      quizId = quizInProgress?.id || null;
-    } else {
-      quizId = null;
+      if (quizzes.length) {
+        const quizInProgress = quizzes.find(
+          (quiz: any) => quiz.status === "in_progress"
+        );
+        quizId = quizInProgress?.id || null;
+      } else {
+        quizId = null;
+      }
+
+      return {
+        name,
+        quizId,
+      };
     }
-
-    return {
-      name,
-      quizId,
-    };
-  });
+  );
 
   return {
     ...user,
@@ -67,7 +77,10 @@ export interface FetchOptions extends RequestInit {
   requestBody?: Record<string, any> | string;
 }
 
-export const fetchFn = async (endpoint: string, options: FetchOptions = { headers: {} }) => {
+export const fetchFn = async (
+  endpoint: string,
+  options: FetchOptions = { headers: {} }
+) => {
   try {
     const response = await fetch(`${API_URL}${endpoint}`, {
       method: options.method || "GET",
@@ -128,7 +141,9 @@ export const useMutation = <T, R = T, V = void>({
 
     try {
       const response: T = await mutationFn(variables);
-      const adaptedData: R = adapter ? adapter(response) : (response as unknown as R);
+      const adaptedData: R = adapter
+        ? adapter(response)
+        : (response as unknown as R);
       setData(adaptedData);
       if (onSuccess) onSuccess(adaptedData);
     } catch (error: unknown) {

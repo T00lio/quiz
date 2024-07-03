@@ -1,5 +1,12 @@
-import { createContext, useContext, useState, useEffect, ReactNode, FC } from "react";
-import { fetchFn, handleDefaultError, useMutation } from "../../utils";
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  ReactNode,
+  FC,
+} from "react";
+import { fetchFn, useMutation } from "../../utils";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -32,10 +39,12 @@ export const UserProvider: FC<UserProviderProps> = ({ children }) => {
   const [isFetched, setIsFetched] = useState<boolean>(false);
 
   const { mutate: getUserData, isLoading } = useMutation({
-    mutationFn: (): Promise<User> => fetchFn("/auth/user", { credentials: "include" }),
+    mutationFn: (): Promise<User> =>
+      fetchFn("/auth/user", { credentials: "include" }),
     onSuccess: (data) => {
       setUser(data);
       setIsFetched(true);
+      console.log(data);
     },
   });
 

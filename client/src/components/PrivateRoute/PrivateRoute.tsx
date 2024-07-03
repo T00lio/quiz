@@ -7,7 +7,7 @@ function PrivateRoute() {
   let navigate = useNavigate();
 
   useEffect(() => {
-    if (isFetched && !isAuthenticated) {
+    if (!isAuthenticated) {
       navigate("/signin");
     }
   }, [isAuthenticated, isFetched, navigate]);

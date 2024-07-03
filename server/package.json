@@ -12,7 +12,7 @@
     "setup-database": "npm run create-database && npm run setup-user-permissions",
     "install-postgresql": "sudo apt-get install postgresql",
     "create-database": "sudo -u postgres createdb quizcompleted",
-    "setup-user-permissions": "sudo -u postgres psql -c 'CREATE USER myuser WITH PASSWORD ''mypassword''; GRANT ALL PRIVILEGES ON DATABASE quizcompleted TO myuser;'",
+    "setup-user-permissions": "sudo -u postgres psql -c 'CREATE USER tulio WITH PASSWORD ''12345''; GRANT ALL PRIVILEGES ON DATABASE quizcompleted TO myuser;'",
     "migrate-database": "prisma migrate dev --preview-feature"
   },
   "author": "",
