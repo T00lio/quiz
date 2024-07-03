@@ -23,7 +23,7 @@ function SignUpForm() {
         credentials: "include",
         requestBody: variables,
       }),
-    onSuccess: ({ data }) => {
+    onSuccess: ({ data = null }) => {
       setUser(data);
       navigate("/profile");
     },

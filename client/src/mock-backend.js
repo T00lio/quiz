@@ -36,7 +36,9 @@ function getUniqueId() {
 }
 
 function selectQuestion(isCorrect) {
-  const questions = mockedQuestions.filter((question) => question.subject === quizState.subject);
+  const questions = mockedQuestions.filter(
+    (question) => question.subject === quizState.subject
+  );
   const newState = {
     questions,
     quizState: {
@@ -52,7 +54,9 @@ function selectQuestion(isCorrect) {
 }
 
 function restartQuiz() {
-  const questions = mockedQuestions.filter((question) => question.subject === quizState.subject);
+  const questions = mockedQuestions.filter(
+    (question) => question.subject === quizState.subject
+  );
   const newState = {
     questions,
     quizState: {
@@ -69,7 +73,9 @@ function restartQuiz() {
 }
 
 function skipQuestion() {
-  const questions = mockedQuestions.filter((question) => question.subject === quizState.subject);
+  const questions = mockedQuestions.filter(
+    (question) => question.subject === quizState.subject
+  );
   const newState = {
     questions,
     quizState: {
@@ -84,7 +90,9 @@ function skipQuestion() {
 }
 
 function initQuiz(subject) {
-  const questions = mockedQuestions.filter((question) => question.subject === subject);
+  const questions = mockedQuestions.filter(
+    (question) => question.subject === subject
+  );
   quizState.id = getUniqueId();
   quizState.subject = subject;
 
@@ -100,7 +108,9 @@ function getUser() {
 
 function updateQuiz(id, { operation, isCorrect }) {
   if (operation === "resume") {
-    const questions = mockedQuestions.filter((question) => question.subject === quizState.subject);
+    const questions = mockedQuestions.filter(
+      (question) => question.subject === quizState.subject
+    );
 
     return {
       questions,
