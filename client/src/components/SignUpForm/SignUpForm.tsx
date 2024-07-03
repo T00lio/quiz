@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import GoogleButton from "../GoogleButton/GoogleButton";
 import GithubButton from "../GithubButton/GithubButton";

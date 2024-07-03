@@ -1,5 +1,5 @@
 declare module "*.svg" {
-  const content: any;
+  const content: unknown;
   export default content;
 }
 
@@ -10,7 +10,7 @@ declare module "*.webp" {
 }
 
 declare module "*.json" {
-  const value: any;
+  const value: unknown;
   export default value;
 }
 

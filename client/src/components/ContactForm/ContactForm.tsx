@@ -1,3 +1,4 @@
+import React from "react";
 import { useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { TELEPHONE, PORTFOLIO_URL } from "../../constants";

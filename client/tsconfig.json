@@ -3,13 +3,12 @@
     "baseUrl": "./",
     "target": "ES2015",
     "useDefineForClassFields": true,
-    "lib": ["ES2015", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ES2022",
     "skipLibCheck": true,
     "paths": {
       "@components/*": ["src/components/*"],
       "@pages/*": ["src/pages/*"]
-      // Add other paths as needed
     },
 
     /* Bundler mode */
@@ -18,7 +17,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "react",
 
     /* Linting */
     "strict": true,

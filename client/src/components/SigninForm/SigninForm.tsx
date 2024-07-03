@@ -1,10 +1,16 @@
+import React from "react";
 import { useState } from "react";
 import GoogleButton from "../GoogleButton";
 import GithubButton from "../GithubButton";
 import { useUser } from "../UserContext";
 import ResetPasswordModal from "../ResetPasswordModal";
 import { useNavigate } from "react-router-dom";
-import { ErrorResponse, fetchFn, handleDefaultError, useMutation } from "../../utils";
+import {
+  ErrorResponse,
+  fetchFn,
+  handleDefaultError,
+  useMutation,
+} from "../../utils";
 import { ApiResponse, User } from "../UserContext/UserContext";
 import { toast } from "react-toastify";
 
@@ -16,16 +22,23 @@ interface SigninParams {
 function SignInForm() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState<string | null>(null);
-  const [noPassWordConfigured, setNoPasswordConfigured] = useState<boolean>(false);
+  const [noPassWordConfigured, setNoPasswordConfigured] =
+    useState<boolean>(false);
 
   const { setUser } = useUser();
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   const { mutate: signIn } = useMutation({
     mutationFn: (variables: SigninParams): Promise<ApiResponse<User>> =>
-      fetchFn("/auth/signin", { method: "POST", credentials: "include", requestBody: variables }),
+      fetchFn("/auth/signin", {
+        method: "POST",
+        credentials: "include",
+        requestBody: variables,
+      }),
     onSuccess: ({ data }) => {
-      setUser(data);
+      if (data) {
+        setUser(data);
+      }
       navigate("/");
     },
     onError: (error: unknown) => {
@@ -43,7 +56,11 @@ function SignInForm() {
 
   const { mutate: forgotPassword } = useMutation({
     mutationFn: (variables: { email: string }): Promise<User> =>
-      fetchFn("/auth/forgot-password", { method: "POST", credentials: "include", requestBody: variables }),
+      fetchFn("/auth/forgot-password", {
+        method: "POST",
+        credentials: "include",
+        requestBody: variables,
+      }),
     onError: handleDefaultError,
   });
 
@@ -70,8 +87,12 @@ function SignInForm() {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <h3 className="mb-10 text-2xl font-bold font-heading text-white">Sign in Account</h3>
-        <div className="p-2">{error && <p style={{ color: "red" }}>{error}</p>}</div>
+        <h3 className="mb-10 text-2xl font-bold font-heading text-white">
+          Sign in Account
+        </h3>
+        <div className="p-2">
+          {error && <p style={{ color: "red" }}>{error}</p>}
+        </div>
         <div className="flex items-center pl-6 mb-3 bg-white rounded-full border-slate-950">
           <span className="inline-block pr-3 py-2 border-r border-gray-50">
             <svg
@@ -93,7 +114,15 @@ function SignInForm() {
                 fill="black"
               />
               <rect x={15} y={15} width={5} height={1} rx="0.5" fill="black" />
-              <rect x={17} y={18} width={5} height={1} rx="0.5" transform="rotate(-90 17 18)" fill="black" />
+              <rect
+                x={17}
+                y={18}
+                width={5}
+                height={1}
+                rx="0.5"
+                transform="rotate(-90 17 18)"
+                fill="black"
+              />
             </svg>
           </span>
 
@@ -141,7 +170,9 @@ function SignInForm() {
           Sign in
         </button>
         <div className="flex-col mt-10">
-          <p className="-mt-2 text-sm text-gray-400 mb-5 text-center">Or sign in with your socials</p>
+          <p className="-mt-2 text-sm text-gray-400 mb-5 text-center">
+            Or sign in with your socials
+          </p>
           {/* Google button */}
           <GoogleButton />
           {/* Github button */}

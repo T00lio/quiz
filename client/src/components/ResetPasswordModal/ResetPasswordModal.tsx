@@ -1,3 +1,4 @@
+import React from "react";
 import "./ResetPasswordModal.css";
 
 type ConfirmCallback = () => void;
