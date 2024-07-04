@@ -64,7 +64,7 @@ function SignInForm() {
     onError: handleDefaultError,
   });
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.target as HTMLFormElement) as FormData;
 
