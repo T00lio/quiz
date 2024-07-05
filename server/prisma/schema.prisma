@@ -23,3 +23,26 @@ datasource db {
     picture    String?
     createdAt  DateTime @default(now())
   }
+
+model Subject {
+  id          Int        @id @default(autoincrement())
+  name        String     @unique
+  questions   Question[]
+}
+
+model Question {
+  id          Int        @id @default(autoincrement())
+  subject     Subject    @relation(fields: [subjectId], references: [id])
+  subjectId   Int
+  question    String
+  options     Option[]
+  createdAt   DateTime   @default(now())
+}
+
+model Option {
+  id          Int        @id @default(autoincrement())
+  question    Question   @relation(fields: [questionId], references: [id])
+  questionId  Int
+  optionText  String
+  isCorrect   Boolean
+}

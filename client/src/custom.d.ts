@@ -3,6 +3,11 @@ declare module "*.svg" {
   export default content;
 }
 
+declare module "./pages/Test" {
+  const Test: React.ComponentType;
+  export default Test;
+}
+
 declare module "./SigninForm" {
   const SigninForm: React.ComponentType;
   export default SigninForm;

@@ -1,3 +1,4 @@
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import IndexPage from "./pages/Index";
 import AboutPage from "./pages/About";
@@ -9,6 +10,7 @@ import SignUpPage from "./pages/SignInPage";
 import QuizPage from "./pages/QuizPage_new";
 import ProfilePage from "./pages/Profile";
 import PrivateRoute from "./components/PrivateRoute";
+import Test from "./pages/Test";
 import "./App.css";
 
 function App() {
@@ -22,6 +24,7 @@ function App() {
       <Route path="/signin" element={<SignUpPage />} />
       <Route path="/reset-password" element={<ResetPassword />} />
       <Route path="/quiz/:quizId" element={<QuizPage />} />
+      <Route path="/test" element={<Test />} />
 
       <Route path="/profile" element={<PrivateRoute />}>
         <Route path="" element={<ProfilePage />} />
