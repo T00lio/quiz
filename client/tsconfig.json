@@ -16,6 +16,7 @@
     /* Bundler mode */
 
     "allowImportingTsExtensions": true,
+    "allowArbitraryExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,

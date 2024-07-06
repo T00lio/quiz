@@ -1,51 +1,53 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import apiClient from "../apiClient";
 
-export default function Test() {
-  const [data, setData] = useState(null);
+interface Option {
+  optionText: string;
+  isCorrect: boolean;
+}
+
+interface Question {
+  id: string;
+  question: string;
+  options: Option[];
+}
+
+const TestApiComponent: React.FC = () => {
+  const [data, setData] = useState<Question[] | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          "http://localhost:3000/api/questions/react",
-          {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
+        const result = await apiClient(
+          "http://localhost:3000/api/questions/css"
         );
-
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const result = await response.json();
         setData(result);
         setLoading(false);
-      } catch (err: Error) {
-        setError(err.message);
+        console.log(`Fetched questions: ${JSON.stringify(result)}`);
+      } catch (err) {
+        setError((err as Error).message);
         setLoading(false);
       }
     };
 
     fetchData();
   }, []);
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
   return (
     <div>
-      <h1>Quiz Questions</h1>
+      <h1 className="text-white">Quiz Questions</h1>
       <ul>
-        {data?.map((question: any, index: number) => (
+        {data?.map((question, index) => (
           <li key={index}>
-            <h2>{question?.question}</h2>
+            <h2 className="text-white">{question.question}</h2>
             <ul>
-              {question.options.map((option: any, idx: number) => (
-                <li key={idx}>
+              {question.options.map((option, idx) => (
+                <li key={idx} className="text-white">
                   {option.optionText} -{" "}
                   {option.isCorrect ? "Correct" : "Incorrect"}
                 </li>
@@ -56,4 +58,6 @@ export default function Test() {
       </ul>
     </div>
   );
-}
+};
+
+export default TestApiComponent;

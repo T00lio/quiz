@@ -15,13 +15,12 @@ require("dotenv").config();
 app.use(bodyParser.json());
 
 // Middleware para habilitar CORS
-app
-  .use
-  // cors({
-  //   origin: `http://localhost:5173`,
-  //   credentials: true,
-  // })
-  ();
+app.use(
+  cors({
+    origin: `http://localhost:5173`,
+    credentials: true,
+  })
+);
 
 // Middleware para manejar cookies
 app.use((req, res, next) => {
